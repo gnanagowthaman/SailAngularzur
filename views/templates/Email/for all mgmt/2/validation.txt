@@ -1,0 +1,24 @@
+
+		Validation for All Management
+
+	1.User Management (create & edit) - validation done
+
+	2.Geography Management (create & edit) - validation done
+
+	3.Country Management (create & edit) - no validation for both create and edit
+
+		(It allows all the special characters while edit and create )
+
+	4.State Management - no validation for create and edit as in country management
+
+	5.Domain Management (create & edit) - validation done
+
+	6.Regulator Management - no validation for create and edit as in country management
+
+	7.Regulation Management (create & edit) - validation done
+
+	8.Document Management (create & edit) - validation done
+
+	9.Sub Document Management (create & edit) - validation done
+
+	Country,State And Regulator Management has No Validation

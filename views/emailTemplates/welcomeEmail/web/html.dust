@@ -1,0 +1,12 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body> -->
+<h2>Alert Notification</h2>
+
+	<p>Dear {Name},</p>
+	<p>Alert Message: {alertText} </p>
+<!-- 
+</body>
+</html> -->

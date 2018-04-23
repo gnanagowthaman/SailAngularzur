@@ -1,0 +1,14 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body> -->
+<h2>Alert Notification</h2>
+
+	<p>Dear {Name},</p>
+	<p>Welcome to Zurik {alertText} </p>
+	
+	<p>Have a great day </p>
+<!-- 
+</body>
+</html> -->

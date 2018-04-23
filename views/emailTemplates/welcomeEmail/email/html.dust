@@ -1,0 +1,9 @@
+<p>Alert Notification</p>
+	
+	<p>Dear {Name},</p> 
+
+	<p>Alert Message - {alertText} </p>
+	
+	<p>Regards </p>
+	
+	<p>Zurik Support</p>

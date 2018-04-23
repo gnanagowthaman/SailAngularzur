@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/basic.css">
+    <link rel="stylesheet" href="/styles/client-first-layout.css">
+    <link rel="stylesheet" href="/styles/enhanced.css">
+    <link rel="stylesheet" href="/styles/first-layout.component.css">
+    <link rel="stylesheet" href="/styles/hl.component.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/jquery.easyswitch.css">
+    <link rel="stylesheet" href="/styles/light.css">
+    <link rel="stylesheet" href="/styles/search-first-layout.css">
+    <link rel="stylesheet" href="/styles/tracker.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <%- body %>
+
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
+    <!--TEMPLATES END-->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/collections/admin/AlertCollection.js"></script>
+    <script src="/js/collections/admin/CountryCollection.js"></script>
+    <script src="/js/collections/admin/CreateUserTableCollection.js"></script>
+    <script src="/js/collections/admin/DoctypeCollection.js"></script>
+    <script src="/js/collections/admin/DocumentCollection.js"></script>
+    <script src="/js/collections/admin/DocumentTableCollection.js"></script>
+    <script src="/js/collections/admin/DomainCollection.js"></script>
+    <script src="/js/collections/admin/DomaineditTableCollection.js"></script>
+    <script src="/js/collections/admin/GeographyCollection.js"></script>
+    <script src="/js/collections/admin/GeographyTableCollection.js"></script>
+    <script src="/js/collections/admin/NewsCollection.js"></script>
+    <script src="/js/collections/admin/RegulationAlertCollection.js"></script>
+    <script src="/js/collections/admin/RegulationCollection.js"></script>
+    <script src="/js/collections/admin/RegulationeditTableCollection.js"></script>
+    <script src="/js/collections/admin/RegulationTableCollection.js"></script>
+    <script src="/js/collections/admin/RegulatorCollection.js"></script>
+    <script src="/js/collections/admin/RegulatorTableCollection.js"></script>
+    <script src="/js/collections/admin/StateCollection.js"></script>
+    <script src="/js/collections/admin/SubDocCollection.js"></script>
+    <script src="/js/collections/admin/SubDocumentCollection.js"></script>
+    <script src="/js/collections/admin/SubscriptionCollection.js"></script>
+    <script src="/js/collections/admin/UserCollection.js"></script>
+    <script src="/js/collections/AlertsList.js"></script>
+    <script src="/js/collections/CountryList.js"></script>
+    <script src="/js/collections/DocumentList.js"></script>
+    <script src="/js/collections/DomainList.js"></script>
+    <script src="/js/collections/GeographyList.js"></script>
+    <script src="/js/collections/LibraryList.js"></script>
+    <script src="/js/collections/master/MAlertList.js"></script>
+    <script src="/js/collections/master/MCountryList.js"></script>
+    <script src="/js/collections/master/MDocumentList.js"></script>
+    <script src="/js/collections/master/MDomainList.js"></script>
+    <script src="/js/collections/master/MGeographyList.js"></script>
+    <script src="/js/collections/master/MRegulationList.js"></script>
+    <script src="/js/collections/master/MRegulatorList.js"></script>
+    <script src="/js/collections/master/MSearchList.js"></script>
+    <script src="/js/collections/master/MStateList.js"></script>
+    <script src="/js/collections/master/MSubDocumentList.js"></script>
+    <script src="/js/collections/NewsList.js"></script>
+    <script src="/js/collections/RegulationCollection.js"></script>
+    <script src="/js/collections/RegulationList.js"></script>
+    <script src="/js/collections/RegulatorList.js"></script>
+    <script src="/js/collections/SearchList.js"></script>
+    <script src="/js/collections/StateList.js"></script>
+    <script src="/js/collections/SubscriptionCollection.js"></script>
+    <script src="/js/collections/XlsList.js"></script>
+    <script src="/js/first-layout/app.js"></script>
+    <script src="/js/first-layout/capp.js"></script>
+    <script src="/js/first-layout/demo.js"></script>
+    <script src="/js/first-layout/pwd.js"></script>
+    <script src="/js/lib/backbone-collection-search.js"></script>
+    <script src="/js/lib/backbone-min.js"></script>
+    <script src="/js/lib/backbone.js"></script>
+    <script src="/js/lib/colResizable-1.6.js"></script>
+    <script src="/js/lib/colResizable-1.6.min.js"></script>
+    <script src="/js/lib/jquery-3.1.1.slim.min.js"></script>
+    <script src="/js/lib/jquery-ui.js"></script>
+    <script src="/js/lib/jquery.contains.insensitive.js"></script>
+    <script src="/js/lib/jquery.sorttable.js"></script>
+    <script src="/js/lib/jsearch.js"></script>
+    <script src="/js/lib/underscore-min.js"></script>
+    <script src="/js/lib/underscore.js"></script>
+    <script src="/js/models/admin/AlertRowModel.js"></script>
+    <script src="/js/models/admin/CountryRowModel.js"></script>
+    <script src="/js/models/admin/DocTypeRowModel.js"></script>
+    <script src="/js/models/admin/DocumentRowModel.js"></script>
+    <script src="/js/models/admin/domaineditRowModel.js"></script>
+    <script src="/js/models/admin/DomainRowModel.js"></script>
+    <script src="/js/models/admin/GeoRowModel.js"></script>
+    <script src="/js/models/admin/NewsModel.js"></script>
+    <script src="/js/models/admin/regulationAlertRowModel.js"></script>
+    <script src="/js/models/admin/regulationeditRowModel.js"></script>
+    <script src="/js/models/admin/RegulationRowModel.js"></script>
+    <script src="/js/models/admin/RegulatorRowModel.js"></script>
+    <script src="/js/models/admin/StateRowModel.js"></script>
+    <script src="/js/models/admin/SubDocModel.js"></script>
+    <script src="/js/models/admin/SubDocumentRowModel.js"></script>
+    <script src="/js/models/admin/SubscriptionModel.js"></script>
+    <script src="/js/models/AlertsModel.js"></script>
+    <script src="/js/models/DocumentModel.js"></script>
+    <script src="/js/models/DomainModel.js"></script>
+    <script src="/js/models/GeographyModel.js"></script>
+    <script src="/js/models/LibraryModel.js"></script>
+    <script src="/js/models/master/MAlertModel.js"></script>
+    <script src="/js/models/master/MCountryModel.js"></script>
+    <script src="/js/models/master/MDocumentModel.js"></script>
+    <script src="/js/models/master/MDomainModel.js"></script>
+    <script src="/js/models/master/MGeographyModel.js"></script>
+    <script src="/js/models/master/MRegulationModel.js"></script>
+    <script src="/js/models/master/MRegulatorModel.js"></script>
+    <script src="/js/models/master/MSearchModel.js"></script>
+    <script src="/js/models/master/MStateModel.js"></script>
+    <script src="/js/models/master/MSubDocumentModel.js"></script>
+    <script src="/js/models/NewsModel.js"></script>
+    <script src="/js/models/RegulationModel.js"></script>
+    <script src="/js/models/RegulatorModel.js"></script>
+    <script src="/js/models/SearchModel.js"></script>
+    <script src="/js/models/SubscriptionModel.js"></script>
+    <script src="/js/models/XlsModel.js"></script>
+    <script src="/js/page-content/charts/chart-js.js"></script>
+    <script src="/js/page-content/charts/chartist.js"></script>
+    <script src="/js/page-content/charts/flot-charts.js"></script>
+    <script src="/js/page-content/charts/morris-charts.js"></script>
+    <script src="/js/page-content/charts/other-charts.js"></script>
+    <script src="/js/page-content/dashboard/index-v2.js"></script>
+    <script src="/js/page-content/dashboard/index.js"></script>
+    <script src="/js/page-content/email/email-compose.js"></script>
+    <script src="/js/page-content/email/email-read.js"></script>
+    <script src="/js/page-content/extra-pages/calendar.js"></script>
+    <script src="/js/page-content/extra-pages/chat-dashboard.js"></script>
+    <script src="/js/page-content/forms/advanced-elements.js"></script>
+    <script src="/js/page-content/forms/file-uploads.js"></script>
+    <script src="/js/page-content/forms/forms-validation.js"></script>
+    <script src="/js/page-content/forms/forms-wizard.js"></script>
+    <script src="/js/page-content/forms/image-cropper.js"></script>
+    <script src="/js/page-content/forms/text-editors.js"></script>
+    <script src="/js/page-content/maps/google-maps.js"></script>
+    <script src="/js/page-content/maps/vector-maps.js"></script>
+    <script src="/js/page-content/tables/data-tables.js"></script>
+    <script src="/js/page-content/ui-elements/animations.js"></script>
+    <script src="/js/page-content/ui-elements/buttons.js"></script>
+    <script src="/js/page-content/ui-elements/carousels.js"></script>
+    <script src="/js/page-content/ui-elements/indicators.js"></script>
+    <script src="/js/page-content/ui-elements/navigations.js"></script>
+    <script src="/js/page-content/ui-elements/progress-bars.js"></script>
+    <script src="/js/page-content/user-pages/lock-screen.js"></script>
+    <script src="/js/page-content/user-pages/profile.js"></script>
+    <script src="/js/router/adminRouter.js"></script>
+    <script src="/js/router/clientRouter.js"></script>
+    <script src="/js/views/admin/AdminUserFormPageView.js"></script>
+    <script src="/js/views/admin/AlertFormPageView.js"></script>
+    <script src="/js/views/admin/AlertRowView.js"></script>
+    <script src="/js/views/admin/AlertTablePageView.js"></script>
+    <script src="/js/views/admin/AlertTableView.js"></script>
+    <script src="/js/views/admin/CountryCollectionView.js"></script>
+    <script src="/js/views/admin/CountryFormPageView.js"></script>
+    <script src="/js/views/admin/CountryItemView.js"></script>
+    <script src="/js/views/admin/CountryRowView.js"></script>
+    <script src="/js/views/admin/CountryTablePageView.js"></script>
+    <script src="/js/views/admin/CountryTableView.js"></script>
+    <script src="/js/views/admin/CreateAdminRowView.js"></script>
+    <script src="/js/views/admin/CreateAdminTableView.js"></script>
+    <script src="/js/views/admin/CreateUserRowView.js"></script>
+    <script src="/js/views/admin/CreateUserTableView.js"></script>
+    <script src="/js/views/admin/DocTypeCollectionView.js"></script>
+    <script src="/js/views/admin/DocTypeFormPageView.js"></script>
+    <script src="/js/views/admin/DocTypeItemView.js"></script>
+    <script src="/js/views/admin/DocTypeRowView.js"></script>
+    <script src="/js/views/admin/DocTypeTablePageView.js"></script>
+    <script src="/js/views/admin/DocTypeTableView.js"></script>
+    <script src="/js/views/admin/DocumentCollectionView.js"></script>
+    <script src="/js/views/admin/DocumentItemView.js"></script>
+    <script src="/js/views/admin/DocumentRowView.js"></script>
+    <script src="/js/views/admin/DocumentTablePageView.js"></script>
+    <script src="/js/views/admin/DocumentTableView.js"></script>
+    <script src="/js/views/admin/DomainCollectionView.js"></script>
+    <script src="/js/views/admin/domaineditRowView.js"></script>
+    <script src="/js/views/admin/domaineditTableView.js"></script>
+    <script src="/js/views/admin/DomainFormPageView.js"></script>
+    <script src="/js/views/admin/DomainItemView.js"></script>
+    <script src="/js/views/admin/DomainRowView.js"></script>
+    <script src="/js/views/admin/DomainTablePageView.js"></script>
+    <script src="/js/views/admin/DomainTableView.js"></script>
+    <script src="/js/views/admin/EditAdminUserFormPageView.js"></script>
+    <script src="/js/views/admin/EditUserFormPageView.js"></script>
+    <script src="/js/views/admin/FileUploadCountryCollectionView.js"></script>
+    <script src="/js/views/admin/FileUploadCountryItemView.js"></script>
+    <script src="/js/views/admin/FileUploadDocumentCollectionView.js"></script>
+    <script src="/js/views/admin/FileUploadDocumentItemView.js"></script>
+    <script src="/js/views/admin/FileUploadPageView.js"></script>
+    <script src="/js/views/admin/FileUploadRegulationCollectionView.js"></script>
+    <script src="/js/views/admin/FileUploadRegulationItemView.js"></script>
+    <script src="/js/views/admin/FileUploadRegulatorCollectionView.js"></script>
+    <script src="/js/views/admin/FileUploadRegulatorItemView.js"></script>
+    <script src="/js/views/admin/FileUploadStateCollectionView.js"></script>
+    <script src="/js/views/admin/FileUploadStateItemView.js"></script>
+    <script src="/js/views/admin/FileUploadSubDocumentCollection.js"></script>
+    <script src="/js/views/admin/FileUploadSubDocumentItem.js"></script>
+    <script src="/js/views/admin/GeoCollectionView.js"></script>
+    <script src="/js/views/admin/GeoFormPageView.js"></script>
+    <script src="/js/views/admin/GeoItemView.js"></script>
+    <script src="/js/views/admin/GeoRowView.js"></script>
+    <script src="/js/views/admin/GeoTablePageView.js"></script>
+    <script src="/js/views/admin/GeoTableView.js"></script>
+    <script src="/js/views/admin/MgmtCountryCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtCountryRegulationCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtDocumentCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtDocumentItemView.js"></script>
+    <script src="/js/views/admin/MgmtDomainCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtDomainItemView.js"></script>
+    <script src="/js/views/admin/MgmtGeographyCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtGeographyRegulationCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtRegulationAlertCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtRegulationCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtRegulationItemView.js"></script>
+    <script src="/js/views/admin/MgmtRegulatorCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtStateCollectionView.js"></script>
+    <script src="/js/views/admin/MgmtSubDocCollectionView.js"></script>
+    <script src="/js/views/admin/NewsFormPageView.js"></script>
+    <script src="/js/views/admin/NewsItemView.js"></script>
+    <script src="/js/views/admin/NewsListView.js"></script>
+    <script src="/js/views/admin/NewsManagementPageView.js"></script>
+    <script src="/js/views/admin/ProfileManagementPageView.js"></script>
+    <script src="/js/views/admin/ProfileSubscriptionItemView.js"></script>
+    <script src="/js/views/admin/ProfileSubscriptionListView.js"></script>
+    <script src="/js/views/admin/RegulationAlertItemView.js"></script>
+    <script src="/js/views/admin/RegulationCollectionView.js"></script>
+    <script src="/js/views/admin/regulationeditRowView.js"></script>
+    <script src="/js/views/admin/regulationeditTableView.js"></script>
+    <script src="/js/views/admin/RegulationFormPageView.js"></script>
+    <script src="/js/views/admin/RegulationItemView.js"></script>
+    <script src="/js/views/admin/RegulationRowView.js"></script>
+    <script src="/js/views/admin/RegulationTableCollection.js"></script>
+    <script src="/js/views/admin/RegulationTablePageView.js"></script>
+    <script src="/js/views/admin/RegulationTableView.js"></script>
+    <script src="/js/views/admin/RegulatorCollectionView.js"></script>
+    <script src="/js/views/admin/RegulatorFormPageView.js"></script>
+    <script src="/js/views/admin/RegulatorItemView.js"></script>
+    <script src="/js/views/admin/RegulatorRowView.js"></script>
+    <script src="/js/views/admin/RegulatorTablePageView.js"></script>
+    <script src="/js/views/admin/RegulatorTableView.js"></script>
+    <script src="/js/views/admin/StateCollectionView.js"></script>
+    <script src="/js/views/admin/StateFormPageView.js"></script>
+    <script src="/js/views/admin/StateItemView.js"></script>
+    <script src="/js/views/admin/StateRowView.js"></script>
+    <script src="/js/views/admin/StateTablePageView.js"></script>
+    <script src="/js/views/admin/StateTableView.js"></script>
+    <script src="/js/views/admin/SubDocFormPageView.js"></script>
+    <script src="/js/views/admin/SubDocItemView.js"></script>
+    <script src="/js/views/admin/SubDocListView.js"></script>
+    <script src="/js/views/admin/SubDocManagementPageView.js"></script>
+    <script src="/js/views/admin/SubDocRowView.js"></script>
+    <script src="/js/views/admin/UserFormPageView.js"></script>
+    <script src="/js/views/admin/UserGeoCollectionView.js"></script>
+    <script src="/js/views/admin/userGeoItemView.js"></script>
+    <script src="/js/views/admin/UserProfilePageView.js"></script>
+    <script src="/js/views/admin/UserRowView.js"></script>
+    <script src="/js/views/admin/UserTablePageView.js"></script>
+    <script src="/js/views/admin/UserTableView.js"></script>
+    <script src="/js/views/AdvanceSearchPageView.js"></script>
+    <script src="/js/views/ClientDashboardView.js"></script>
+    <script src="/js/views/DocTypeView.js"></script>
+    <script src="/js/views/DocumentListView.js"></script>
+    <script src="/js/views/DocumentView.js"></script>
+    <script src="/js/views/DomainListView.js"></script>
+    <script src="/js/views/DomainView.js"></script>
+    <script src="/js/views/GeographyListView.js"></script>
+    <script src="/js/views/GeographyView.js"></script>
+    <script src="/js/views/PdfView.js"></script>
+    <script src="/js/views/RegulationItemView.js"></script>
+    <script src="/js/views/RegulationListsView.js"></script>
+    <script src="/js/views/RegulationListView.js"></script>
+    <script src="/js/views/RegulationView.js"></script>
+    <script src="/js/views/RegulatorListView.js"></script>
+    <script src="/js/views/RegulatorView.js"></script>
+    <script src="/js/views/SearchView.js"></script>
+    <script src="/js/views/TreeView.js"></script>
+    <script src="/js/views/UserProfilePageView.js"></script>
+    <script src="/js/views/UserSubscriptionItemView.js"></script>
+    <script src="/js/views/UserSubscriptionListView.js"></script>
+    <script src="/js/views/XlsView.js"></script>
+    <!--SCRIPTS EN{
+  "name": "bootstrap"
