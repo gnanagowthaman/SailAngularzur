@@ -1,20 +1,134 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="alert-box success">
 
+
+</div>
+<div class="alert-box failure"></div>
+<div class="alert-box warning"></div>
+<!-- Header start-->
+<div>
+  <a href="javascript:;" role="button" class="hamburger-menu pull-left">
+    <span></span>
+  </a>
+  <div>
+    <div style="float:right; overflow: visible" align="top">
+      <h4 class="media-heading fs-16"></h4>
+      <div class="dropdown">
+        <a id="dropdown-status" href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"
+          class="dropdown-toggle">
+          <span class="status bg-success"></span>
+          <a href="/logout">Logout</a>
+        </a>
+      </div>
+    </div>
+    <div class="image-container234" style="position:absolute; top:20px;right:180px">
+      <div id="esp-user-profile" data-percent="66" style="height: 56px; width: 56px; line-height: 40px; padding: 8px; cursor: pointer;"
+        class="easy-pie-chart">
+        <img src="profile_image_link" alt="" class="avatar img-circle" width="42" height="42" align="top">
+      </div>
+    </div>
+  </div>
+  <div class="zurik-con" style="height: 56px; width: 56px; line-height: 40px; padding: 8px;">
+    <a style="left: 100px; top: 20px;" href="/adminDashboard" class="brand">ZURIK</a>
+  </div>
+</div>
+<!-- Header end-->
+<div class="main-container">
+  <!-- Main Sidebar start-->
+  <div data-mcs-theme="minimal-dark" class="main-sidebar mCustomScrollbar">
+    <ul id="usertest" class="list-unstyled navigation mb-0" style="padding-top:30px;">
+      <li class="sidebar-category"></li>
+      <li id="dashboard_click" class="panel">
+        <a id="accdboard" role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false"
+          aria-controls="collapse1" class="bubble active collapsed">
+          <i class="ion-ios-home-outline bg-purple"></i>
+          <span class="sidebar-title accdboard">Dashboard</span>
+          <span class="badge bg-danger">9</span>
+        </a>
+      </li>
+      <ul id="collapse1" class="list-unstyled collapse">
+        <li>
+          <a id="usermgnt">User Management</a>
+        </li>
+
+        <li>
+          <a id="geomgnt">Geography Management</a>
+        </li>
+        <li>
+          <a id="countrymgnt">Country Management</a>
+        </li>
+        <li>
+          <a id="statemgnt">State Management</a>
+        </li>
+        <li>
+          <a id="dommgnt">Domain Management</a>
+        </li>
+        <li>
+          <a id="regulatormgnt">Regulator Management</a>
+        </li>
+        <li>
+          <a id="regmgnt">Regulation Management</a>
+        </li>
+        <li>
+          <a id="doctmgnt">Document Management</a>
+        </li>
+        <li>
+          <a id="subdocMgnt">Sub Document Management</a>
+        </li>
+        <li>
+          <a id="docmgnt">Document Upload Management</a>
+        </li>           
+        <li>            
+          <a id="newsMgnt">News Management</a>
+        </li>
+        <li>
+          <a id="alertMgnt">Alert Management</a>
+        </li>
+      </ul>      
+  </div>
+  <ul>        
+      <li id="user_click" class="panel">
+        <a role="button" id="profileMgnt" data-toggle="collapse" data-parent=".navigation" href="#collapse12" aria-expanded="false"
+          aria-controls="collapse12" class="bubble collapsed">
+          <i class="ion-ios-person-outline bg-success"></i>
+          <span class="sidebar-title">Profile</span>
+          <span class="badge bg-danger"></span>
+        </a>
+           <ul><li id="collapse12" class="list-unstyled collapse"></li></ul>   
+      </li>     
+    </ul> 
+  <!-- Main Sidebar end-->
+  <div class="page-container">
+    <div class="page-content container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget no-border">
+            <div id="page-section"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- add by Louis for modal dialog to leave the curent page -->
+
+  <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="exitBrowserDialog">
+    <div role="document" class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 id="mySmallModalLabel" class="modal-title">Leave Current Page</h4>
+        </div>
+        <div class="modal-body">
+          <p>Do you want to leave current page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="leaveCurrentPageCancel">Cancel</button>
+          <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="leaveCurrentPageOK">Leave</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>             

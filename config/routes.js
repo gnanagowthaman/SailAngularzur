@@ -31,16 +31,17 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-//  '/': {
-//     view: 'homepage'    
-//   },
-  '/': {
-   view: 'login',locals:{message:''}  
+ '/': {
+    view: 'homepage'    
   },        
+  // '/': {
+  //  view: 'login',locals:{message:''}  
+  // },            
   
   'get /forgotpass' : {
     view :'forgot-password'
   },
+  
   
   '/logout': 'AuthController.logout',
   '/sessionExpired' : 'AuthController.redirectToLogin',

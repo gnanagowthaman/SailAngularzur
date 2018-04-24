@@ -16,6 +16,7 @@
     "@angular/router": "^5.0.0",
     "adaro": "^1.0.4",
     "bcrypt-password": "^1.0.2",
+    "bootstrap": "^3.3.7",
     "connect-redis": "^3.3.3",
     "consolidate": "^0.15.1",
     "core-js": "^2.4.1",
