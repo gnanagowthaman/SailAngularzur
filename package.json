@@ -95,12 +95,9 @@
   },
   "main": "app.js",
   "repository": {
-    "type": "git",              
+    "type": "git",     
     "url": "git://github.com/gnanagowthaman/apr24.git"
   },
-  "author": "anonymous node/agrt",     
-  "license": "",
-  "engines": {
-    "node": ">=8.10"
-  }
+  "author": "gnanagowthaman",
+  "license": ""
 }
