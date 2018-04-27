@@ -118,5 +118,5 @@
     "prod": "sails lift --prod",
     "dev": "sails lift --dev",
     "debug": "node --inspect app.js"
-  }
+  }  
 }
