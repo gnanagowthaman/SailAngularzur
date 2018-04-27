@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GridModule } from '@progress/kendo-angular-grid';
 import { AppComponent } from './app.component';
-
+import { FormsModule } from '@angular/forms';
+import { DemoService } from './demo.service';  
 
 
 @NgModule({
@@ -11,9 +13,11 @@ import { AppComponent } from './app.component';
     AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    BrowserModule, BrowserAnimationsModule, GridModule
   ],
-  providers: [],    
+  providers: [DemoService],    
   bootstrap: [AppComponent]    
 })
 export class AppModule { }
