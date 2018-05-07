@@ -1,13 +1,22 @@
-    
-
 <!-- <li *ngFor="let food of foods">{{food.user_name}}</li> -->
 
-<pre>{{myData | json}}</pre>
+<!-- <pre>{{myData | json}}</pre> -->
+               
+<!-- <div *ngFor="let d of myData">
+  {{d}}                        
+</div>                
+-->
+<!-- <li *ngFor="let item of myData">
+  {{item.id}}            
+</li>      -->   
+<!-- <a routerLink="newuser"><button class="btn btn-success pull-right" > Add User</button></a> -->
 
-<div *ngFor="let d of myData">
-  {{d}}     
-</div>
+<h1>Zurik</h1>        
+  <nav>
+    <a routerLink="/crisis-center" routerLinkActive="active">List Users</a>
+    <a routerLink="/heroes" routerLinkActive="active">Add User</a>  
+  </nav>       
+  <router-outlet></router-outlet>
 
-<li *ngFor="let item of myData">
-  {{item}}
-</li>
+
+ 

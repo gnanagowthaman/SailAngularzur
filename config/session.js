@@ -96,5 +96,7 @@ module.exports.session = {
   //     ssl: true
   //   }
   // }
-
+  cookie: {
+    maxAge: 15*60*1000
+  }  
 };

@@ -27,7 +27,7 @@ module.exports = "\nbody {\n  font-family: \"Lato\", sans-serif;\n  font-size: 1
 /***/ "./assets/app/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    \n\n<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\n\n<pre>{{myData | json}}</pre>\n\n<div *ngFor=\"let d of myData\">\n  {{d}}     \n</div>\n\n<li *ngFor=\"let item of myData\">\n  {{item}}\n</li>"
+module.exports = "<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\n\n<!-- <pre>{{myData | json}}</pre> -->\n               \n<!-- <div *ngFor=\"let d of myData\">\n  {{d}}                        \n</div>                \n-->\n<!-- <li *ngFor=\"let item of myData\">\n  {{item.id}}            \n</li>      -->   \n<!-- <a routerLink=\"newuser\"><button class=\"btn btn-success pull-right\" > Add User</button></a> -->\n\n<h1>Zurik</h1>        \n  <nav>\n    <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">List Users</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Add User</a>  \n  </nav>       \n  <router-outlet></router-outlet>\n\n\n "
 
 /***/ }),
 
@@ -56,25 +56,42 @@ var AppComponent = /** @class */ (function () {
         this._demoService = _demoService;
         this.http = http;
         this.title = 'app';
-        this.goodResponse = [];
+        this.btnClick = function () {
+            window.location.href = 'http://localhost:1337/forw';
+            // this.router.navigate(['http://localhost:1337/newuser']);
+        };
     }
     AppComponent.prototype.ngOnInit = function () {
-        //this.getFoods();
         var _this = this;
-        this.http.get('http://localhost:1337/user').subscribe(function (data) {
+        //this.getFoods();                  
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/user', { headers: headers }).subscribe(function (data) {
             _this.myData = data;
             console.log(data);
-        }, function (error) {
-            alert("ERROR");
         });
-        var evilResponseProps = Object.keys(this.myData);
-        for (var _i = 0, evilResponseProps_1 = evilResponseProps; _i < evilResponseProps_1.length; _i++) {
-            var prop = evilResponseProps_1[_i];
-            this.myData.push(evilResponseProps[prop]);
-        }
+        // this.http.get('http://localhost:1337/user',{withCredentials:true}).subscribe((res: any[]) => {
+        //   console.log(res);
+        //   this.myData = res;  
+        // });  
+    };
+    AppComponent.prototype.selectAllStudentsChange = function (e) {
+        // switch inactive checked value
+        //   if (e.target.checked) {   
+        //     alert('am checked' + e);
+        //     window.location.href = 'http://localhost:1337/forw';
+        //   } else {  
+        //     alert('am sorry');
+        //   }
+        // }   
+        alert('My id is');
+    };
+    AppComponent.prototype.editHandler = function (_a) {
+        var sender = _a.sender, rowIndex = _a.rowIndex, dataItem = _a.dataItem;
+        this.myid = rowIndex;
     };
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("./assets/app/app/app.component.html"),
             styles: [__webpack_require__("./assets/app/app/app.component.css")]
@@ -108,6 +125,12 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__ = __webpack_require__("./node_modules/@progress/kendo-angular-grid/dist/es/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./assets/app/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demo_service__ = __webpack_require__("./assets/app/app/demo.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__newuser_newuser_component__ = __webpack_require__("./assets/app/app/newuser/newuser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__ = __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__list_list_component__ = __webpack_require__("./assets/app/app/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -121,20 +144,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+var appRoutes = [
+    { path: 'crisis-center', component: __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */] },
+    {
+        path: 'heroes',
+        component: __WEBPACK_IMPORTED_MODULE_7__newuser_newuser_component__["a" /* NewuserComponent */]
+    },
+    {
+        path: '',
+        redirectTo: '/crisis-center',
+        pathMatch: 'full'
+    },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__newuser_newuser_component__["a" /* NewuserComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_9__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+                ),
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_6__demo_service__["a" /* DemoService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_6__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -170,11 +218,285 @@ var DemoService = /** @class */ (function () {
     function DemoService(http) {
         this.http = http;
     }
+    // Uses http.get() to load data from a single API endpoint
+    // getFoods() {
+    //     return this.http.get('http://localhost:1337/user');
+    // }
+    DemoService.prototype.getNavigate = function () {
+    };
     DemoService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], DemoService);
     return DemoService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/list/list.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/list/list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <button type=\"button\" class=\"btn btn-primary-outline pull-right\" (click)=\"btnClick();\">\n    <i class=\"fa fa-plus\"></i> Add User</button>    -->\n                        \n<kendo-grid [data]=\"myData\" [height]=\"410\">\n  <kendo-grid-column field=\"id\" title=\"ID\" width=\"40\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"user_name\" title=\"Name\" width=\"250\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"type\" title=\"Category\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"access_reg\" title=\"Access\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"access1_reg\" title=\"Access 1\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"mobile_no\" title=\"Mobile\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"email_id\" title=\"Email\" width=\"80\">\n  </kendo-grid-column>\n  <!-- <kendo-grid-column field=\"access_geo\" title=\"Geo\" width=\"80\">\n  </kendo-grid-column> -->          \n  <kendo-grid-column field=\"renewal_date\" title=\"Date\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"Discontinued\" title=\"Edit\" width=\"120\">\n      <ng-template kendoGridCellTemplate let-dataItem>\n          <input type=\"checkbox\" (click)=\"selectAllStudentsChange($event)\"   \n          [checked]=\"dataItem.Discontinued\"/>\n      </ng-template>\n  </kendo-grid-column>       \n  <kendo-grid-column field=\"Discontinued\" title=\"Delete\" width=\"120\">\n    <ng-template kendoGridCellTemplate let-dataItem>\n        <input type=\"checkbox\" [checked]=\"dataItem.Discontinued\"/>\n    </ng-template>\n</kendo-grid-column>\n</kendo-grid>"
+
+/***/ }),
+
+/***/ "./assets/app/app/list/list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ListComponent = /** @class */ (function () {
+    function ListComponent(http) {
+        this.http = http;
+    }
+    ListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/user', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+    };
+    ListComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-list',
+            template: __webpack_require__("./assets/app/app/list/list.component.html"),
+            styles: [__webpack_require__("./assets/app/app/list/list.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], ListComponent);
+    return ListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/newuser/newuser.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/newuser/newuser.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n\n    <div class=\"form-group\">\n      <label for=\"usr\">Name:</label>\n      <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"center-block\">Mobile No:\n        <input class=\"form-control\" formControlName=\"mob\">\n      </label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Subscription:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Access:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"full\">Full</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"restricted\">Restricted</label>\n    </div>\n    <div class=\"checkbox\">\n      <h4>Alert Type:</h4>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\">Sms\n      </label>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"web\">Web\n      </label>\n      <label class=\"center-block\">              \n        <input type=\"checkbox\" formControlName=\"ale\" value=\"email\">E-mail\n      </label>\n    </div>\n    <div class=\"form-group\">                          \n      <label class=\"center-block\">Geography  \n        <select class=\"form-control\" formControlName=\"geo\">     \n          <option *ngFor=\"let geo of requests\" [value]=\"geo\">{{geo.name}}</option>       \n        </select>\n      </label>                    \n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Country\n        <select class=\"form-control\" formControlName=\"st\">                       \n          <option *ngFor=\"let rstate of regRequest.countryCollection\" [value]=\"rstate\">{{rstate.id}}</option>      \n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State     \n        <select class=\"form-control\" formControlName=\"st\">               \n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">       \n      <label class=\"center-block\">Regulation\n        <select class=\"form-control\" formControlName=\"reg\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>  \n    <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n    <input type=\"button\" value=\"cancel\">\n  </form>\n</div>\n<p>\n  Username entered is : {{usr}}     \n</p>"
+
+/***/ }),
+
+/***/ "./assets/app/app/newuser/newuser.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewuserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NewuserComponent = /** @class */ (function () {
+    function NewuserComponent(fb, http, _http) {
+        this.fb = fb;
+        this.http = http;
+        this._http = _http;
+        this.createForm();
+    }
+    NewuserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        // this.http.get('http://localhost:1337/getRegbygeostate', { headers: headers }).subscribe(
+        //   data => {
+        //     this.Regbygeostate = data
+        //     console.log(data);
+        //   });
+        // this.http.get('http://localhost:1337/geographys', { headers: headers }).subscribe(
+        //   data => {
+        //     this.geographys = data
+        //     console.log(data);   
+        //   });
+        // this.requests = this._http.getRequest().subscribe(res => { this.requests = res; console.log(this.requests) });   
+        console.log("before loading this requests");
+        this._http.getRequest().subscribe(function (res) { _this.requests = res; console.log(_this.requests); });
+        console.log("before loading GeoBy register this requests");
+        this._http.getRegByGeo().subscribe(function (res) { _this.regRequest = res; console.log(_this.regRequest); });
+        // this.formdata = new FormGroup({
+        //   usr: new FormControl("", Validators.compose([
+        //     Validators.required
+        //   ])),          
+        //   pwd: new FormControl('', Validators.required)
+        // });
+    };
+    // pwdvalidation(formcontrol) {
+    //   if (formcontrol.value.length < 5) {     
+    //     return { "pwd": true };   
+    //   }
+    // }
+    // onClickSubmit(data) {
+    //   this.usr = data.usr;
+    // }
+    NewuserComponent.prototype.createForm = function () {
+        this.formdata = this.fb.group({
+            usr: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required],
+            pwd: '',
+            mob: '',
+            sub: '',
+            acc: '',
+            ale: '',
+            geo: '',
+            st: '',
+            reg: '',
+            sidekick: ''
+        });
+    };
+    NewuserComponent.prototype.onClickSubmit = function (data) {
+        this.usr = data.usr;
+        this.pwd = data.pwd;
+        this.mob = data.mob;
+        this.sub = data.sub;
+        this.acc = data.acc;
+        this.ale = data.ale;
+        this.geo = data.geo;
+        this.st = data.st;
+        this.reg = data.reg;
+    };
+    NewuserComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-newuser',
+            template: __webpack_require__("./assets/app/app/newuser/newuser.component.html"),
+            styles: [__webpack_require__("./assets/app/app/newuser/newuser.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */]])
+    ], NewuserComponent);
+    return NewuserComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/newuser/request.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RequestService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RequestService = /** @class */ (function () {
+    function RequestService(http) {
+        this.http = http;
+    }
+    RequestService.prototype.getRequest = function () {
+        return this.http.get("http://localhost:1337/geographys").map(function (res) { return res; });
+    };
+    RequestService.prototype.getRegByGeo = function () {
+        return this.http.get("http://localhost:1337/getRegbygeostate").map(function (res) { return res; });
+    };
+    RequestService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], RequestService);
+    return RequestService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/page-not-found/page-not-found.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/page-not-found/page-not-found.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  page-not-found works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./assets/app/app/page-not-found/page-not-found.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNotFoundComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PageNotFoundComponent = /** @class */ (function () {
+    function PageNotFoundComponent() {
+    }
+    PageNotFoundComponent.prototype.ngOnInit = function () {
+    };
+    PageNotFoundComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-page-not-found',
+            template: __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.html"),
+            styles: [__webpack_require__("./assets/app/app/page-not-found/page-not-found.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
 
 
@@ -211,7 +533,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

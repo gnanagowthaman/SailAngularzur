@@ -16,4 +16,7 @@ export class DemoService {
     // getFoods() {
     //     return this.http.get('http://localhost:1337/user');
     // }
+    getNavigate(){
+        
+    }
 }

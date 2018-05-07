@@ -83,7 +83,8 @@ module.exports = {
                                       return res.redirect('/adminDashboard');
                                     } else if (user.role_id == sails.config.globalmodels.CLIENT) {
                                       console.log('from userDashboard0');
-                                      return res.redirect('/userDashboard');
+                                    return res.redirect('/userDashboard');   
+                                    //return res.json(200, { errCode: 500 , errMsg: 'success occurred while login.' });
                                     } else  {
                                        
                                       // return res.redirect('/adminDashboard');

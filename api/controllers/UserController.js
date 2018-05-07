@@ -251,7 +251,7 @@ module.exports = {
             }        
           });          
         }
-      ], function(err) {
+      ], function(err) {   
             if (err) {                
               return res.json(500, { errCode: 500 , errMsg: 'Error occurred while updating User.Please contact Administrator.' });
             } else {

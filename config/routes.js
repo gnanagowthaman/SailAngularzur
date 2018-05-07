@@ -37,7 +37,9 @@ module.exports.routes = {
   // '/': {
   //  view: 'login',locals:{message:''}  
   // },            
-  
+  '/forw':{     
+    view:'edithomepage'  
+  },
   'get /forgotpass' : {
     view :'forgot-password'
   },
@@ -61,7 +63,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   'POST /locallogin': 'AuthController.locallogin',
-  'POST /createUser' : 'UserController.create',
+  'POST /createUser' : 'UserController.create',     
   'POST /updateUser' : 'UserController.update',
   'GET /user/:id' : 'UserController.findOne',
   'GET /findRegByGeo4Create' : 'RegulationController.findByGeo4Create',

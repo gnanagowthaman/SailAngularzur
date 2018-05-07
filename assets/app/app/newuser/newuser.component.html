@@ -1,0 +1,81 @@
+<div>
+  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" formControlName="usr">
+    </div>
+
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" formControlName="pwd">
+    </div>
+
+    <div class="form-group">
+      <label class="center-block">Mobile No:
+        <input class="form-control" formControlName="mob">
+      </label>
+    </div>
+
+    <div class="form-group radio">
+      <h4>Subscription:</h4>
+      <label class="center-block">
+        <input type="radio" formControlName="sub" value="paid">Paid Subscription</label>
+      <label class="center-block">
+        <input type="radio" formControlName="sub" value="trail">Free Trial</label>
+    </div>
+
+    <div class="form-group radio">
+      <h4>Access:</h4>
+      <label class="center-block">
+        <input type="radio" formControlName="acc" value="full">Full</label>
+      <label class="center-block">
+        <input type="radio" formControlName="acc" value="restricted">Restricted</label>
+    </div>
+    <div class="checkbox">
+      <h4>Alert Type:</h4>
+      <label class="center-block">
+        <input type="checkbox" formControlName="ale" value="sms">Sms
+      </label>
+      <label class="center-block">
+        <input type="checkbox" formControlName="ale" value="web">Web
+      </label>
+      <label class="center-block">              
+        <input type="checkbox" formControlName="ale" value="email">E-mail
+      </label>
+    </div>
+    <div class="form-group">                          
+      <label class="center-block">Geography  
+        <select class="form-control" formControlName="geo">     
+          <option *ngFor="let geo of requests" [value]="geo">{{geo.name}}</option>       
+        </select>
+      </label>                    
+    </div>
+    <div class="form-group">
+      <label class="center-block">Country
+        <select class="form-control" formControlName="st">                       
+          <option *ngFor="let rstate of regRequest.countryCollection" [value]="rstate">{{rstate.id}}</option>      
+        </select>
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="center-block">State     
+        <select class="form-control" formControlName="st">               
+          <option *ngFor="let state of states" [value]="state">{{state}}</option>
+        </select>
+      </label>
+    </div>
+    <div class="form-group">       
+      <label class="center-block">Regulation
+        <select class="form-control" formControlName="reg">
+          <option *ngFor="let state of states" [value]="state">{{state}}</option>
+        </select>
+      </label>
+    </div>  
+    <input type="submit" class="forsubmit" value="Save">
+    <input type="button" value="cancel">
+  </form>
+</div>
+<p>
+  Username entered is : {{usr}}     
+</p>
