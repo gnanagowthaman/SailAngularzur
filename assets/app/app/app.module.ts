@@ -8,12 +8,12 @@ import { FormsModule } from '@angular/forms';
 import { DemoService } from './demo.service';
 import { NewuserComponent } from './newuser/newuser.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms'; 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListComponent } from './list/list.component';
 import { RequestService } from './newuser/request.service';       
 const appRoutes: Routes = [
-  { path: 'crisis-center', component: ListComponent },
+  { path: 'crisis-center', component: ListComponent },  
   {
     path: 'heroes',
     component: NewuserComponent
@@ -28,7 +28,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NewuserComponent,
+    NewuserComponent,  
     PageNotFoundComponent,
     ListComponent,
   ],
@@ -36,6 +36,7 @@ const appRoutes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

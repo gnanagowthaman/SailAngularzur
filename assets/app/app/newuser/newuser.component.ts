@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { Response } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { RequestService } from './request.service';
+import { Iterator } from '@progress/kendo-angular-grid/dist/es2015/data/data.iterators';
 @Component({
   selector: 'app-newuser',
   templateUrl: './newuser.component.html',
@@ -15,12 +16,23 @@ export class NewuserComponent implements OnInit {
   //formdata;
   Regbygeostate: any;
   requests;
+  userCollectCountry;
+  userCollectState;
+  userCollectRegulation;
+  userCollectGeo;
   regRequest;
   geographys: any;
   usr: any;
   pwd: any; mob: any; sub: any; acc: any; ale: any; geo: any; st: any; reg: any;
   formdata: FormGroup;
   jdata: Object;
+  selectedCountry = 0;
+  selectedState = 0;
+  selectedReg = 0;
+  title = 'app';
+  states = [];
+  cities = [];
+  regulation = [];
   constructor(private fb: FormBuilder, private http: HttpClient, private _http: RequestService) {
     this.createForm();
 
@@ -43,7 +55,15 @@ export class NewuserComponent implements OnInit {
     console.log("before loading this requests")
     this._http.getRequest().subscribe(res => { this.requests = res; console.log(this.requests) });
     console.log("before loading GeoBy register this requests")
-    this._http.getRegByGeo().subscribe(res => { this.regRequest = res; console.log(this.regRequest) });  
+    this._http.getRegByGeo().subscribe(res => {
+      this.regRequest = res;
+      console.log(this.regRequest)
+      this.userCollectCountry = this.regRequest.countryCollection;
+      this.userCollectState = this.regRequest.stateCollection;
+      this.userCollectRegulation = this.regRequest.regCollection;
+      this.userCollectGeo = this.regRequest.usergeoCollection;
+      console.log(this.userCollectCountry, this.userCollectState, this.userCollectRegulation, this.userCollectGeo)
+    });
     // this.formdata = new FormGroup({
     //   usr: new FormControl("", Validators.compose([
     //     Validators.required
@@ -85,6 +105,29 @@ export class NewuserComponent implements OnInit {
     this.geo = data.geo;
     this.st = data.st;
     this.reg = data.reg;
+  } Iterator
+  onSelectCountry(country_id: number) {
+    this.selectedCountry = country_id;
+    this.selectedState = 0;
+    this.cities = [];
+    this.states = this.userCollectCountry.filter((item) => {
+      console.log(item.gid, country_id)
+      return item.gid === Number(country_id)
+    });
+  }
+  onSelectState(state_id: number) {
+    this.selectedState = state_id;
+    this.cities = this.userCollectState.filter((item) => {
+      console.log(item.gid, state_id)
+      return item.gid === Number(state_id)
+    });
+  }
+  onSelectReg(reg_id: number) {
+    this.selectedReg = reg_id;
+    this.regulation = this.userCollectRegulation.filter((item) => {
+      console.log(item.geography_id, reg_id)
+      return item.geography_id == Number(reg_id)
+    });
   }
 
 }

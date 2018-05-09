@@ -12,4 +12,5 @@ export class RequestService {
   getRegByGeo(){
     return this.http.get("http://localhost:1337/getRegbygeostate").map(res => res);  
   }
+  
 }

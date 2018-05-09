@@ -1,7 +1,7 @@
-<div>
+<!-- <div>
   <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
 
-    <div class="form-group">
+    <div class="form-group">    
       <label for="usr">Name:</label>
       <input type="text" class="form-control" formControlName="usr">
     </div>
@@ -75,7 +75,44 @@
     <input type="submit" class="forsubmit" value="Save">
     <input type="button" value="cancel">
   </form>
-</div>
+</div>          
 <p>
   Username entered is : {{usr}}     
-</p>
+</p> -->      
+<div class="form-group">
+  <label class="control-label" for="Country">Geography</label>  
+  <select *ngIf="requests" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event.target.value)" class="form-control input-lg" id="country"
+     >
+     <option value="0">Select Country</option>
+    <option *ngFor="let country of requests" value= {{country.id}}>{{country.name}}</option>  
+  </select>    
+</div>
+<div class="form-group">
+  <label class="control-label" for="States">Country</label>
+  <select *ngIf="states" [(ngModel)]="selectedState" (change)="onSelectState($event.target.value)" class="form-control input-lg" id="state">
+      <option value="0">Select State</option>
+    <option *ngFor="let state of states" value= {{state.gid}}>{{state.name}}</option>
+  </select>
+</div>    
+<!-- <div class="form-group">
+  <label class="control-label" for="City">State</label>
+  <select class="form-control input-lg" id="city">
+      <option *ngIf="!selectedState" value="0">Select City</option>
+      <option *ngFor="let city of cities" value= {{city.gid}}>{{city.name}}</option>
+  </select>
+</div> -->
+     
+<div class="form-group">
+  <label class="control-label" for="States">State</label>
+  <select *ngIf="states" [(ngModel)]="selectedReg" (change)="onSelectReg($event.target.value)" class="form-control input-lg" id="state">
+      <option value="0">Select State</option>
+      <option *ngFor="let city of cities" value= {{city.gid}}>{{city.name}}</option>
+  </select>
+</div>      
+<div class="form-group">      
+  <label class="control-label" for="City">Regulation</label>        
+  <select class="form-control input-lg" id="city">       
+      <option *ngIf="!selectedReg" value="0">Select Reg</option>   
+      <option *ngFor="let re of regulation" value= {{re.gid}}>{{re.name}}</option>
+  </select>
+</div>  
