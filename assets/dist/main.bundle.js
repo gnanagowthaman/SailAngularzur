@@ -307,7 +307,7 @@ module.exports = ""
 /***/ "./assets/app/app/newuser/newuser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div>\n  <form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n\n    <div class=\"form-group\">    \n      <label for=\"usr\">Name:</label>\n      <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"center-block\">Mobile No:\n        <input class=\"form-control\" formControlName=\"mob\">\n      </label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Subscription:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Access:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"full\">Full</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"restricted\">Restricted</label>\n    </div>\n    <div class=\"checkbox\">\n      <h4>Alert Type:</h4>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\">Sms\n      </label>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"web\">Web\n      </label>\n      <label class=\"center-block\">              \n        <input type=\"checkbox\" formControlName=\"ale\" value=\"email\">E-mail\n      </label>\n    </div>\n    <div class=\"form-group\">                          \n      <label class=\"center-block\">Geography  \n        <select class=\"form-control\" formControlName=\"geo\">     \n          <option *ngFor=\"let geo of requests\" [value]=\"geo\">{{geo.name}}</option>       \n        </select>\n      </label>                    \n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Country\n        <select class=\"form-control\" formControlName=\"st\">                       \n          <option *ngFor=\"let rstate of regRequest.countryCollection\" [value]=\"rstate\">{{rstate.id}}</option>      \n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State     \n        <select class=\"form-control\" formControlName=\"st\">               \n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">       \n      <label class=\"center-block\">Regulation\n        <select class=\"form-control\" formControlName=\"reg\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>  \n    <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n    <input type=\"button\" value=\"cancel\">\n  </form>\n</div>          \n<p>\n  Username entered is : {{usr}}     \n</p> -->      \n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"Country\">Geography</label>  \n  <select *ngIf=\"requests\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\" id=\"country\"\n     >\n     <option value=\"0\">Select Country</option>\n    <option *ngFor=\"let country of requests\" value= {{country.id}}>{{country.name}}</option>  \n  </select>    \n</div>\n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"States\">Country</label>\n  <select *ngIf=\"states\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\" id=\"state\">\n      <option value=\"0\">Select State</option>\n    <option *ngFor=\"let state of states\" value= {{state.gid}}>{{state.name}}</option>\n  </select>\n</div>    \n<!-- <div class=\"form-group\">\n  <label class=\"control-label\" for=\"City\">State</label>\n  <select class=\"form-control input-lg\" id=\"city\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select City</option>\n      <option *ngFor=\"let city of cities\" value= {{city.gid}}>{{city.name}}</option>\n  </select>\n</div> -->\n\n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"States\">State</label>\n  <select *ngIf=\"states\" [(ngModel)]=\"selectedReg\" (change)=\"onSelectReg($event.target.value)\" class=\"form-control input-lg\" id=\"state\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let city of cities\" value= {{city.gid}}>{{city.name}}</option>\n  </select>\n</div>      \n<div class=\"form-group\">      \n  <label class=\"control-label\" for=\"City\">Regulation</label>        \n  <select class=\"form-control input-lg\" id=\"city\">       \n      <option *ngIf=\"!selectedReg\" value=\"0\">Select Reg</option>   \n      <option *ngFor=\"let re of regulation\" value= {{re.gid}}>{{re.name}}</option>\n  </select>\n</div>  "
+module.exports = "<!-- <div>\n  <form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n\n    <div class=\"form-group\">    \n      <label for=\"usr\">Name:</label>\n      <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"center-block\">Mobile No:\n        <input class=\"form-control\" formControlName=\"mob\">\n      </label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Subscription:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Access:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"full\">Full</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"restricted\">Restricted</label>\n    </div>\n    <div class=\"checkbox\">\n      <h4>Alert Type:</h4>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\">Sms\n      </label>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"web\">Web\n      </label>\n      <label class=\"center-block\">              \n        <input type=\"checkbox\" formControlName=\"ale\" value=\"email\">E-mail\n      </label>\n    </div>\n    <div class=\"form-group\">                          \n      <label class=\"center-block\">Geography  \n        <select class=\"form-control\" formControlName=\"geo\">     \n          <option *ngFor=\"let geo of requests\" [value]=\"geo\">{{geo.name}}</option>       \n        </select>\n      </label>                    \n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Country\n        <select class=\"form-control\" formControlName=\"st\">                       \n          <option *ngFor=\"let rstate of regRequest.countryCollection\" [value]=\"rstate\">{{rstate.id}}</option>      \n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State     \n        <select class=\"form-control\" formControlName=\"st\">               \n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">       \n      <label class=\"center-block\">Regulation\n        <select class=\"form-control\" formControlName=\"reg\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>  \n    <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n    <input type=\"button\" value=\"cancel\">\n  </form>\n</div>          \n<p>\n  Username entered is : {{usr}}     \n</p> -->      \n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"Geography\">Geography</label>  \n  <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" (change)=\"onSelectGeography($event.target.value)\" class=\"form-control input-lg\" id=\"Geography\"\n     >\n     <option value=\"0\">Select Geography</option>    \n    <option *ngFor=\"let geograph of requests\" value= {{geograph.id}}>{{geograph.name}}</option>  \n  </select>    \n</div>\n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"Country\">Country</label>\n  <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\" id=\"Country\">\n      <option value=\"0\">Select Country</option>    \n    <option *ngFor=\"let cout of countryVal\" value= {{cout.gid}}>{{cout.name}}</option>\n  </select>\n</div>        \n<!-- <div class=\"form-group\">\n  <label class=\"control-label\" for=\"City\">State</label>\n  <select class=\"form-control input-lg\" id=\"city\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select City</option>\n      <option *ngFor=\"let city of cities\" value= {{city.gid}}>{{city.name}}</option>\n  </select>\n</div> -->\n     \n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"States\">State</label>\n  <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\" id=\"States\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value= {{stat.gid}}>{{stat.name}}</option>\n  </select>\n</div>      \n<div class=\"form-group\">      \n  <label class=\"control-label\" for=\"Regulation\">Regulation</label>          \n  <select class=\"form-control input-lg\" id=\"Regulation\">                         \n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>        \n      <option *ngFor=\"let reg of regulationVal\" value= {{reg.geography_id}}>{{reg.name}}</option>\n  </select>\n</div>  "
 
 /***/ }),
 
@@ -338,13 +338,13 @@ var NewuserComponent = /** @class */ (function () {
         this.fb = fb;
         this.http = http;
         this._http = _http;
+        this.selecteGeography = 0;
         this.selectedCountry = 0;
         this.selectedState = 0;
-        this.selectedReg = 0;
         this.title = 'app';
-        this.states = [];
-        this.cities = [];
-        this.regulation = [];
+        this.countryVal = [];
+        this.stateVal = [];
+        this.regulationVal = [];
         this.createForm();
     }
     NewuserComponent.prototype.ngOnInit = function () {
@@ -414,27 +414,30 @@ var NewuserComponent = /** @class */ (function () {
         this.st = data.st;
         this.reg = data.reg;
     };
+    NewuserComponent.prototype.onSelectGeography = function (geography_id) {
+        this.selecteGeography = geography_id;
+        this.selectedCountry = 0;
+        this.stateVal = [];
+        this.regulationVal = [];
+        this.countryVal = this.userCollectCountry.filter(function (item) {
+            console.log("country id", item.gid, "geography id", geography_id);
+            return item.gid === Number(geography_id);
+        });
+    };
     NewuserComponent.prototype.onSelectCountry = function (country_id) {
         this.selectedCountry = country_id;
         this.selectedState = 0;
-        this.cities = [];
-        this.states = this.userCollectCountry.filter(function (item) {
-            console.log(item.gid, country_id);
+        this.regulationVal = [];
+        this.stateVal = this.userCollectState.filter(function (item) {
+            console.log("state id", item.gid, "country id", country_id);
             return item.gid === Number(country_id);
         });
     };
     NewuserComponent.prototype.onSelectState = function (state_id) {
         this.selectedState = state_id;
-        this.cities = this.userCollectState.filter(function (item) {
-            console.log(item.gid, state_id);
-            return item.gid === Number(state_id);
-        });
-    };
-    NewuserComponent.prototype.onSelectReg = function (reg_id) {
-        this.selectedReg = reg_id;
-        this.regulation = this.userCollectRegulation.filter(function (item) {
-            console.log(item.geography_id, reg_id);
-            return item.geography_id == Number(reg_id);
+        this.regulationVal = this.userCollectRegulation.filter(function (item) {
+            console.log("geography id", item.geography_id, "state id", state_id);
+            return item.geography_id == Number(state_id);
         });
     };
     NewuserComponent = __decorate([

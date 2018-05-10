@@ -26,18 +26,18 @@ export class NewuserComponent implements OnInit {
   pwd: any; mob: any; sub: any; acc: any; ale: any; geo: any; st: any; reg: any;
   formdata: FormGroup;
   jdata: Object;
+  selecteGeography = 0;
   selectedCountry = 0;
   selectedState = 0;
-  selectedReg = 0;
   title = 'app';
-  states = [];
-  cities = [];
-  regulation = [];
+  countryVal = [];
+  stateVal = [];
+  regulationVal = [];
   constructor(private fb: FormBuilder, private http: HttpClient, private _http: RequestService) {
     this.createForm();
-
+      
   }
-
+     
   ngOnInit() {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
@@ -106,27 +106,30 @@ export class NewuserComponent implements OnInit {
     this.st = data.st;
     this.reg = data.reg;
   } Iterator
+  onSelectGeography(geography_id: number) {
+    this.selecteGeography = geography_id;
+    this.selectedCountry = 0;
+    this.stateVal = [];
+    this.regulationVal = [];
+    this.countryVal = this.userCollectCountry.filter((item) => {
+      console.log("country id", item.gid, "geography id", geography_id)
+      return item.gid === Number(geography_id)
+    });
+  }
   onSelectCountry(country_id: number) {
     this.selectedCountry = country_id;
     this.selectedState = 0;
-    this.cities = [];
-    this.states = this.userCollectCountry.filter((item) => {
-      console.log(item.gid, country_id)
+    this.regulationVal = [];
+    this.stateVal = this.userCollectState.filter((item) => {
+      console.log("state id", item.gid, "country id", country_id)
       return item.gid === Number(country_id)
     });
   }
   onSelectState(state_id: number) {
     this.selectedState = state_id;
-    this.cities = this.userCollectState.filter((item) => {
-      console.log(item.gid, state_id)
-      return item.gid === Number(state_id)
-    });
-  }
-  onSelectReg(reg_id: number) {
-    this.selectedReg = reg_id;
-    this.regulation = this.userCollectRegulation.filter((item) => {
-      console.log(item.geography_id, reg_id)
-      return item.geography_id == Number(reg_id)
+    this.regulationVal = this.userCollectRegulation.filter((item) => {
+      console.log("geography id", item.geography_id, "state id", state_id)
+      return item.geography_id == Number(state_id)
     });
   }
 

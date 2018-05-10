@@ -80,20 +80,20 @@
   Username entered is : {{usr}}     
 </p> -->      
 <div class="form-group">
-  <label class="control-label" for="Country">Geography</label>  
-  <select *ngIf="requests" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event.target.value)" class="form-control input-lg" id="country"
+  <label class="control-label" for="Geography">Geography</label>  
+  <select *ngIf="requests" [(ngModel)]="selecteGeography" (change)="onSelectGeography($event.target.value)" class="form-control input-lg" id="Geography"
      >
-     <option value="0">Select Country</option>
-    <option *ngFor="let country of requests" value= {{country.id}}>{{country.name}}</option>  
+     <option value="0">Select Geography</option>    
+    <option *ngFor="let geograph of requests" value= {{geograph.id}}>{{geograph.name}}</option>  
   </select>    
 </div>
 <div class="form-group">
-  <label class="control-label" for="States">Country</label>
-  <select *ngIf="states" [(ngModel)]="selectedState" (change)="onSelectState($event.target.value)" class="form-control input-lg" id="state">
-      <option value="0">Select State</option>
-    <option *ngFor="let state of states" value= {{state.gid}}>{{state.name}}</option>
+  <label class="control-label" for="Country">Country</label>
+  <select *ngIf="countryVal" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event.target.value)" class="form-control input-lg" id="Country">
+      <option value="0">Select Country</option>    
+    <option *ngFor="let cout of countryVal" value= {{cout.gid}}>{{cout.name}}</option>
   </select>
-</div>    
+</div>        
 <!-- <div class="form-group">
   <label class="control-label" for="City">State</label>
   <select class="form-control input-lg" id="city">
@@ -104,15 +104,15 @@
      
 <div class="form-group">
   <label class="control-label" for="States">State</label>
-  <select *ngIf="states" [(ngModel)]="selectedReg" (change)="onSelectReg($event.target.value)" class="form-control input-lg" id="state">
+  <select *ngIf="stateVal" [(ngModel)]="selectedState" (change)="onSelectState($event.target.value)" class="form-control input-lg" id="States">
       <option value="0">Select State</option>
-      <option *ngFor="let city of cities" value= {{city.gid}}>{{city.name}}</option>
+      <option *ngFor="let stat of stateVal" value= {{stat.gid}}>{{stat.name}}</option>
   </select>
 </div>      
 <div class="form-group">      
-  <label class="control-label" for="City">Regulation</label>        
-  <select class="form-control input-lg" id="city">       
-      <option *ngIf="!selectedReg" value="0">Select Reg</option>   
-      <option *ngFor="let re of regulation" value= {{re.gid}}>{{re.name}}</option>
+  <label class="control-label" for="Regulation">Regulation</label>          
+  <select class="form-control input-lg" id="Regulation">                         
+      <option *ngIf="!selectedState" value="0">Select Reg</option>        
+      <option *ngFor="let reg of regulationVal" value= {{reg.geography_id}}>{{reg.name}}</option>
   </select>
 </div>  
