@@ -1,118 +1,79 @@
-<!-- <div>
-  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+<form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+  <div class="form-group">
+    <label for="usr">Name:</label>
+    <input type="text" class="form-control" formControlName="usr">
+  </div>    
 
-    <div class="form-group">    
-      <label for="usr">Name:</label>
-      <input type="text" class="form-control" formControlName="usr">
-    </div>
+  <div class="form-group">
+    <label for="pwd">Email:</label>
+    <input type="text" class="form-control" formControlName="pwd">
+  </div>
 
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" formControlName="pwd">
-    </div>
+  <div class="form-group">
+    <label class="center-block">Mobile No:
+      <input class="form-control" formControlName="mob">
+    </label>
+  </div>
 
-    <div class="form-group">
-      <label class="center-block">Mobile No:
-        <input class="form-control" formControlName="mob">
-      </label>
-    </div>
+  <div class="form-group radio">
+    <h4>Subscription:</h4>
+    <label class="center-block">
+      <input type="radio" formControlName="sub" value="paid">Paid Subscription</label>
+    <label class="center-block">
+      <input type="radio" formControlName="sub" value="trail">Free Trial</label>
+  </div>
 
-    <div class="form-group radio">
-      <h4>Subscription:</h4>
-      <label class="center-block">
-        <input type="radio" formControlName="sub" value="paid">Paid Subscription</label>
-      <label class="center-block">
-        <input type="radio" formControlName="sub" value="trail">Free Trial</label>
-    </div>
-
-    <div class="form-group radio">
-      <h4>Access:</h4>
-      <label class="center-block">
-        <input type="radio" formControlName="acc" value="full">Full</label>
-      <label class="center-block">
-        <input type="radio" formControlName="acc" value="restricted">Restricted</label>
-    </div>
-    <div class="checkbox">
-      <h4>Alert Type:</h4>
-      <label class="center-block">
-        <input type="checkbox" formControlName="ale" value="sms">Sms
-      </label>
-      <label class="center-block">
-        <input type="checkbox" formControlName="ale" value="web">Web
-      </label>
-      <label class="center-block">              
-        <input type="checkbox" formControlName="ale" value="email">E-mail
-      </label>
-    </div>
-    <div class="form-group">                          
-      <label class="center-block">Geography  
-        <select class="form-control" formControlName="geo">     
-          <option *ngFor="let geo of requests" [value]="geo">{{geo.name}}</option>       
-        </select>
-      </label>                    
-    </div>
-    <div class="form-group">
-      <label class="center-block">Country
-        <select class="form-control" formControlName="st">                       
-          <option *ngFor="let rstate of regRequest.countryCollection" [value]="rstate">{{rstate.id}}</option>      
-        </select>
-      </label>
-    </div>
-    <div class="form-group">
-      <label class="center-block">State     
-        <select class="form-control" formControlName="st">               
-          <option *ngFor="let state of states" [value]="state">{{state}}</option>
-        </select>
-      </label>
-    </div>
-    <div class="form-group">       
-      <label class="center-block">Regulation
-        <select class="form-control" formControlName="reg">
-          <option *ngFor="let state of states" [value]="state">{{state}}</option>
-        </select>
-      </label>
-    </div>  
-    <input type="submit" class="forsubmit" value="Save">
-    <input type="button" value="cancel">
-  </form>
-</div>          
-<p>
-  Username entered is : {{usr}}     
-</p> -->      
-<div class="form-group">
-  <label class="control-label" for="Geography">Geography</label>  
-  <select *ngIf="requests" [(ngModel)]="selecteGeography" (change)="onSelectGeography($event.target.value)" class="form-control input-lg" id="Geography"
-     >
-     <option value="0">Select Geography</option>    
-    <option *ngFor="let geograph of requests" value= {{geograph.id}}>{{geograph.name}}</option>  
-  </select>    
-</div>
-<div class="form-group">
-  <label class="control-label" for="Country">Country</label>
-  <select *ngIf="countryVal" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event.target.value)" class="form-control input-lg" id="Country">
-      <option value="0">Select Country</option>    
-    <option *ngFor="let cout of countryVal" value= {{cout.gid}}>{{cout.name}}</option>
-  </select>
-</div>        
-<!-- <div class="form-group">
-  <label class="control-label" for="City">State</label>
-  <select class="form-control input-lg" id="city">
-      <option *ngIf="!selectedState" value="0">Select City</option>
-      <option *ngFor="let city of cities" value= {{city.gid}}>{{city.name}}</option>
-  </select>
-</div> -->
-     
-<div class="form-group">
-  <label class="control-label" for="States">State</label>
-  <select *ngIf="stateVal" [(ngModel)]="selectedState" (change)="onSelectState($event.target.value)" class="form-control input-lg" id="States">
+  <div class="form-group radio">
+    <h4>Access:</h4>
+    <label class="center-block">
+      <input type="radio" formControlName="acc" value="full" [(ngModel)]="acc" (change)="handleChange($event)">Full</label>
+    <label class="center-block">
+      <input type="radio" formControlName="acc" value="restricted" [(ngModel)]="acc" (change)="handleChangeRest($event)">Restricted</label>
+  </div>
+  <div class="checkbox">
+    <h4>Alert Type:</h4>
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="sms" class="classImLookingFor">Sms
+    </label>
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="web" class="classImLookingFor">Web
+    </label>
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="email" class="classImLookingFor">E-mail
+    </label>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="Geography">Geography</label>
+    <select *ngIf="requests" [(ngModel)]="selecteGeography" (change)="onSelectGeography($event.target.value)" class="form-control input-lg"
+      id="Geography">
+      <option value="0">Select Geography</option>
+      <option *ngFor="let geograph of requests" value={{geograph.id}}>{{geograph.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="Country">Country</label>
+    <select *ngIf="countryVal" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event.target.value)" class="form-control input-lg"
+      id="Country">
+      <option value="0">Select Country</option>
+      <option *ngFor="let cout of countryVal" value={{cout.gid}}>{{cout.name}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="States">State</label>
+    <select *ngIf="stateVal" [(ngModel)]="selectedState" (change)="onSelectState($event.target.value)" class="form-control input-lg"
+      id="States">
       <option value="0">Select State</option>
-      <option *ngFor="let stat of stateVal" value= {{stat.gid}}>{{stat.name}}</option>
-  </select>
-</div>      
-<div class="form-group">      
-  <label class="control-label" for="Regulation">Regulation</label>          
-  <select class="form-control input-lg" id="Regulation">                         
-      <option *ngIf="!selectedState" value="0">Select Reg</option>        
-      <option *ngFor="let reg of regulationVal" value= {{reg.geography_id}}>{{reg.name}}</option>
-  </select>
-</div>  
+      <option *ngFor="let stat of stateVal" value={{stat.gid}}>{{stat.name}}</option>
+    </select>            
+  </div>          
+  <div class="form-group">
+    <label class="control-label" for="Regulation">Regulation</label>
+    <select class="form-control input-lg" id="Regulation">
+      <option *ngIf="!selectedState" value="0">Select Reg</option>
+      <option *ngFor="let reg of regulationVal" value={{reg.geography_id}}>{{reg.name}}</option>
+    </select>
+  </div>
+
+  <input type="submit" class="forsubmit" value="Save">
+  <input type="button" value="cancel">
+</form>

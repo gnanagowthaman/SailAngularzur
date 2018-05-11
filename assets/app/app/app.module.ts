@@ -38,8 +38,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes,  
+     // { enableTracing: true } // <-- debugging purposes only
     ),
     BrowserModule, BrowserAnimationsModule, GridModule
   ],

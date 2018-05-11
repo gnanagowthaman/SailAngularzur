@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild, ElementRef, AfterViewInit,Renderer} from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
@@ -14,6 +14,8 @@ import { Iterator } from '@progress/kendo-angular-grid/dist/es2015/data/data.ite
 export class NewuserComponent implements OnInit {
   //usr;
   //formdata;
+  @ViewChild('abc') abc: ElementRef;
+  txtValue;
   Regbygeostate: any;
   requests;
   userCollectCountry;
@@ -33,28 +35,16 @@ export class NewuserComponent implements OnInit {
   countryVal = [];
   stateVal = [];
   regulationVal = [];
-  constructor(private fb: FormBuilder, private http: HttpClient, private _http: RequestService) {
+  private _prevSelected: any;
+  constructor(private fb: FormBuilder, private http: HttpClient, private _http: RequestService,private renderer: Renderer, private elem: ElementRef) {
     this.createForm();
-      
+
   }
-     
+
   ngOnInit() {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-    // this.http.get('http://localhost:1337/getRegbygeostate', { headers: headers }).subscribe(
-    //   data => {
-    //     this.Regbygeostate = data
-    //     console.log(data);
-    //   });
-    // this.http.get('http://localhost:1337/geographys', { headers: headers }).subscribe(
-    //   data => {
-    //     this.geographys = data
-    //     console.log(data);   
-    //   });
-    // this.requests = this._http.getRequest().subscribe(res => { this.requests = res; console.log(this.requests) });   
-    console.log("before loading this requests")
     this._http.getRequest().subscribe(res => { this.requests = res; console.log(this.requests) });
-    console.log("before loading GeoBy register this requests")
     this._http.getRegByGeo().subscribe(res => {
       this.regRequest = res;
       console.log(this.regRequest)
@@ -72,14 +62,19 @@ export class NewuserComponent implements OnInit {
     // });
 
   }
+  ngAfterViewInit() {
+    let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');    
+    console.log(elements)
+  }    
   // pwdvalidation(formcontrol) {
   //   if (formcontrol.value.length < 5) {     
   //     return { "pwd": true };   
   //   }
   // }
-  // onClickSubmit(data) {
-  //   this.usr = data.usr;
-  // }
+  onClickSubmit(data) {
+    this.acc = data.acc;
+    console.log("account subscription", this.acc);
+  }
 
   createForm() {
     this.formdata = this.fb.group({
@@ -94,18 +89,20 @@ export class NewuserComponent implements OnInit {
       reg: '',
       sidekick: ''
     });
+
   }
-  onClickSubmit(data) {
-    this.usr = data.usr;
-    this.pwd = data.pwd;
-    this.mob = data.mob;
-    this.sub = data.sub;
-    this.acc = data.acc;
-    this.ale = data.ale;
-    this.geo = data.geo;
-    this.st = data.st;
-    this.reg = data.reg;
-  } Iterator
+  // onClickSubmit(data) {
+  //   this.usr = data.usr;
+  //   this.pwd = data.pwd;
+  //   this.mob = data.mob;
+  //   this.sub = data.sub;
+  //   this.acc = data.acc;           
+  //   console.log("account subscription",this.acc);
+  //   this.ale = data.ale;
+  //   this.geo = data.geo;
+  //   this.st = data.st;
+  //   this.reg = data.reg;
+  // } //Iterator
   onSelectGeography(geography_id: number) {
     this.selecteGeography = geography_id;
     this.selectedCountry = 0;
@@ -131,6 +128,36 @@ export class NewuserComponent implements OnInit {
       console.log("geography id", item.geography_id, "state id", state_id)
       return item.geography_id == Number(state_id)
     });
+  }
+  handleChange(evt) {
+    var target = evt.target;
+    if (target.checked) {
+      //doSelected(target);   
+      //this._prevSelected = target;
+      let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');      
+      console.log(elements)
+      for (let i = 0; i < elements.length; i++) {   
+        (<HTMLInputElement>elements[i]).disabled = true; // note the type assertion on the element
+    }
+      console.log("success",evt)   
+    } else {
+      //doUnSelected(this._prevSelected)
+      console.log("fails",evt)
+    }   
+  }    
+  handleChangeRest(evt){
+    var target = evt.target;
+    if (target.checked) {           
+      let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');      
+      console.log(elements)
+      for (let i = 0; i < elements.length; i++) {     
+        (<HTMLInputElement>elements[i]).disabled = false; // note the type assertion on the element
+    }
+      console.log("success",evt)   
+    } else {
+      //doUnSelected(this._prevSelected)
+      console.log("fails",evt)
+    }
   }
 
 }

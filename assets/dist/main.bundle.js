@@ -180,8 +180,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_9__angular_router__["a" /* RouterModule */].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
-                ),
+                __WEBPACK_IMPORTED_MODULE_9__angular_router__["a" /* RouterModule */].forRoot(appRoutes),
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */]],
@@ -307,7 +306,7 @@ module.exports = ""
 /***/ "./assets/app/app/newuser/newuser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div>\n  <form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n\n    <div class=\"form-group\">    \n      <label for=\"usr\">Name:</label>\n      <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"center-block\">Mobile No:\n        <input class=\"form-control\" formControlName=\"mob\">\n      </label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Subscription:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Access:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"full\">Full</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"restricted\">Restricted</label>\n    </div>\n    <div class=\"checkbox\">\n      <h4>Alert Type:</h4>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\">Sms\n      </label>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"web\">Web\n      </label>\n      <label class=\"center-block\">              \n        <input type=\"checkbox\" formControlName=\"ale\" value=\"email\">E-mail\n      </label>\n    </div>\n    <div class=\"form-group\">                          \n      <label class=\"center-block\">Geography  \n        <select class=\"form-control\" formControlName=\"geo\">     \n          <option *ngFor=\"let geo of requests\" [value]=\"geo\">{{geo.name}}</option>       \n        </select>\n      </label>                    \n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Country\n        <select class=\"form-control\" formControlName=\"st\">                       \n          <option *ngFor=\"let rstate of regRequest.countryCollection\" [value]=\"rstate\">{{rstate.id}}</option>      \n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State     \n        <select class=\"form-control\" formControlName=\"st\">               \n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">       \n      <label class=\"center-block\">Regulation\n        <select class=\"form-control\" formControlName=\"reg\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>  \n    <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n    <input type=\"button\" value=\"cancel\">\n  </form>\n</div>          \n<p>\n  Username entered is : {{usr}}     \n</p> -->      \n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"Geography\">Geography</label>  \n  <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" (change)=\"onSelectGeography($event.target.value)\" class=\"form-control input-lg\" id=\"Geography\"\n     >\n     <option value=\"0\">Select Geography</option>    \n    <option *ngFor=\"let geograph of requests\" value= {{geograph.id}}>{{geograph.name}}</option>  \n  </select>    \n</div>\n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"Country\">Country</label>\n  <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\" id=\"Country\">\n      <option value=\"0\">Select Country</option>    \n    <option *ngFor=\"let cout of countryVal\" value= {{cout.gid}}>{{cout.name}}</option>\n  </select>\n</div>        \n<!-- <div class=\"form-group\">\n  <label class=\"control-label\" for=\"City\">State</label>\n  <select class=\"form-control input-lg\" id=\"city\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select City</option>\n      <option *ngFor=\"let city of cities\" value= {{city.gid}}>{{city.name}}</option>\n  </select>\n</div> -->\n     \n<div class=\"form-group\">\n  <label class=\"control-label\" for=\"States\">State</label>\n  <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\" id=\"States\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value= {{stat.gid}}>{{stat.name}}</option>\n  </select>\n</div>      \n<div class=\"form-group\">      \n  <label class=\"control-label\" for=\"Regulation\">Regulation</label>          \n  <select class=\"form-control input-lg\" id=\"Regulation\">                         \n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>        \n      <option *ngFor=\"let reg of regulationVal\" value= {{reg.geography_id}}>{{reg.name}}</option>\n  </select>\n</div>  "
+module.exports = "<!-- <div>\n  <form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n\n    <div class=\"form-group\">    \n      <label for=\"usr\">Name:</label>\n      <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"center-block\">Mobile No:\n        <input class=\"form-control\" formControlName=\"mob\">\n      </label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Subscription:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Access:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"full\">Full</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"restricted\">Restricted</label>\n    </div>\n    <div class=\"checkbox\">\n      <h4>Alert Type:</h4>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\">Sms\n      </label>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"web\">Web\n      </label>\n      <label class=\"center-block\">              \n        <input type=\"checkbox\" formControlName=\"ale\" value=\"email\">E-mail\n      </label>\n    </div>\n    <div class=\"form-group\">                          \n      <label class=\"center-block\">Geography  \n        <select class=\"form-control\" formControlName=\"geo\">     \n          <option *ngFor=\"let geo of requests\" [value]=\"geo\">{{geo.name}}</option>       \n        </select>\n      </label>                    \n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Country\n        <select class=\"form-control\" formControlName=\"st\">                       \n          <option *ngFor=\"let rstate of regRequest.countryCollection\" [value]=\"rstate\">{{rstate.id}}</option>      \n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State     \n        <select class=\"form-control\" formControlName=\"st\">               \n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">       \n      <label class=\"center-block\">Regulation\n        <select class=\"form-control\" formControlName=\"reg\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>  \n    <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n    <input type=\"button\" value=\"cancel\">\n  </form>\n</div>          \n<p>\n  Username entered is : {{usr}}              \n</p> -->    \n<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n  <div class=\"form-group\">\n    <label for=\"usr\">Name:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"pwd\">Password:</label>\n    <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"center-block\">Mobile No:\n      <input class=\"form-control\" formControlName=\"mob\">\n    </label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Subscription:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Access:</h4>  \n    <label class=\"center-block\"> \n      <input type=\"radio\" formControlName=\"acc\" value=\"full\" [(ngModel)]=\"acc\" (change)=\"handleChange($event)\">Full</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"restricted\" [(ngModel)]=\"acc\" (change)=\"handleChangeRest($event)\">Restricted</label>\n  </div>\n  <div class=\"checkbox\">\n    <h4>Alert Type:</h4>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\" class=\"classImLookingFor\">Sms\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"web\" class=\"classImLookingFor\">Web\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"email\" class=\"classImLookingFor\">E-mail\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Geography\">Geography</label>\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" (change)=\"onSelectGeography($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Geography\">\n      <option value=\"0\">Select Geography</option>\n      <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Country\">Country</label>\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Country\">\n      <option value=\"0\">Select Country</option>\n      <option *ngFor=\"let cout of countryVal\" value={{cout.gid}}>{{cout.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"States\">State</label>\n    <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\"\n      id=\"States\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value={{stat.gid}}>{{stat.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n    <select class=\"form-control input-lg\" id=\"Regulation\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.geography_id}}>{{reg.name}}</option>\n    </select>\n  </div>\n\n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n  <input type=\"button\" value=\"cancel\">\n</form>"
 
 /***/ }),
 
@@ -334,10 +333,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var NewuserComponent = /** @class */ (function () {
-    function NewuserComponent(fb, http, _http) {
+    function NewuserComponent(fb, http, _http, renderer, elem) {
         this.fb = fb;
         this.http = http;
         this._http = _http;
+        this.renderer = renderer;
+        this.elem = elem;
         this.selecteGeography = 0;
         this.selectedCountry = 0;
         this.selectedState = 0;
@@ -351,20 +352,7 @@ var NewuserComponent = /** @class */ (function () {
         var _this = this;
         var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
         headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-        // this.http.get('http://localhost:1337/getRegbygeostate', { headers: headers }).subscribe(
-        //   data => {
-        //     this.Regbygeostate = data
-        //     console.log(data);
-        //   });
-        // this.http.get('http://localhost:1337/geographys', { headers: headers }).subscribe(
-        //   data => {
-        //     this.geographys = data
-        //     console.log(data);   
-        //   });
-        // this.requests = this._http.getRequest().subscribe(res => { this.requests = res; console.log(this.requests) });   
-        console.log("before loading this requests");
         this._http.getRequest().subscribe(function (res) { _this.requests = res; console.log(_this.requests); });
-        console.log("before loading GeoBy register this requests");
         this._http.getRegByGeo().subscribe(function (res) {
             _this.regRequest = res;
             console.log(_this.regRequest);
@@ -381,14 +369,19 @@ var NewuserComponent = /** @class */ (function () {
         //   pwd: new FormControl('', Validators.required)
         // });
     };
+    NewuserComponent.prototype.ngAfterViewInit = function () {
+        var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+        console.log(elements);
+    };
     // pwdvalidation(formcontrol) {
     //   if (formcontrol.value.length < 5) {     
     //     return { "pwd": true };   
     //   }
     // }
-    // onClickSubmit(data) {
-    //   this.usr = data.usr;
-    // }
+    NewuserComponent.prototype.onClickSubmit = function (data) {
+        this.acc = data.acc;
+        console.log("account subscription", this.acc);
+    };
     NewuserComponent.prototype.createForm = function () {
         this.formdata = this.fb.group({
             usr: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required],
@@ -403,17 +396,18 @@ var NewuserComponent = /** @class */ (function () {
             sidekick: ''
         });
     };
-    NewuserComponent.prototype.onClickSubmit = function (data) {
-        this.usr = data.usr;
-        this.pwd = data.pwd;
-        this.mob = data.mob;
-        this.sub = data.sub;
-        this.acc = data.acc;
-        this.ale = data.ale;
-        this.geo = data.geo;
-        this.st = data.st;
-        this.reg = data.reg;
-    };
+    // onClickSubmit(data) {
+    //   this.usr = data.usr;
+    //   this.pwd = data.pwd;
+    //   this.mob = data.mob;
+    //   this.sub = data.sub;
+    //   this.acc = data.acc;           
+    //   console.log("account subscription",this.acc);
+    //   this.ale = data.ale;
+    //   this.geo = data.geo;
+    //   this.st = data.st;
+    //   this.reg = data.reg;
+    // } //Iterator
     NewuserComponent.prototype.onSelectGeography = function (geography_id) {
         this.selecteGeography = geography_id;
         this.selectedCountry = 0;
@@ -440,13 +434,49 @@ var NewuserComponent = /** @class */ (function () {
             return item.geography_id == Number(state_id);
         });
     };
+    NewuserComponent.prototype.handleChange = function (evt) {
+        var target = evt.target;
+        if (target.checked) {
+            //doSelected(target);   
+            //this._prevSelected = target;
+            var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+            console.log(elements);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].disabled = true; // note the type assertion on the element
+            }
+            console.log("success", evt);
+        }
+        else {
+            //doUnSelected(this._prevSelected)
+            console.log("fails", evt);
+        }
+    };
+    NewuserComponent.prototype.handleChangeRest = function (evt) {
+        var target = evt.target;
+        if (target.checked) {
+            var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+            console.log(elements);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].disabled = false; // note the type assertion on the element
+            }
+            console.log("success", evt);
+        }
+        else {
+            //doUnSelected(this._prevSelected)
+            console.log("fails", evt);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('abc'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "abc", void 0);
     NewuserComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-newuser',
             template: __webpack_require__("./assets/app/app/newuser/newuser.component.html"),
             styles: [__webpack_require__("./assets/app/app/newuser/newuser.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
     ], NewuserComponent);
     return NewuserComponent;
 }());
