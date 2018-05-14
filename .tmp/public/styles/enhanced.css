@@ -1,0 +1,92 @@
+/*body { font-size:62.5%; margin:20px; } 
+#domain { margin:2em 0 5em; width:400px; } */
+#treeCanvas {
+	margin: 17px 10px 17px 62px;
+    position: relative;
+    /* left: 50px; */
+    /* width: -webkit-calc(100% - 77px); */
+    /*width: -moz-calc(100% - 77px);*/
+    /* width: calc(100% - 77px); */
+}
+.tree {  }
+.tree,.tree ul,.tree li { list-style:none; margin:0; padding:0; zoom: 1; margin-top: 6px; list-style-image: url("data:0");}
+.tree ul { margin-left:8px; }
+.tree li a { color:#979DAA; padding:.1em 7px .1em 27px; display:block; text-decoration:none; 
+    border:1px dashed #fff; background:url(../img/tree/icon-file.svg) 5px 50% no-repeat; }
+.tree li a.pdf{
+	background: url(../img/tree/icon-file-pdf.svg) 7px 50% no-repeat;
+}
+.tree li a.tree-parent { background:url(../img/tree/icon-folder-open.svg) 5px 50% no-repeat; color: #FFF;}
+
+.tree li ul a.tree-parent{
+    background:url(../img/tree/icon-folder-light.svg) 5px 50% no-repeat;
+}
+
+.tree li a.tree-parent-collapsed { background:url(../img/tree/icon-folder.svg) 5px 50% no-repeat; color: #50535B;}
+.tree li ul a.tree-parent-collapsed {
+    color: #979DAA;
+}
+.tree li a.continent.tree-parent{
+	background: url(../img/tree/icon-folder-continent-open.svg) 5px 50% no-repeat ;
+	background-size: 16px 15px;
+}
+.tree li a.continent.tree-parent-collapsed {
+    background: url(../img/tree/icon-folder-continent-close.svg) 5px 50% no-repeat ;
+    background-size: 16px 15px;
+}
+.tree li ul a.continent.tree-parent-collapsed {
+    background: url(../img/tree/icon-folder-continent-close-light.svg) 5px 50% no-repeat ;
+    background-size: 16px 15px;
+}
+.tree li a:hover,.tree li a.tree-parent:hover,
+.tree li a:focus,.tree li a.tree-parent:focus,
+.tree li a.tree-item-active
+{ color:#FFF; background: url(../img/tree/icon-folder-open.svg) 5px 50% no-repeat #DA2128; }
+
+.tree li a.continent:hover,.tree li a.continent.tree-parent:hover,
+.tree li a.continent:focus,.tree li a.continent.tree-parent:focus,
+.tree li a.continent.tree-item-active
+{
+    background: url(../img/tree/icon-folder-continent-open.svg) 5px 50% no-repeat #DA2128;
+    background-size: 16px 15px;
+}
+
+.tree li a:hover, .tree li a:focus,.tree li a.tree-item-active{
+    background:url(../img/tree/icon-file-open.svg) 5px 50% no-repeat #DA2128;
+}
+
+.tree li a.pdf:hover, .tree li a.pdf:focus,.tree li a.pdf.tree-item-active{
+    background: url(../img/tree/icon-file-pdf-open.svg) 7px 50% no-repeat #DA2128;
+}
+
+
+
+.tree li a:focus,.tree li a.tree-parent:focus,
+.tree li a.tree-item-active
+{ background-color:#DA2128; color:#FFF;}
+
+
+
+
+.tree ul.tree-group-collapsed { display:none; }
+
+
+
+/* Light version*/
+.light .tree li a {background:url(../img/tree/light/icon-file.svg) 5px 50% no-repeat; color: #50535B;}
+.light .tree li a.pdf{background: url(../img/tree/light/icon-file-pdf.svg) 7px 50% no-repeat; color: #50535B;}
+.light .tree li a.pdf:hover{background: url(../img/tree/light/icon-file-pdf-open.svg) 7px 50% no-repeat; color: #50535B;}
+.light .tree li a.tree-parent {background:url(../img/tree/light/icon-folder-open.svg) 5px 50% no-repeat;}
+.light .tree li ul a.tree-parent{background:url(../img/tree/light/icon-folder-light.svg) 5px 50% no-repeat;}
+.light .tree li a.tree-parent-collapsed { background:url(../img/tree/light/icon-folder.svg) 5px 50% no-repeat; color: #50535B;}
+.light .tree li a.continent.tree-parent{background: url(../img/tree/light/icon-folder-continent.svg) 5px 50% no-repeat;}
+.light .tree li a.continent.tree-parent-collapsed {background: url(../img/tree/light/icon-folder-continent-close.svg) 5px 50% no-repeat ;}
+.light .tree li ul a.continent.tree-parent-collapsed {background: url(../img/tree/light/icon-folder-continent-close-light.svg) 5px 50% no-repeat ; color: #50535B;}
+.light .tree li a:hover,.light.tree li a.tree-parent:hover,
+.light .tree li a:focus,.light.tree li a.tree-parent:focus,
+.light .tree li a.tree-item-active{background: url(../img/tree/light/icon-folder-open.svg) 5px 50% no-repeat #DA2128;}
+.light .tree li a.continent:hover, .light .tree li a.continent.tree-parent:hover,
+.light .tree li a.continent:focus, .light .tree li a.continent.tree-parent:focus,
+.light .tree li a.continent.tree-item-active{background: url(../img/tree/light/icon-folder-continent-open.svg) 5px 50% no-repeat #DA2128; color: #FFF}
+.light .tree li a:hover, .light .tree li a:focus, .light .tree li a.tree-item-active{background:url(../img/tree/light/icon-file-open.svg) 5px 50% no-repeat #DA2128;}
+.light .tree li a.pdf:hover, .light .tree li a.pdf:focus, .light .tree li a.pdf.tree-item-active{background: url(../img/tree/light/icon-file-pdf-open.svg) 7px 50% no-repeat #DA2128; color: #FFF;}
