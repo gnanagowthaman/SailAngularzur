@@ -299,14 +299,14 @@ var ListComponent = /** @class */ (function () {
 /***/ "./assets/app/app/newuser/newuser.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "table {\n    font-family: arial, sans-serif;\n    border-collapse: collapse;\n    width: 100%;\n}\n\ntd, th {\n    border: 1px solid #dddddd;\n    text-align: left;\n    padding: 8px;\n}\n\ntr:nth-child(even) {\n    background-color: #dddddd;\n}"
 
 /***/ }),
 
 /***/ "./assets/app/app/newuser/newuser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div>\n  <form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n\n    <div class=\"form-group\">    \n      <label for=\"usr\">Name:</label>\n      <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n    </div>\n\n    <div class=\"form-group\">\n      <label for=\"pwd\">Password:</label>\n      <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n    </div>\n\n    <div class=\"form-group\">\n      <label class=\"center-block\">Mobile No:\n        <input class=\"form-control\" formControlName=\"mob\">\n      </label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Subscription:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n    </div>\n\n    <div class=\"form-group radio\">\n      <h4>Access:</h4>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"full\">Full</label>\n      <label class=\"center-block\">\n        <input type=\"radio\" formControlName=\"acc\" value=\"restricted\">Restricted</label>\n    </div>\n    <div class=\"checkbox\">\n      <h4>Alert Type:</h4>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\">Sms\n      </label>\n      <label class=\"center-block\">\n        <input type=\"checkbox\" formControlName=\"ale\" value=\"web\">Web\n      </label>\n      <label class=\"center-block\">              \n        <input type=\"checkbox\" formControlName=\"ale\" value=\"email\">E-mail\n      </label>\n    </div>\n    <div class=\"form-group\">                          \n      <label class=\"center-block\">Geography  \n        <select class=\"form-control\" formControlName=\"geo\">     \n          <option *ngFor=\"let geo of requests\" [value]=\"geo\">{{geo.name}}</option>       \n        </select>\n      </label>                    \n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">Country\n        <select class=\"form-control\" formControlName=\"st\">                       \n          <option *ngFor=\"let rstate of regRequest.countryCollection\" [value]=\"rstate\">{{rstate.id}}</option>      \n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"center-block\">State     \n        <select class=\"form-control\" formControlName=\"st\">               \n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>\n    <div class=\"form-group\">       \n      <label class=\"center-block\">Regulation\n        <select class=\"form-control\" formControlName=\"reg\">\n          <option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</option>\n        </select>\n      </label>\n    </div>  \n    <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n    <input type=\"button\" value=\"cancel\">\n  </form>\n</div>          \n<p>\n  Username entered is : {{usr}}              \n</p> -->    \n<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n  <div class=\"form-group\">\n    <label for=\"usr\">Name:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"usr\">\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"pwd\">Password:</label>\n    <input type=\"password\" class=\"form-control\" formControlName=\"pwd\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"center-block\">Mobile No:\n      <input class=\"form-control\" formControlName=\"mob\">\n    </label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Subscription:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Access:</h4>  \n    <label class=\"center-block\"> \n      <input type=\"radio\" formControlName=\"acc\" value=\"full\" [(ngModel)]=\"acc\" (change)=\"handleChange($event)\">Full</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"restricted\" [(ngModel)]=\"acc\" (change)=\"handleChangeRest($event)\">Restricted</label>\n  </div>\n  <div class=\"checkbox\">\n    <h4>Alert Type:</h4>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\" class=\"classImLookingFor\">Sms\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"web\" class=\"classImLookingFor\">Web\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"email\" class=\"classImLookingFor\">E-mail\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Geography\">Geography</label>\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" (change)=\"onSelectGeography($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Geography\">\n      <option value=\"0\">Select Geography</option>\n      <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Country\">Country</label>\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Country\">\n      <option value=\"0\">Select Country</option>\n      <option *ngFor=\"let cout of countryVal\" value={{cout.gid}}>{{cout.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"States\">State</label>\n    <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\"\n      id=\"States\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value={{stat.gid}}>{{stat.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n    <select class=\"form-control input-lg\" id=\"Regulation\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.geography_id}}>{{reg.name}}</option>\n    </select>\n  </div>\n\n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n  <input type=\"button\" value=\"cancel\">\n</form>"
+module.exports = "<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n  <div class=\"form-group\">\n    <label for=\"usr\">Name:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"usr\"  [(ngModel)]=\"name\">             \n  </div>       \n    \n  <div class=\"form-group\">\n    <label for=\"pwd\">Email:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"pwd\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"center-block\">Mobile No:\n      <input class=\"form-control\" formControlName=\"mob\">\n    </label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Subscription:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Access:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"full\" [(ngModel)]=\"acc\" (change)=\"handleChange($event)\">Full</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"restricted\" [(ngModel)]=\"acc\" (change)=\"handleChangeRest($event)\">Restricted</label>\n  </div>\n  <div class=\"checkbox\">\n    <h4>Alert Type:</h4>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\" class=\"classImLookingFor\">Sms\n    </label>  \n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"web\" class=\"classImLookingFor\">Web\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"email\" class=\"classImLookingFor\">E-mail\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Geography\">Geography</label>\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectGeography($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Geography\" class=\"classImLookingFor\">   \n      <option value=\"0\">Select Geography</option>\n      <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option>\n    </select>\n  </div>  \n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Country\">Country</label>\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Country\" class=\"classImLookingFor\">\n      <option value=\"0\">Select Country</option>\n      <option *ngFor=\"let cout of countryVal\" value={{cout.gid}}>{{cout.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"States\">State</label>\n    <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\"\n      id=\"States\" class=\"classImLookingFor\">  \n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value={{stat.gid}}>{{stat.name}}</option>\n    </select>            \n  </div>          \n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>  \n    <select class=\"form-control input-lg\" id=\"Regulation\" class=\"classImLookingFor\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.geography_id}}>{{reg.name}}</option>\n    </select>    \n  </div>  \n  <input type=\"button\" value=\"Add\" class=\"classImAdd\" (click)=\"open(name)\">                      \n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n  <input type=\"button\" value=\"cancel\">\n</form>\n<!-- <li>{{name}}</li>         -->\n  \n  \n<table>  \n  <tr>\n    <th>GEOGRAPHY</th>\n    <th>Contact</th>\n    <th>Country</th>      \n  </tr>         \n  <tr>  \n    <!-- <td *ngFor=\"let geograph of requests\">{{geograph.name}}</td>  \n    <td>{{selecteGeography}}</td> -->\n    <!-- <td>{{userCollectCountry|json}}</td>           -->  \n    <td>{{geoOptionOnly|json}}</td>      \n  </tr>\n  <tr>\n    <td>Centro comercial Moctezuma</td>\n    <td>Francisco Chang</td>\n    <td>Mexico</td>\n  </tr>\n  <tr>\n    <td>Ernst Handel</td>\n    <td>Roland Mendel</td>\n    <td>Austria</td>\n  </tr>\n  <tr>\n    <td>Island Trading</td>\n    <td>Helen Bennett</td>\n    <td>UK</td>\n  </tr>\n  <tr>\n    <td>Laughing Bacchus Winecellars</td>\n    <td>Yoshi Tannamuri</td>\n    <td>Canada</td>\n  </tr>\n  <tr>\n    <td>Magazzini Alimentari Riuniti</td>\n    <td>Giovanni Rovelli</td>\n    <td>Italy</td>\n  </tr>\n</table>"
 
 /***/ }),
 
@@ -413,6 +413,11 @@ var NewuserComponent = /** @class */ (function () {
         this.selectedCountry = 0;
         this.stateVal = [];
         this.regulationVal = [];
+        this.geoOptionOnly = this.userCollectGeo.filter(function (dump) {
+            if (dump.id === Number(geography_id)) {
+                return dump.name;
+            }
+        });
         this.countryVal = this.userCollectCountry.filter(function (item) {
             console.log("country id", item.gid, "geography id", geography_id);
             return item.gid === Number(geography_id);
@@ -440,9 +445,32 @@ var NewuserComponent = /** @class */ (function () {
             //doSelected(target);   
             //this._prevSelected = target;
             var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+            var addElement = this.elem.nativeElement.querySelectorAll('.classImAdd');
             console.log(elements);
             for (var i = 0; i < elements.length; i++) {
                 elements[i].disabled = true; // note the type assertion on the element
+            }
+            for (var i = 0; i < addElement.length; i++) {
+                addElement[i].style.visibility = 'hidden'; // note the type assertion on the element
+            }
+            console.log("success", evt);
+        }
+        else {
+            //doUnSelected(this._prevSelected)  
+            console.log("fails", evt);
+        }
+    };
+    NewuserComponent.prototype.handleChangeRest = function (evt) {
+        var target = evt.target;
+        if (target.checked) {
+            var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+            var addElement = this.elem.nativeElement.querySelectorAll('.classImAdd');
+            console.log(elements);
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].disabled = false; // note the type assertion on the element
+            }
+            for (var i = 0; i < addElement.length; i++) {
+                addElement[i].style.visibility = 'visible'; // note the type assertion on the element
             }
             console.log("success", evt);
         }
@@ -451,20 +479,10 @@ var NewuserComponent = /** @class */ (function () {
             console.log("fails", evt);
         }
     };
-    NewuserComponent.prototype.handleChangeRest = function (evt) {
-        var target = evt.target;
-        if (target.checked) {
-            var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
-            console.log(elements);
-            for (var i = 0; i < elements.length; i++) {
-                elements[i].disabled = false; // note the type assertion on the element
-            }
-            console.log("success", evt);
-        }
-        else {
-            //doUnSelected(this._prevSelected)
-            console.log("fails", evt);
-        }
+    NewuserComponent.prototype.open = function (event) {
+        console.log(JSON.stringify(event), "am button value");
+        console.log(event.value);
+        this.txtValue = event.value;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('abc'),

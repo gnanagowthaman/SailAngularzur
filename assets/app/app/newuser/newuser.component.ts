@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild, ElementRef, AfterViewInit,Renderer} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
@@ -16,6 +16,7 @@ export class NewuserComponent implements OnInit {
   //formdata;
   @ViewChild('abc') abc: ElementRef;
   txtValue;
+  geoOptionOnly;
   Regbygeostate: any;
   requests;
   userCollectCountry;
@@ -36,7 +37,7 @@ export class NewuserComponent implements OnInit {
   stateVal = [];
   regulationVal = [];
   private _prevSelected: any;
-  constructor(private fb: FormBuilder, private http: HttpClient, private _http: RequestService,private renderer: Renderer, private elem: ElementRef) {
+  constructor(private fb: FormBuilder, private http: HttpClient, private _http: RequestService, private renderer: Renderer, private elem: ElementRef) {
     this.createForm();
 
   }
@@ -63,9 +64,9 @@ export class NewuserComponent implements OnInit {
 
   }
   ngAfterViewInit() {
-    let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');    
+    let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
     console.log(elements)
-  }    
+  }
   // pwdvalidation(formcontrol) {
   //   if (formcontrol.value.length < 5) {     
   //     return { "pwd": true };   
@@ -89,8 +90,8 @@ export class NewuserComponent implements OnInit {
       reg: '',
       sidekick: ''
     });
-
-  }
+             
+  }          
   // onClickSubmit(data) {
   //   this.usr = data.usr;
   //   this.pwd = data.pwd;
@@ -101,13 +102,16 @@ export class NewuserComponent implements OnInit {
   //   this.ale = data.ale;
   //   this.geo = data.geo;
   //   this.st = data.st;
-  //   this.reg = data.reg;
+  //   this.reg = data.reg;   
   // } //Iterator
   onSelectGeography(geography_id: number) {
     this.selecteGeography = geography_id;
     this.selectedCountry = 0;
     this.stateVal = [];
-    this.regulationVal = [];
+    this.regulationVal = [];    
+    this.geoOptionOnly=this.userCollectGeo.filter((dump)=>{     
+      if(dump.id===Number(geography_id)){return dump.name}  
+    })
     this.countryVal = this.userCollectCountry.filter((item) => {
       console.log("country id", item.gid, "geography id", geography_id)
       return item.gid === Number(geography_id)
@@ -134,30 +138,42 @@ export class NewuserComponent implements OnInit {
     if (target.checked) {
       //doSelected(target);   
       //this._prevSelected = target;
-      let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');      
+      let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+      let addElement = this.elem.nativeElement.querySelectorAll('.classImAdd');
       console.log(elements)
-      for (let i = 0; i < elements.length; i++) {   
+      for (let i = 0; i < elements.length; i++) {
         (<HTMLInputElement>elements[i]).disabled = true; // note the type assertion on the element
-    }
-      console.log("success",evt)   
+      }
+      for (let i = 0; i < addElement.length; i++) {
+        (<HTMLInputElement>addElement[i]).style.visibility = 'hidden';// note the type assertion on the element
+      }
+      console.log("success", evt)
     } else {
-      //doUnSelected(this._prevSelected)
-      console.log("fails",evt)
-    }   
-  }    
-  handleChangeRest(evt){
-    var target = evt.target;
-    if (target.checked) {           
-      let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');      
-      console.log(elements)
-      for (let i = 0; i < elements.length; i++) {     
-        (<HTMLInputElement>elements[i]).disabled = false; // note the type assertion on the element
-    }
-      console.log("success",evt)   
-    } else {
-      //doUnSelected(this._prevSelected)
-      console.log("fails",evt)
+      //doUnSelected(this._prevSelected)  
+      console.log("fails", evt)
     }
   }
-
+  handleChangeRest(evt) {
+    var target = evt.target;  
+    if (target.checked) {
+      let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+      let addElement = this.elem.nativeElement.querySelectorAll('.classImAdd');
+      console.log(elements)
+      for (let i = 0; i < elements.length; i++) {
+        (<HTMLInputElement>elements[i]).disabled = false; // note the type assertion on the element
+      }
+      for (let i = 0; i < addElement.length; i++) {
+        (<HTMLInputElement>addElement[i]).style.visibility = 'visible';// note the type assertion on the element
+      }
+      console.log("success", evt)
+    } else {
+      //doUnSelected(this._prevSelected)
+      console.log("fails", evt)
+    }
+  }                
+  open(event) {
+    console.log(JSON.stringify(event), "am button value");
+    console.log(event.value);  
+    this.txtValue=event.value;
+  }
 }
