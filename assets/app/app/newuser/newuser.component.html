@@ -1,12 +1,12 @@
 <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
   <div class="form-group">
     <label for="usr">Name:</label>
-    <input type="text" class="form-control" formControlName="usr"  [(ngModel)]="name">             
-  </div>       
-    
+    <input type="text" class="form-control" formControlName="usr" [(ngModel)]="textValue" #textbox>
+  </div>
+
   <div class="form-group">
     <label for="pwd">Email:</label>
-    <input type="text" class="form-control" formControlName="pwd">
+    <input type="text" class="form-control" formControlName="pwd" [(ngModel)]="pwdValue" #pwdtextbox>
   </div>
 
   <div class="form-group">
@@ -33,88 +33,74 @@
   <div class="checkbox">
     <h4>Alert Type:</h4>
     <label class="center-block">
-      <input type="checkbox" formControlName="ale" value="sms" class="classImLookingFor">Sms
-    </label>  
-    <label class="center-block">
-      <input type="checkbox" formControlName="ale" value="web" class="classImLookingFor">Web
+      <input type="checkbox" formControlName="ale" value="sms" class="classImLookingFor" id="sms">Sms  
     </label>
     <label class="center-block">
-      <input type="checkbox" formControlName="ale" value="email" class="classImLookingFor">E-mail
+      <input type="checkbox" formControlName="ale" value="web" class="classImLookingFor" id="web">Web
+    </label>
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="email" class="classImLookingFor" id="email">E-mail      
     </label>
   </div>
   <div class="form-group">
     <label class="control-label" for="Geography">Geography</label>
-    <select *ngIf="requests" [(ngModel)]="selecteGeography" [ngModelOptions]="{standalone: true}" (change)="onSelectGeography($event.target.value)" class="form-control input-lg"
-      id="Geography" class="classImLookingFor">   
+    <select *ngIf="requests" [(ngModel)]="selecteGeography" [ngModelOptions]="{standalone: true}" (change)="onSelectGeography($event.target.value)"
+      class="form-control input-lg" id="Geography" class="classImLookingFor">
       <option value="0">Select Geography</option>
-      <option *ngFor="let geograph of requests" value={{geograph.id}}>{{geograph.name}}</option>
+      <!-- <option *ngFor="let geograph of requests" value={{geograph.id}}>{{geograph.name}}</option> -->
+      <option *ngFor="let geograph of requests" [value]="geograph.id">{{geograph.name}}</option>
     </select>
-  </div>  
+  </div>
   <div class="form-group">
     <label class="control-label" for="Country">Country</label>
-    <select *ngIf="countryVal" [(ngModel)]="selectedCountry" [ngModelOptions]="{standalone: true}" (change)="onSelectCountry($event.target.value)" class="form-control input-lg"
-      id="Country" class="classImLookingFor">
+    <select *ngIf="countryVal" [(ngModel)]="selectedCountry" [ngModelOptions]="{standalone: true}" (change)="onSelectCountry($event.target.value)"
+      class="form-control input-lg" id="Country" class="classImLookingFor">
       <option value="0">Select Country</option>
       <option *ngFor="let cout of countryVal" value={{cout.gid}}>{{cout.name}}</option>
     </select>
   </div>
   <div class="form-group">
     <label class="control-label" for="States">State</label>
-    <select *ngIf="stateVal" [(ngModel)]="selectedState" [ngModelOptions]="{standalone: true}" (change)="onSelectState($event.target.value)" class="form-control input-lg"
-      id="States" class="classImLookingFor">  
+    <select *ngIf="stateVal" [(ngModel)]="selectedState" [ngModelOptions]="{standalone: true}" (change)="onSelectState($event.target.value)"
+      class="form-control input-lg" id="States" class="classImLookingFor">
       <option value="0">Select State</option>
       <option *ngFor="let stat of stateVal" value={{stat.gid}}>{{stat.name}}</option>
-    </select>            
-  </div>          
+    </select>
+  </div>
   <div class="form-group">
-    <label class="control-label" for="Regulation">Regulation</label>  
+    <label class="control-label" for="Regulation">Regulation</label>
     <select class="form-control input-lg" id="Regulation" class="classImLookingFor">
       <option *ngIf="!selectedState" value="0">Select Reg</option>
       <option *ngFor="let reg of regulationVal" value={{reg.geography_id}}>{{reg.name}}</option>
-    </select>    
-  </div>  
-  <input type="button" value="Add" class="classImAdd" (click)="open(name)">                      
+    </select>
+  </div>
+  <input type="button" value="Add" class="classImAdd">      
   <input type="submit" class="forsubmit" value="Save">
   <input type="button" value="cancel">
 </form>
-<!-- <li>{{name}}</li>         -->
-  
-  
-<table>  
+
+
+
+<table>
   <tr>
     <th>GEOGRAPHY</th>
-    <th>Contact</th>
-    <th>Country</th>      
-  </tr>         
-  <tr>  
-    <!-- <td *ngFor="let geograph of requests">{{geograph.name}}</td>  
-    <td>{{selecteGeography}}</td> -->
-    <!-- <td>{{userCollectCountry|json}}</td>           -->  
-    <td>{{geoOptionOnly|json}}</td>      
+    <th>COUNTRY</th>
+    <th>STATE</th>
+    <th>REGULATION</th>
+    <th>SMS</th>
+    <th>WEB</th>  
+    <th>EMAIL</th>
+    <th>OPERATION</th>
   </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
+  <tr class="hallo">        
+    <td id="detailInfo"></td>
+    <td id="countryInfo"></td>
+    <td id="stateInfo"></td>
+    <td id="regulationInfo"></td>   
+    <td id="smsInfo"></td>
+    <td id="webInfo"></td>     
+    <td id="emailInfo"></td>                          
+    <td><a routerLink="/heroes" id="link1" >Delete</a></td>      
   </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
+
 </table>

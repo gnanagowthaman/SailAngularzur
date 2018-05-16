@@ -6,6 +6,7 @@ import { Response } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { RequestService } from './request.service';
 import { Iterator } from '@progress/kendo-angular-grid/dist/es2015/data/data.iterators';
+import * as $ from '../../resources/js/jquery.min.js';
 @Component({
   selector: 'app-newuser',
   templateUrl: './newuser.component.html',
@@ -16,6 +17,8 @@ export class NewuserComponent implements OnInit {
   //formdata;
   @ViewChild('abc') abc: ElementRef;
   txtValue;
+  pwdTxtValue;
+  optionTest;
   geoOptionOnly;
   Regbygeostate: any;
   requests;
@@ -61,7 +64,38 @@ export class NewuserComponent implements OnInit {
     //   ])),          
     //   pwd: new FormControl('', Validators.required)
     // });
+    $(document).ready(function () {
+      $(".classImAdd").click(function () {
+        var selectedText = $("#Geography").find("option:selected").text();
+        var selectedCountryText = $("#Country").find("option:selected").text();
+        var selectedStateText = $("#States").find("option:selected").text();
+        var selectedRegulationText = $("#Regulation").find("option:selected").text();
+        var selectedValue = $("#Geography").val();
+        //this.optionTest=selectedText;                   
+        //alert("clicked");         
+        if ($("#sms").is(':checked'))
+          $("#smsInfo").html('YES');  // checked
+        else
+          $("#smsInfo").html('NO');
+        if ($("#web").is(':checked'))
+          $("#webInfo").html('YES');  // checked
+        else
+          $("#webInfo").html('NO');
+        if ($("#email").is(':checked'))
+          $("#emailInfo").html('YES');  // checked
+        else
+          $("#emailInfo").html('NO');
+        $('.hallo').click(function () {
+            $(this).remove(); // remove element which is being clicked
+        });
+        $('#detailInfo').html(selectedText);
+        $('#countryInfo').html(selectedCountryText);
+        $('#stateInfo').html(selectedStateText);
+        $('#regulationInfo').html(selectedRegulationText);
+        // alert("Selected Text: " + selectedText + " Value: " + selectedValue);
 
+      });
+    });
   }
   ngAfterViewInit() {
     let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
@@ -90,8 +124,8 @@ export class NewuserComponent implements OnInit {
       reg: '',
       sidekick: ''
     });
-             
-  }          
+
+  }
   // onClickSubmit(data) {
   //   this.usr = data.usr;
   //   this.pwd = data.pwd;
@@ -103,15 +137,15 @@ export class NewuserComponent implements OnInit {
   //   this.geo = data.geo;
   //   this.st = data.st;
   //   this.reg = data.reg;   
-  // } //Iterator
+  // } //Iterator        
   onSelectGeography(geography_id: number) {
     this.selecteGeography = geography_id;
     this.selectedCountry = 0;
     this.stateVal = [];
-    this.regulationVal = [];    
-    this.geoOptionOnly=this.userCollectGeo.filter((dump)=>{     
-      if(dump.id===Number(geography_id)){return dump.name}  
-    })
+    this.regulationVal = [];
+    // this.geoOptionOnly=this.userCollectGeo.filter((dump)=>{     
+    //   if(dump.id===Number(geography_id)){return dump.name}  
+    // })
     this.countryVal = this.userCollectCountry.filter((item) => {
       console.log("country id", item.gid, "geography id", geography_id)
       return item.gid === Number(geography_id)
@@ -154,7 +188,7 @@ export class NewuserComponent implements OnInit {
     }
   }
   handleChangeRest(evt) {
-    var target = evt.target;  
+    var target = evt.target;
     if (target.checked) {
       let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
       let addElement = this.elem.nativeElement.querySelectorAll('.classImAdd');
@@ -170,10 +204,6 @@ export class NewuserComponent implements OnInit {
       //doUnSelected(this._prevSelected)
       console.log("fails", evt)
     }
-  }                
-  open(event) {
-    console.log(JSON.stringify(event), "am button value");
-    console.log(event.value);  
-    this.txtValue=event.value;
   }
+
 }
