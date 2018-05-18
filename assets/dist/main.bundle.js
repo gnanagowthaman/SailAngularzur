@@ -27,7 +27,7 @@ module.exports = "\nbody {\n  font-family: \"Lato\", sans-serif;\n  font-size: 1
 /***/ "./assets/app/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\n\n<!-- <pre>{{myData | json}}</pre> -->\n               \n<!-- <div *ngFor=\"let d of myData\">\n  {{d}}                        \n</div>                \n-->\n<!-- <li *ngFor=\"let item of myData\">\n  {{item.id}}            \n</li>      -->   \n<!-- <a routerLink=\"newuser\"><button class=\"btn btn-success pull-right\" > Add User</button></a> -->\n\n<h1>Zurik</h1>        \n  <nav>\n    <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">List Users</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Add User</a>  \n  </nav>       \n  <router-outlet></router-outlet>\n\n\n "
+module.exports = "<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\n\n<!-- <pre>{{myData | json}}</pre> -->\n               \n<!-- <div *ngFor=\"let d of myData\">\n  {{d}}                        \n</div>                \n-->\n<!-- <li *ngFor=\"let item of myData\">\n  {{item.id}}            \n</li>      -->   \n<!-- <a routerLink=\"newuser\"><button class=\"btn btn-success pull-right\" > Add User</button></a> -->\n\n<h1>Zurik</h1>        \n  <nav>\n    <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">List Users</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Add User</a>  \n  </nav> \n  <app-list></app-list>  \n  <app-newuser></app-newuser>                        \n  <router-outlet></router-outlet>\n\n\n "
 
 /***/ }),
 
@@ -306,7 +306,7 @@ module.exports = "table {\n    font-family: arial, sans-serif;\n    border-colla
 /***/ "./assets/app/app/newuser/newuser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n  <div class=\"form-group\">\n    <label for=\"usr\">Name:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"usr\" [(ngModel)]=\"textValue\" #textbox>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"pwd\">Email:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"pwd\" [(ngModel)]=\"pwdValue\" #pwdtextbox>\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"center-block\">Mobile No:\n      <input class=\"form-control\" formControlName=\"mob\">\n    </label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Subscription:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Access:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"full\" [(ngModel)]=\"acc\" (change)=\"handleChange($event)\">Full</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"restricted\" [(ngModel)]=\"acc\" (change)=\"handleChangeRest($event)\">Restricted</label>\n  </div>\n  <div class=\"checkbox\">\n    <h4>Alert Type:</h4>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\" class=\"classImLookingFor\" id=\"sms\">Sms  \n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"web\" class=\"classImLookingFor\" id=\"web\">Web\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"email\" class=\"classImLookingFor\" id=\"email\">E-mail      \n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Geography\">Geography</label>\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectGeography($event.target.value)\"\n      class=\"form-control input-lg\" id=\"Geography\" class=\"classImLookingFor\">\n      <option value=\"0\">Select Geography</option>\n      <!-- <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option> -->\n      <option *ngFor=\"let geograph of requests\" [value]=\"geograph.id\">{{geograph.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Country\">Country</label>\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectCountry($event.target.value)\"\n      class=\"form-control input-lg\" id=\"Country\" class=\"classImLookingFor\">\n      <option value=\"0\">Select Country</option>\n      <option *ngFor=\"let cout of countryVal\" value={{cout.gid}}>{{cout.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"States\">State</label>\n    <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectState($event.target.value)\"\n      class=\"form-control input-lg\" id=\"States\" class=\"classImLookingFor\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value={{stat.gid}}>{{stat.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n    <select class=\"form-control input-lg\" id=\"Regulation\" class=\"classImLookingFor\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.geography_id}}>{{reg.name}}</option>\n    </select>\n  </div>\n  <input type=\"button\" value=\"Add\" class=\"classImAdd\">      \n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n  <input type=\"button\" value=\"cancel\">\n</form>\n\n\n\n<table>\n  <tr>\n    <th>GEOGRAPHY</th>\n    <th>COUNTRY</th>\n    <th>STATE</th>\n    <th>REGULATION</th>\n    <th>SMS</th>\n    <th>WEB</th>  \n    <th>EMAIL</th>\n    <th>OPERATION</th>\n  </tr>\n  <tr class=\"hallo\">        \n    <td id=\"detailInfo\"></td>\n    <td id=\"countryInfo\"></td>\n    <td id=\"stateInfo\"></td>\n    <td id=\"regulationInfo\"></td>   \n    <td id=\"smsInfo\"></td>\n    <td id=\"webInfo\"></td>     \n    <td id=\"emailInfo\"></td>              \n    <td><a routerLink=\"/heroes\" id=\"link1\" >Delete</a></td>      \n  </tr>\n\n</table>"
+module.exports = "<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n  <div class=\"form-group\">\n    <label for=\"usr\">Name:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"usr\" [(ngModel)]=\"textValue\" #textbox>\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"pwd\">Email:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"pwd\" [(ngModel)]=\"pwdValue\" #pwdtextbox>\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"center-block\">Mobile No:\n      <input class=\"form-control\" formControlName=\"mob\">\n    </label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Subscription:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"paid\">Paid Subscription</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"trail\">Free Trial</label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Access:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"full\" [(ngModel)]=\"acc\" (change)=\"handleChange($event)\">Full</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"restricted\" [(ngModel)]=\"acc\" (change)=\"handleChangeRest($event)\">Restricted</label>\n  </div>\n  <div class=\"checkbox\">\n    <h4>Alert Type:</h4>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\" class=\"classImLookingFor\" id=\"sms\">Sms\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"web\" class=\"classImLookingFor\" id=\"web\">Web\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"email\" class=\"classImLookingFor\" id=\"email\">E-mail\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Geography\">Geography</label>\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectGeography($event.target.value)\"\n      class=\"form-control input-lg\" id=\"Geography\" class=\"classImLookingFor\">\n      <option value=\"0\">Select Geography</option>\n      <!-- <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option> -->\n      <option *ngFor=\"let geograph of requests\" [value]=\"geograph.id\">{{geograph.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Country\">Country</label>\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectCountry($event.target.value)\"\n      class=\"form-control input-lg\" id=\"Country\" class=\"classImLookingFor\">\n      <option value=\"0\">Select Country</option>\n      <option *ngFor=\"let cout of countryVal\" value={{cout.gid}}>{{cout.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"States\">State</label>\n    <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" [ngModelOptions]=\"{standalone: true}\" (change)=\"onSelectState($event.target.value)\"\n      class=\"form-control input-lg\" id=\"States\" class=\"classImLookingFor\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value={{stat.gid}}>{{stat.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n    <select class=\"form-control input-lg\" id=\"Regulation\" class=\"classImLookingFor\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.geography_id}}>{{reg.name}}</option>\n    </select>\n  </div>\n  <input type=\"button\" value=\"Add\" class=\"classImAdd\">\n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n  <input type=\"button\" value=\"cancel\">\n</form>\n\n\n\n<table id=\"myTable\">\n  <thead>\n    <tr>\n      <th>GEOGRAPHY</th>\n      <th>COUNTRY</th>\n      <th>STATE</th>\n      <th>REGULATION</th>\n      <th>SMS</th>\n      <th>WEB</th>\n      <th>EMAIL</th>\n      <th>OPERATION</th>\n    </tr>\n  </thead>\n  <tbody>\n\n  </tbody>\n  <!-- <tr class=\"hallo\">        \n    <td id=\"detailInfo\"></td>\n    <td id=\"countryInfo\"></td>\n    <td id=\"stateInfo\"></td>  \n    <td id=\"regulationInfo\"></td>   \n    <td id=\"smsInfo\"></td>\n    <td id=\"webInfo\"></td>     \n    <td id=\"emailInfo\"></td>                          \n    <td><a routerLink=\"/heroes\" id=\"link1\" >Delete</a></td>      \n  </tr>     -->\n</table>\n<!-- <button id =\"myId\" (click)=\"onClick($event)\" #myId>Hello</button>  \n<table id=\"myTable\">\n    <tbody>\n      <tr>\n      \n      </tr>\n    </tbody>\n  </table> -->"
 
 /***/ }),
 
@@ -373,39 +373,59 @@ var NewuserComponent = /** @class */ (function () {
         // });
         __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__(document).ready(function () {
             __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__(".classImAdd").click(function () {
+                var defaultSelectValueGeo = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Geography").find(":selected").val();
+                var defaultSelectValueCou = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Country").find(":selected").val();
+                var defaultSelectValueStat = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#States").find(":selected").val();
+                var defaultSelectValueReg = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Regulation").find(":selected").val();
                 var selectedText = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Geography").find("option:selected").text();
                 var selectedCountryText = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Country").find("option:selected").text();
                 var selectedStateText = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#States").find("option:selected").text();
                 var selectedRegulationText = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Regulation").find("option:selected").text();
                 var selectedValue = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#Geography").val();
-                //this.optionTest=selectedText;                   
-                //alert("clicked");         
-                if (__WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#sms").is(':checked'))
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#smsInfo").html('YES'); // checked
-                else
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#smsInfo").html('NO');
-                if (__WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#web").is(':checked'))
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#webInfo").html('YES'); // checked
-                else
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#webInfo").html('NO');
-                if (__WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#email").is(':checked'))
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#emailInfo").html('YES'); // checked
-                else
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#emailInfo").html('NO');
-                __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('.hallo').click(function () {
-                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__(this).remove(); // remove element which is being clicked
-                });
-                __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#detailInfo').html(selectedText);
-                __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#countryInfo').html(selectedCountryText);
-                __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#stateInfo').html(selectedStateText);
-                __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#regulationInfo').html(selectedRegulationText);
-                // alert("Selected Text: " + selectedText + " Value: " + selectedValue);
+                var smsTxtVal = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#sms").is(':checked') ? "Yes" : "No";
+                var webTxtVal = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#web").is(':checked') ? "Yes" : "No";
+                var emailTxtVal = __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#email").is(':checked') ? "Yes" : "No";
+                // console.log(smsTxtVal)       
+                // if ($("#sms").is(':checked'))
+                //   $("#smsInfo").html('YES');  // checked
+                // else
+                //   $("#smsInfo").html('NO');
+                // if ($("#web").is(':checked'))
+                //   $("#webInfo").html('YES');  // checked
+                // else
+                //   $("#webInfo").html('NO');
+                // if ($("#email").is(':checked'))
+                //   $("#emailInfo").html('YES');  // checked
+                // else
+                //   $("#emailInfo").html('NO');
+                // $('#detailInfo').html(selectedText);
+                // $('#countryInfo').html(selectedCountryText);
+                // $('#stateInfo').html(selectedStateText);
+                // $('#regulationInfo').html(selectedRegulationText);
+                //var rowCount = $('#myTable tbody tr').length;  
+                //console.log(defaultSelectValueGeo, "geography default value")
+                if (defaultSelectValueGeo == "0" && defaultSelectValueCou == "0" && defaultSelectValueStat == "0" && defaultSelectValueReg == "0") {
+                    //$('#myTable tbody').hide();
+                    alert("please select geography");
+                }
+                else {
+                    __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#myTable tbody").empty();
+                    if (__WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#myTable tbody').is(':empty')) {
+                        console.log("am empty");
+                        __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#myTable tbody').append('<tr class="child"><td>' + selectedText + '</td><td>' + selectedCountryText + '</td><td>' + selectedStateText + '</td><td>' + selectedRegulationText + '</td> <td>' + smsTxtVal + '</td> <td>' + webTxtVal + '</td>  <td>' + emailTxtVal + '</td> <td><input type="button" value="Delete" id="btn_a" /></td></tr>');
+                    }
+                }
+            });
+            __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__('#myTable tbody').on('click', '#btn_a', function () {
+                __WEBPACK_IMPORTED_MODULE_4__resources_js_jquery_min_js__("#myTable tbody").empty();
+                //console.log('clicked success');                 
             });
         });
     };
     NewuserComponent.prototype.ngAfterViewInit = function () {
-        var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
-        console.log(elements);
+        //let elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
+        //console.log(elements)  
+        //console.log(this.myId.nativeElement);
     };
     // pwdvalidation(formcontrol) {
     //   if (formcontrol.value.length < 5) {     
@@ -515,6 +535,10 @@ var NewuserComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('abc'),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
     ], NewuserComponent.prototype, "abc", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('myId'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "myId", void 0);
     NewuserComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-newuser',

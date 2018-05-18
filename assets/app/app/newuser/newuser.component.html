@@ -33,13 +33,13 @@
   <div class="checkbox">
     <h4>Alert Type:</h4>
     <label class="center-block">
-      <input type="checkbox" formControlName="ale" value="sms" class="classImLookingFor" id="sms">Sms  
+      <input type="checkbox" formControlName="ale" value="sms" class="classImLookingFor" id="sms">Sms
     </label>
     <label class="center-block">
       <input type="checkbox" formControlName="ale" value="web" class="classImLookingFor" id="web">Web
     </label>
     <label class="center-block">
-      <input type="checkbox" formControlName="ale" value="email" class="classImLookingFor" id="email">E-mail      
+      <input type="checkbox" formControlName="ale" value="email" class="classImLookingFor" id="email">E-mail
     </label>
   </div>
   <div class="form-group">
@@ -74,33 +74,45 @@
       <option *ngFor="let reg of regulationVal" value={{reg.geography_id}}>{{reg.name}}</option>
     </select>
   </div>
-  <input type="button" value="Add" class="classImAdd">      
+  <input type="button" value="Add" class="classImAdd">
   <input type="submit" class="forsubmit" value="Save">
   <input type="button" value="cancel">
 </form>
 
 
 
-<table>
-  <tr>
-    <th>GEOGRAPHY</th>
-    <th>COUNTRY</th>
-    <th>STATE</th>
-    <th>REGULATION</th>
-    <th>SMS</th>
-    <th>WEB</th>  
-    <th>EMAIL</th>
-    <th>OPERATION</th>
-  </tr>
-  <tr class="hallo">        
+<table id="myTable">
+  <thead>
+    <tr>
+      <th>GEOGRAPHY</th>
+      <th>COUNTRY</th>
+      <th>STATE</th>
+      <th>REGULATION</th>
+      <th>SMS</th>
+      <th>WEB</th>
+      <th>EMAIL</th>
+      <th>OPERATION</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+  <!-- <tr class="hallo">        
     <td id="detailInfo"></td>
     <td id="countryInfo"></td>
-    <td id="stateInfo"></td>
+    <td id="stateInfo"></td>  
     <td id="regulationInfo"></td>   
     <td id="smsInfo"></td>
     <td id="webInfo"></td>     
     <td id="emailInfo"></td>                          
     <td><a routerLink="/heroes" id="link1" >Delete</a></td>      
-  </tr>
-
+  </tr>     -->
 </table>
+<!-- <button id ="myId" (click)="onClick($event)" #myId>Hello</button>  
+<table id="myTable">
+    <tbody>
+      <tr>
+      
+      </tr>
+    </tbody>
+  </table> -->
