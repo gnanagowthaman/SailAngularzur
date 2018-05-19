@@ -11,7 +11,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListComponent } from './list/list.component';
-import { RequestService } from './newuser/request.service';       
+import { RequestService } from './newuser/request.service';
+import { HeaderComponent } from './header/header.component';
+import { AsideComponent } from './aside/aside.component';
+import { MainContentComponent } from './main-content/main-content.component';       
 const appRoutes: Routes = [
   { path: 'crisis-center', component: ListComponent },  
   {
@@ -31,6 +34,9 @@ const appRoutes: Routes = [
     NewuserComponent,  
     PageNotFoundComponent,
     ListComponent,
+    HeaderComponent,
+    AsideComponent,
+    MainContentComponent,
   ],
   imports: [
     BrowserModule,
