@@ -14,7 +14,8 @@ import { ListComponent } from './list/list.component';
 import { RequestService } from './newuser/request.service';
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
-import { MainContentComponent } from './main-content/main-content.component';       
+import { MainContentComponent } from './main-content/main-content.component';  
+import { HttpModule } from '@angular/http';     
 const appRoutes: Routes = [
   { path: 'crisis-center', component: ListComponent },  
   {
@@ -31,7 +32,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NewuserComponent,  
+    NewuserComponent,     
     PageNotFoundComponent,
     ListComponent,
     HeaderComponent,
@@ -40,13 +41,15 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,  
-     // { enableTracing: true } // <-- debugging purposes only
-    ),
+    // RouterModule.forRoot(
+    //   appRoutes,  
+    //  // { enableTracing: true } // <-- debugging purposes only
+    // ),
+    RouterModule.forRoot(appRoutes, {useHash: true}),
     BrowserModule, BrowserAnimationsModule, GridModule
   ],
   providers: [DemoService, RequestService],

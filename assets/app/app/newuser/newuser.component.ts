@@ -2,19 +2,38 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer } fro
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
-import { Response } from '@angular/http';
+import { Response,Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { RequestService } from './request.service';
 import { Iterator } from '@progress/kendo-angular-grid/dist/es2015/data/data.iterators';
+import { Client } from './user';
+
 import * as $ from '../../resources/js/jquery.min.js';
 @Component({
   selector: 'app-newuser',
-  templateUrl: './newuser.component.html',    
+  templateUrl: './newuser.component.html',
   styleUrls: ['./newuser.component.css']
 })
 export class NewuserComponent implements OnInit {
   //usr;
-  //formdata;           
+  //formdata;         
+
+  client: Client = {
+    user_name: '',
+    email_id: '',
+    mobile_no: 0,
+    company_name: 'others',
+    role_id: 3,
+    subscription: 'paid',
+    access: 'full',
+    smsaccess: 'none',
+    webaccess: 'none',
+    emailaccess: 'none',
+    country: 23,
+    geopgrpahy: '',
+    state: 18
+  }
+  
   @ViewChild('abc') abc: ElementRef;
   @ViewChild('myId') myId: ElementRef;
   txtValue;
@@ -101,7 +120,7 @@ export class NewuserComponent implements OnInit {
         if (defaultSelectValueGeo == "0" && defaultSelectValueCou == "0" && defaultSelectValueStat == "0" && defaultSelectValueReg == "0") {
           //$('#myTable tbody').hide();
           alert("please select geography")
-        }
+        }   
         else {
           $("#myTable tbody").empty();
           if ($('#myTable tbody').is(':empty')) {
@@ -125,10 +144,13 @@ export class NewuserComponent implements OnInit {
   //   if (formcontrol.value.length < 5) {     
   //     return { "pwd": true };   
   //   }
-  // }
-  onClickSubmit(data) {
-    this.acc = data.acc;
-    console.log("account subscription", this.acc);
+  // }   
+  onClickSubmit({value}: {value: Client}) {
+    //this.acc = data.acc;
+    console.log(value);     
+    this._http.newClient(value);                   
+     
+    console.log("account subscription", value);
   }
 
   createForm() {

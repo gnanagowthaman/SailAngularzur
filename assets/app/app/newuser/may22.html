@@ -1,0 +1,247 @@
+  <div class="userformcontainer">
+      <div class="widget">
+        <div class="widget-heading">
+          <h3 class="widget-title">User Set Up</h3>
+        </div>
+        <div class="widget-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="user_name" class="col-sm-3 control-label">User Name</label>
+              <div class="col-sm-9">
+                <input id="user_name" type="text" class="form-control">
+                <div id="user_error" class="user_error" style="font-size: 12px; color: #FF0000; "></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email_id" class="col-sm-3 control-label">Email ID</label>
+              <div class="col-sm-9">
+                <input id="email_id" type="text" class="form-control">
+                <div id="mail_error" class="user_error" style="font-size: 12px; color: #FF0000; "></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mobile_no" class="col-sm-3 control-label">Mobile Number</label>
+              <div class="col-sm-9">
+                <input id="mobile_no" type="text" class="form-control">
+                <div id="mobile_no_error" class="user_error" style="font-size: 12px; color: #FF0000; "></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="paid" class="col-sm-3 control-label">Subscription</label>
+              <div class="col-sm-9">
+                {#paid}
+                  <div class="radio-custom radio-inline">
+                    <input id="paid" type="radio" name="subscription" value="paid">
+                    <label for="paid">Paid Subscription</label>
+                  </div>
+                  <div class="radio-custom radio-inline">
+                    <input id="free" type="radio" name="subscription" value="free">
+                    <label for="free">Free Trial</label>
+                  </div>                  
+                {:else} 
+                  <div class="radio-custom radio-inline">
+                    <input id="paid" type="radio" name="subscription" value="paid" disabled="true">
+                    <label for="paid">Paid Subscription</label>
+                  </div> 
+                  <div class="radio-custom radio-inline">
+                    <input id="free" type="radio" name="subscription" value="free">
+                    <label for="free">Free Trial</label>
+                  </div>
+                {/paid} 
+                </br>
+                <span id="subc_error_show" style="font-size: 12px; color: #FF0000;"></span>             
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="paid" class="col-sm-3 control-label">Access</label>
+              <div class="col-sm-9">
+              {#full}
+                <div class="radio-custom radio-inline">
+                  <input id="full" type="radio" name="access" value="full">
+                  <label for="full">Full</label>
+                </div>
+                <div class="radio-custom radio-inline">
+                  <input id="restricted" type="radio" name="access" value="restricted">
+                  <label for="restricted">Restricted</label>
+                </div>
+              {:else}  
+                <div class="radio-custom radio-inline">
+                  <input id="full" type="radio" name="access" value="full" disabled="true">
+                  <label for="full">Full</label>
+                </div>
+                <div class="radio-custom radio-inline">
+                  <input id="restricted" type="radio" name="access" value="restricted">
+                  <label for="restricted">Restricted</label>
+                </div>              
+              {/full} 
+              </br>
+              <span id="access_error_show" style="font-size: 12px; color: #FF0000;"></span>
+              </div>
+            </div>
+
+                <div class="form-group">
+              <label class="col-sm-3 control-label">Alert TYpe</label>
+              <div class="col-sm-9">
+                {#sms}
+                  <div class="checkbox-custom radio-inline">
+                    <input id="sms" type="checkbox" name="sms" value="sms" checkbox="true" >
+                    <label for="sms">Sms</label>
+                  </div>
+                 {:else}
+                  <div class="checkbox-custom radio-inline">
+                    <input id="sms"type="checkbox" value="sms" name="sms" checkbox="true">
+                    <label for="sms">Sms</label>
+                  </div>
+                {/sms}
+                {#web}
+                  <div class="checkbox-custom radio-inline">
+                    <input id="web" type="checkbox" name="web" value="web" checkbox="true">
+                    <label for="web">Web</label>
+                  </div>    
+                {:else}
+                  <div class="checkbox-custom radio-inline">
+                    <input id="web" type="checkbox" value="web" name="web" checkbox="true">
+                    <label for="web">Web</label>
+                  </div>    
+                {/web}
+                {#email}
+                  <div class="checkbox-custom radio-inline">
+                    <input id="email" type="checkbox" value="email" name="email" checkbox="true">
+                    <label for="email">E-Mail</label>
+                  </div>    
+                {:else}
+                  <div class="checkbox-custom radio-inline">
+                    <input id="email" type="checkbox" value="email" name="email" checkbox="true">
+                    <label for="email">E-Mail</label>
+                  </div>    
+                {/email}
+
+                </br>
+                <span id="access1_error_show" style="font-size: 12px; color: #FF0000;"></span>            
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="selectGeography" class="col-sm-3 control-label">Geography</label>
+              <div class="col-sm-9">
+              <select id="selectGeography" class="form-control"  disabled="disabled">
+
+              </select>
+              <div id="geo_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+
+            </div>
+            </div> 
+            <div class="form-group">
+              <label for="selectCountry" class="col-sm-3 control-label">Country</label>
+              <div class="col-sm-9">
+              <select id="selectCountry" class="form-control" disabled="disabled">
+
+              </select>
+              <div id="country_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+
+            </div>
+            </div> 
+            <div class="form-group">
+              <label for="selectState" class="col-sm-3 control-label">State</label>
+              <div class="col-sm-9">
+              <select id="selectState" class="form-control" disabled="disabled">
+
+              </select>
+              <div id="state_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+
+            </div>
+            </div> 
+            <div class="form-group">
+              <label for="selectRegulation" class="col-sm-3 control-label">Regulation</label>
+              <div class="col-sm-9">
+              <select id="selectRegulation" class="form-control" disabled="disabled">
+
+              </select>
+              <div id="reg_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+
+            </div>
+            </div> 
+
+          <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-9">
+                <button id="add" class="btn btn-outline btn-success">Add</button>  
+                <button id="save" class="btn btn-outline btn-success">Save</button>  
+                <button id="cancel" class="btn btn-outline btn-black">Cancel</button>
+              </div>
+              <div id="user_reg_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+            </div>
+
+            <div class="form-group">
+            <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+           <thead>
+            <tr>
+                 <th style="width:6%" class="text-center">Geography</th>
+                 <th style="width:10%" class="text-center">Country</th>
+                 <th style="width:10%" class="text-center">State</th>
+                 <th style="width:10%" class="text-center">Regulation</th>
+                 <th style="width:10%" class="text-center">Sms</th>
+                 <th style="width:10%" class="text-center">Web</th>
+                  <th style="width:10%" class="text-center">Email</th>
+                 <th style="width:30%" class="text-center">Operation</th>
+
+            </tr>
+          </thead>
+             <tbody id="user-list-table">
+            
+              </tbody> 
+            </table>
+            <div id="findStatus"></div>
+         </div>
+             
+           <!--  <div class="form-group">
+              <label class="col-sm-3 control-label">Geography</label>
+              <div class="col-sm-9">
+              <div id="user-geo"></div> 
+              </br>
+                <span id="geography_error_show" style="font-size: 12px; color: #FF0000;"></span>
+              </div> 
+          
+            </div>
+            <div class="form-group">
+              <label for="selectCountry" class="col-sm-3 control-label">Country</label>
+              <div class="col-sm-9">
+              <select id="selectCountry" class="form-control" >
+
+              </select>
+              <div id="country_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+
+            </div>
+            </div> 
+            <div class="form-group">
+              <label for="selectState" class="col-sm-3 control-label">State</label>
+              <div class="col-sm-9">
+              <select id="selectState" class="form-control" >
+
+              </select>
+              <div id="state_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
+
+            </div>
+            </div> 
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Regulation</label>
+              <div class="col-sm-9">
+              <table class="regtable" id="mcTable" data-mcs-theme="minimal-dark" class="main-sidebar regtable mCustomScrollbar"><tr id="user-reg-geo"></tr>               
+              </table> 
+              <span id="regulation_error_show" style="font-size: 12px; color: #FF0000;"></span>
+              </div>
+             
+            </div> -->
+          
+
+          
+
+          </form>
+        </div>
+      </div>
+    </div>

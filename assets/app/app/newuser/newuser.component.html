@@ -1,17 +1,17 @@
 <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
   <div class="form-group">
     <label for="usr">Name:</label>
-    <input type="text" class="form-control" formControlName="usr" [(ngModel)]="textValue" #textbox>
+    <input type="text" class="form-control" formControlName="usr" [(ngModel)]=" client.user_name" #textbox>
   </div>
 
   <div class="form-group">
     <label for="pwd">Email:</label>
-    <input type="text" class="form-control" formControlName="pwd" [(ngModel)]="pwdValue" #pwdtextbox>
+    <input type="text" class="form-control" formControlName="pwd" [(ngModel)]=" client.email_id" #pwdtextbox>
   </div>
 
-  <div class="form-group">
+  <div class="form-group">   
     <label class="center-block">Mobile No:
-      <input class="form-control" formControlName="mob">
+      <input class="form-control" formControlName="mob" [(ngModel)]="client.mobile_no">
     </label>
   </div>
 
