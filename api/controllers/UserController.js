@@ -481,7 +481,7 @@ module.exports = {
            if (userFormData.hasOwnProperty('regulations')) {
           //if (userFormData.hasOwnProperty('regulations') && userFormData.regulations.length > 0) {
           // if (userFormData.access == 'restricted' && userFormData.regulations.length > 0) {  
-            async.series([
+            async.series([       
               //Get subscription id from subscription table
               function(callback) {
                 var sql = "SELECT id FROM subscription WHERE user_id=?";

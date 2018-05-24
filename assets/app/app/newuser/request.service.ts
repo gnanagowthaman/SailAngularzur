@@ -10,7 +10,14 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 //import { Observable } from 'rxjs/Observable';
 import { Observable } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+    'Authorization': 'my-auth-token'
+  })
+};
 @Injectable()
 export class RequestService {
   //clients: any[] = [];
@@ -26,14 +33,19 @@ export class RequestService {
   newClient(client: Client) : Observable<Client> {
     // Pushing Client object to clients which is a FirebaseListObservable
     //this.clients.push(client);    
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });    
+    //let headers = new Headers({ 'Content-Type': 'application/json' });
+    //let options = new RequestOptions({ headers: headers });    
     // return this.http.post("http://localhost:1337/getRegbygeostate", client, options).toPromise()
-    //        .then(this.extractData)
-    //        .catch(this.handleErrorPromise);             
-    return this._http.post("http://localhost:1337/createUser", client, options) // ...using post request
-    .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
-    .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
-    
+    //        .then(this.extractData)   
+    //        .catch(this.handleErrorPromise);       
+    console.log("new client in")              
+       
+    client.role_id=3;   
+    client.country=23; 
+    client.geopgrpahy='';                              
+    client.state=18;             
+                   
+    console.log(client)    
+    return this.http.post<Client>("http://localhost:1337/createUser", client, httpOptions);         
   }
 }

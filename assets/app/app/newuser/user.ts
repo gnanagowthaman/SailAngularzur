@@ -5,7 +5,9 @@ export interface Client {
     company_name?: string;
     role_id?: number;
     subscription?: string;
-    access?: string;
+    access?:string;    
+    cliaccess?: string;
+    resaccess?: string;
     smsaccess?: string;
     webaccess?: string;
     emailaccess?: string;
