@@ -1,0 +1,129 @@
+<ng-container *ngIf="!show">
+  <div class="widget-heading">
+    <h3 class="widget-title">Geography Management</h3>   
+  </div>           
+  <div class="form-group">   
+    <div class="col-sm-offset-3 col-sm-9">
+      <button id="creategeo" class="btn btn-success btn-rounded btn-block" style="width: 150px;" (click)="toggle()">create</button>
+
+    </div>
+
+    <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+      <thead>
+        <tr>
+          <th style="width:15%" class="text-center">Name</th>
+          <th style="width:15%" class="text-center">Description</th>
+          <th style="width:30%" class="text-center">Operation</th>     
+        </tr>
+      </thead>      
+      <tbody id="doc-list-table">
+        <!-- <tr *ngFor="let employee of myData; let i = index">
+        <td class="text-center">{{employee.id}}</td>
+        <td class="text-center">{{employee.name}}</td>
+        <td class="text-center">{{employee.description}}</td>
+      </tr>                              -->
+        <tr *ngFor="let employee of myData; let i = index">
+          <td class="text-center">
+            {{employee.name}}
+          </td>
+          <td class="text-center">
+            {{employee.description}}
+          </td>
+          <td class="text-center">
+            <div id="hide">
+              <span id="tocreategeo" class="published">
+                <a class="tooltips">
+                  <span>Edit</span>
+                  <img src="/images/edit.png" />
+                </a>
+              </span>
+              <span class="delete-doc" data-toggle="modal" data-target="#<%=id%>">
+                <a class="tooltips">
+                  <span>Delete</span>
+                  <img src="/images/delete.png" />
+                </a>
+              </span>
+            </div>
+            <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="<%=id%>">
+              <div role="document" class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 id="mySmallModalLabel" class="modal-title">Geography Delete</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Do you want to delete?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                    <button type="button" id="delGeography" class="btn btn-outline btn-primary-red">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="findStatus"></div>
+    <div class="user_load">
+      <div id="loadMore">
+
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="show">         
+  <app-geography-create></app-geography-create>
+</ng-container>
+
+<!-- <table>
+  <tbody>
+    <tr *ngFor="let employee of myData; let i = index">
+      <td class="text-center">
+          {{employee.name}}
+      </td>
+      <td class="text-center">
+          {{employee.description}}
+      </td>
+      <td class="text-center">                     
+        <div id="hide">
+          <span id="tocreategeo" class="published">
+            <a class="tooltips">
+              <span>Edit</span>
+              <img src="/images/edit.png" />
+            </a>
+          </span>
+          <span class="delete-doc" data-toggle="modal" data-target="#<%=id%>">
+            <a class="tooltips">
+              <span>Delete</span>
+              <img src="/images/delete.png" />
+            </a>
+          </span>
+        </div>
+        <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="<%=id%>">
+          <div role="document" class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <h4 id="mySmallModalLabel" class="modal-title">Geography Delete</h4>
+              </div>
+              <div class="modal-body">
+                <p>Do you want to delete?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                <button type="button" id="delGeography" class="btn btn-outline btn-primary-red">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table> -->

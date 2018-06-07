@@ -1,51 +1,51 @@
 <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
   <div class="form-group">
     <label for="usr">Name:</label>  
-    <input type="text" class="form-control" formControlName="user_name" [(ngModel)]=" client.user_name" #textbox>
+    <input type="text" class="form-control" formControlName="user_name" [(ngModel)]=" client.user_name" #refusername>
   </div>
    
   <div class="form-group">    
     <label for="pwd">Email:</label>
-    <input type="text" class="form-control" formControlName="email_id" [(ngModel)]=" client.email_id" #pwdtextbox>
+    <input type="text" class="form-control" formControlName="email_id" [(ngModel)]=" client.email_id" #refemail>
   </div>
 
   <div class="form-group">        
     <label class="center-block">Mobile No:   
-      <input class="form-control" formControlName="mobile_no" [(ngModel)]="client.mobile_no">
+      <input class="form-control" formControlName="mobile_no" [(ngModel)]="client.mobile_no" #refmob>
     </label>
   </div>         
 
   <div class="form-group radio">
     <h4>Subscription:</h4>      
     <label class="center-block">   
-      <input type="radio" formControlName="subscription" value="paid" [(ngModel)]="client.subscription" >Paid Subscription</label>
+      <input type="radio" formControlName="subscription" value="paid" [(ngModel)]="client.subscription" #refsub>Paid Subscription</label>
     <label class="center-block">   
-      <input type="radio" formControlName="subscription" value="free" [(ngModel)]="client.subscription">Free Trial</label>
+      <input type="radio" formControlName="subscription" value="free" [(ngModel)]="client.subscription" #refsub>Free Trial</label>
   </div>
 
    <div class="form-group radio">      
     <h4>Access:</h4>           
     <label class="center-block">               
-      <input type="radio" formControlName="access" value="full" [(ngModel)]="client.cliaccess" (change)="handleChange($event)">Full</label>
+      <input type="radio" formControlName="access" value="full" [(ngModel)]="client.access" (change)="handleChange($event)" #refacc>Full</label>
     <label class="center-block">      
-      <input type="radio" formControlName="access" value="restricted" [(ngModel)]="client.resaccess" (change)="handleChangeRest($event)">Restricted</label>
+      <input type="radio" formControlName="access" value="restricted" [(ngModel)]="client.access" (change)="handleChangeRest($event)" #refacc>Restricted</label>
   </div>
   <div class="checkbox">         
     <h4>Alert Type:</h4>
     <label class="center-block">
-      <input type="checkbox" formControlName="smsaccess" value="sms" class="classImLookingFor" id="sms">Sms
+      <input type="checkbox" formControlName="smsaccess" [(ngModel)]="client.smsaccess" value="sms" class="classImLookingFor" (change)="smsChoose($event)" #sms>Sms      
     </label>
     <label class="center-block">
-      <input type="checkbox" formControlName="webaccess" value="web" class="classImLookingFor" id="web">Web
+      <input type="checkbox" formControlName="webaccess" [(ngModel)]="client.webaccess" value="web" class="classImLookingFor" (change)="webChoose($event)" #web>Web      
     </label>   
-    <label class="center-block">          
-      <input type="checkbox" formControlName="emailaccess" value="email" class="classImLookingFor" id="email">E-mail
+    <label class="center-block">                       
+      <input type="checkbox" formControlName="emailaccess" [(ngModel)]="client.emailaccess" value="email" class="classImLookingFor" (change)="emailChoose($event)" #email>E-mail       
     </label>
   </div>           
   <div class="form-group">         
     <label class="control-label" for="Geography">Geography</label>
-    <select *ngIf="requests" [(ngModel)]="selecteGeography"  (change)="onSelectGeography($event.target.value)"
-      class="form-control input-lg" id="Geography" class="classImLookingFor" formControlName="geopgrpahy" >
+    <select *ngIf="requests" [(ngModel)]="selecteGeography"  (change)="onSelectGeography($event)"
+      class="form-control input-lg"  class="classImLookingFor" formControlName="geopgrpahy" class="ge" #Geography >
       <option value="0">Select Geography</option>   
       <!-- <option *ngFor="let geograph of requests" value={{geograph.id}}>{{geograph.name}}</option> -->
        <option *ngFor="let geograph of requests" [value]="geograph.id">{{geograph.name}}</option>
@@ -53,28 +53,29 @@
   </div>    
   <div class="form-group">      
     <label class="control-label" for="Country">Country</label>
-    <select *ngIf="countryVal" [(ngModel)]="selectedCountry"  (change)="onSelectCountry($event.target.value)"
-      class="form-control input-lg" id="Country" class="classImLookingFor" formControlName="country">
+    <select *ngIf="countryVal" [(ngModel)]="selectedCountry"  (change)="onSelectCountry($event)"
+      class="form-control input-lg"  class="classImLookingFor" formControlName="country" #Country>
       <option value="0">Select Country</option>  
       <option *ngFor="let cout of countryVal" value={{cout.id}}>{{cout.name}}</option>
     </select>
   </div>
-  <div class="form-group">
+  <div class="form-group">       
     <label class="control-label" for="States">State</label>
-    <select *ngIf="stateVal" [(ngModel)]="selectedState"  (change)="onSelectState($event.target.value)"
-      class="form-control input-lg" id="States" class="classImLookingFor" formControlName="state">
+    <select *ngIf="stateVal" [(ngModel)]="selectedState"  (change)="onSelectState($event)"
+      class="form-control input-lg"  class="classImLookingFor" formControlName="state" #States>
       <option value="0">Select State</option>  
-      <option *ngFor="let stat of stateVal" value={{stat.scid}}>{{stat.name}}</option>
+      <option *ngFor="let stat of stateVal" value={{stat.id}}>{{stat.name}}</option>
     </select>
-  </div>
+  </div>                                   
   <div class="form-group">
     <label class="control-label" for="Regulation">Regulation</label>
-    <select class="form-control input-lg" id="Regulation" class="classImLookingFor">
+    <select class="form-control input-lg"  class="classImLookingFor" #Regulation>  
       <option *ngIf="!selectedState" value="0">Select Reg</option>     
       <option *ngFor="let reg of regulationVal" value={{reg.rlid}}>{{reg.name}}</option>
     </select>  
    </div>     
-  <input type="button" value="Add" class="classImAdd">
+    
+  <input type="button" value="Add" (click)="addFunction()">
   <input type="submit" class="forsubmit" value="Save">
   <input type="button" value="cancel">
 </form>
@@ -94,25 +95,22 @@
       <th>OPERATION</th>
     </tr>
   </thead>
-  <tbody>
-
-  </tbody>
-  <!-- <tr class="hallo">        
-    <td id="detailInfo"></td>
-    <td id="countryInfo"></td>
-    <td id="stateInfo"></td>  
-    <td id="regulationInfo"></td>   
-    <td id="smsInfo"></td>
-    <td id="webInfo"></td>     
-    <td id="emailInfo"></td>                          
-    <td><a routerLink="/heroes" id="link1" >Delete</a></td>      
-  </tr>     -->
-</table>
-<!-- <button id ="myId" (click)="onClick($event)" #myId>Hello</button>  
-<table id="myTable">
-    <tbody>
-      <tr>
-      
-      </tr>
-    </tbody>
-  </table> -->
+  <tbody #ir>                       
+   
+<div *ngIf="!myFlag;else myFlagTrue;" >
+</div>
+<ng-template #myFlagTrue>   
+  <tr *ngFor="let item of regulation_new; let i = index">
+  <!-- <td>{{i+1}}</td>                 -->
+  <td>{{item.geography}}</td>                                          
+  <td>{{item.country}}</td>
+  <td>{{item.state}}</td>         
+  <td>{{item.regulation_name}}</td>                                                 
+  <td>{{item.smsaccess}}</td>               
+  <td>{{item.webaccess}}</td>                    
+  <td>{{item.emailaccess}}</td>
+  <td><button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button></td>          
+</tr>   
+</ng-template>  
+  </tbody>        
+</table>        

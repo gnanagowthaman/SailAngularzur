@@ -45,7 +45,11 @@ export class RequestService {
     client.geopgrpahy='';                              
     client.state=18;             
                    
-    console.log(client)    
+    console.log(client)      
     return this.http.post<Client>("http://localhost:1337/createUser", client, httpOptions);         
+  }
+  fullClient(client: Client) : Observable<Client>{   
+    
+    return this.http.post<Client>("http://localhost:1337/createUser", client, httpOptions);  
   }
 }
