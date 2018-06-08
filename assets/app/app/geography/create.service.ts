@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Http, Response } from '@angular/http';
-import { GeoCreate } from './geocreate';
-import 'rxjs/add/operator/map';
+import { GeoCreate,GeoCard } from './geo';
+import 'rxjs/add/operator/map';    
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 import { Observable } from 'rxjs';
@@ -17,11 +17,16 @@ const httpOptions = {
 };
 
 @Injectable()
-export class CreateService {
-
+export class CreateService {      
   constructor(private http: HttpClient) { }
   saveGeography(geocreate:GeoCreate):Observable<GeoCreate>{       
-    
     return this.http.post<GeoCreate>("http://localhost:1337/createGeo", geocreate, httpOptions);  
+  }
+  updateGeography(geo:GeoCreate):Observable<any>{
+    // return this.http.put("http://localhost:1337/findgeo/"+"/"+geo.id,geo,httpOptions);
+    return this.http.put("http://localhost:1337/findgeo"+"/"+geo.id,geo,httpOptions); 
+  } 
+  getGeographyById(geoId: string): Observable<GeoCreate>{             
+    return this.http.get<GeoCard>("http://localhost:1337/findgeo" +"/"+ geoId);
   }
 }

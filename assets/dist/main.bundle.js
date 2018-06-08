@@ -131,24 +131,18 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__ = __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__list_list_component__ = __webpack_require__("./assets/app/app/list/list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__geography_create_create_service__ = __webpack_require__("./assets/app/app/geography-create/create.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__geography_edit_geography_create_service__ = __webpack_require__("./assets/app/app/geography-edit/geography-create.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__geography_edit_geography_edit_component__ = __webpack_require__("./assets/app/app/geography-edit/geography-edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__geography_create_geography_create_component__ = __webpack_require__("./assets/app/app/geography-create/geography-create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
 
 
 
@@ -182,12 +176,15 @@ var appRoutes = [
     },
     {
         path: 'geoList',
-        component: __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */],
-        children: [
-            { path: '', component: __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */], pathMatch: 'full' },
-            { path: 'createGeography', component: __WEBPACK_IMPORTED_MODULE_21__geography_create_geography_create_component__["a" /* GeographyCreateComponent */] },
-            { path: 'editGeography/:id', component: __WEBPACK_IMPORTED_MODULE_20__geography_edit_geography_edit_component__["a" /* GeographyEditComponent */] }
-        ]
+        component: __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'geoCreate',
+        component: __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'geoEdit/:id',
+        component: __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
     },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
@@ -201,16 +198,14 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__aside_aside_component__["a" /* AsideComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__main_content_main_content_component__["a" /* MainContentComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__geography_edit_geography_edit_component__["a" /* GeographyEditComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__geography_create_geography_create_component__["a" /* GeographyCreateComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__aside_aside_component__["a" /* AsideComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__main_content_main_content_component__["a" /* MainContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_18__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_17__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */],
@@ -221,7 +216,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_14__geography_edit_geography_create_service__["a" /* GeographyCreateService */], __WEBPACK_IMPORTED_MODULE_13__geography_create_create_service__["a" /* CreateService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_13__geography_create_service__["a" /* CreateService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -324,7 +319,7 @@ var DemoService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./assets/app/app/geography-create/create.service.ts":
+/***/ "./assets/app/app/geography/create.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -362,207 +357,18 @@ var CreateService = /** @class */ (function () {
     CreateService.prototype.saveGeography = function (geocreate) {
         return this.http.post("http://localhost:1337/createGeo", geocreate, httpOptions);
     };
+    CreateService.prototype.updateGeography = function (geo) {
+        // return this.http.put("http://localhost:1337/findgeo/"+"/"+geo.id,geo,httpOptions);
+        return this.http.put("http://localhost:1337/findgeo" + "/" + geo.id, geo, httpOptions);
+    };
+    CreateService.prototype.getGeographyById = function (geoId) {
+        return this.http.get("http://localhost:1337/findgeo" + "/" + geoId);
+    };
     CreateService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], CreateService);
     return CreateService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-create/geography-create.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-create/geography-create.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ng-container *ngIf=\"!show\">\n<div class=\"col-md-7\">\n    <div class=\"widget\">\n      <div class=\"widget-heading\">   \n        <h3 class=\"widget-title\">Geography Set Up</h3>\n      </div>\n      <div class=\"widget-body\">   \n        <!-- <form class=\"form-horizontal\"> -->\n        <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n          <div class=\"form-group\">\n            <label class=\"col-sm-3 control-label\">Name</label>\n            <div class=\"col-sm-9\">\n              <input type=\"text\" class=\"form-control\" formControlName=\"geographyName\" [(ngModel)]=\" geoCreate.name\" #geoname/>\n              <div id=\"geo_name_error\" class=\"geo_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n            </div>\n          </div>\n  \n          <div class=\"form-group\">\n            <label class=\"col-sm-3 control-label\">Description</label>         \n            <div class=\"col-sm-9\">\n              <input type=\"text\" class=\"form-control\" formControlName=\"geoDescription\" [(ngModel)]=\" geoCreate.description\" #geodescription/>\n              <div id=\"geo_description_error\" class=\"geo_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n            </div>\n          </div>\n      \n          <div class=\"form-group\">\n            <div class=\"col-sm-offset-3 col-sm-9\">\n              <!-- <button id=\"save\" class=\"btn btn-outline btn-success\">Save</button> -->\n              <input type=\"submit\" class=\"btn btn-outline btn-success\" value=\"Save\" >\n              <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n            </div>\n          </div>\n  \n          <!-- </form> -->\n        </form>\n      </div>    \n    </div>\n  </div>\n</ng-container>  \n  <ng-container *ngIf=\"show\">         \n      <app-geography></app-geography>\n  </ng-container>"
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-create/geography-create.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeographyCreateComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_service__ = __webpack_require__("./assets/app/app/geography-create/create.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var GeographyCreateComponent = /** @class */ (function () {
-    function GeographyCreateComponent(http, createService, renderer, elem, _router) {
-        this.http = http;
-        this.createService = createService;
-        this.renderer = renderer;
-        this.elem = elem;
-        this._router = _router;
-        this.show = false;
-        this.buttonName = 'Show';
-        this.geoCreate = {
-            name: '',
-            description: ''
-        };
-    }
-    GeographyCreateComponent.prototype.ngOnInit = function () {
-        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
-            geographyName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
-            geoDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
-        });
-    };
-    GeographyCreateComponent.prototype.ngAfterViewInit = function () {
-    };
-    GeographyCreateComponent.prototype.onClickSubmit = function (data) {
-        var _this = this;
-        this.getGeoName = this.geoname.nativeElement.value;
-        this.getGeoDescription = this.geodescription.nativeElement.value;
-        this.router = __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */];
-        var geoCreate = {
-            name: this.getGeoName,
-            description: this.getGeoDescription
-        };
-        this.createService.saveGeography(geoCreate)
-            .subscribe(function (mySave) {
-            _this.saveGeo = mySave;
-            console.log(_this.saveGeo);
-            _this._router.navigate(['/geoList']);
-            _this.show = !_this.show;
-        });
-        console.warn("am in onsubmit geography");
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geoname"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
-    ], GeographyCreateComponent.prototype, "geoname", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geodescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
-    ], GeographyCreateComponent.prototype, "geodescription", void 0);
-    GeographyCreateComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-geography-create',
-            template: __webpack_require__("./assets/app/app/geography-create/geography-create.component.html"),
-            styles: [__webpack_require__("./assets/app/app/geography-create/geography-create.component.css")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
-    ], GeographyCreateComponent);
-    return GeographyCreateComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-edit/geography-create.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeographyCreateService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var httpOptions = {
-    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
-        'Content-Type': 'application/json',
-        'Authorization': 'my-auth-token'
-    })
-};
-var GeographyCreateService = /** @class */ (function () {
-    function GeographyCreateService() {
-    }
-    GeographyCreateService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
-    ], GeographyCreateService);
-    return GeographyCreateService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-edit/geography-edit.component.css":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-edit/geography-edit.component.html":
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ "./assets/app/app/geography-edit/geography-edit.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeographyEditComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var GeographyEditComponent = /** @class */ (function () {
-    function GeographyEditComponent() {
-    }
-    GeographyEditComponent.prototype.ngOnInit = function () {
-    };
-    GeographyEditComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-geography-edit',
-            template: __webpack_require__("./assets/app/app/geography-edit/geography-edit.component.html"),
-            styles: [__webpack_require__("./assets/app/app/geography-edit/geography-edit.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], GeographyEditComponent);
-    return GeographyEditComponent;
 }());
 
 
@@ -579,7 +385,7 @@ module.exports = ""
 /***/ "./assets/app/app/geography/geography.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"!show\">\n  <div class=\"widget-heading\">\n    <h3 class=\"widget-title\">Geography Management</h3>   \n  </div>           \n  <div class=\"form-group\">   \n    <div class=\"col-sm-offset-3 col-sm-9\">\n      <button id=\"creategeo\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n    </div>\n\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n      <thead>\n        <tr>\n          <th style=\"width:15%\" class=\"text-center\">Name</th>\n          <th style=\"width:15%\" class=\"text-center\">Description</th>\n          <th style=\"width:30%\" class=\"text-center\">Operation</th>     \n        </tr>\n      </thead>      \n      <tbody id=\"doc-list-table\">\n        <!-- <tr *ngFor=\"let employee of myData; let i = index\">\n        <td class=\"text-center\">{{employee.id}}</td>\n        <td class=\"text-center\">{{employee.name}}</td>\n        <td class=\"text-center\">{{employee.description}}</td>\n      </tr>                              -->\n        <tr *ngFor=\"let employee of myData; let i = index\">\n          <td class=\"text-center\">\n            {{employee.name}}\n          </td>\n          <td class=\"text-center\">\n            {{employee.description}}\n          </td>\n          <td class=\"text-center\">\n            <div id=\"hide\">\n              <span id=\"tocreategeo\" class=\"published\">\n                <a class=\"tooltips\">\n                  <span>Edit</span>\n                  <img src=\"/images/edit.png\" />\n                </a>\n              </span>\n              <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\n                <a class=\"tooltips\">\n                  <span>Delete</span>\n                  <img src=\"/images/delete.png\" />\n                </a>\n              </span>\n            </div>\n            <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\n              <div role=\"document\" class=\"modal-dialog modal-sm\">\n                <div class=\"modal-content\">\n                  <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                      <span aria-hidden=\"true\">×</span>\n                    </button>\n                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Geography Delete</h4>\n                  </div>\n                  <div class=\"modal-body\">\n                    <p>Do you want to delete?</p>\n                  </div>\n                  <div class=\"modal-footer\">\n                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                    <button type=\"button\" id=\"delGeography\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n      <div id=\"loadMore\">\n\n      </div>\n    </div>\n  </div>\n</ng-container>\n<ng-container *ngIf=\"show\">         \n  <app-geography-create></app-geography-create>\n</ng-container>\n\n<!-- <table>\n  <tbody>\n    <tr *ngFor=\"let employee of myData; let i = index\">\n      <td class=\"text-center\">\n          {{employee.name}}\n      </td>\n      <td class=\"text-center\">\n          {{employee.description}}\n      </td>\n      <td class=\"text-center\">                     \n        <div id=\"hide\">\n          <span id=\"tocreategeo\" class=\"published\">\n            <a class=\"tooltips\">\n              <span>Edit</span>\n              <img src=\"/images/edit.png\" />\n            </a>\n          </span>\n          <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\n            <a class=\"tooltips\">\n              <span>Delete</span>\n              <img src=\"/images/delete.png\" />\n            </a>\n          </span>\n        </div>\n        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\n          <div role=\"document\" class=\"modal-dialog modal-sm\">\n            <div class=\"modal-content\">\n              <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                  <span aria-hidden=\"true\">×</span>\n                </button>\n                <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Geography Delete</h4>\n              </div>\n              <div class=\"modal-body\">\n                <p>Do you want to delete?</p>\n              </div>\n              <div class=\"modal-footer\">\n                <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                <button type=\"button\" id=\"delGeography\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table> -->"
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Geography Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"creategeo\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:15%\" class=\"text-center\">Name</th>\n                    <th style=\"width:15%\" class=\"text-center\">Description</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\">\n\n                <tr *ngFor=\"let employee of myData; let i = index\">\n                    <td class=\"text-center\">\n                        {{employee.name}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{employee.description}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div id=\"hide\">\n                            <span id=\"tocreategeo\" class=\"published\">  \n                                <a class=\"tooltips\">\n                    <span><button type=\"button\" (click)=\"loadArticleToEdit(employee.id)\">Edit</button></span>\n                                    <img src=\"/images/edit.png\" />\n                                </a>\n                            </span>       \n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\n                                <a class=\"tooltips\">\n                    <span><td><button type=\"button\" (click)=\"deleteArticle(employee.id)\">Delete</button></td></span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Geography Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" id=\"delGeography\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n\n        <div id=\"findStatus\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMore\">\n\n            </div>\n        </div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Geography Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geographyName\" [(ngModel)]=\" geoCreate.name\" #geoname/>\n                            <div id=\"geo_name_error\" class=\"geo_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geoDescription\" [(ngModel)]=\" geoCreate.description\" #geodescription/>\n                            <div id=\"geo_description_error\" class=\"geo_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">\n                            <!-- <input type=\"submit\" class=\"btn btn-outline btn-success\" value=\"Save\"> -->\n<button *ngIf=\"!articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>  \n<button *ngIf=\"articleIdToUpdate\" class=\"btn btn-outline btn-success\">UPDATE</button>                \n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
 
 /***/ }),
 
@@ -589,8 +395,10 @@ module.exports = "<ng-container *ngIf=\"!show\">\n  <div class=\"widget-heading\
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeographyComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -603,16 +411,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var GeographyComponent = /** @class */ (function () {
-    function GeographyComponent(http, _router) {
+    function GeographyComponent(http, createService, renderer, elem, _router) {
         this.http = http;
+        this.createService = createService;
+        this.renderer = renderer;
+        this.elem = elem;
         this._router = _router;
+        this.articleIdToUpdate = null;
         this.show = false;
         this.buttonName = 'Show';
+        this.correct = false;
+        this.geoCreate = {
+            name: '',
+            description: ''
+        };
     }
     GeographyComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            geographyName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            geoDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/geography', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+        this.getGeographyAll();
+    };
+    GeographyComponent.prototype.getGeographyAll = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
         headers = headers.set('Content-Type', 'application/json; charset=utf-8');
         this.http.get('http://localhost:1337/geography', { headers: headers }).subscribe(function (data) {
             _this.myData = data;
@@ -620,25 +453,78 @@ var GeographyComponent = /** @class */ (function () {
         });
     };
     GeographyComponent.prototype.toggle = function () {
-        this._router.navigate(['/geoList/createGeography']);
-        this.show = !this.show;
-        // CHANGE THE NAME OF THE BUTTON.
-        if (this.show)
-            this.buttonName = "Hide";
-        else
-            this.buttonName = "Show";
+        this.correct = !this.correct;
+        this._router.navigate(['/geoCreate']);
     };
+    GeographyComponent.prototype.onClickSubmit = function (data) {
+    };
+    GeographyComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.getGeoName = this.geoname.nativeElement.value;
+        this.getGeoDescription = this.geodescription.nativeElement.value;
+        this.router = __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */];
+        var geoCreate = {
+            name: this.getGeoName,
+            description: this.getGeoDescription
+        };
+        var geoform = this.formdata.value;
+        if (this.articleIdToUpdate === null) {
+            this.createService.saveGeography(geoCreate)
+                .subscribe(function (mySave) {
+                _this.saveGeo = mySave;
+                console.log(_this.saveGeo);
+                _this.getGeographyAll();
+                _this._router.navigate(['/geoList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            geoCreate.id = this.articleIdToUpdate;
+            this.createService.updateGeography(geoCreate).subscribe(function (successCode) {
+                _this.getGeographyAll();
+            });
+            console.warn("am in update");
+        }
+    };
+    GeographyComponent.prototype.loadArticleToEdit = function (geoId) {
+        var _this = this;
+        this.createService.getGeographyById(geoId)
+            .subscribe(function (geot) {
+            _this.formdata.setValue({ geographyName: geot[0].name, geoDescription: geot[0].description });
+        });
+        this.correct = !this.correct;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geoname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], GeographyComponent.prototype, "geoname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geodescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], GeographyComponent.prototype, "geodescription", void 0);
     GeographyComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-geography',
             template: __webpack_require__("./assets/app/app/geography/geography.component.html"),
             styles: [__webpack_require__("./assets/app/app/geography/geography.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], GeographyComponent);
     return GeographyComponent;
 }());
 
+// this.articleIdToUpdate = geot[0].id;  
+// console.log("am loadArticle",this.articleIdToUpdate)  
+// this.formdata.setValue({ geographyName: geo.name, geoDescription: geo.description });
+// let geoCreate: GeoCreate = {
+//   name: this.getGeoName,
+//   description: this.getGeoDescription
+// }  
+/*       useful
+  console.log(geot);
+        console.log(geot[0].name);
+        console.log(geot[0].description);  */ 
 
 
 /***/ }),

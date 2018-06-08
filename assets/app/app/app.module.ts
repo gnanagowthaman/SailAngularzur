@@ -12,19 +12,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListComponent } from './list/list.component';
 import { RequestService } from './newuser/request.service';
-import { CreateService } from './geography-create/create.service';      
-import { GeographyCreateService } from './geography-edit/geography-create.service';
+import { CreateService } from './geography/create.service';   
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HttpModule } from '@angular/http';
 import { GeographyComponent } from './geography/geography.component';
-import { GeographyEditComponent } from './geography-edit/geography-edit.component';
-import { GeographyCreateComponent } from './geography-create/geography-create.component';
 const appRoutes: Routes = [
   { path: 'userList', component: ListComponent },
   {
-    path: 'newUser',
+    path: 'newUser',  
     component: NewuserComponent
   },
   {
@@ -34,13 +31,16 @@ const appRoutes: Routes = [
   },
   {
     path: 'geoList',
-    component: GeographyComponent,
-    children: [
-      { path: '', component: GeographyComponent, pathMatch: 'full' },
-      { path: 'createGeography', component: GeographyCreateComponent },
-      { path: 'editGeography/:id', component: GeographyEditComponent }                    
-    ]
+    component: GeographyComponent
   },
+  {
+    path:'geoCreate',
+    component: GeographyComponent    
+  },
+  {
+    path:'geoEdit/:id',
+    component: GeographyComponent
+  },     
   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
@@ -52,9 +52,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     AsideComponent,
     MainContentComponent,
-    GeographyComponent,
-    GeographyEditComponent,
-    GeographyCreateComponent,
+    GeographyComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +67,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, { useHash: true }),
     BrowserModule, BrowserAnimationsModule, GridModule
   ],
-  providers: [DemoService, RequestService, GeographyCreateService, CreateService],
+  providers: [DemoService, RequestService, CreateService],     
   bootstrap: [AppComponent]
 })
 export class AppModule { }
