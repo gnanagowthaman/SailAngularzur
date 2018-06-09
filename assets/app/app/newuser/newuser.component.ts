@@ -82,7 +82,7 @@ export class NewuserComponent implements OnInit {
   formdata: FormGroup;
   state: any;
   jdata: Object;
-  selecteGeography = 0;
+  selecteGeography = 0;  
   selectedCountry = 0;
   selectedState = 0;
   title = 'app';
@@ -435,7 +435,7 @@ export class NewuserComponent implements OnInit {
     this.selecteGeography = geography_id;
     this.selectedCountry = 0;
     this.stateVal = [];
-    this.regulationVal = [];
+    this.regulationVal = [];  
 
     this.countryVal = this.userCollectCountry.filter((item) => {
       console.log("country id", item.gid, "geography id", geography_id)
