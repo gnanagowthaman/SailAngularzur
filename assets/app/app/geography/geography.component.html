@@ -1,0 +1,111 @@
+<ng-container *ngIf="!correct">
+    <div class="widget-heading">
+        <h3 class="widget-title">Geography Management</h3>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+            <button id="creategeo" class="btn btn-success btn-rounded btn-block" style="width: 150px;" (click)="toggle()">create</button>
+
+        </div>
+
+        <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+            <thead>
+                <tr>
+                    <th style="width:15%" class="text-center">Name</th>
+                    <th style="width:15%" class="text-center">Description</th>
+                    <th style="width:30%" class="text-center">Operation</th>
+                </tr>
+            </thead>
+            <tbody id="doc-list-table">
+
+                <tr *ngFor="let employee of myData; let i = index">
+                    <td class="text-center">
+                        {{employee.name}}
+                    </td>
+                    <td class="text-center">
+                        {{employee.description}}
+                    </td>
+                    <td class="text-center">
+                        <div id="hide">
+                            <span id="tocreategeo" class="published">  
+                                <a class="tooltips">
+                    <span><button type="button" (click)="loadArticleToEdit(employee.id)">Edit</button></span>
+                                    <img src="/images/edit.png" />
+                                </a>
+                            </span>       
+                            <span class="delete-doc" data-toggle="modal" data-target="#<%=id%>">
+                                <a class="tooltips">
+                    <span><td><button type="button" (click)="deleteArticle(employee.id)">Delete</button></td></span>
+                                    <img src="/images/delete.png" />
+                                </a>
+                            </span>
+                        </div>
+                        <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="<%=id%>">
+                            <div role="document" class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4 id="mySmallModalLabel" class="modal-title">Geography Delete</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Do you want to delete?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                                        <button type="button" id="delGeography" class="btn btn-outline btn-primary-red">Confirm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="findStatus"></div>
+        <div class="user_load">
+            <div id="loadMore">
+
+            </div>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="correct">
+    <div class="col-md-7">
+        <div class="widget">
+            <div class="widget-heading">
+                <h3 class="widget-title">Geography Set Up</h3>
+            </div>
+            <div class="widget-body">
+                <form class="form-horizontal" [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="geographyName" [(ngModel)]=" geoCreate.name" #geoname/>
+                            <div id="geo_name_error" class="geo_name_error" style="font-size: 12px; color: #FF0000; "></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Description</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="geoDescription" [(ngModel)]=" geoCreate.description" #geodescription/>
+                            <div id="geo_description_error" class="geo_description_error" style="font-size: 12px; color: #FF0000; "></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <!-- <input type="submit" class="btn btn-outline btn-success" value="Save"> -->
+<button *ngIf="!articleIdToUpdate" class="btn btn-outline btn-success" (click)="saveEdit()">CREATE</button>  
+<button *ngIf="articleIdToUpdate" class="btn btn-outline btn-success">UPDATE</button>                
+                            <button id="cancel" class="btn btn-outline btn-black">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-container>

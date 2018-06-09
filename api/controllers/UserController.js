@@ -481,7 +481,7 @@ module.exports = {
            if (userFormData.hasOwnProperty('regulations')) {
           //if (userFormData.hasOwnProperty('regulations') && userFormData.regulations.length > 0) {
           // if (userFormData.access == 'restricted' && userFormData.regulations.length > 0) {  
-            async.series([
+            async.series([       
               //Get subscription id from subscription table
               function(callback) {
                 var sql = "SELECT id FROM subscription WHERE user_id=?";
@@ -497,19 +497,23 @@ module.exports = {
                   }            
                 });                
               },
+             
               //Get regulation_document_link
               function(callback) {
                 var sql = "SELECT * FROM regulation_document_link";
                 var params = [];
+                console.warn('upper test demo')            
                 User.query(sql, params, function(err, result) {  
                   if (err) {
                     Logger.log('error', 'UserController.create', 'The following error occurred(While fetching from regulation_document_link table.):', null, err);
                     callback(err);
                   } else {             
                     regulation_document = result;
+                   // Logger.log('debug', 'hi.create', 'regulation_document_link.');    
+                   console.warn('test demo')                                                              
                     callback();
-                  }            
-                });   
+                  }                
+                });                    
               }, 
               // Do actual INSERTs into subscription detail table
               function(callback) {
@@ -561,7 +565,7 @@ module.exports = {
                 else
                   return res.json(500, { errCode: 500 , errMsg: '' });
             } else {
-                Mailer.sendWelcomeMail(user);
+              //  Mailer.sendWelcomeMail(user);                                   
                 Logger.log('debug', 'UserController.create', 'New User Created.', null, null);
                 res.status(200).json(200);
             }
@@ -795,7 +799,8 @@ module.exports = {
                     Logger.log('error', 'UserController.update', 'The following error occurred(While Getting from regulation_document_link table.):', null, err);
                     callback(err);
                   } else {
-                    // console.log('regulation_document_link!!'); console.log(result);              
+                    // console.log('regulation_document_link!!'); console.log(result);       
+                                           
                     regulation_document = result;
                     callback();
                   }            

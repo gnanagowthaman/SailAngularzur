@@ -1,0 +1,50 @@
+
+.easyswitch {
+  width: 90px;
+  height: 28px;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  /*border: 1px solid #666;*/
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.easyswitch .easyswitch-label {
+  width: 45px;
+  height: 28px;
+  line-height: 28px;
+  float: left;
+  margin: 0;
+  text-align: center;
+}
+
+.easyswitch .easyswitch-slider {
+  width: 42px;
+  height: 23px;
+  position: absolute;
+  top: 2px;
+  /*border: 1px solid #999;*/
+  border-radius: 3px;
+  background: url(../../img/table_tracker/switch_bg.png) 50% 50% #50535B no-repeat;
+  /*background: #fff;
+  /*background: -moz-linear-gradient(top, #ececec 0%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ececec 0%, #ffffff 100%);
+  background: -o-linear-gradient(top, #ececec 0%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #ececec 0%, #ffffff 100%);
+  background: linear-gradient(top, #ececec 0%, #ffffff 100%);
+  box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.5);*/
+}
+
+.easyswitch.on {
+  background-color: #000000;
+  color: #FFF;
+}
+
+.easyswitch.off {
+  background-color: #000000;
+  color: #FFF;
+}

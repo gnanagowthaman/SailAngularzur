@@ -1,0 +1,34 @@
+<!-- <button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();">
+    <i class="fa fa-plus"></i> Add User</button>    -->
+                        
+<kendo-grid [data]="myData" [height]="410">
+  <kendo-grid-column field="id" title="ID" width="40">       
+  </kendo-grid-column>
+  <kendo-grid-column field="user_name" title="Name" width="250">
+  </kendo-grid-column>
+  <kendo-grid-column field="type" title="Category">
+  </kendo-grid-column>   
+  <kendo-grid-column field="access_reg" title="Access" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="access1_reg" title="Access 1" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="mobile_no" title="Mobile" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="email_id" title="Email" width="80">
+  </kendo-grid-column>
+  <!-- <kendo-grid-column field="access_geo" title="Geo" width="80">
+  </kendo-grid-column> -->          
+  <kendo-grid-column field="renewal_date" title="Date" width="80">
+  </kendo-grid-column>
+  <kendo-grid-column field="Discontinued" title="Edit" width="120">
+      <ng-template kendoGridCellTemplate let-dataItem>
+          <input type="checkbox" (click)="selectAllStudentsChange($event)"   
+          [checked]="dataItem.Discontinued"/>
+      </ng-template>
+  </kendo-grid-column>       
+  <kendo-grid-column field="Discontinued" title="Delete" width="120">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <input type="checkbox" [checked]="dataItem.Discontinued"/>
+    </ng-template>
+</kendo-grid-column>
+</kendo-grid>

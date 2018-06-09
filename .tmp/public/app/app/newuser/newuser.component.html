@@ -1,0 +1,79 @@
+<form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+  <div class="form-group">
+    <label for="usr">Name:</label>
+    <input type="text" class="form-control" formControlName="usr" [(ngModel)]="usr">
+  </div>      
+
+  <div class="form-group">
+    <label for="pwd">Email:</label>
+    <input type="text" class="form-control" formControlName="pwd" [(ngModel)]="pwd">
+  </div>
+
+  <div class="form-group">
+    <label class="center-block">Mobile No:
+      <input class="form-control" formControlName="mob" [(ngModel)]="mob">
+    </label>
+  </div>
+
+  <div class="form-group radio">
+    <h4>Subscription:</h4>
+    <label class="center-block">
+      <input type="radio" formControlName="sub" value="paid" [(ngModel)]="sub">Paid Subscription</label>
+    <label class="center-block">
+      <input type="radio" formControlName="sub" value="trail" [(ngModel)]="sub">Free Trial</label>
+  </div>
+
+  <div class="form-group radio">
+    <h4>Access:</h4>
+    <label class="center-block">
+      <input type="radio" formControlName="acc" value="full" [(ngModel)]="acc" (change)="handleChange($event)">Full</label>
+    <label class="center-block">
+      <input type="radio" formControlName="acc" value="restricted" [(ngModel)]="acc" (change)="handleChangeRest($event)">Restricted</label>
+  </div>   
+  <div class="checkbox">   
+    <h4>Alert Type:</h4>  
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="sms" class="classImLookingFor" [(ngModel)]="ale">Sms
+    </label>
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="web" class="classImLookingFor" [(ngModel)]="ale">Web
+    </label>  
+    <label class="center-block">
+      <input type="checkbox" formControlName="ale" value="email" class="classImLookingFor" [(ngModel)]="ale">E-mail
+    </label>
+  </div>
+  <div class="form-group">    
+    <label class="control-label" for="Geography">Geography</label>
+    <select *ngIf="requests" [(ngModel)]="selecteGeography" [ngModelOptions]="{standalone: true}" class="classImLookingFor" (change)="onSelectGeography($event.target.value)" class="form-control input-lg"
+      id="Geography">
+      <option value="0">Select Geography</option>       
+      <option *ngFor="let geograph of requests" value={{geograph.id}}>{{geograph.name}}</option>         
+    </select>
+  </div>
+  <div class="form-group">           
+    <label class="control-label" for="Country">Country</label>
+    <select *ngIf="countryVal" [(ngModel)]="selectedCountry" [ngModelOptions]="{standalone: true}" class="classImLookingFor" (change)="onSelectCountry($event.target.value)" class="form-control input-lg"
+      id="Country">
+      <option value="0">Select Country</option>        
+      <option *ngFor="let cout of countryVal" value={{cout.gid}}>{{cout.name}}</option>    
+    </select>
+  </div>
+  <div class="form-group">    
+    <label class="control-label" for="States">State</label>
+    <select class="classImLookingFor" *ngIf="stateVal" [(ngModel)]="selectedState" [ngModelOptions]="{standalone: true}"  (change)="onSelectState($event.target.value)" class="form-control input-lg"
+      id="States">
+      <option value="0">Select State</option>
+      <option *ngFor="let stat of stateVal" value={{stat.gid}}>{{stat.name}}</option>
+    </select>            
+  </div>              
+  <div class="form-group">
+    <label class="control-label" for="Regulation">Regulation</label>
+    <select class="form-control input-lg" id="Regulation" class="classImLookingFor">
+      <option *ngIf="!selectedState" value="0">Select Reg</option>
+      <option *ngFor="let reg of regulationVal" value={{reg.geography_id}}>{{reg.name}}</option>
+    </select>
+  </div>
+
+  <input type="submit" class="forsubmit" value="Save">
+  <input type="button" value="cancel">
+</form>
