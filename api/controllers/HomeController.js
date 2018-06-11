@@ -126,7 +126,7 @@ module.exports = {
           Logger.log('debug', 'HomeController.adminDashboard', 'userConfig stored in session::', dashboardModel, null);
           //set the user specific data in session
           req.session.userConfig = dashboardModel;
-          return res.view('admin-dashboard', dashboardModel);
+          return res.view('homepage', dashboardModel);  
         }
       });
     } else {
@@ -145,7 +145,7 @@ module.exports = {
           // ....................geography list..........
           var sql = "SELECT id, name FROM geography where status=true";
           var params = [];
-          User.query(sql, params, function(err, result) {  
+          User.query(sql, params, function(err, result) {                 
             if (err) {
               Logger.log('error', 'HomeController.adminDashboard', 'The following error occurred:', null, err);
               callback(err);
@@ -153,7 +153,7 @@ module.exports = {
               geoList = result; 
               Logger.log('debug', 'HomeController.adminDashboard', 'geographyList!!', result, null);
               callback();
-            }            
+            }              
           });           
         },
 

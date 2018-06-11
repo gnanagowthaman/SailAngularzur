@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
  '/': {
-    view: 'homepage'    
+    view: 'login'      
   },        
   // '/': {
   //  view: 'login',locals:{message:''}  

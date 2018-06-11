@@ -44,7 +44,7 @@ export class RequestService {
     client.country=23; 
     client.geopgrpahy='';                              
     client.state=18;             
-                   
+                      
     console.log(client)      
     return this.http.post<Client>("http://localhost:1337/createUser", client, httpOptions);         
   }

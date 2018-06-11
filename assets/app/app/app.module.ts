@@ -12,16 +12,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListComponent } from './list/list.component';
 import { RequestService } from './newuser/request.service';
-import { CreateService } from './geography/create.service';   
+import { CountryService } from './country/country.service';  
+import { CreateService } from './geography/create.service';
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HttpModule } from '@angular/http';
 import { GeographyComponent } from './geography/geography.component';
+import { CountryComponent } from './country/country.component';
 const appRoutes: Routes = [
   { path: 'userList', component: ListComponent },
   {
-    path: 'newUser',  
+    path: 'newUser',
     component: NewuserComponent
   },
   {
@@ -34,25 +36,38 @@ const appRoutes: Routes = [
     component: GeographyComponent
   },
   {
-    path:'geoCreate',
-    component: GeographyComponent    
+    path: 'geoCreate',
+    component: GeographyComponent
   },
   {
-    path:'geoEdit/:id',
+    path: 'geoBack',
     component: GeographyComponent
-  },     
+  },
+  {
+    path: 'geoEdit/:id',
+    component: GeographyComponent
+  },
+  {
+    path: 'couList',
+    component: CountryComponent
+  },
+  {
+    path: 'couCreate',
+    component: CountryComponent
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
-@NgModule({
+@NgModule({    
   declarations: [
-    AppComponent,   
+    AppComponent,
     NewuserComponent,
     PageNotFoundComponent,
     ListComponent,
     HeaderComponent,
     AsideComponent,
     MainContentComponent,
-    GeographyComponent
+    GeographyComponent,
+    CountryComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +82,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, { useHash: true }),
     BrowserModule, BrowserAnimationsModule, GridModule
   ],
-  providers: [DemoService, RequestService, CreateService],     
+  providers: [DemoService, RequestService, CreateService, CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -131,18 +131,22 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__ = __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__list_list_component__ = __webpack_require__("./assets/app/app/list/list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__country_country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__country_country_component__ = __webpack_require__("./assets/app/app/country/country.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -176,15 +180,27 @@ var appRoutes = [
     },
     {
         path: 'geoList',
-        component: __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoCreate',
-        component: __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'geoBack',
+        component: __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoEdit/:id',
-        component: __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'couList',
+        component: __WEBPACK_IMPORTED_MODULE_20__country_country_component__["a" /* CountryComponent */]
+    },
+    {
+        path: 'couCreate',
+        component: __WEBPACK_IMPORTED_MODULE_20__country_country_component__["a" /* CountryComponent */]
     },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
@@ -198,14 +214,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__aside_aside_component__["a" /* AsideComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__main_content_main_content_component__["a" /* MainContentComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__geography_geography_component__["a" /* GeographyComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__aside_aside_component__["a" /* AsideComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__main_content_main_content_component__["a" /* MainContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__geography_geography_component__["a" /* GeographyComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__country_country_component__["a" /* CountryComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_17__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_18__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */],
@@ -216,7 +233,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_13__geography_create_service__["a" /* CreateService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_14__geography_create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_13__country_country_service__["a" /* CountryService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -237,7 +254,7 @@ module.exports = ""
 /***/ "./assets/app/app/aside/aside.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<aside data-mcs-theme=\"minimal-dark\" class=\"main-sidebar mCustomScrollbar\">\n        <ul id=\"usertest\" class=\"list-unstyled navigation mb-0\" style=\"padding-top:30px;\">\n          <li class=\"sidebar-category\"></li>   \n          <li id=\"dashboard_click\" class=\"panel\">   \n            <a id=\"accdboard\" role=\"button\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse1\" aria-expanded=\"false\"\n              aria-controls=\"collapse1\" class=\"bubble active collapsed\">\n              <i class=\"ion-ios-home-outline bg-purple\"></i>\n              <span class=\"sidebar-title accdboard\">Dashboard</span>\n              <span class=\"badge bg-danger\">9</span>\n            </a>             \n                         \n            <ul id=\"collapse1\" class=\"list-unstyled collapse\">\n              <!-- <li>\n                <a id=\"usermgnt\">User Management</a>\n              </li> -->   \n              <li>                        \n                <a routerLink=\"/userList\" routerLinkActive=\"active\">User Management</a>\n              </li>\n              <li>                    \n                <a routerLink=\"/newUser\" routerLinkActive=\"active\">New User</a>  \n              </li>\n               <li>                                                                 \n                <a routerLink=\"/geoList\" routerLinkActive=\"active\">Geography Management</a>\n                             \n              </li>                   \n              <li>           \n                <a id=\"countrymgnt\">Country Management</a>\n              </li>\n              <li>\n                <a id=\"statemgnt\">State Management</a>\n              </li>\n              <li>\n                <a id=\"dommgnt\">Domain Management</a>\n              </li>\n              <li>\n                <a id=\"regulatormgnt\">Regulator Management</a>\n              </li>\n              <li>\n                <a id=\"regmgnt\">Regulation Management</a>\n              </li>\n              <li>\n                <a id=\"doctmgnt\">Document Management</a>\n              </li>\n              <li>\n                <a id=\"subdocMgnt\">Sub Document Management</a>\n              </li>\n              <li>\n                <a id=\"docmgnt\">Document Upload Management</a>\n              </li>\n              <li>\n                <a id=\"newsMgnt\">News Management</a>\n              </li>\n              <li>      \n                <a id=\"alertMgnt\">Alert Management</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n        <li id=\"user_click\" class=\"panel\">\n          <a role=\"button\" id=\"profileMgnt\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse12\" aria-expanded=\"false\"\n            aria-controls=\"collapse12\" class=\"bubble collapsed\">\n            <i class=\"ion-ios-person-outline bg-success\"></i>\n            <span class=\"sidebar-title\">Profile</span>\n            <span class=\"badge bg-danger\"></span>\n          </a>\n          <ul id=\"collapse12\" class=\"list-unstyled collapse\"></ul>\n        </li>\n      </aside>"
+module.exports = "<aside data-mcs-theme=\"minimal-dark\" class=\"main-sidebar mCustomScrollbar\">\n        <ul id=\"usertest\" class=\"list-unstyled navigation mb-0\" style=\"padding-top:30px;\">\n          <li class=\"sidebar-category\"></li>   \n          <li id=\"dashboard_click\" class=\"panel\">   \n            <a id=\"accdboard\" role=\"button\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse1\" aria-expanded=\"false\"\n              aria-controls=\"collapse1\" class=\"bubble active collapsed\">\n              <i class=\"ion-ios-home-outline bg-purple\"></i>\n              <span class=\"sidebar-title accdboard\">Dashboard</span>\n              <span class=\"badge bg-danger\">9</span>\n            </a>             \n                         \n            <ul id=\"collapse1\" class=\"list-unstyled collapse\">\n              <!-- <li>\n                <a id=\"usermgnt\">User Management</a>\n              </li> -->   \n              <li>                        \n                <a routerLink=\"/userList\" routerLinkActive=\"active\">User Management</a>\n              </li>\n              <li>                    \n                <a routerLink=\"/newUser\" routerLinkActive=\"active\">New User</a>  \n              </li>\n               <li>                                                                 \n                <a routerLink=\"/geoList\" routerLinkActive=\"active\">Geography Management</a>\n                             \n              </li>                   \n              <li>           \n                <a routerLink=\"/couList\" routerLinkActive=\"active\">Country Management</a>\n              </li>\n              <li>\n                <a id=\"statemgnt\">State Management</a>\n              </li>\n              <li>\n                <a id=\"dommgnt\">Domain Management</a>\n              </li>\n              <li>\n                <a id=\"regulatormgnt\">Regulator Management</a>\n              </li>\n              <li>\n                <a id=\"regmgnt\">Regulation Management</a>\n              </li>\n              <li>\n                <a id=\"doctmgnt\">Document Management</a>\n              </li>\n              <li>\n                <a id=\"subdocMgnt\">Sub Document Management</a>\n              </li>\n              <li>\n                <a id=\"docmgnt\">Document Upload Management</a>\n              </li>\n              <li>\n                <a id=\"newsMgnt\">News Management</a>\n              </li>\n              <li>      \n                <a id=\"alertMgnt\">Alert Management</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n        <li id=\"user_click\" class=\"panel\">\n          <a role=\"button\" id=\"profileMgnt\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse12\" aria-expanded=\"false\"\n            aria-controls=\"collapse12\" class=\"bubble collapsed\">\n            <i class=\"ion-ios-person-outline bg-success\"></i>\n            <span class=\"sidebar-title\">Profile</span>\n            <span class=\"badge bg-danger\"></span>\n          </a>\n          <ul id=\"collapse12\" class=\"list-unstyled collapse\"></ul>\n        </li>\n      </aside>"
 
 /***/ }),
 
@@ -271,6 +288,213 @@ var AsideComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], AsideComponent);
     return AsideComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Country Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"createcountry\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\n                <th style=\"width:15%\" class=\"text-center\">Country Code</th>\n                <th style=\"width:15%\" class=\"text-center\">Geography</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"country-list-table\">\n            <tr *ngFor=\"let country of myData; let i = index\">\n                <!--  ngfor comes here for list operation -->\n                <td class=\"text-center\">\n                    {{country.name}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.description}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.country_code}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.geoname}}\n                </td>\n                <td class=\"text-center\">\n                    <div id=\"hide\">\n                        <span id=\"tocreatecountry\" class=\"published\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <button type=\"button\" (click)=\"loadArticleToEdit(country.id)\">Edit</button>\n                                </span>\n                                <img src=\"/images/edit.png\" />\n                            </a>\n                        </span>\n                        <span class=\"delete-country\" data-toggle=\"modal\" data-target=\"\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <td>\n                                        <button type=\"button\" (click)=\"deleteArticle(country.id)\">Delete</button>\n                                    </td>\n                                </span>\n                                <img src=\"/images/delete.png\" />\n                            </a>\n                        </span>\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                        <span aria-hidden=\"true\">×</span>\n                                    </button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Country Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" id=\"deleteCountry\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Country Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryName\" [(ngModel)]=\" couInter.name\" #countryname/>\n                            <div id=\"country_name_error\" class=\"country_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryDescription\" [(ngModel)]=\" couInter.description\" #countrydescription/>\n                            <div id=\"country_description_error\" class=\"country_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Country Code</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"countryCode\" [(ngModel)]=\" couInter.country_code\"\n                                #countrycode/>\n                            <div id=\"country_code_error\" class=\"country_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                            <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\n                            <div class=\"col-sm-9\">           \n                                <select class=\"form-control\" required formControlName=\"countryGeography\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\n                                    #selectGeography>  \n                                    <option value=\"0\">Select Geography</option>      \n                                    <option *ngFor='let option of geoData' [value]=\"option.id\">{{option.name}}</option> \n                                      \n                                </select>\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            </div>\n                        </div>    \n                    <!-- <div class=\"form-group\">\n                        <label class=\"control-label\" class=\"col-sm-3 control-label\">Geography</label>\n                        <div class=\"col-sm-9\">\n                            <select *ngIf=\"geoData\" [(ngModel)]=\"optionSelected\" (change)=\"onOptionsSelected($event)\" formControlName=\"countryGeography\"\n                                #selectGeography>\n                                <option value=\"0\">Select Geography</option>\n                                <option *ngFor=\"let option of geoData\" [value]=\"option.id\">{{option.name}}</option>\n                            </select>\n                            <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div> -->\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">\n                            <button *ngIf=\"!articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                            <button *ngIf=\"articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CountryComponent = /** @class */ (function () {
+    function CountryComponent(http, countryService, renderer, elem, _router) {
+        this.http = http;
+        this.countryService = countryService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.articleIdToUpdate = null;
+        //un optionSelected: any;
+        this.show = false;
+        this.correct = false;
+        this.optionSelected = 0;
+        this.couInter = {
+            name: '',
+            description: '',
+            geo_id: 0,
+            country_code: ''
+        };
+    }
+    CountryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            countryName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            countryDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            countryCode: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            countryGeography: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+        });
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/country', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+        this.geographyLoad = this.http.get('http://localhost:1337/geographys', { headers: headers }).subscribe(function (data) {
+            _this.geoData = data;
+            console.log(_this.geoData, "dfdsfdsfsdf");
+        });
+        this.getCountryAll();
+    };
+    CountryComponent.prototype.getCountryAll = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/country', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+    };
+    CountryComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/couCreate']);
+    };
+    CountryComponent.prototype.ngAfterViewInit = function () {
+    };
+    CountryComponent.prototype.onClickSubmit = function (data) {
+        console.log(this.geo_Value, this.geo_Text);
+    };
+    CountryComponent.prototype.saveEdit = function () {
+        if (this.articleIdToUpdate === null) {
+            this.couName = this.countryname.nativeElement.value;
+            this.couDescription = this.countrydescription.nativeElement.value;
+            this.couCode = this.countrycode.nativeElement.value;
+            var geoLoadRef = this.selectGeography.nativeElement;
+            var optGeo = geoLoadRef.options[geoLoadRef.selectedIndex];
+            this.geo_Value = optGeo.value;
+            this.geo_Text = optGeo.text;
+            console.warn("am in create");
+        }
+        else {
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    CountryComponent.prototype.loadArticleToEdit = function (couId) {
+        var _this = this;
+        this.countryService.getCountryById(couId).subscribe(function (geot) {
+            console.log(geot);
+            _this.articleIdToUpdate = geot[0].id;
+            console.log(geot.id, "me only geotid");
+            console.log(_this.articleIdToUpdate, "am updata article updata");
+            // this.formdata.setValue({ geographyName: geot[0].name, geoDescription: geot[0].description });           
+        });
+        this.correct = !this.correct;
+    };
+    CountryComponent.prototype.deleteArticle = function (couId) {
+    };
+    CountryComponent.prototype.onOptionSelected = function (event) {
+        console.log(event); //option value will be sent as event
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countryname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "countryname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countrydescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "countrydescription", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countrycode"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "countrycode", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectGeography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "selectGeography", void 0);
+    CountryComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-country',
+            template: __webpack_require__("./assets/app/app/country/country.component.html"),
+            styles: [__webpack_require__("./assets/app/app/country/country.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], CountryComponent);
+    return CountryComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var CountryService = /** @class */ (function () {
+    function CountryService(http) {
+        this.http = http;
+    }
+    CountryService.prototype.getCountryById = function (geoId) {
+        return this.http.get("http://localhost:1337/findcountry" + "/" + geoId);
+    };
+    CountryService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], CountryService);
+    return CountryService;
 }());
 
 
@@ -358,11 +582,16 @@ var CreateService = /** @class */ (function () {
         return this.http.post("http://localhost:1337/createGeo", geocreate, httpOptions);
     };
     CreateService.prototype.updateGeography = function (geo) {
-        // return this.http.put("http://localhost:1337/findgeo/"+"/"+geo.id,geo,httpOptions);
-        return this.http.put("http://localhost:1337/findgeo" + "/" + geo.id, geo, httpOptions);
+        return this.http.post("http://localhost:1337/updateGeo", geo, httpOptions);
     };
     CreateService.prototype.getGeographyById = function (geoId) {
         return this.http.get("http://localhost:1337/findgeo" + "/" + geoId);
+    };
+    CreateService.prototype.deleteGeographyById = function (geoId) {
+        // return this.http.request('delete', 'http://localhost:1337/destroygeography', { body: { geography_id: geoId} });
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroygeography', { body: { geography_id: geoId }, headers: httpHeaders, responseType: 'text' });
     };
     CreateService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
@@ -385,7 +614,7 @@ module.exports = ""
 /***/ "./assets/app/app/geography/geography.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Geography Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"creategeo\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:15%\" class=\"text-center\">Name</th>\n                    <th style=\"width:15%\" class=\"text-center\">Description</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\">\n\n                <tr *ngFor=\"let employee of myData; let i = index\">\n                    <td class=\"text-center\">\n                        {{employee.name}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{employee.description}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div id=\"hide\">\n                            <span id=\"tocreategeo\" class=\"published\">  \n                                <a class=\"tooltips\">\n                    <span><button type=\"button\" (click)=\"loadArticleToEdit(employee.id)\">Edit</button></span>\n                                    <img src=\"/images/edit.png\" />\n                                </a>\n                            </span>       \n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\n                                <a class=\"tooltips\">\n                    <span><td><button type=\"button\" (click)=\"deleteArticle(employee.id)\">Delete</button></td></span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Geography Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" id=\"delGeography\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n\n        <div id=\"findStatus\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMore\">\n\n            </div>\n        </div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Geography Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geographyName\" [(ngModel)]=\" geoCreate.name\" #geoname/>\n                            <div id=\"geo_name_error\" class=\"geo_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geoDescription\" [(ngModel)]=\" geoCreate.description\" #geodescription/>\n                            <div id=\"geo_description_error\" class=\"geo_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">\n                            <!-- <input type=\"submit\" class=\"btn btn-outline btn-success\" value=\"Save\"> -->\n<button *ngIf=\"!articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>  \n<button *ngIf=\"articleIdToUpdate\" class=\"btn btn-outline btn-success\">UPDATE</button>                \n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Geography Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"creategeo\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:15%\" class=\"text-center\">Name</th>\n                    <th style=\"width:15%\" class=\"text-center\">Description</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\">\n\n                <tr *ngFor=\"let employee of myData; let i = index\">\n                    <td class=\"text-center\">\n                        {{employee.name}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{employee.description}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div id=\"hide\">\n                            <span id=\"tocreategeo\" class=\"published\">  \n                                <a class=\"tooltips\">\n                    <span><button type=\"button\" (click)=\"loadArticleToEdit(employee.id)\">Edit</button></span>\n                                    <img src=\"/images/edit.png\" />\n                                </a>\n                            </span>       \n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\n                                <a class=\"tooltips\">\n                    <span><td><button type=\"button\" (click)=\"deleteArticle(employee.id)\">Delete</button></td></span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Geography Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" id=\"delGeography\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n\n        <div id=\"findStatus\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMore\">\n\n            </div>\n        </div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Geography Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geographyName\" [(ngModel)]=\" geoCreate.name\" #geoname/>\n                            <div id=\"geo_name_error\" class=\"geo_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geoDescription\" [(ngModel)]=\" geoCreate.description\" #geodescription/>\n                            <div id=\"geo_description_error\" class=\"geo_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">\n                            <!-- <input type=\"submit\" class=\"btn btn-outline btn-success\" value=\"Save\"> -->\n<button *ngIf=\"!articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>  \n<button *ngIf=\"articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>                       \n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>     \n    </div>\n</ng-container>"
 
 /***/ }),
 
@@ -468,6 +697,7 @@ var GeographyComponent = /** @class */ (function () {
             description: this.getGeoDescription
         };
         var geoform = this.formdata.value;
+        console.log(this.articleIdToUpdate);
         if (this.articleIdToUpdate === null) {
             this.createService.saveGeography(geoCreate)
                 .subscribe(function (mySave) {
@@ -485,15 +715,25 @@ var GeographyComponent = /** @class */ (function () {
                 _this.getGeographyAll();
             });
             console.warn("am in update");
+            this.correct = !this.correct;
         }
     };
     GeographyComponent.prototype.loadArticleToEdit = function (geoId) {
         var _this = this;
         this.createService.getGeographyById(geoId)
             .subscribe(function (geot) {
+            _this.articleIdToUpdate = geot[0].id;
             _this.formdata.setValue({ geographyName: geot[0].name, geoDescription: geot[0].description });
         });
         this.correct = !this.correct;
+    };
+    GeographyComponent.prototype.deleteArticle = function (geoId) {
+        var _this = this;
+        this.createService.deleteGeographyById(geoId)
+            .subscribe(function (geot) {
+            _this.getGeographyAll();
+        });
+        this._router.navigate(['/geoList']);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geoname"),
@@ -514,7 +754,7 @@ var GeographyComponent = /** @class */ (function () {
     return GeographyComponent;
 }());
 
-// this.articleIdToUpdate = geot[0].id;  
+// this.articleIdToUpdate = geot[0].id;     
 // console.log("am loadArticle",this.articleIdToUpdate)  
 // this.formdata.setValue({ geographyName: geo.name, geoDescription: geo.description });
 // let geoCreate: GeoCreate = {

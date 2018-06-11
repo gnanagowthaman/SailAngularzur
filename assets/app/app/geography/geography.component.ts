@@ -47,6 +47,7 @@ export class GeographyComponent implements OnInit {
       });                                                                             
     this.getGeographyAll();
   }
+  
   getGeographyAll() {
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
@@ -74,6 +75,7 @@ export class GeographyComponent implements OnInit {
       description: this.getGeoDescription
     }
    let geoform=this.formdata.value;
+   console.log(this.articleIdToUpdate)        
     if (this.articleIdToUpdate === null) {
       this.createService.saveGeography(geoCreate)
         .subscribe(
@@ -81,7 +83,7 @@ export class GeographyComponent implements OnInit {
             this.saveGeo = mySave;
             console.log(this.saveGeo)
             this.getGeographyAll();
-            this._router.navigate(['/geoList']);
+            this._router.navigate(['/geoList']);                      
             this.show = !this.show;
           });
       console.warn("am in create")
@@ -92,6 +94,7 @@ export class GeographyComponent implements OnInit {
         this.getGeographyAll();
       });                                                                                     
       console.warn("am in update")
+      this.correct = !this.correct;         
     }
   }
   loadArticleToEdit(geoId: string) {             
@@ -103,9 +106,16 @@ export class GeographyComponent implements OnInit {
       });            
       this.correct = !this.correct;               
   }
-
+  deleteArticle(geoId: string) {
+  
+    this.createService.deleteGeographyById(geoId)
+      .subscribe(geot => {
+          this.getGeographyAll();	
+        });    
+        this._router.navigate(['/geoList']);          
+ }
 }
-// this.articleIdToUpdate = geot[0].id;  
+// this.articleIdToUpdate = geot[0].id;     
 // console.log("am loadArticle",this.articleIdToUpdate)  
  // this.formdata.setValue({ geographyName: geo.name, geoDescription: geo.description });
     // let geoCreate: GeoCreate = {
