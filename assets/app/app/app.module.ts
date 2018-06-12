@@ -20,6 +20,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { HttpModule } from '@angular/http';
 import { GeographyComponent } from './geography/geography.component';
 import { CountryComponent } from './country/country.component';
+import { StateComponent } from './state/state.component';
 const appRoutes: Routes = [
   { path: 'userList', component: ListComponent },
   {
@@ -55,6 +56,10 @@ const appRoutes: Routes = [
     path: 'couCreate',
     component: CountryComponent
   },
+  {
+     path:'stateList',
+     component:StateComponent  
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({    
@@ -67,7 +72,8 @@ const appRoutes: Routes = [
     AsideComponent,
     MainContentComponent,
     GeographyComponent,
-    CountryComponent
+    CountryComponent,
+    StateComponent
   ],
   imports: [
     BrowserModule,

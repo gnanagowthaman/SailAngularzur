@@ -13,15 +13,31 @@ const httpOptions = {
     'Content-Type': 'application/json',
     'Authorization': 'my-auth-token'                 
   })  
-};
+};   
        
 @Injectable()
 export class CountryService {
 
-  constructor(private http: HttpClient) { }  
-
-  getCountryById(geoId: string): Observable<CountryI> {
-    return this.http.get<CountryCard>("http://localhost:1337/findcountry" + "/" + geoId);
+  constructor(private http: HttpClient) { }       
+  saveCountry(couCreate:CountryI):Observable<CountryI>{           
+    return this.http.post<CountryI>("http://localhost:1337/createcountry", couCreate, httpOptions);
+  }  
+  getCountryById(geoId: string): Observable<CountryCard> {
+    return this.http.get<any>("http://localhost:1337/findcountry" + "/" + geoId);
   }
-      
+  getGeographyOnly(){
+    return this.http.get("http://localhost:1337/geographys").map(res => res);
+  }      
+  updateCountryAll(cou: CountryI): Observable<any> {   
+    let httpHeaders = new HttpHeaders()         
+    .set('Accept', 'application/json');                                     
+    return this.http.post<CountryI>("http://localhost:1337/updatecountry", cou, httpOptions);          
+  }
+  deleteCountryById(couId: string): Observable<any> {                       
+    let httpHeaders = new HttpHeaders()
+    .set('Accept', 'application/json');                                
+   return this.http.request('delete', 'http://localhost:1337/destroycountry', { body: { country_id: couId} ,headers:httpHeaders,responseType: 'text'});
+
+  }  
 }
+  

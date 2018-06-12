@@ -304,7 +304,7 @@ module.exports = ""
 /***/ "./assets/app/app/country/country.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Country Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"createcountry\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\n                <th style=\"width:15%\" class=\"text-center\">Country Code</th>\n                <th style=\"width:15%\" class=\"text-center\">Geography</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"country-list-table\">\n            <tr *ngFor=\"let country of myData; let i = index\">\n                <!--  ngfor comes here for list operation -->\n                <td class=\"text-center\">\n                    {{country.name}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.description}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.country_code}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.geoname}}\n                </td>\n                <td class=\"text-center\">\n                    <div id=\"hide\">\n                        <span id=\"tocreatecountry\" class=\"published\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <button type=\"button\" (click)=\"loadArticleToEdit(country.id)\">Edit</button>\n                                </span>\n                                <img src=\"/images/edit.png\" />\n                            </a>\n                        </span>\n                        <span class=\"delete-country\" data-toggle=\"modal\" data-target=\"\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <td>\n                                        <button type=\"button\" (click)=\"deleteArticle(country.id)\">Delete</button>\n                                    </td>\n                                </span>\n                                <img src=\"/images/delete.png\" />\n                            </a>\n                        </span>\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                        <span aria-hidden=\"true\">×</span>\n                                    </button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Country Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" id=\"deleteCountry\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Country Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryName\" [(ngModel)]=\" couInter.name\" #countryname/>\n                            <div id=\"country_name_error\" class=\"country_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryDescription\" [(ngModel)]=\" couInter.description\" #countrydescription/>\n                            <div id=\"country_description_error\" class=\"country_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Country Code</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"countryCode\" [(ngModel)]=\" couInter.country_code\"\n                                #countrycode/>\n                            <div id=\"country_code_error\" class=\"country_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                            <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\n                            <div class=\"col-sm-9\">           \n                                <select class=\"form-control\" required formControlName=\"countryGeography\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\n                                    #selectGeography>  \n                                    <option value=\"0\">Select Geography</option>      \n                                    <option *ngFor='let option of geoData' [value]=\"option.id\">{{option.name}}</option> \n                                      \n                                </select>\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            </div>\n                        </div>    \n                    <!-- <div class=\"form-group\">\n                        <label class=\"control-label\" class=\"col-sm-3 control-label\">Geography</label>\n                        <div class=\"col-sm-9\">\n                            <select *ngIf=\"geoData\" [(ngModel)]=\"optionSelected\" (change)=\"onOptionsSelected($event)\" formControlName=\"countryGeography\"\n                                #selectGeography>\n                                <option value=\"0\">Select Geography</option>\n                                <option *ngFor=\"let option of geoData\" [value]=\"option.id\">{{option.name}}</option>\n                            </select>\n                            <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div> -->\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">\n                            <button *ngIf=\"!articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                            <button *ngIf=\"articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Country Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"createcountry\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\n                <th style=\"width:15%\" class=\"text-center\">Country Code</th>\n                <th style=\"width:15%\" class=\"text-center\">Geography</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"country-list-table\">\n            <tr *ngFor=\"let country of myData; let i = index\">\n                <!--  ngfor comes here for list operation -->\n                <td class=\"text-center\">\n                    {{country.name}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.description}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.country_code}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.geoname}}\n                </td>\n                <td class=\"text-center\">\n                    <div id=\"hide\">\n                        <span id=\"tocreatecountry\" class=\"published\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <button type=\"button\" (click)=\"loadArticleToEdit(country.id)\">Edit</button>\n                                </span>\n                                <img src=\"/images/edit.png\" />\n                            </a>\n                        </span>\n                        <span class=\"delete-country\" data-toggle=\"modal\" data-target=\"\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <td>\n                                        <button type=\"button\" (click)=\"deleteArticle(country.id)\">Delete</button>\n                                    </td>\n                                </span>\n                                <img src=\"/images/delete.png\" />\n                            </a>\n                        </span>\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                        <span aria-hidden=\"true\">×</span>\n                                    </button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Country Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" id=\"deleteCountry\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Country Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryName\" [(ngModel)]=\" couInter.name\" #countryname/>\n                            <div id=\"country_name_error\" class=\"country_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryDescription\" [(ngModel)]=\" couInter.description\" #countrydescription/>\n                            <div id=\"country_description_error\" class=\"country_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Country Code</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"countryCode\" [(ngModel)]=\" couInter.country_code\"\n                                #countrycode/>\n                            <div id=\"country_code_error\" class=\"country_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                            <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\n                            <div class=\"col-sm-9\">           \n                                <select class=\"form-control\" required formControlName=\"countryGeography\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\n                                    #selectGeography>       \n                                    <!-- <option value=\"0\"></option> -->\n                                    <option *ngFor='let option of geoData' [value]=\"option.id\">{{option.name}}</option> \n                                      \n                                </select>\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            </div>\n                        </div>    \n                    <!-- <div class=\"form-group\">\n                        <label class=\"control-label\" class=\"col-sm-3 control-label\">Geography</label>\n                        <div class=\"col-sm-9\">\n                            <select *ngIf=\"geoData\" [(ngModel)]=\"optionSelected\" (change)=\"onOptionsSelected($event)\" formControlName=\"countryGeography\"\n                                #selectGeography>\n                                <option value=\"0\">Select Geography</option>\n                                <option *ngFor=\"let option of geoData\" [value]=\"option.id\">{{option.name}}</option>\n                            </select>\n                            <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div> -->\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">      \n                            <button *ngIf=\"!countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                            <button *ngIf=\"countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
 
 /***/ }),
 
@@ -339,15 +339,14 @@ var CountryComponent = /** @class */ (function () {
         this.renderer = renderer;
         this.elem = elem;
         this._router = _router;
-        this.articleIdToUpdate = null;
-        //un optionSelected: any;
+        this.countryIdToUpdate = null;
         this.show = false;
         this.correct = false;
         this.optionSelected = 0;
         this.couInter = {
             name: '',
             description: '',
-            geo_id: 0,
+            geography_id: 0,
             country_code: ''
         };
     }
@@ -390,33 +389,57 @@ var CountryComponent = /** @class */ (function () {
         console.log(this.geo_Value, this.geo_Text);
     };
     CountryComponent.prototype.saveEdit = function () {
-        if (this.articleIdToUpdate === null) {
-            this.couName = this.countryname.nativeElement.value;
-            this.couDescription = this.countrydescription.nativeElement.value;
-            this.couCode = this.countrycode.nativeElement.value;
-            var geoLoadRef = this.selectGeography.nativeElement;
-            var optGeo = geoLoadRef.options[geoLoadRef.selectedIndex];
-            this.geo_Value = optGeo.value;
-            this.geo_Text = optGeo.text;
+        var _this = this;
+        this.couName = this.countryname.nativeElement.value;
+        this.couDescription = this.countrydescription.nativeElement.value;
+        this.couCode = this.countrycode.nativeElement.value;
+        var geoLoadRef = this.selectGeography.nativeElement;
+        var optGeo = geoLoadRef.options[geoLoadRef.selectedIndex];
+        this.geo_Value = optGeo.value;
+        this.geo_Text = optGeo.text;
+        var couInter = {
+            name: this.couName,
+            description: this.couDescription,
+            geography_id: this.geo_Value,
+            country_code: this.couCode
+        };
+        if (this.countryIdToUpdate === null) {
+            this.countryService.saveCountry(couInter)
+                .subscribe(function (mySave) {
+                _this.saveCou = mySave;
+                console.log(_this.saveCou);
+                _this.getCountryAll();
+                _this._router.navigate(['/couList']);
+                _this.show = !_this.show;
+            });
             console.warn("am in create");
         }
         else {
+            couInter.id = this.countryIdToUpdate;
+            this.countryService.updateCountryAll(couInter).subscribe(function (successCode) {
+                _this.getCountryAll();
+            });
             console.warn("am in update");
             this.correct = !this.correct;
         }
     };
     CountryComponent.prototype.loadArticleToEdit = function (couId) {
         var _this = this;
+        console.log(this.geoData, "am a response");
         this.countryService.getCountryById(couId).subscribe(function (geot) {
-            console.log(geot);
-            _this.articleIdToUpdate = geot[0].id;
-            console.log(geot.id, "me only geotid");
-            console.log(_this.articleIdToUpdate, "am updata article updata");
-            // this.formdata.setValue({ geographyName: geot[0].name, geoDescription: geot[0].description });           
+            _this.countryIdToUpdate = geot[0].id;
+            console.log(_this.countryIdToUpdate);
+            _this.formdata.setValue({ countryName: geot[0].name, countryDescription: geot[0].description, countryCode: geot[0].country_code, countryGeography: geot[0].geo_id });
         });
         this.correct = !this.correct;
     };
     CountryComponent.prototype.deleteArticle = function (couId) {
+        var _this = this;
+        this.countryService.deleteCountryById(couId)
+            .subscribe(function (geot) {
+            _this.getCountryAll();
+        });
+        this._router.navigate(['/couList']);
     };
     CountryComponent.prototype.onOptionSelected = function (event) {
         console.log(event); //option value will be sent as event
@@ -487,8 +510,24 @@ var CountryService = /** @class */ (function () {
     function CountryService(http) {
         this.http = http;
     }
+    CountryService.prototype.saveCountry = function (couCreate) {
+        return this.http.post("http://localhost:1337/createcountry", couCreate, httpOptions);
+    };
     CountryService.prototype.getCountryById = function (geoId) {
         return this.http.get("http://localhost:1337/findcountry" + "/" + geoId);
+    };
+    CountryService.prototype.getGeographyOnly = function () {
+        return this.http.get("http://localhost:1337/geographys").map(function (res) { return res; });
+    };
+    CountryService.prototype.updateCountryAll = function (cou) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.post("http://localhost:1337/updatecountry", cou, httpOptions);
+    };
+    CountryService.prototype.deleteCountryById = function (couId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroycountry', { body: { country_id: couId }, headers: httpHeaders, responseType: 'text' });
     };
     CountryService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
