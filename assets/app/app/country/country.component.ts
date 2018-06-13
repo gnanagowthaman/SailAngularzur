@@ -87,7 +87,7 @@ export class CountryComponent implements OnInit {
     var geoLoadRef = this.selectGeography.nativeElement;
     var optGeo = geoLoadRef.options[geoLoadRef.selectedIndex];
     this.geo_Value = optGeo.value;
-    this.geo_Text = optGeo.text;                   
+    this.geo_Text = optGeo.text;                     
     let couInter: CountryI = {  
       name:this.couName,
       description:this.couDescription,
@@ -105,7 +105,7 @@ export class CountryComponent implements OnInit {
           this._router.navigate(['/couList']);                      
           this.show = !this.show;
         });
-      console.warn("am in create")
+      console.warn("am in create")   
     }
     else {      
       couInter.id=this.countryIdToUpdate;                                                   

@@ -1,10 +1,10 @@
 <ng-container *ngIf="!correct">
     <div class="widget-heading">
-        <h3 class="widget-title">State Management</h3>
+        <h3 class="widget-title">State Management</h3>   
     </div>
-    <div class="form-group">
+    <div class="form-group">     
         <div class="col-sm-offset-3 col-sm-9">
-            <button id="createstate" class="btn btn-success btn-rounded btn-block">create</button>
+            <button id="createstate" class="btn btn-success btn-rounded btn-block" style="width: 150px;" (click)="toggle()">create</button>
 
         </div>
     </div>
@@ -18,8 +18,8 @@
                 <th style="width:30%" class="text-center">Operation</th>
             </tr>
         </thead>
-        <tbody id="state-list-table">
-            <tr>
+        <tbody id="state-list-table">         
+            <tr *ngFor="let state of stateResponse; let i = index">        
                 <!-- ngfor goes here  -->
                 <td class="text-center">
                     {{state.name}}
@@ -36,25 +36,25 @@
                 <td class="text-center">
                     <div id="hide">
                         <span id="tocreatestate" class="published">
-                            <a class="tooltips">
+                            <a class="tooltips">         
                                 <span>
-                                    <button type="button" (click)="loadArticleToEdit(country.id)">Edit</button>
+                                    <button type="button" (click)="loadStateToEdit(state.id)">Edit</button>
                                 </span>
                                 <img src="/images/edit.png" />
                             </a>
                         </span>
-                        <span class="delete-state" data-toggle="modal" data-target="#<%=id%>">
+                        <span class="delete-state" data-toggle="modal" data-target="">
                             <a class="tooltips">
                                 <span>
                                     <td>
-                                        <button type="button" (click)="deleteArticle(country.id)">Delete</button>
+                                        <button type="button" (click)="deleteState(state.id)">Delete</button>
                                     </td>
                                 </span>
                                 <img src="/images/delete.png" />
                             </a>
                         </span>
                     </div>
-                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="<%=id%>">
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="">
                         <div role="document" class="modal-dialog modal-sm">
                             <div class="modal-content">
                                 <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
@@ -93,7 +93,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Name</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" formControlName="stateName" [(ngModel)]=" staInter.name" #statename />
+                            <input type="text" class="form-control" formControlName="stateName" [(ngModel)]=" stateInterface.name" #statename />
                             <div id="state_name_error" class="state_name_error" style="font-size: 12px; color: #FF0000; "></div>
                         </div>
                     </div>
@@ -101,7 +101,8 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">Description</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" formControlName="stateDescription" [(ngModel)]=" staInter.description" #statedescription />
+                            <input type="text" class="form-control" formControlName="stateDescription" [(ngModel)]=" stateInterface.description" #statedescription
+                            />
                             <div id="state_description_error" class="state_description_error" style="font-size: 12px; color: #FF0000; "></div>
                         </div>
                     </div>
@@ -110,37 +111,39 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">State Code</label>
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" maxlength="3" formControlName="stateCode" [(ngModel)]=" staInter.countrycode" #statecode />
+                            <input type="text" class="form-control" maxlength="3" formControlName="stateCode" [(ngModel)]=" stateInterface.countrycode" #statecode
+                            />
                             <div id="state_code_error" class="state_code_error" style="font-size: 12px; color: #FF0000; "></div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
+                    </div>                                               
+           
+                    <div class="form-group">                        
                         <label for="selectGeography" class="col-sm-3 control-label">Geography</label>
-                        <div class="col-sm-9">
-                            <select class="form-control" disabled="disabled" #selectGeography>
-
+                        <div class="col-sm-9">                                                                  
+                            <select *ngIf="GeographyResponse" class="form-control" formControlName="stateGeography" [(ngModel)]="optionSelectedGeography" (change)='onOptionsSelectedGeo($event)'
+                                #selectGeography>                                                                     
+                                <option value="0">Select Geography</option>   
+                                <option *ngFor='let option of GeographyResponse' [value]="option.id">{{option.name}}</option>
                             </select>
                             <div id="geo_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
-
                         </div>
-                    </div>                            
-                    <div class="form-group">                               
+                    </div>              
+                    <div class="form-group">
                         <label for="selectCountry" class="col-sm-3 control-label">Country</label>
                         <div class="col-sm-9">
-                            <select class="form-control" disabled="disabled" #selectCountry>
-
+                            <select class="form-control" formControlName="stateCountry" [(ngModel)]="optionSelectedCountry" (change)='onOptionsSelectedCountry($event)'
+                                #selectCountry>
+                                <option *ngIf="!optionSelectedGeography" value="0">Select Country</option>                                                                           
+                                <option *ngFor='let cout of countryVal' [value]="cout.gid">{{cout.name}}</option>
                             </select>
                             <div id="country_error" class="reg_error" style="font-size: 12px; color: #FF0000; "></div>
-
                         </div>
-                    </div>
-
+                    </div>                            
    
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <button *ngIf="!countryIdToUpdate" class="btn btn-outline btn-success" (click)="saveEdit()">CREATE</button>
-                            <button *ngIf="countryIdToUpdate" class="btn btn-outline btn-success" (click)="saveEdit()">UPDATE</button>
+                    <div class="form-group">       
+                        <div class="col-sm-offset-3 col-sm-9">  
+                            <button *ngIf="!stateIdToUpdate" class="btn btn-outline btn-success" (click)="saveEdit()">CREATE</button>
+                            <button *ngIf="stateIdToUpdate" class="btn btn-outline btn-success" (click)="saveEdit()">UPDATE</button>
                             <button id="cancel" class="btn btn-outline btn-black">Cancel</button>
                         </div>
                     </div>
@@ -148,5 +151,5 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>   
 </ng-container>

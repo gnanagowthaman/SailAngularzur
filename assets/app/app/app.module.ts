@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';     
 import { DemoService } from './demo.service';
 import { NewuserComponent } from './newuser/newuser.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,8 +12,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListComponent } from './list/list.component';
 import { RequestService } from './newuser/request.service';
-import { CountryService } from './country/country.service';  
+import { CountryService } from './country/country.service';
 import { CreateService } from './geography/create.service';
+import { StateService } from './state/state.service';                
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -57,12 +58,16 @@ const appRoutes: Routes = [
     component: CountryComponent
   },
   {
-     path:'stateList',
-     component:StateComponent  
+    path: 'stateList',
+    component: StateComponent
+  },
+  {
+     path:'stateCreate',
+     component: StateComponent        
   },
   { path: '**', component: PageNotFoundComponent }
 ];
-@NgModule({    
+@NgModule({
   declarations: [
     AppComponent,
     NewuserComponent,
@@ -88,7 +93,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, { useHash: true }),
     BrowserModule, BrowserAnimationsModule, GridModule
   ],
-  providers: [DemoService, RequestService, CreateService, CountryService],
+  providers: [DemoService, RequestService, CreateService, CountryService, StateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
