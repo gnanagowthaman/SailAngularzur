@@ -134,19 +134,27 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__country_country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__state_state_service__ = __webpack_require__("./assets/app/app/state/state.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__country_country_component__ = __webpack_require__("./assets/app/app/country/country.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__state_state_component__ = __webpack_require__("./assets/app/app/state/state.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__document_document_service__ = __webpack_require__("./assets/app/app/document/document.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__subdocumentmanagement_subdocumentmanagement_service__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__country_country_component__ = __webpack_require__("./assets/app/app/country/country.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__state_state_component__ = __webpack_require__("./assets/app/app/state/state.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__document_document_component__ = __webpack_require__("./assets/app/app/document/document.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__subdocumentmanagement_subdocumentmanagement_component__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -184,35 +192,51 @@ var appRoutes = [
     },
     {
         path: 'geoList',
-        component: __WEBPACK_IMPORTED_MODULE_20__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_22__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoCreate',
-        component: __WEBPACK_IMPORTED_MODULE_20__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_22__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoBack',
-        component: __WEBPACK_IMPORTED_MODULE_20__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_22__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoEdit/:id',
-        component: __WEBPACK_IMPORTED_MODULE_20__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_22__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'couList',
-        component: __WEBPACK_IMPORTED_MODULE_21__country_country_component__["a" /* CountryComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_23__country_country_component__["a" /* CountryComponent */]
     },
     {
         path: 'couCreate',
-        component: __WEBPACK_IMPORTED_MODULE_21__country_country_component__["a" /* CountryComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_23__country_country_component__["a" /* CountryComponent */]
     },
     {
         path: 'stateList',
-        component: __WEBPACK_IMPORTED_MODULE_22__state_state_component__["a" /* StateComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_24__state_state_component__["a" /* StateComponent */]
     },
     {
         path: 'stateCreate',
-        component: __WEBPACK_IMPORTED_MODULE_22__state_state_component__["a" /* StateComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_24__state_state_component__["a" /* StateComponent */]
+    },
+    {
+        path: 'docList',
+        component: __WEBPACK_IMPORTED_MODULE_25__document_document_component__["a" /* DocumentComponent */]
+    },
+    {
+        path: 'docCreate',
+        component: __WEBPACK_IMPORTED_MODULE_25__document_document_component__["a" /* DocumentComponent */]
+    },
+    {
+        path: 'subDocList',
+        component: __WEBPACK_IMPORTED_MODULE_26__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
+    },
+    {
+        path: 'subDocCreate',
+        component: __WEBPACK_IMPORTED_MODULE_26__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
     },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
@@ -226,16 +250,18 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__aside_aside_component__["a" /* AsideComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__main_content_main_content_component__["a" /* MainContentComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__geography_geography_component__["a" /* GeographyComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__country_country_component__["a" /* CountryComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__state_state_component__["a" /* StateComponent */]
+                __WEBPACK_IMPORTED_MODULE_18__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__aside_aside_component__["a" /* AsideComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__main_content_main_content_component__["a" /* MainContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__geography_geography_component__["a" /* GeographyComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__country_country_component__["a" /* CountryComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__state_state_component__["a" /* StateComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__document_document_component__["a" /* DocumentComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_19__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_21__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */],
@@ -246,7 +272,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_14__geography_create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_13__country_country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_15__state_state_service__["a" /* StateService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_14__geography_create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_13__country_country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_15__state_state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_16__document_document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_17__subdocumentmanagement_subdocumentmanagement_service__["a" /* SubdocumentmanagementService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -267,7 +293,7 @@ module.exports = ""
 /***/ "./assets/app/app/aside/aside.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<aside data-mcs-theme=\"minimal-dark\" class=\"main-sidebar mCustomScrollbar\">\n        <ul id=\"usertest\" class=\"list-unstyled navigation mb-0\" style=\"padding-top:30px;\">\n          <li class=\"sidebar-category\"></li>   \n          <li id=\"dashboard_click\" class=\"panel\">   \n            <a id=\"accdboard\" role=\"button\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse1\" aria-expanded=\"false\"\n              aria-controls=\"collapse1\" class=\"bubble active collapsed\">\n              <i class=\"ion-ios-home-outline bg-purple\"></i>\n              <span class=\"sidebar-title accdboard\">Dashboard</span>\n              <span class=\"badge bg-danger\">9</span>\n            </a>             \n                         \n            <ul id=\"collapse1\" class=\"list-unstyled collapse\">\n              <!-- <li>\n                <a id=\"usermgnt\">User Management</a>\n              </li> -->   \n              <li>                        \n                <a routerLink=\"/userList\" routerLinkActive=\"active\">User Management</a>\n              </li>\n              <li>                    \n                <a routerLink=\"/newUser\" routerLinkActive=\"active\">New User</a>  \n              </li>\n               <li>                                                                 \n                <a routerLink=\"/geoList\" routerLinkActive=\"active\">Geography Management</a>\n                             \n              </li>                   \n              <li>           \n                <a routerLink=\"/couList\" routerLinkActive=\"active\">Country Management</a>\n              </li>\n              <li>\n                <a routerLink=\"/stateList\" routerLinkActive=\"active\">State Management</a>\n              </li>\n              <li>\n                <a id=\"dommgnt\">Domain Management</a>\n              </li>\n              <li>\n                <a id=\"regulatormgnt\">Regulator Management</a>\n              </li>\n              <li>\n                <a id=\"regmgnt\">Regulation Management</a>\n              </li>\n              <li>\n                <a id=\"doctmgnt\">Document Management</a>\n              </li>\n              <li>\n                <a id=\"subdocMgnt\">Sub Document Management</a>\n              </li>\n              <li>\n                <a id=\"docmgnt\">Document Upload Management</a>\n              </li>\n              <li>\n                <a id=\"newsMgnt\">News Management</a>\n              </li>\n              <li>      \n                <a id=\"alertMgnt\">Alert Management</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n        <li id=\"user_click\" class=\"panel\">\n          <a role=\"button\" id=\"profileMgnt\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse12\" aria-expanded=\"false\"\n            aria-controls=\"collapse12\" class=\"bubble collapsed\">\n            <i class=\"ion-ios-person-outline bg-success\"></i>\n            <span class=\"sidebar-title\">Profile</span>\n            <span class=\"badge bg-danger\"></span>\n          </a>\n          <ul id=\"collapse12\" class=\"list-unstyled collapse\"></ul>\n        </li>\n      </aside>"
+module.exports = "<aside data-mcs-theme=\"minimal-dark\" class=\"main-sidebar mCustomScrollbar\">\n        <ul id=\"usertest\" class=\"list-unstyled navigation mb-0\" style=\"padding-top:30px;\">\n          <li class=\"sidebar-category\"></li>   \n          <li id=\"dashboard_click\" class=\"panel\">   \n            <a id=\"accdboard\" role=\"button\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse1\" aria-expanded=\"false\"\n              aria-controls=\"collapse1\" class=\"bubble active collapsed\">\n              <i class=\"ion-ios-home-outline bg-purple\"></i>\n              <span class=\"sidebar-title accdboard\">Dashboard</span>\n              <span class=\"badge bg-danger\">9</span>\n            </a>             \n                         \n            <ul id=\"collapse1\" class=\"list-unstyled collapse\">\n              <!-- <li>\n                <a id=\"usermgnt\">User Management</a>\n              </li> -->   \n              <li>                        \n                <a routerLink=\"/userList\" routerLinkActive=\"active\">User Management</a>\n              </li>\n              <li>                    \n                <a routerLink=\"/newUser\" routerLinkActive=\"active\">New User</a>  \n              </li>\n               <li>                                                                 \n                <a routerLink=\"/geoList\" routerLinkActive=\"active\">Geography Management</a>\n                             \n              </li>                   \n              <li>           \n                <a routerLink=\"/couList\" routerLinkActive=\"active\">Country Management</a>\n              </li>\n              <li>\n                <a routerLink=\"/stateList\" routerLinkActive=\"active\">State Management</a>\n              </li>\n              <li>\n                <a id=\"dommgnt\">Domain Management</a>\n              </li>\n              <li>\n                <a id=\"regulatormgnt\">Regulator Management</a>\n              </li>\n              <li>\n                <a id=\"regmgnt\">Regulation Management</a>\n              </li>               \n              <li>\n                <a routerLink=\"/docList\" routerLinkActive=\"active\">Document Management</a>\n              </li>\n              <li>\n                <a a routerLink=\"/subDocList\" routerLinkActive=\"active\">Sub Document Management</a>\n              </li>\n              <li>\n                <a id=\"docmgnt\">Document Upload Management</a>\n              </li>\n              <li>\n                <a id=\"newsMgnt\">News Management</a>\n              </li>\n              <li>      \n                <a id=\"alertMgnt\">Alert Management</a>\n              </li>\n            </ul>\n          </li>\n        </ul>\n        <li id=\"user_click\" class=\"panel\">\n          <a role=\"button\" id=\"profileMgnt\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse12\" aria-expanded=\"false\"\n            aria-controls=\"collapse12\" class=\"bubble collapsed\">\n            <i class=\"ion-ios-person-outline bg-success\"></i>\n            <span class=\"sidebar-title\">Profile</span>\n            <span class=\"badge bg-danger\"></span>\n          </a>\n          <ul id=\"collapse12\" class=\"list-unstyled collapse\"></ul>\n        </li>\n      </aside>"
 
 /***/ }),
 
@@ -317,7 +343,7 @@ module.exports = ""
 /***/ "./assets/app/app/country/country.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Country Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"createcountry\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\n                <th style=\"width:15%\" class=\"text-center\">Country Code</th>\n                <th style=\"width:15%\" class=\"text-center\">Geography</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"country-list-table\">\n            <tr *ngFor=\"let country of myData; let i = index\">\n                <!--  ngfor comes here for list operation -->\n                <td class=\"text-center\">\n                    {{country.name}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.description}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.country_code}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.geoname}}\n                </td>\n                <td class=\"text-center\">\n                    <div id=\"hide\">\n                        <span id=\"tocreatecountry\" class=\"published\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <button type=\"button\" (click)=\"loadArticleToEdit(country.id)\">Edit</button>\n                                </span>\n                                <img src=\"/images/edit.png\" />\n                            </a>\n                        </span>\n                        <span class=\"delete-country\" data-toggle=\"modal\" data-target=\"\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <td>\n                                        <button type=\"button\" (click)=\"deleteArticle(country.id)\">Delete</button>\n                                    </td>\n                                </span>\n                                <img src=\"/images/delete.png\" />\n                            </a>\n                        </span>\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                        <span aria-hidden=\"true\">×</span>\n                                    </button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Country Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" id=\"deleteCountry\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 class=\"widget-title\">Country Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryName\" [(ngModel)]=\" couInter.name\" #countryname/>\n                            <div id=\"country_name_error\" class=\"country_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryDescription\" [(ngModel)]=\" couInter.description\" #countrydescription/>\n                            <div id=\"country_description_error\" class=\"country_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Country Code</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"countryCode\" [(ngModel)]=\" couInter.country_code\"\n                                #countrycode/>\n                            <div id=\"country_code_error\" class=\"country_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                            <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\n                            <div class=\"col-sm-9\">           \n                                <select class=\"form-control\" required formControlName=\"countryGeography\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\n                                    #selectGeography>       \n                                    <!-- <option value=\"0\"></option> -->\n                                    <option *ngFor='let option of geoData' [value]=\"option.id\">{{option.name}}</option> \n                                      \n                                </select>\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            </div>\n                        </div>    \n                    <!-- <div class=\"form-group\">\n                        <label class=\"control-label\" class=\"col-sm-3 control-label\">Geography</label>\n                        <div class=\"col-sm-9\">\n                            <select *ngIf=\"geoData\" [(ngModel)]=\"optionSelected\" (change)=\"onOptionsSelected($event)\" formControlName=\"countryGeography\"\n                                #selectGeography>\n                                <option value=\"0\">Select Geography</option>\n                                <option *ngFor=\"let option of geoData\" [value]=\"option.id\">{{option.name}}</option>\n                            </select>\n                            <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div> -->\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">      \n                            <button *ngIf=\"!countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                            <button *ngIf=\"countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Country Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"createcountry\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\n                <th style=\"width:15%\" class=\"text-center\">Country Code</th>\n                <th style=\"width:15%\" class=\"text-center\">Geography</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"country-list-table\">\n            <tr *ngFor=\"let country of myData; let i = index\">\n                <!--  ngfor comes here for list operation -->\n                <td class=\"text-center\">\n                    {{country.name}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.description}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.country_code}}\n                </td>\n                <td class=\"text-center\">\n                    {{country.geoname}}\n                </td>\n                <td class=\"text-center\">\n                    <div id=\"hide\">\n                        <span id=\"tocreatecountry\" class=\"published\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <button type=\"button\" (click)=\"loadArticleToEdit(country.id)\">Edit</button>\n                                </span>\n                                <img src=\"/images/edit.png\" />\n                            </a>\n                        </span>\n                        <span class=\"delete-country\" data-toggle=\"modal\" data-target=\"\">\n                            <a class=\"tooltips\">\n                                <span>\n                                    <td>\n                                        <button type=\"button\" (click)=\"deleteArticle(country.id)\">Delete</button>\n                                    </td>\n                                </span>\n                                <img src=\"/images/delete.png\" />\n                            </a>\n                        </span>\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                        <span aria-hidden=\"true\">×</span>\n                                    </button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Country Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" id=\"deleteCountry\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">   \n                <h3 class=\"widget-title\">Country Set Up</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryName\" [(ngModel)]=\" couInter.name\" #countryname/>\n                            <div id=\"country_name_error\" class=\"country_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryDescription\" [(ngModel)]=\" couInter.description\" #countrydescription/>\n                            <div id=\"country_description_error\" class=\"country_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Country Code</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"countryCode\" [(ngModel)]=\" couInter.country_code\"\n                                #countrycode/>\n                            <div id=\"country_code_error\" class=\"country_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                            <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\n                            <div class=\"col-sm-9\">           \n                                <select class=\"form-control\" required formControlName=\"countryGeography\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\n                                    #selectGeography>       \n                                    <!-- <option value=\"0\"></option> -->\n                                    <option *ngFor='let option of geoData' [value]=\"option.id\">{{option.name}}</option> \n                                      \n                                </select>\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            </div>\n                        </div>    \n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">      \n                            <button *ngIf=\"!countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                            <button *ngIf=\"countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
 
 /***/ }),
 
@@ -589,6 +615,207 @@ var DemoService = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], DemoService);
     return DemoService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\n  <div class=\"widget-heading\">      \n    <h3 class=\"widget-title\">Document Management</h3>\n                       \n  </div>\n  <div class=\"form-group\">                     \n    <div class=\"col-sm-offset-3 col-sm-9\">\n      <button id=\"createdoctype\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n\n    </div>\n  </div>\n  <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n    <thead>\n      <tr>\n        <th class=\"text-center\">Name</th>\n        <th class=\"text-center\">Description</th>\n        <th class=\"text-center\">Operation</th>\n      </tr>\n    </thead>           \n    <tbody id=\"doc-list-table\">   \n      <tr *ngFor=\"let doc of documentResponse; let i = index\">\n        <!-- ngfor goes here -->\n        <td class=\"text-left\">\n          {{doc.name}}\n        </td>\n        <td class=\"text-center\">\n          {{doc.description}}\n        </td>\n        <td class=\"text-center\">\n          <div>\n            <span id=\"toeditdoctype\" class=\"published\">\n              <a class=\"tooltips\">\n                <span>\n                  <button type=\"button\" (click)=\"loadArticleToEdit(doc.id)\">Edit</button>\n                </span>\n                <img src=\"/images/edit.png\" />\n              </a>\n            </span>\n            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"\">\n              <a class=\"tooltips\">\n                <span>\n                  <button type=\"button\" (click)=\"deleteArticle(doc.id)\">Delete</button>\n                </span>\n                <img src=\"/images/delete.png\" />\n              </a>\n            </span>\n          </div>\n          <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n            <div role=\"document\" class=\"modal-dialog modal-sm\">\n              <div class=\"modal-content\">\n                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                  <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                    <span aria-hidden=\"true\">×</span>\n                  </button>\n                  <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                </div>\n                <div class=\"modal-body\">\n                  <p>Do you want to delete?</p>\n                </div>\n                <div class=\"modal-footer\">\n                  <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                  <button type=\"button\" data-dismiss=\"modal\" id=\"delDocumentType\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                </div>\n              </div>\n            </div>\n          </div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n  <div id=\"findStatus\"></div>\n  <div class=\"doc_load\">\n    <div id=\"loadMore\"></div>\n  </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n  <div class=\"col-md-7\">\n    <div class=\"widget\">\n      <div class=\"widget-heading\">           \n        <h3 class=\"widget-title\">Document Set Up</h3>\n        <h3 class=\"widget-title\" *ngIf=\"documentIdToUpdate\">Edit Document</h3>      \n      </div>\n      <div class=\"widget-body\">\n        <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n          <div class=\"form-group\">\n            <label class=\"col-sm-3 control-label\">Name</label>\n            <div class=\"col-sm-9\">\n              <input type=\"text\" class=\"form-control\" formControlName=\"documentName\" [(ngModel)]=\"docInter.name\" #doctypename/>\n              <div id=\"doctype_name_error\" class=\"doctype_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label class=\"col-sm-3 control-label\">Description</label>\n            <div class=\"col-sm-9\">\n              <input type=\"text\" class=\"form-control\" formControlName=\"documentDescription\" [(ngModel)]=\"docInter.description\" #doctypedescription/>\n              <div id=\"doctype_description_error\" class=\"doctype_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <div class=\"col-sm-offset-3 col-sm-9\">\n              <button *ngIf=\"!documentIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n              <button *ngIf=\"documentIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n              <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n            </div>\n          </div>\n        \n        </form>\n      </div>\n    </div>\n  </div>\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__document_service__ = __webpack_require__("./assets/app/app/document/document.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DocumentComponent = /** @class */ (function () {
+    function DocumentComponent(http, documentService, renderer, elem, _router) {
+        this.http = http;
+        this.documentService = documentService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.documentIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.docInter = {
+            name: '',
+            description: ''
+        };
+    }
+    DocumentComponent.prototype.ngOnInit = function () {
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            documentName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            documentDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        this.loadAllDocuments();
+    };
+    DocumentComponent.prototype.loadAllDocuments = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/doctype', { headers: headers }).subscribe(function (data) {
+            _this.documentResponse = data;
+            console.log(data);
+        });
+    };
+    DocumentComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/docCreate']);
+    };
+    DocumentComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.getDocName = this.doctypename.nativeElement.value;
+        this.getDocDescription = this.doctypedescription.nativeElement.value;
+        var docInter = {
+            name: this.getDocName,
+            description: this.getDocDescription
+        };
+        if (this.documentIdToUpdate === null) {
+            this.documentService.saveDocument(docInter)
+                .subscribe(function (mySave) {
+                _this.saveDoc = mySave;
+                console.log(_this.saveDoc);
+                _this.loadAllDocuments();
+                _this._router.navigate(['/docList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            docInter.id = this.documentIdToUpdate;
+            this.documentService.updateDocument(docInter).subscribe(function (successCode) {
+                _this.loadAllDocuments();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    DocumentComponent.prototype.loadArticleToEdit = function (documentId) {
+        var _this = this;
+        this.documentService.getDocumentById(documentId)
+            .subscribe(function (doc) {
+            _this.documentIdToUpdate = doc[0].id;
+            _this.formdata.setValue({ documentName: doc[0].name, documentDescription: doc[0].description });
+        });
+        this.correct = !this.correct;
+    };
+    DocumentComponent.prototype.deleteArticle = function (documentId) {
+        var _this = this;
+        this.documentService.deleteDocumentById(documentId)
+            .subscribe(function (doc) {
+            _this.loadAllDocuments();
+        });
+        this._router.navigate(['/docList']);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("doctypename"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], DocumentComponent.prototype, "doctypename", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("doctypedescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], DocumentComponent.prototype, "doctypedescription", void 0);
+    DocumentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-document',
+            template: __webpack_require__("./assets/app/app/document/document.component.html"),
+            styles: [__webpack_require__("./assets/app/app/document/document.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], DocumentComponent);
+    return DocumentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var DocumentService = /** @class */ (function () {
+    function DocumentService(http) {
+        this.http = http;
+    }
+    DocumentService.prototype.saveDocument = function (insertDocument) {
+        return this.http.post("http://localhost:1337/createDocType", insertDocument, httpOptions);
+    };
+    DocumentService.prototype.updateDocument = function (updateDocument) {
+        return this.http.post("http://localhost:1337/updateDocType", updateDocument, httpOptions);
+    };
+    DocumentService.prototype.getDocumentById = function (doumentId) {
+        return this.http.get("http://localhost:1337/findDocType" + "/" + doumentId);
+    };
+    DocumentService.prototype.deleteDocumentById = function (doumentId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroydocument', { body: { document_id: doumentId }, headers: httpHeaders, responseType: 'text' });
+    };
+    DocumentService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], DocumentService);
+    return DocumentService;
 }());
 
 
@@ -1843,7 +2070,7 @@ var StateComponent = /** @class */ (function () {
             country_id: this.refCou_Value
         };
         if (this.stateIdToUpdate === null) {
-            this.stateService.saveState(stateInterface).subscribe(function (mySave) {
+            this.stateService.saveState(stateInterfaceUpdate).subscribe(function (mySave) {
                 _this.saveState = mySave;
                 console.log(_this.saveState);
                 _this.onstateLoad();
@@ -1989,6 +2216,243 @@ var StateService = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], StateService);
     return StateService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\n  <div class=\"widget-heading\">\n    <h3 class=\"widget-title\">Sub Document Management</h3>\n  </div>\n  <div class=\"form-group\">  \n    <div class=\"col-sm-offset-3 col-sm-9\">\n      <button id=\"createSubDoc\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n    </div>\n  </div>\n  <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n    <thead>\n      <tr>\n        <th class=\"text-center\">Name </th>\n        <th class=\"text-center\">Description</th>\n        <th class=\"text-center\">Document Name </th>\n        <th class=\"text-center\">Operation</th>\n      </tr>     \n    </thead>\n    <tbody id=\"subDocList\">\n      <tr *ngFor=\"let sdm of subDocMgtResponse; let i = index\">\n        <td class=\"text-left\">\n          {{sdm.name}}\n        </td>\n        <td class=\"text-center\">\n          {{sdm.description}}\n        </td>\n        <td class=\"text-center\">\n          {{sdm.docname}}\n        </td>\n        <td class=\"text-center\">\n          <div>\n            <span id=\"editSubDoc\" class=\"\">\n              <a class=\"tooltips\">\n                <span>\n                  <button type=\"button\" (click)=\"loadArticleToEdit(sdm.id)\">Edit</button>\n                </span>\n                <img src=\"/images/edit.png\" />\n              </a>\n            </span>\n            <span class=\"delete-subDoc\" data-toggle=\"modal\" data-target=\"\">\n              <a class=\"tooltips\">\n                <span>\n                  <button type=\"button\" (click)=\"deleteArticle(sdm.id)\">Delete</button>\n                </span>\n                <img src=\"/images/delete.png\" />\n              </a>\n            </span>\n          </div>\n          <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n            <div role=\"document\" class=\"modal-dialog modal-sm\">\n              <div class=\"modal-content\">\n                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                  <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                    <span aria-hidden=\"true\">×</span>\n                  </button>\n                  <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Sub Document Delete</h4>\n                </div>\n                <div class=\"modal-body\">\n                  <p>Do you want to delete?</p>\n                </div>\n                <div class=\"modal-footer\">\n                  <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                  <button type=\"button\" data-dismiss=\"modal\" id=\"deleteSubDoc\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                </div>\n              </div>\n            </div>\n          </div>\n        </td>\n      </tr>\n    </tbody>\n  </table>\n  <div id=\"findStatus\"></div>\n  <div class=\"user_load\">\n    <div id=\"loadMore\"></div>\n  </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n  <div class=\"container\">\n    <div class=\"col-md-6\">\n      <div class=\"widget\">\n        <div class=\"widget-heading\">\n          <h3 *ngIf=\"!subDocIdToUpdate\"class=\"widget-title\">Sub Document Create</h3>\n          <h3 *ngIf=\"subDocIdToUpdate\" class=\"widget-title\">Edit Sub Document</h3>\n        </div>\n        <div class=\"widget-body\">\n          <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n            <div class=\"form-group\">\n              <label class=\"col-sm-3 control-label\">Name</label>\n              <div class=\"col-sm-8\">\n                <input type=\"text\" class=\"form-control\" formControlName=\"subDocName\" [(ngModel)]=\" subDocInter.name\" #subDocname/>\n                <div id=\"subDocName_error\" class=\"sub_doc_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n              </div>\n            </div>\n\n            <div class=\"form-group\">\n              <label class=\"col-sm-3 control-label\">Description</label>\n              <div class=\"col-sm-8\">\n                <input  type=\"text\" class=\"form-control\" formControlName=\"subDocDescription\" [(ngModel)]=\" subDocInter.description\" #subDocdescription/>\n\n                <div id=\"subDoc_content_error\" style=\"font-size: 12px; color: #FF0000;\"></div>\n              </div>\n            </div>\n   \n            <!-- <div class=\"form-group\">\n              <label for=\"selectDocument\" class=\"col-sm-3 control-label\">Document</label>\n              <div class=\"col-sm-9\">            \n                <select id=\"selectDocument\" class=\"form-control\">\n                </select>\n                <div id=\"doc_error\" class=\"doc_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n              </div>\n            </div> -->                                                      \n            <div class=\"form-group\">\n              <label for=\"selectDocument\" class=\"col-sm-3 control-label\">Document</label>   \n              <div class=\"col-sm-9\">\n                <select class=\"form-control\" formControlName=\"subDocSelectDocument\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\n                  #selectDocument>                                                          \n                  <!-- <option value=\"0\"></option> -->                                                                                                                             \n                  <option *ngFor='let option of documentResponse' [value]=\"option.id\">{{option.name}}</option>        \n\n                </select>\n                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n              </div>\n            </div>                     \n            <div class=\"form-group\">\n              <div class=\"col-sm-offset-3 col-sm-9\">         \n                <button *ngIf=\"!subDocIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                <button *ngIf=\"subDocIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>        \n              </div>\n            </div>\n          </form>   \n        </div>\n      </div>\n    </div>\n  </div>\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubdocumentmanagementComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__subdocumentmanagement_service__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SubdocumentmanagementComponent = /** @class */ (function () {
+    function SubdocumentmanagementComponent(http, subDocService, renderer, elem, _router) {
+        this.http = http;
+        this.subDocService = subDocService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.subDocIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.optionSelected = 0;
+        this.subDocInter = {
+            name: '',
+            description: '',
+            doc_id: 0,
+            parent_id: 0
+        };
+    }
+    SubdocumentmanagementComponent.prototype.ngOnInit = function () {
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            subDocName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            subDocDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            subDocSelectDocument: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+        });
+        this.loadAllSubDocuments();
+        this.loadDropDownDocumentst();
+    };
+    SubdocumentmanagementComponent.prototype.loadAllSubDocuments = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/getAllSubDoc', { headers: headers }).subscribe(function (data) {
+            _this.subDocMgtResponse = data;
+            console.log(data);
+        });
+    };
+    SubdocumentmanagementComponent.prototype.loadDropDownDocumentst = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/allDoctype', { headers: headers }).subscribe(function (data) {
+            _this.documentResponse = data;
+            console.log(data);
+        });
+    };
+    SubdocumentmanagementComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/subDocCreate']);
+    };
+    SubdocumentmanagementComponent.prototype.ngAfterViewInit = function () {
+    };
+    SubdocumentmanagementComponent.prototype.onClickSubmit = function (data) {
+        console.log("on submit");
+    };
+    SubdocumentmanagementComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.subDoc_Name = this.subDocname.nativeElement.value;
+        this.subDoc_Description = this.subDocdescription.nativeElement.value;
+        var subDocLoadRef = this.selectDocument.nativeElement;
+        var optSubDoc = subDocLoadRef.options[subDocLoadRef.selectedIndex];
+        this.subdoc_Value = optSubDoc.value;
+        this.subdoc_Text = optSubDoc.text;
+        var subDocInter = {
+            name: this.subDoc_Name,
+            description: this.subDoc_Description,
+            parent_id: this.subdoc_Value,
+            doc_id: this.subdoc_Value
+        };
+        console.log("am save edit subdoc value", subDocInter.parent_id);
+        console.log("am save edit subdoc value", subDocInter.doc_id);
+        if (this.subDocIdToUpdate === null) {
+            this.subDocService.saveSubDocument(subDocInter)
+                .subscribe(function (mySave) {
+                _this.saveSubDoc = mySave;
+                console.log(_this.saveSubDoc);
+                _this.loadAllSubDocuments();
+                _this._router.navigate(['/subDocList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            subDocInter.id = this.subDocIdToUpdate;
+            this.subDocService.SubDocumentUpdate(subDocInter).subscribe(function (successCode) {
+                _this.loadAllSubDocuments();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    SubdocumentmanagementComponent.prototype.loadArticleToEdit = function (subDocId) {
+        var _this = this;
+        this.subDocService.getSubDocumentById(subDocId).subscribe(function (subdoc) {
+            _this.subDocIdToUpdate = subdoc[0].id;
+            console.log(_this.subDocIdToUpdate);
+            _this.formdata.setValue({ subDocName: subdoc[0].name, subDocDescription: subdoc[0].description, subDocSelectDocument: subdoc[0].id });
+        });
+        this.correct = !this.correct;
+    };
+    SubdocumentmanagementComponent.prototype.deleteArticle = function (subDocId) {
+        var _this = this;
+        this.subDocService.deleteSubDocumentById(subDocId)
+            .subscribe(function (subdoc) {
+            _this.loadAllSubDocuments();
+        });
+        this._router.navigate(['/subDocList']);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("subDocname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], SubdocumentmanagementComponent.prototype, "subDocname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("subDocdescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], SubdocumentmanagementComponent.prototype, "subDocdescription", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectDocument"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], SubdocumentmanagementComponent.prototype, "selectDocument", void 0);
+    SubdocumentmanagementComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-subdocumentmanagement',
+            template: __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.html"),
+            styles: [__webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], SubdocumentmanagementComponent);
+    return SubdocumentmanagementComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubdocumentmanagementService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var SubdocumentmanagementService = /** @class */ (function () {
+    function SubdocumentmanagementService(http) {
+        this.http = http;
+    }
+    SubdocumentmanagementService.prototype.saveSubDocument = function (subDocCreate) {
+        return this.http.post("http://localhost:1337/saveSubDocUrl", subDocCreate, httpOptions);
+    };
+    SubdocumentmanagementService.prototype.getSubDocumentById = function (subDocId) {
+        return this.http.get("http://localhost:1337/findBySubDoc" + "/" + subDocId);
+    };
+    // getSubDocumentOnly(){    
+    //   return this.http.get("http://localhost:1337/geographys").map(res => res);
+    // }      
+    SubdocumentmanagementService.prototype.SubDocumentUpdate = function (subDocId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.post("http://localhost:1337/updateSubDoc", subDocId, httpOptions);
+    };
+    SubdocumentmanagementService.prototype.deleteSubDocumentById = function (subDocId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroySubDoc ', { body: { id: subDocId }, headers: httpHeaders, responseType: 'text' });
+    };
+    SubdocumentmanagementService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], SubdocumentmanagementService);
+    return SubdocumentmanagementService;
 }());
 
 

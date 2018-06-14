@@ -48,7 +48,7 @@ export class StateComponent implements OnInit, AfterViewInit {
   @ViewChild("statecode") statecode: ElementRef;
   @ViewChild("selectGeography") selectGeography: ElementRef;
   @ViewChild("selectCountry") selectCountry: ElementRef;
-  formdata: FormGroup;
+  formdata: FormGroup; 
   ngOnInit() {
     this.formdata = new FormGroup({
       stateName: new FormControl(""),
@@ -152,7 +152,7 @@ export class StateComponent implements OnInit, AfterViewInit {
   loadStateToEdit(stateId: string) {
     this.stateService.getStateById(stateId).subscribe(sta => {
       this.stateIdToUpdate = sta[0].id;
-      console.log(this.stateIdToUpdate)
+      console.log(this.stateIdToUpdate)   
       this.formdata.setValue({ stateName: sta[0].name, stateDescription: sta[0].description, stateCode: sta[0].state_code, stateGeography: sta[0].gid, stateCountry: sta[0].country_id });
     });
     this.correct = !this.correct;      

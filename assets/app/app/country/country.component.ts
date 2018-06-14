@@ -68,7 +68,7 @@ export class CountryComponent implements OnInit {
         this.myData = data
         console.log(data);
       });
-  }
+  } 
   toggle() {
     this.correct = !this.correct;
     this._router.navigate(['/couCreate']);
