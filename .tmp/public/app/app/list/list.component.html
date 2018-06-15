@@ -1,7 +1,7 @@
 <!-- <button type="button" class="btn btn-primary-outline pull-right" (click)="btnClick();">
     <i class="fa fa-plus"></i> Add User</button>    -->
-                        
-<kendo-grid [data]="myData" [height]="410">
+
+<!-- <kendo-grid [data]="myData" [height]="410">
   <kendo-grid-column field="id" title="ID" width="40">       
   </kendo-grid-column>
   <kendo-grid-column field="user_name" title="Name" width="250">
@@ -15,20 +15,116 @@
   <kendo-grid-column field="mobile_no" title="Mobile" width="80">
   </kendo-grid-column>
   <kendo-grid-column field="email_id" title="Email" width="80">
-  </kendo-grid-column>
-  <!-- <kendo-grid-column field="access_geo" title="Geo" width="80">
-  </kendo-grid-column> -->          
-  <kendo-grid-column field="renewal_date" title="Date" width="80">
+  </kendo-grid-column> -->
+<!-- <kendo-grid-column field="access_geo" title="Geo" width="80">
+  </kendo-grid-column> -->
+<!-- <kendo-grid-column field="renewal_date" title="Date" width="80">
   </kendo-grid-column>
   <kendo-grid-column field="Discontinued" title="Edit" width="120">
       <ng-template kendoGridCellTemplate let-dataItem>
           <input type="checkbox" (click)="selectAllStudentsChange($event)"   
           [checked]="dataItem.Discontinued"/>
       </ng-template>
-  </kendo-grid-column>       
+  </kendo-grid-column>          
   <kendo-grid-column field="Discontinued" title="Delete" width="120">
     <ng-template kendoGridCellTemplate let-dataItem>
-        <input type="checkbox" [checked]="dataItem.Discontinued"/>
+        <input type="checkbox" [checked]="dataItem.Discontinued"/>   
     </ng-template>
 </kendo-grid-column>
-</kendo-grid>
+</kendo-grid> -->    
+
+<div class="widget-heading">
+    <h3 class="widget-title">User Management</h3>
+</div>
+<div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+        <div class="input-group input-group-search">
+            <input id="searchUserTxt" type="text" placeholder="Search for..." class="form-control">
+            <span class="input-group-btn">
+                <button id="searchUser" type="button" class="btn btn-outline">Go!</button>           
+            </span>
+        </div>
+        <!-- {#createAdmin} -->
+        <button id="renderCreateUserFormPage" class="btn btn-success btn-rounded btn-block" style="width: 150px;">Create User</button>
+        <button id="renderCreateAdminUserFormPage" class="btn btn-success btn-rounded btn-block" style="position: absolute;right: 50px;bottom: 0px;width: 150px;">Create Admin</button>
+       
+    </div>
+</div>
+<table id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+    <thead>
+        <tr>
+            <th style="width:15%" class="text-center" style="position: relative;right: 14px;width: 1%;">User</th>
+            <th style="width:10%" class="text-center" style="left: 23px;width:10%;position: relative;">Type</th>
+            <th style="width:10%" class="text-center" style="position: relative;left: 63px;width:10%;">Email Id</th>
+            <th style="width:10%" class="text-center" style="position:  relative;left: 161px;width:10%;">Mobile No</th>
+            <th style="width:15%" class="text-center" style="position:  relative;left: 160px;width:15%;">Renewal Date</th>
+            <th style="width:30%" class="text-center" style="position: relative;left: 63px;width:30%;">Operation</th>
+        </tr>
+        <tr style="display:show" id="no-record-found">
+            <th colspan="6">
+                <span id="SearchResult"></span>
+            </th>
+        </tr>
+    </thead>       
+    <div id="user-list-table"></div>
+</table>        
+<div id="findStatus"></div>
+<div class="user_load">
+    <div id="loadMore"></div>           
+</div>         
+<table class="table table-hover">   
+    <tbody>   
+        <tr *ngFor="let employee of myData; let i = index">
+            <td>
+                <div class="media">
+                    <div class="media-body">
+                        <h5 class="media-heading">{{employee.user_name}}</h5>
+                    </div>
+                </div>            
+            </td>
+            <td class="text-center">{{employee.type}}</td>
+            <td class="text-center">{{employee.email_id}}</td>
+            <td class="text-center">{{employee.mobile_no}}</td>
+            <td id='<%=user_name%><%=type%>' class="text-center">{{employee.renewal_date}}</td>
+            <td class="text-center">
+                <div>
+                    <!-- {#edituser} -->
+                    <span class="edit-user" id="editUser">
+                        <a class="tooltips">
+                            <span>Edit</span>
+                            <img src="/images/edit.png" />
+                        </a>
+                    </span>
+                    <!-- {/edituser} -->
+                    <!-- {#deleteuser}   -->
+                    <span class="delete-user" data-toggle="modal" data-target="#<%=id%>">
+                        <a class="tooltips">
+                            <span>Delete</span>
+                            <img src="/images/delete.png" />
+                        </a>
+                    </span>
+                    <!-- {/deleteuser}   -->
+                </div>
+                <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="<%=id%>">
+                    <div role="document" class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                                <h4 id="mySmallModalLabel" class="modal-title">User Delete</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Do you want to delete?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" data-dismiss="modal" class="btn  btn-outline btn-primary-red">Close</button>
+                                <button type="button" data-dismiss="modal" id="delUser" class="btn btn-outline btn-primary-red">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

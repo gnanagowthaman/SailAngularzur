@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridModule } from '@progress/kendo-angular-grid';
@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DemoService } from './demo.service';
 import { NewuserComponent } from './newuser/newuser.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';   
 import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListComponent } from './list/list.component';
@@ -17,6 +17,8 @@ import { CreateService } from './geography/create.service';
 import { StateService } from './state/state.service';
 import { DocumentService } from './document/document.service';        
 import { SubdocumentmanagementService } from './subdocumentmanagement/subdocumentmanagement.service';
+import {RegulatorService} from './regulator/regulator.service'
+import { DocumentuploadService } from './documentupload/documentupload.service';
 import { HeaderComponent } from './header/header.component';
 import { AsideComponent } from './aside/aside.component';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -26,6 +28,8 @@ import { CountryComponent } from './country/country.component';
 import { StateComponent } from './state/state.component';
 import { DocumentComponent } from './document/document.component';
 import { SubdocumentmanagementComponent } from './subdocumentmanagement/subdocumentmanagement.component';
+import { RegulatorComponent } from './regulator/regulator.component';
+import { DocumentuploadComponent } from './documentupload/documentupload.component';
 const appRoutes: Routes = [
   { path: 'userList', component: ListComponent },
   {
@@ -85,6 +89,18 @@ const appRoutes: Routes = [
     path: 'subDocCreate',
     component: SubdocumentmanagementComponent
   },
+  {
+    path: 'regList',        
+    component: RegulatorComponent                   
+  },        
+  {
+    path: 'regCreate',
+    component: RegulatorComponent
+  },
+  {
+   path:'docUplMgtList',
+   component:DocumentuploadComponent                  
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({
@@ -100,7 +116,9 @@ const appRoutes: Routes = [
     CountryComponent,
     StateComponent,
     DocumentComponent,
-    SubdocumentmanagementComponent
+    SubdocumentmanagementComponent,  
+    RegulatorComponent,
+    DocumentuploadComponent
   ],
   imports: [
     BrowserModule,
@@ -114,8 +132,8 @@ const appRoutes: Routes = [
     // ),
     RouterModule.forRoot(appRoutes, { useHash: true }),
     BrowserModule, BrowserAnimationsModule, GridModule
-  ],
-  providers: [DemoService, RequestService, CreateService, CountryService, StateService, DocumentService, SubdocumentmanagementService],
+  ],                    
+  providers: [DemoService, RequestService, CreateService, CountryService, StateService, DocumentService, SubdocumentmanagementService,RegulatorService,DocumentuploadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,14 +20,14 @@ webpackEmptyAsyncContext.id = "./assets/app/$$_lazy_route_resource lazy recursiv
 /***/ "./assets/app/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "\nbody {\n  font-family: \"Lato\", sans-serif;\n  font-size: 14px;\n  font-weight: 400;\n  color: #777;\n  background-color: #FFF;\n  position: relative;\n  overflow-x: hidden;\n  -webkit-font-smoothing: antialiased !important;\n  moz-osx-font-smoothing: grayscale !important;\n}\na {\n  color: #000;\n  cursor: pointer;\n}\na:hover,\na:focus {\n  text-decoration: none;\n  outline: 0;\n  color: #A52A2A;\n}\n.icon i {\n  display: inline-block;\n  width: 14px;\n  text-align: center;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  font-weight: 700;\n}\n.text-base {\n  color: #737373;\n}\n.text-muted {\n  color: #9a9a9a;\n}\n.text-white {\n  color: #FFF;\n}\n.text-black {\n  color: #1f364f;\n}\n.text-primary {\n  color: #054fa4;\n}\na.text-primary:hover,\na.text-primary:focus {\n  color: #033773;\n}\n.text-success {\n  color: #117b66;\n}\na.text-success:hover,\na.text-success:focus {\n  color: #0b4e41;\n}\n.text-info {\n  color: #0096db;\n}\na.text-info:hover,\na.text-info:focus {\n  color: #0073a8;\n}\n.text-warning {\n  color: #ea9e00;\n}\na.text-warning:hover,\na.text-warning:focus {\n  color: #b77c00;\n}\n.text-danger {\n  color: #cc1a23;\n}\na.text-danger:hover,\na.text-danger:focus {\n  color: #9f141b;\n}\n.text-purple {\n  color: #721ab6;\n}\na.text-purple:hover,\na.text-purple:focus {\n  color: #56138a;\n}\n.bg-light {\n  background-color: rgba(255, 255, 255, 0.1);\n}\n.bg-dark {\n  background-color: rgba(31, 54, 79, 0.1);\n}\n.bg-white {\n  background-color: #FFF;\n}\n.bg-default {\n  background-color: #eeeeee;\n}\n.bg-black {\n  background-color: #627284;\n  color: #FFF;\n}\na.bg-black:hover,\na.bg-black:focus {\n  background-color: #4d5967;\n}\n.bg-primary {\n  background-color: #5195e2;\n  color: #FFF;\n}\na.bg-primary:hover,\na.bg-primary:focus {\n  background-color: #257adb;\n}\n.bg-success {\n  background-color: #000;\n  color: #FFF;\n}\na.bg-success:hover,\na.bg-success:focus {\n  background-color: #40ab96;\n}\n.bg-info {\n  background-color: #57caff;\n  color: #FFF;\n}\na.bg-info:hover,\na.bg-info:focus {\n  background-color: #24baff;\n}\n.bg-warning {\n  background-color: #ffcc62;\n  color: #FFF;\n}\na.bg-warning:hover,\na.bg-warning:focus {\n  background-color: #ffbb2f;\n}\n.bg-danger {\n  background-color: #000;\n  color: #FFF;\n}\na.bg-danger:hover,\na.bg-danger:focus {\n  background-color: #e7444c;\n}\n.bg-purple {\n  background-color: #FFF;\n  color: #A52A2A;\n}\na.bg-purple:hover,\na.bg-purple:focus {\n  background-color: #9938e3;\n}\n.drop-cap:first-letter {\n  float: left;\n  margin: 0 10px -5px 0;\n  font-size: 450%;\n  line-height: 100%;\n  color: #737373;\n}\n.row {\n  margin-left: -10px;\n  margin-right: -10px;\n}\n.row > [class^=\"col\"] {\n  padding-left: 10px;\n  padding-right: 10px;\n}\n.row-sm {\n  margin-left: -5px;\n  margin-right: -5px;\n}\n.row-sm > [class^=\"col\"] {\n  padding-left: 5px;\n  padding-right: 5px;\n}\n.row-sm.grid {\n  margin: -5px;\n}\n.row-sm.grid > [class^=\"col\"] {\n  padding: 5px;\n}\n.row-xs {\n  margin-left: -1.66666667px;\n  margin-right: -1.66666667px;\n}\n.row-xs > [class^=\"col\"] {\n  padding-left: 1.66666667px;\n  padding-right: 1.66666667px;\n}\n.row-xs.grid {\n  margin: -1.66666667px;\n}\n.row-xs.grid > [class^=\"col\"] {\n  padding: 1.66666667px;\n}\n.row-0 {\n  margin-left: 0;\n  margin-right: 0;\n}\n.row-0 > [class^=\"col\"] {\n  padding-left: 0;\n  padding-right: 0;\n}\n.row-0.divider > [class^=\"col\"] {\n  border-right: 1px solid #d9d9d9;\n}\n.row-0.divider > [class^=\"col\"]:last-child {\n  border: none;\n}\ncaption {\n  color: #9a9a9a;\n}\n.table > thead > tr > th,\n.table > tbody > tr > th,\n.table > tfoot > tr > th,\n.table > thead > tr > td,\n.table > tbody > tr > td,\n.table > tfoot > tr > td {\n  padding: 12px 15px;\n  vertical-align: middle;\n  border-top: 1px solid #d9d9d9;\n}\n.table > thead > tr > th,\n.table > tfoot > tr > th {\n  text-transform: uppercase;\n  font-weight: 700;\n  font-size: 12px;\n  color: #9a9a9a;\n  border-bottom: 1px solid #d9d9d9;\n}\n.table > tbody + tbody {\n  border-top: 1px solid #d9d9d9;\n}\n.table.no-border > thead > tr > th,\n.table.no-border > tbody > tr > th,\n.table.no-border > tfoot > tr > th,\n.table.no-border > thead > tr > td,\n.table.no-border > tbody > tr > td,\n.table.no-border > tfoot > tr > td {\n  border: none;\n}\n.table-bordered {\n  border: 1px solid #d9d9d9;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > tbody > tr > th,\n.table-bordered > tfoot > tr > th,\n.table-bordered > thead > tr > td,\n.table-bordered > tbody > tr > td,\n.table-bordered > tfoot > tr > td {\n  border: 1px solid #d9d9d9;\n}\n@media screen and (max-width: 767px) {\n  .table-responsive {\n    border: 1px solid #d9d9d9;\n  }\n}\ninput[type=\"text\"],\ninput[type=\"email\"],\ninput[type=\"password\"],\ntextarea {\n  -webkit-appearance: none;\n}\nlabel {\n  font-weight: 700;\n}\n.form-control {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  font-size: 14px;\n  border: 1px solid transparent;\n  background-color: #f5f5f5;\n}\n.form-control.focus,\n.form-control:focus {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.form-control.rounded {\n  border-radius: 100px !important;\n}\n.radio-custom,\n.checkbox-custom,\n.switch {\n  position: relative;\n  display: block;\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.radio-custom label,\n.checkbox-custom label,\n.switch label {\n  padding-left: 20px;\n  margin-bottom: 0;\n  font-weight: 400;\n  cursor: pointer;\n}\n.radio-custom + .radio-custom,\n.checkbox-custom + .checkbox-custom,\n.switch + .switch {\n  margin-top: -5px;\n}\ninput[type=\"radio\"][disabled] + label,\ninput[type=\"checkbox\"][disabled] + label,\ninput[type=\"radio\"].disabled + label,\ninput[type=\"checkbox\"].disabled + label,\nfieldset[disabled] input[type=\"radio\"] + label,\nfieldset[disabled] input[type=\"checkbox\"] + label {\n  opacity: .6;\n  cursor: not-allowed !important;\n}\ninput[type=\"radio\"]:focus,\ninput[type=\"checkbox\"]:focus {\n  outline: 0;\n}\n.radio-inline,\n.checkbox-inline,\n.switch-inline {\n  padding-left: 0;\n  display: inline-block;\n  margin-top: 0;\n  margin-bottom: 0;\n}\n.checkbox-custom {\n  position: relative;\n}\n.checkbox-custom input[type=\"checkbox\"] {\n  display: none !important;\n}\n.checkbox-custom input[type=\"checkbox\"] + label {\n  cursor: pointer;\n  margin-bottom: 0;\n}\n.checkbox-custom input[type=\"checkbox\"] + label:before {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: 2px;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #d9d9d9;\n  border-radius: 2px;\n}\n.checkbox-custom input[type=\"checkbox\"] + label:after {\n  position: absolute;\n  top: -1px;\n  left: 2px;\n  font-family: \"Ionicons\";\n  content: \"\\f121\";\n  font-size: 14px;\n  -webkit-transition: all 0.1s ease-in-out;\n  transition: all 0.1s ease-in-out;\n  -webkit-transform: scale(0);\n  transform: scale(0);\n}\n.checkbox-custom input[type=\"checkbox\"] + label.checkbox-success:before {\n  border-color: #17A88B;\n}\n.checkbox-custom input[type=\"checkbox\"] + label.checkbox-success:after {\n  color: #FFF;\n}\n.checkbox-custom input[type=\"checkbox\"] + label.checkbox-warning:before {\n  border-color: #FFB61E;\n}\n.checkbox-custom input[type=\"checkbox\"] + label.checkbox-warning:after {\n  color: #FFF;\n}\n.checkbox-custom input[type=\"checkbox\"] + label.checkbox-error:before {\n  border-color: #E5343D;\n}\n.checkbox-custom input[type=\"checkbox\"] + label.checkbox-error:after {\n  color: #FFF;\n}\n.checkbox-custom input[type=\"checkbox\"]:checked + label:before {\n  background-color: #d9d9d9;\n}\n.checkbox-custom input[type=\"checkbox\"]:checked + label:after {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n.checkbox-custom input[type=\"checkbox\"]:checked + label.checkbox-success:before {\n  background-color: #17A88B;\n}\n.checkbox-custom input[type=\"checkbox\"]:checked + label.checkbox-warning:before {\n  background-color: #FFB61E;\n}\n.checkbox-custom input[type=\"checkbox\"]:checked + label.checkbox-error:before {\n  background-color: #E5343D;\n}\n.radio-custom {\n  position: relative;\n}\n.radio-custom input[type=\"radio\"] {\n  display: none !important;\n}\n.radio-custom input[type=\"radio\"] + label {\n  cursor: pointer;\n  margin-bottom: 0;\n}\n.radio-custom input[type=\"radio\"] + label:before {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: 2px;\n  width: 16px;\n  height: 16px;\n  border: 2px solid #d9d9d9;\n  border-radius: 50%;\n}\n.radio-custom input[type=\"radio\"] + label:after {\n  content: '';\n  position: absolute;\n  width: 6px;\n  height: 6px;\n  background-color: #737373;\n  top: 7px;\n  left: 5px;\n  display: block;\n  border-radius: 50%;\n  -webkit-transition: all 0.1s ease-in-out;\n  transition: all 0.1s ease-in-out;\n  -webkit-transform: scale(0);\n  transform: scale(0);\n}\n.radio-custom input[type=\"radio\"] + label.radio-success:before {\n  border-color: #17A88B;\n}\n.radio-custom input[type=\"radio\"] + label.radio-success:after {\n  background-color: #FFF;\n}\n.radio-custom input[type=\"radio\"] + label.radio-warning:before {\n  border-color: #FFB61E;\n}\n.radio-custom input[type=\"radio\"] + label.radio-warning:after {\n  background-color: #FFF;\n}\n.radio-custom input[type=\"radio\"] + label.radio-error:before {\n  border-color: #E5343D;\n}\n.radio-custom input[type=\"radio\"] + label.radio-error:after {\n  background-color: #FFF;\n}\n.radio-custom input[type=\"radio\"]:checked + label:before {\n  background-color: #d9d9d9;\n}\n.radio-custom input[type=\"radio\"]:checked + label:after {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n.radio-custom input[type=\"radio\"]:checked + label.radio-success:before {\n  background-color: #17A88B;\n}\n.radio-custom input[type=\"radio\"]:checked + label.radio-warning:before {\n  background-color: #FFB61E;\n}\n.radio-custom input[type=\"radio\"]:checked + label.radio-error:before {\n  background-color: #E5343D;\n}\n.switch {\n  position: relative;\n}\n.switch input[type=\"radio\"],\n.switch input[type=\"checkbox\"] {\n  display: none !important;\n}\n.switch input[type=\"radio\"] + label,\n.switch input[type=\"checkbox\"] + label {\n  cursor: pointer;\n  margin-bottom: 0;\n  height: 20px;\n  width: 36px;\n}\n.switch input[type=\"radio\"] + label:before,\n.switch input[type=\"checkbox\"] + label:before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 36px;\n  height: 20px;\n  border: 2px solid #d9d9d9;\n  background-color: #FFF;\n  border-radius: 50px;\n}\n.switch input[type=\"radio\"] + label:after,\n.switch input[type=\"checkbox\"] + label:after {\n  content: \"\";\n  position: absolute;\n  top: 3px;\n  left: 3px;\n  margin-left: 0;\n  width: 14px;\n  height: 14px;\n  background-color: #d9d9d9;\n  border-radius: 50%;\n  -webkit-transition: margin 0.05s;\n  transition: margin 0.05s;\n}\n.switch input[type=\"radio\"]:checked + label:after,\n.switch input[type=\"checkbox\"]:checked + label:after {\n  margin-left: 16px;\n}\n.switch input[type=\"radio\"]:checked + label.switch-black:before,\n.switch input[type=\"checkbox\"]:checked + label.switch-black:before {\n  border-color: #1f364f;\n}\n.switch input[type=\"radio\"]:checked + label.switch-black:after,\n.switch input[type=\"checkbox\"]:checked + label.switch-black:after {\n  background-color: #1f364f;\n}\n.switch input[type=\"radio\"]:checked + label.switch-success:before,\n.switch input[type=\"checkbox\"]:checked + label.switch-success:before {\n  border-color: #17A88B;\n}\n.switch input[type=\"radio\"]:checked + label.switch-success:after,\n.switch input[type=\"checkbox\"]:checked + label.switch-success:after {\n  background-color: #17A88B;\n}\n.switch input[type=\"radio\"]:checked + label.switch-warning:before,\n.switch input[type=\"checkbox\"]:checked + label.switch-warning:before {\n  border-color: #FFB61E;\n}\n.switch input[type=\"radio\"]:checked + label.switch-warning:after,\n.switch input[type=\"checkbox\"]:checked + label.switch-warning:after {\n  background-color: #FFB61E;\n}\n.switch input[type=\"radio\"]:checked + label.switch-error:before,\n.switch input[type=\"checkbox\"]:checked + label.switch-error:before {\n  border-color: #E5343D;\n}\n.switch input[type=\"radio\"]:checked + label.switch-error:after,\n.switch input[type=\"checkbox\"]:checked + label.switch-error:after {\n  background-color: #E5343D;\n}\n.form-control-feedback {\n  line-height: 34px;\n}\n.has-success .help-block,\n.has-success .control-label,\n.has-success .radio,\n.has-success .checkbox,\n.has-success .radio-custom,\n.has-success .checkbox-custom,\n.has-success .radio-inline,\n.has-success .checkbox-inline,\n.has-success.radio label,\n.has-success.checkbox label,\n.has-success.radio-inline label,\n.has-success.checkbox-inline label {\n  color: #17A88B;\n}\n.has-success .form-control {\n  border-color: transparent;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  background-color: #5dc2ae;\n  color: #FFF;\n}\n.has-success .form-control:focus {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  border-color: transparent;\n}\n.has-success .input-group-addon {\n  color: #FFF;\n  border-color: transparent;\n  background-color: #17A88B;\n}\n.has-success .form-control-feedback {\n  color: #17A88B;\n}\n.has-warning .help-block,\n.has-warning .control-label,\n.has-warning .radio,\n.has-warning .checkbox,\n.has-warning .radio-custom,\n.has-warning .checkbox-custom,\n.has-warning .radio-inline,\n.has-warning .checkbox-inline,\n.has-warning.radio label,\n.has-warning.checkbox label,\n.has-warning.radio-inline label,\n.has-warning.checkbox-inline label {\n  color: #FFB61E;\n}\n.has-warning .form-control {\n  border-color: transparent;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  background-color: #ffcc62;\n  color: #FFF;\n}\n.has-warning .form-control:focus {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  border-color: transparent;\n}\n.has-warning .input-group-addon {\n  color: #FFF;\n  border-color: transparent;\n  background-color: #FFB61E;\n}\n.has-warning .form-control-feedback {\n  color: #FFB61E;\n}\n.has-error .help-block,\n.has-error .control-label,\n.has-error .radio,\n.has-error .checkbox,\n.has-error .radio-custom,\n.has-error .checkbox-custom,\n.has-error .radio-inline,\n.has-error .checkbox-inline,\n.has-error.radio label,\n.has-error.checkbox label,\n.has-error.radio-inline label,\n.has-error.checkbox-inline label {\n  color: #E5343D;\n}\n.has-error .form-control {\n  border-color: transparent;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  background-color: #ed7177;\n  color: #FFF;\n}\n.has-error .form-control:focus {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  border-color: transparent;\n}\n.has-error .input-group-addon {\n  color: #FFF;\n  border-color: transparent;\n  background-color: #E5343D;\n}\n.has-error .form-control-feedback {\n  color: #E5343D;\n}\n@media (min-width: 768px) {\n  .form-inline .radio-custom,\n  .form-inline .checkbox-custom,\n  .form-inline .switch {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n}\n/*** Form display as full height Starts - Need to hide this code ***\n.form-horizontal .radio-custom,\n.form-horizontal .checkbox-custom,\n.form-horizontal .switch {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-top: 7px;\n}\n.form-horizontal .radio-custom,\n.form-horizontal .checkbox-custom,\n.form-horizontal .switch {\n  height: 27px;\n}\n.form-horizontal .checkbox-custom input[type=\"checkbox\"] + label:before {\n  top: 9px;\n}\n.form-horizontal .checkbox-custom input[type=\"checkbox\"] + label:after {\n  top: 7px;\n}\n.form-horizontal .radio-custom input[type=\"radio\"] + label:before {\n  top: 9px;\n}\n.form-horizontal .radio-custom input[type=\"radio\"] + label:after {\n  top: 14px;\n}\n.form-horizontal .switch input[type=\"radio\"] + label:before,\n.form-horizontal .switch input[type=\"checkbox\"] + label:before {\n  top: 7px;\n}\n.form-horizontal .switch input[type=\"radio\"] + label:after,\n.form-horizontal .switch input[type=\"checkbox\"] + label:after {\n  top: 10px;\n} /*** Form display as full height - Need to hide this code ***/\n.form-horizontal .radio-custom,\n.form-horizontal .checkbox-custom,\n.form-horizontal .switch {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-top: 7px;\n}\n.checkbox-custom.radio-inline {\n  vertical-align: top;\n}\n.form-horizontal .checkbox-custom input[type=\"checkbox\"] + label:before {\n  top: 9px;\n}\n.form-horizontal .checkbox-custom input[type=\"checkbox\"] + label:after {\n  top: 7px;\n}\n.form-horizontal .radio-custom input[type=\"radio\"] + label:before {\n  top: 9px;\n}\n.form-horizontal .radio-custom input[type=\"radio\"] + label:after {\n  top: 14px;\n}\n.form-horizontal .switch input[type=\"radio\"] + label:before,\n.form-horizontal .switch input[type=\"checkbox\"] + label:before {\n  top: 7px;\n}\n.form-horizontal .switch input[type=\"radio\"] + label:after,\n.form-horizontal .switch input[type=\"checkbox\"] + label:after {\n  top: 10px;\n}\n.btn {\n  outline: 0 !important;\n  padding: 5px 15px;\n  border-width: 2px;\n  font-weight: 700;\n}\n.btn:active,\n.btn.active {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.btn-link {\n  color: #9a9a9a;\n}\n.btn-link:hover,\n.btn-link:focus,\n.btn-link:active {\n  color: #737373;\n}\n.btn-lg,\n.btn-group-lg > .btn {\n  padding: 9px 20px;\n}\n.btn-sm,\n.btn-group-sm > .btn {\n  padding: 4px 12px;\n}\n.btn-xs,\n.btn-group-xs > .btn {\n  padding: 0px 5px;\n}\n.btn-default {\n  color: #737373;\n  background-color: #eeeeee;\n  border-color: #d9d9d9;\n}\n.btn-default:focus,\n.btn-default.focus {\n  color: #737373 !important;\n  background-color: #cdcdcd !important;\n  border-color: #cdcdcd !important;\n}\n.btn-default:hover {\n  color: #737373 !important;\n  background-color: #d9d9d9 !important;\n  border-color: #d9d9d9 !important;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  color: #737373;\n  background-color: #cdcdcd;\n  border-color: #cdcdcd;\n}\n.btn-default:active:hover,\n.btn-default.active:hover,\n.open > .dropdown-toggle.btn-default:hover,\n.btn-default:active:focus,\n.btn-default.active:focus,\n.open > .dropdown-toggle.btn-default:focus,\n.btn-default:active.focus,\n.btn-default.active.focus,\n.open > .dropdown-toggle.btn-default.focus {\n  color: #737373;\n  background-color: #cdcdcd;\n  border-color: #cdcdcd;\n}\n.btn-default.disabled,\n.btn-default[disabled],\nfieldset[disabled] .btn-default,\n.btn-default.disabled:hover,\n.btn-default[disabled]:hover,\nfieldset[disabled] .btn-default:hover,\n.btn-default.disabled:focus,\n.btn-default[disabled]:focus,\nfieldset[disabled] .btn-default:focus,\n.btn-default.disabled.focus,\n.btn-default[disabled].focus,\nfieldset[disabled] .btn-default.focus,\n.btn-default.disabled:active,\n.btn-default[disabled]:active,\nfieldset[disabled] .btn-default:active,\n.btn-default.disabled.active,\n.btn-default[disabled].active,\nfieldset[disabled] .btn-default.active {\n  background-color: #e6e6e6;\n  border-color: #e6e6e6;\n}\n.btn-default .badge {\n  color: #e6e6e6;\n}\n.btn-primary {\n  color: #FFF;\n  background-color: #5195e2;\n  border-color: #055bbd;\n}\n.btn-primary:focus,\n.btn-primary.focus {\n  color: #FFF !important;\n  background-color: #054fa4 !important;\n  border-color: #054fa4 !important;\n}\n.btn-primary:hover {\n  color: #FFF !important;\n  background-color: #055bbd !important;\n  border-color: #055bbd !important;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  color: #FFF;\n  background-color: #054fa4;\n  border-color: #054fa4;\n}\n.btn-primary-red {\n  color: #A52A2A;\n  background-color: #FFF;\n  border-color: #A52A2A;\n}\n.btn-primary-red:focus,\n.btn-primary-red.focus {\n  color: #FFF !important;\n  background-color: #000 !important;\n  border-color: #000 !important;\n}\n.btn-primary-red:hover {\n  color: #FFF !important;\n  background-color: #000 !important;\n  border-color: #000 !important;\n}\n.btn-primary:active:hover,\n.btn-primary.active:hover,\n.open > .dropdown-toggle.btn-primary:hover,\n.btn-primary:active:focus,\n.btn-primary.active:focus,\n.open > .dropdown-toggle.btn-primary:focus,\n.btn-primary:active.focus,\n.btn-primary.active.focus,\n.open > .dropdown-toggle.btn-primary.focus {\n  color: #FFF;\n  background-color: #054fa4;\n  border-color: #054fa4;\n}\n.btn-primary.disabled,\n.btn-primary[disabled],\nfieldset[disabled] .btn-primary,\n.btn-primary.disabled:hover,\n.btn-primary[disabled]:hover,\nfieldset[disabled] .btn-primary:hover,\n.btn-primary.disabled:focus,\n.btn-primary[disabled]:focus,\nfieldset[disabled] .btn-primary:focus,\n.btn-primary.disabled.focus,\n.btn-primary[disabled].focus,\nfieldset[disabled] .btn-primary.focus,\n.btn-primary.disabled:active,\n.btn-primary[disabled]:active,\nfieldset[disabled] .btn-primary:active,\n.btn-primary.disabled.active,\n.btn-primary[disabled].active,\nfieldset[disabled] .btn-primary.active {\n  background-color: #0667D6;\n  border-color: #0667D6;\n}\n.btn-primary .badge {\n  color: #0667D6;\n}\n.btn-success {\n  color: #FFF;\n  background-color: #A52A2A;\n  border-color: #890000;\n}\n.btn-success:focus,\n.btn-success.focus {\n  color: #FFF !important;\n  background-color: #A52A2A !important;\n  border-color: #600000 !important;\n}\n.btn-success:hover {\n  color: #FFF !important;\n  background-color: #000000 !important;\n  border-color: #000000 !important;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  color: #FFF;\n  background-color: #117b66;\n  border-color: #117b66;\n}\n.btn-success:active:hover,\n.btn-success.active:hover,\n.open > .dropdown-toggle.btn-success:hover,\n.btn-success:active:focus,\n.btn-success.active:focus,\n.open > .dropdown-toggle.btn-success:focus,\n.btn-success:active.focus,\n.btn-success.active.focus,\n.open > .dropdown-toggle.btn-success.focus {\n  color: #FFF;\n  background-color: #117b66;\n  border-color: #117b66;\n}\n.btn-success.disabled,\n.btn-success[disabled],\nfieldset[disabled] .btn-success,\n.btn-success.disabled:hover,\n.btn-success[disabled]:hover,\nfieldset[disabled] .btn-success:hover,\n.btn-success.disabled:focus,\n.btn-success[disabled]:focus,\nfieldset[disabled] .btn-success:focus,\n.btn-success.disabled.focus,\n.btn-success[disabled].focus,\nfieldset[disabled] .btn-success.focus,\n.btn-success.disabled:active,\n.btn-success[disabled]:active,\nfieldset[disabled] .btn-success:active,\n.btn-success.disabled.active,\n.btn-success[disabled].active,\nfieldset[disabled] .btn-success.active {\n  background-color: #17A88B;\n  border-color: #17A88B;\n}\n.btn-success .badge {\n  color: #17A88B;\n}\n.btn-info {\n  color: #FFF;\n  background-color: #57caff;\n  border-color: #00a7f5;\n}\n.btn-info:focus,\n.btn-info.focus {\n  color: #FFF !important;\n  background-color: #0096db !important;\n  border-color: #0096db !important;\n}\n.btn-info:hover {\n  color: #FFF !important;\n  background-color: #00a7f5 !important;\n  border-color: #00a7f5 !important;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  color: #FFF;\n  background-color: #0096db;\n  border-color: #0096db;\n}\n.btn-info:active:hover,\n.btn-info.active:hover,\n.open > .dropdown-toggle.btn-info:hover,\n.btn-info:active:focus,\n.btn-info.active:focus,\n.open > .dropdown-toggle.btn-info:focus,\n.btn-info:active.focus,\n.btn-info.active.focus,\n.open > .dropdown-toggle.btn-info.focus {\n  color: #FFF;\n  background-color: #0096db;\n  border-color: #0096db;\n}\n.btn-info.disabled,\n.btn-info[disabled],\nfieldset[disabled] .btn-info,\n.btn-info.disabled:hover,\n.btn-info[disabled]:hover,\nfieldset[disabled] .btn-info:hover,\n.btn-info.disabled:focus,\n.btn-info[disabled]:focus,\nfieldset[disabled] .btn-info:focus,\n.btn-info.disabled.focus,\n.btn-info[disabled].focus,\nfieldset[disabled] .btn-info.focus,\n.btn-info.disabled:active,\n.btn-info[disabled]:active,\nfieldset[disabled] .btn-info:active,\n.btn-info.disabled.active,\n.btn-info[disabled].active,\nfieldset[disabled] .btn-info.active {\n  background-color: #0FB3FF;\n  border-color: #0FB3FF;\n}\n.btn-info .badge {\n  color: #0FB3FF;\n}\n.btn-purple {\n  color: #FFF;\n  background-color: #b065e9;\n  border-color: #801dcd;\n}\n.btn-purple:focus,\n.btn-purple.focus {\n  color: #FFF !important;\n  background-color: #721ab6 !important;\n  border-color: #721ab6 !important;\n}\n.btn-purple:hover {\n  color: #FFF !important;\n  background-color: #801dcd !important;\n  border-color: #801dcd !important;\n}\n.btn-purple:active,\n.btn-purple.active,\n.open > .dropdown-toggle.btn-purple {\n  color: #FFF;\n  background-color: #721ab6;\n  border-color: #721ab6;\n}\n.btn-purple:active:hover,\n.btn-purple.active:hover,\n.open > .dropdown-toggle.btn-purple:hover,\n.btn-purple:active:focus,\n.btn-purple.active:focus,\n.open > .dropdown-toggle.btn-purple:focus,\n.btn-purple:active.focus,\n.btn-purple.active.focus,\n.open > .dropdown-toggle.btn-purple.focus {\n  color: #FFF;\n  background-color: #721ab6;\n  border-color: #721ab6;\n}\n.btn-purple.disabled,\n.btn-purple[disabled],\nfieldset[disabled] .btn-purple,\n.btn-purple.disabled:hover,\n.btn-purple[disabled]:hover,\nfieldset[disabled] .btn-purple:hover,\n.btn-purple.disabled:focus,\n.btn-purple[disabled]:focus,\nfieldset[disabled] .btn-purple:focus,\n.btn-purple.disabled.focus,\n.btn-purple[disabled].focus,\nfieldset[disabled] .btn-purple.focus,\n.btn-purple.disabled:active,\n.btn-purple[disabled]:active,\nfieldset[disabled] .btn-purple:active,\n.btn-purple.disabled.active,\n.btn-purple[disabled].active,\nfieldset[disabled] .btn-purple.active {\n  background-color: #8E23E0;\n  border-color: #8E23E0;\n}\n.btn-purple .badge {\n  color: #8E23E0;\n}\n.btn-warning {\n  color: #FFF;\n  background-color: #ffcc62;\n  border-color: #ffae04;\n}\n.btn-warning:focus,\n.btn-warning.focus {\n  color: #FFF !important;\n  background-color: #ea9e00 !important;\n  border-color: #ea9e00 !important;\n}\n.btn-warning:hover {\n  color: #FFF !important;\n  background-color: #ffae04 !important;\n  border-color: #ffae04 !important;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  color: #FFF;\n  background-color: #ea9e00;\n  border-color: #ea9e00;\n}\n.btn-warning:active:hover,\n.btn-warning.active:hover,\n.open > .dropdown-toggle.btn-warning:hover,\n.btn-warning:active:focus,\n.btn-warning.active:focus,\n.open > .dropdown-toggle.btn-warning:focus,\n.btn-warning:active.focus,\n.btn-warning.active.focus,\n.open > .dropdown-toggle.btn-warning.focus {\n  color: #FFF;\n  background-color: #ea9e00;\n  border-color: #ea9e00;\n}\n.btn-warning.disabled,\n.btn-warning[disabled],\nfieldset[disabled] .btn-warning,\n.btn-warning.disabled:hover,\n.btn-warning[disabled]:hover,\nfieldset[disabled] .btn-warning:hover,\n.btn-warning.disabled:focus,\n.btn-warning[disabled]:focus,\nfieldset[disabled] .btn-warning:focus,\n.btn-warning.disabled.focus,\n.btn-warning[disabled].focus,\nfieldset[disabled] .btn-warning.focus,\n.btn-warning.disabled:active,\n.btn-warning[disabled]:active,\nfieldset[disabled] .btn-warning:active,\n.btn-warning.disabled.active,\n.btn-warning[disabled].active,\nfieldset[disabled] .btn-warning.active {\n  background-color: #FFB61E;\n  border-color: #FFB61E;\n}\n.btn-warning .badge {\n  color: #FFB61E;\n}\n.btn-danger {\n  color: #FFF;\n  background-color: #ed7177;\n  border-color: #e21d27;\n}\n.btn-danger:focus,\n.btn-danger.focus {\n  color: #FFF !important;\n  background-color: #cc1a23 !important;\n  border-color: #cc1a23 !important;\n}\n.btn-danger:hover {\n  color: #FFF !important;\n  background-color: #e21d27 !important;\n  border-color: #e21d27 !important;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  color: #FFF;\n  background-color: #cc1a23;\n  border-color: #cc1a23;\n}\n.btn-danger:active:hover,\n.btn-danger.active:hover,\n.open > .dropdown-toggle.btn-danger:hover,\n.btn-danger:active:focus,\n.btn-danger.active:focus,\n.open > .dropdown-toggle.btn-danger:focus,\n.btn-danger:active.focus,\n.btn-danger.active.focus,\n.open > .dropdown-toggle.btn-danger.focus {\n  color: #FFF;\n  background-color: #cc1a23;\n  border-color: #cc1a23;\n}\n.btn-danger.disabled,\n.btn-danger[disabled],\nfieldset[disabled] .btn-danger,\n.btn-danger.disabled:hover,\n.btn-danger[disabled]:hover,\nfieldset[disabled] .btn-danger:hover,\n.btn-danger.disabled:focus,\n.btn-danger[disabled]:focus,\nfieldset[disabled] .btn-danger:focus,\n.btn-danger.disabled.focus,\n.btn-danger[disabled].focus,\nfieldset[disabled] .btn-danger.focus,\n.btn-danger.disabled:active,\n.btn-danger[disabled]:active,\nfieldset[disabled] .btn-danger:active,\n.btn-danger.disabled.active,\n.btn-danger[disabled].active,\nfieldset[disabled] .btn-danger.active {\n  background-color: #E5343D;\n  border-color: #E5343D;\n}\n.btn-danger .badge {\n  color: #E5343D;\n}\n.btn-pink {\n  color: #FFF;\n  background-color: #f2829a;\n  border-color: #eb365b;\n}\n.btn-pink:focus,\n.btn-pink.focus {\n  color: #FFF !important;\n  background-color: #e81f48 !important;\n  border-color: #e81f48 !important;\n}\n.btn-pink:hover {\n  color: #FFF !important;\n  background-color: #eb365b !important;\n  border-color: #eb365b !important;\n}\n.btn-pink:active,\n.btn-pink.active,\n.open > .dropdown-toggle.btn-pink {\n  color: #FFF;\n  background-color: #e81f48;\n  border-color: #e81f48;\n}\n.btn-pink:active:hover,\n.btn-pink.active:hover,\n.open > .dropdown-toggle.btn-pink:hover,\n.btn-pink:active:focus,\n.btn-pink.active:focus,\n.open > .dropdown-toggle.btn-pink:focus,\n.btn-pink:active.focus,\n.btn-pink.active.focus,\n.open > .dropdown-toggle.btn-pink.focus {\n  color: #FFF;\n  background-color: #e81f48;\n  border-color: #e81f48;\n}\n.btn-pink.disabled,\n.btn-pink[disabled],\nfieldset[disabled] .btn-pink,\n.btn-pink.disabled:hover,\n.btn-pink[disabled]:hover,\nfieldset[disabled] .btn-pink:hover,\n.btn-pink.disabled:focus,\n.btn-pink[disabled]:focus,\nfieldset[disabled] .btn-pink:focus,\n.btn-pink.disabled.focus,\n.btn-pink[disabled].focus,\nfieldset[disabled] .btn-pink.focus,\n.btn-pink.disabled:active,\n.btn-pink[disabled]:active,\nfieldset[disabled] .btn-pink:active,\n.btn-pink.disabled.active,\n.btn-pink[disabled].active,\nfieldset[disabled] .btn-pink.active {\n  background-color: #ED4D6E;\n  border-color: #ED4D6E;\n}\n.btn-pink .badge {\n  color: #ED4D6E;\n}\n.btn-black {\n  color: #FFF;\n  background-color: #627284;\n  border-color: #18293d;\n}\n.btn-black:focus,\n.btn-black.focus {\n  color: #FFF !important;\n  background-color: #111d2b !important;\n  border-color: #111d2b !important;\n}\n.btn-black:hover {\n  color: #FFF !important;\n  background-color: #18293d !important;\n  border-color: #18293d !important;\n}\n.btn-black:active,\n.btn-black.active,\n.open > .dropdown-toggle.btn-black {\n  color: #FFF;\n  background-color: #111d2b;\n  border-color: #111d2b;\n}\n.btn-black:active:hover,\n.btn-black.active:hover,\n.open > .dropdown-toggle.btn-black:hover,\n.btn-black:active:focus,\n.btn-black.active:focus,\n.open > .dropdown-toggle.btn-black:focus,\n.btn-black:active.focus,\n.btn-black.active.focus,\n.open > .dropdown-toggle.btn-black.focus {\n  color: #FFF;\n  background-color: #111d2b;\n  border-color: #111d2b;\n}\n.btn-black.disabled,\n.btn-black[disabled],\nfieldset[disabled] .btn-black,\n.btn-black.disabled:hover,\n.btn-black[disabled]:hover,\nfieldset[disabled] .btn-black:hover,\n.btn-black.disabled:focus,\n.btn-black[disabled]:focus,\nfieldset[disabled] .btn-black:focus,\n.btn-black.disabled.focus,\n.btn-black[disabled].focus,\nfieldset[disabled] .btn-black.focus,\n.btn-black.disabled:active,\n.btn-black[disabled]:active,\nfieldset[disabled] .btn-black:active,\n.btn-black.disabled.active,\n.btn-black[disabled].active,\nfieldset[disabled] .btn-black.active {\n  background-color: #1f364f;\n  border-color: #1f364f;\n}\n.btn-black .badge {\n  color: #1f364f;\n}\n.btn-outline.btn-default {\n  background-color: transparent;\n  color: #676767;\n  border-color: #d9d9d9;\n}\n.btn-outline.btn-primary {\n  background-color: transparent;\n  color: #055bbd;\n  border-color: #055bbd;\n}\n.btn-outline.btn-success {\n  background-color: transparent;\n  color: #A52A2A;\n  border-color: #A52A2A;  \n}\n.btn-outline.btn-info {\n  background-color: transparent;\n  color: #00a7f5;\n  border-color: #00a7f5;\n}\n.btn-outline.btn-purple {\n  background-color: transparent;\n  color: #801dcd;\n  border-color: #801dcd;\n}\n.btn-outline.btn-warning {\n  background-color: transparent;\n  color: #ffae04;\n  border-color: #ffae04;\n}\n.btn-outline.btn-danger {\n  background-color: transparent;\n  color: #e21d27;\n  border-color: #e21d27;\n}\n.btn-outline.btn-pink {\n  background-color: transparent;\n  color: #eb365b;\n  border-color: #eb365b;\n}\n.btn-outline.btn-black {\n  background-color: transparent;\n  color: #18293d;\n  border-color: #18293d;\n}\n.btn-raised.btn-default {\n  -webkit-box-shadow: 0 3px 0 0 #cdcdcd;\n          box-shadow: 0 3px 0 0 #cdcdcd;\n}\n.btn-raised.btn-default:focus,\n.btn-raised.btn-default.focus {\n  -webkit-box-shadow: 0 3px 0 0 #c0c0c0;\n          box-shadow: 0 3px 0 0 #c0c0c0;\n}\n.btn-raised.btn-primary {\n  -webkit-box-shadow: 0 3px 0 0 #054fa4;\n          box-shadow: 0 3px 0 0 #054fa4;\n}\n.btn-raised.btn-primary:focus,\n.btn-raised.btn-primary.focus {\n  -webkit-box-shadow: 0 3px 0 0 #04438c;\n          box-shadow: 0 3px 0 0 #04438c;\n}\n.btn-raised.btn-success {\n  -webkit-box-shadow: 0 3px 0 0 #117b66;\n          box-shadow: 0 3px 0 0 #117b66;\n}\n.btn-raised.btn-success:focus,\n.btn-raised.btn-success.focus {\n  -webkit-box-shadow: 0 3px 0 0 #0e6553;\n          box-shadow: 0 3px 0 0 #0e6553;\n}\n.btn-raised.btn-info {\n  -webkit-box-shadow: 0 3px 0 0 #0096db;\n          box-shadow: 0 3px 0 0 #0096db;\n}\n.btn-raised.btn-info:focus,\n.btn-raised.btn-info.focus {\n  -webkit-box-shadow: 0 3px 0 0 #0084c2;\n          box-shadow: 0 3px 0 0 #0084c2;\n}\n.btn-raised.btn-purple {\n  -webkit-box-shadow: 0 3px 0 0 #721ab6;\n          box-shadow: 0 3px 0 0 #721ab6;\n}\n.btn-raised.btn-purple:focus,\n.btn-raised.btn-purple.focus {\n  -webkit-box-shadow: 0 3px 0 0 #6417a0;\n          box-shadow: 0 3px 0 0 #6417a0;\n}\n.btn-raised.btn-warning {\n  -webkit-box-shadow: 0 3px 0 0 #ea9e00;\n          box-shadow: 0 3px 0 0 #ea9e00;\n}\n.btn-raised.btn-warning:focus,\n.btn-raised.btn-warning.focus {\n  -webkit-box-shadow: 0 3px 0 0 #d18d00;\n          box-shadow: 0 3px 0 0 #d18d00;\n}\n.btn-raised.btn-danger {\n  -webkit-box-shadow: 0 3px 0 0 #cc1a23;\n          box-shadow: 0 3px 0 0 #cc1a23;\n}\n.btn-raised.btn-danger:focus,\n.btn-raised.btn-danger.focus {\n  -webkit-box-shadow: 0 3px 0 0 #b5171f;\n          box-shadow: 0 3px 0 0 #b5171f;\n}\n.btn-raised.btn-pink {\n  -webkit-box-shadow: 0 3px 0 0 #e81f48;\n          box-shadow: 0 3px 0 0 #e81f48;\n}\n.btn-raised.btn-pink:focus,\n.btn-raised.btn-pink.focus {\n  -webkit-box-shadow: 0 3px 0 0 #d8163e;\n          box-shadow: 0 3px 0 0 #d8163e;\n}\n.btn-raised.btn-black {\n  -webkit-box-shadow: 0 3px 0 0 #111d2b;\n          box-shadow: 0 3px 0 0 #111d2b;\n}\n.btn-raised.btn-black:focus,\n.btn-raised.btn-black.focus {\n  -webkit-box-shadow: 0 3px 0 0 #0a1018;\n          box-shadow: 0 3px 0 0 #0a1018;\n}\n.btn-rounded {\n  border-radius: 100px !important;\n}\n.sk-double-bounce .sk-child {\n  background-color: #1f364f;\n}\n.dropdown-menu {\n  border: 2px solid #d9d9d9;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.dropdown-menu > li > a {\n  padding: 5px 20px;\n  color: #737373;\n}\n.dropdown-menu > li > a > img {\n  margin-right: 8px;\n}\n.dropdown-menu .divider {\n  background-color: #d9d9d9;\n}\n.dm-large {\n  width: 400px;\n}\n.dm-medium {\n  width: 340px;\n}\n.dm-small {\n  width: 280px;\n}\n.dropdown-menu > .active > a,\n.dropdown-menu > .active > a:hover,\n.dropdown-menu > .active > a:focus {\n  background-color: #1f364f;\n}\n.dropdown-header {\n  padding: 5px 20px;\n}\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -2px;\n}\n.btn-group.btn-rounded button:first-child {\n  border-radius: 100px;\n}\n.btn-group.btn-rounded button:last-child {\n  border-radius: 100px;\n}\n.btn-group.open .dropdown-toggle {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.input-group-addon {\n  border: 1px solid transparent;\n}\n.input-group-btn > .btn + .btn {\n  margin-left: -2px;\n}\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group {\n  margin-right: 0;\n}\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group {\n  margin-left: 0;\n}\n.nav > li > a {\n  color: #737373;\n}\n.nav > li > a:hover,\n.nav > li > a:focus {\n  background-color: #FFF;\n}\n.nav-tabs {\n  border-bottom: 1px solid #d9d9d9 !important;\n}\n.nav-tabs > li > a {\n  margin: 0 !important;\n  border-radius: 0 !important;\n  border: none !important;\n  -webkit-transition: -webkit-box-shadow 0.3s;\n  transition: -webkit-box-shadow 0.3s;\n  transition: box-shadow 0.3s;\n  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;\n}\n.nav-tabs > li > a:hover {\n  -webkit-box-shadow: inset 0 -2px 0 #1f364f !important;\n          box-shadow: inset 0 -2px 0 #1f364f !important;\n}\n.nav-tabs > li.active > a,\n.nav-tabs > li.active > a:hover,\n.nav-tabs > li.active > a:focus {\n  color: #1f364f;\n  -webkit-box-shadow: inset 0 -2px 0 #1f364f !important;\n          box-shadow: inset 0 -2px 0 #1f364f !important;\n}\n.nav-tabs .dropdown-menu {\n  margin-top: 0;\n}\n.nav-tabs .open > a,\n.nav-tabs .open > a:hover,\n.nav-tabs .open > a:focus {\n  background-color: #FFF;\n  -webkit-box-shadow: inset 0 -2px 0 #1f364f !important;\n          box-shadow: inset 0 -2px 0 #1f364f !important;\n}\n.nav-pills > li.active > a,\n.nav-pills > li.active > a:hover,\n.nav-pills > li.active > a:focus {\n  background-color: #1f364f;\n}\n.tab-content .tab-pane {\n  display: none;\n}\n.tab-content .active {\n  display: block;\n}\n.breadcrumb {\n  background-color: transparent;\n  padding: 0;\n}\n.breadcrumb > li > a {\n  color: #9a9a9a;\n}\n.breadcrumb > .active {\n  color: #737373;\n}\n.pagination > li > a,\n.pagination > li > span {\n  color: #737373;\n  border: 2px solid #d9d9d9;\n  padding: 5px 12px;\n  margin-left: -2px;\n}\n.pagination > li > a:hover,\n.pagination > li > span:hover,\n.pagination > li > a:focus,\n.pagination > li > span:focus {\n  color: #737373;\n  border-color: #d9d9d9;\n}\n.pagination > .active > a,\n.pagination > .active > span,\n.pagination > .active > a:hover,\n.pagination > .active > span:hover,\n.pagination > .active > a:focus,\n.pagination > .active > span:focus {\n  background-color: #1f364f;\n  border-color: #1f364f;\n}\n.pagination-sm > li > a,\n.pagination-sm > li > span {\n  padding: 4px 10px;\n}\n.pagination-lg > li > a,\n.pagination-lg > li > span {\n  padding: 9px 16px;\n}\n.label {\n  border-radius: 4px;\n  font-weight: 700;\n  padding: 3px 6px;\n}\n.label-default {\n  background-color: #eeeeee;\n}\n.label-default[href]:hover,\n.label-default[href]:focus {\n  background-color: #d4d4d4;\n}\n.label-primary {\n  background-color: #5195e2;\n}\n.label-primary[href]:hover,\n.label-primary[href]:focus {\n  background-color: #257adb;\n}\n.label-success {\n  background-color: #5dc2ae;\n}\n.label-success[href]:hover,\n.label-success[href]:focus {\n  background-color: #40ab96;\n}\n.label-purple {\n  background-color: #b065e9;\n}\n.label-purple[href]:hover,\n.label-purple[href]:focus {\n  background-color: #9938e3;\n}\n.label-info {\n  background-color: #57caff;\n}\n.label-info[href]:hover,\n.label-info[href]:focus {\n  background-color: #24baff;\n}\n.label-warning {\n  background-color: #ffcc62;\n}\n.label-warning[href]:hover,\n.label-warning[href]:focus {\n  background-color: #ffbb2f;\n}\n.label-danger {\n  background-color: #ed7177;\n}\n.label-danger[href]:hover,\n.label-danger[href]:focus {\n  background-color: #e7444c;\n}\n.label-outline.label-default {\n  background-color: transparent;\n  color: #9a9a9a;\n  border: 1px solid #9a9a9a;\n}\n.label-outline.label-primary {\n  background-color: transparent;\n  color: #0667D6;\n  border: 1px solid #0667D6;\n}\n.label-outline.label-success {\n  background-color: transparent;\n  color: #17A88B;\n  border: 1px solid #17A88B;\n}\n.label-outline.label-purple {\n  background-color: transparent;\n  color: #8E23E0;\n  border: 1px solid #8E23E0;\n}\n.label-outline.label-info {\n  background-color: transparent;\n  color: #0FB3FF;\n  border: 1px solid #0FB3FF;\n}\n.label-outline.label-warning {\n  background-color: transparent;\n  color: #FFB61E;\n  border: 1px solid #FFB61E;\n}\n.label-outline.label-danger {\n  background-color: transparent;\n  color: #E5343D;\n  border: 1px solid #E5343D;\n}\n.badge {\n  font-size: 10px;\n  min-width: 14px;\n  height: 14px;\n  line-height: 14px;\n  padding: 0;\n  border-radius: 2px;\n  font-weight: 700;\n}\n.thumbnail {\n  border: 1px solid #d9d9d9;\n}\n.progress {\n  border-radius: 10px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.progress-bar {\n  background-color: #0667D6;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.progress-xs {\n  height: 3px;\n  border-radius: 3px;\n}\n.progress-xs.vertical {\n  width: 3px;\n}\n.progress-sm {\n  height: 12px;\n  border-radius: 6px;\n}\n.progress-sm .progress-bar {\n  line-height: 12px;\n  font-size: 10px;\n}\n.progress-sm .progress-bar .progressbar-front-text {\n  line-height: 12px;\n  font-size: 10px;\n}\n.progress-sm.vertical {\n  width: 12px;\n}\n.progress-lg {\n  height: 30px;\n  border-radius: 14px;\n}\n.progress-lg .progress-bar {\n  line-height: 30px;\n}\n.progress-lg .progress-bar .progressbar-front-text {\n  line-height: 30px;\n}\n.progress-lg.vertical {\n  width: 30px;\n}\n.progress-bar-white {\n  background-color: #FFF;\n}\n.progress-bar-success {\n  background-color: #17A88B;\n}\n.progress-bar-info {\n  background-color: #0FB3FF;\n}\n.progress-bar-purple {\n  background-color: #8E23E0;\n}\n.progress-bar-warning {\n  background-color: #FFB61E;\n}\n.progress-bar-danger {\n  background-color: #E5343D;\n}\n.avatar {\n  position: relative;\n}\n.avatar .media-object {\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n}\n.avatar .status {\n  position: absolute;\n  top: 0;\n  left: 26px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%;\n  border: 1px solid #FFF;\n}\n.avatar.media-right .status {\n  left: 36px;\n}\n.media-lg .media {\n  margin-top: 25px;\n}\n.media-lg .media:first-child {\n  margin-top: 0;\n}\n.mo-xs {\n  width: 24px;\n  height: 24px;\n  line-height: 24px;\n}\n.mo-sm {\n  width: 28px;\n  height: 28px;\n  line-height: 28px;\n}\n.mo-md {\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n}\n.mo-lg {\n  width: 52px;\n  height: 52px;\n  line-height: 52px;\n}\n.list-group.divider .list-group-item {\n  border-bottom: 1px solid #d9d9d9;\n  border-top: none;\n  border-right: none;\n  border-left: none;\n  padding: 10px 0;\n  margin-bottom: 0;\n}\n.list-group.divider .list-group-item:last-child {\n  border-bottom: none;\n}\n.list-group.no-border .list-group-item {\n  border: none;\n  border-radius: 4px;\n}\n.list-group-item {\n  border: 1px solid #d9d9d9;\n}\n.list-group-item.active,\n.list-group-item.active:hover,\n.list-group-item.active:focus {\n  background-color: #1f364f;\n  border-color: #1f364f;\n}\na.list-group-item,\nbutton.list-group-item {\n  color: #737373;\n}\n.panel {\n  margin-bottom: 20px;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.panel-body {\n  padding: 20px;\n}\n.panel-heading {\n  padding: 15px 20px;\n}\n.panel-title {\n  font-size: 18px;\n}\n.panel-title > a,\n.panel-title > small,\n.panel-title > .small,\n.panel-title > small > a,\n.panel-title > .small > a {\n  color: inherit;\n}\n.panel > .panel-body + .table,\n.panel > .panel-body + .table-responsive,\n.panel > .table + .panel-body,\n.panel > .table-responsive + .panel-body {\n  border-top: 1px solid #d9d9d9;\n}\n.panel-group {\n  margin-bottom: 20px;\n}\n.panel-default {\n  border-color: #d9d9d9;\n}\n.panel-default > .panel-heading {\n  color: #737373;\n  background-color: #eeeeee;\n  border-color: #d9d9d9;\n}\n.panel-default > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #d9d9d9;\n}\n.panel-default > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #d9d9d9;\n}\n.panel-primary {\n  border-color: #055bbd;\n}\n.panel-primary > .panel-heading {\n  color: #054fa4;\n  background-color: #5195e2;\n  border-color: #055bbd;\n}\n.panel-primary > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #055bbd;\n}\n.panel-primary > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #055bbd;\n}\n.panel-success {\n  border-color: #149278;\n}\n.panel-success > .panel-heading {\n  color: #117b66;\n  background-color: #5dc2ae;\n  border-color: #149278;\n}\n.panel-success > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #149278;\n}\n.panel-success > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #149278;\n}\n.panel-info {\n  border-color: #00a7f5;\n}\n.panel-info > .panel-heading {\n  color: #0096db;\n  background-color: #57caff;\n  border-color: #00a7f5;\n}\n.panel-info > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #00a7f5;\n}\n.panel-info > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #00a7f5;\n}\n.panel-warning {\n  border-color: #ffae04;\n}\n.panel-warning > .panel-heading {\n  color: #ea9e00;\n  background-color: #ffcc62;\n  border-color: #ffae04;\n}\n.panel-warning > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ffae04;\n}\n.panel-warning > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ffae04;\n}\n.panel-danger {\n  border-color: #e21d27;\n}\n.panel-danger > .panel-heading {\n  color: #cc1a23;\n  background-color: #ed7177;\n  border-color: #e21d27;\n}\n.panel-danger > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #e21d27;\n}\n.panel-danger > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #e21d27;\n}\n.well {\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.modal-content {\n  border-radius: 0;\n}\n.modal-header {\n  padding: 15px 20px;\n  border-bottom: none;\n  border-top: 5px solid #d9d9d9;\n}\n.modal-body {\n  padding: 20px;\n}\n.modal-footer {\n  border-top: none;\n}\n.modal-header .close {\n  outline: 0;\n}\n.tooltip-inner {\n  font-size: 12px;\n  background-color: #1f364f;\n  padding: 5px 8px;\n  border-radius: 3px;\n}\n.tooltip.top .tooltip-arrow {\n  border-top-color: #1f364f;\n}\n.tooltip.top-left .tooltip-arrow {\n  border-top-color: #1f364f;\n}\n.tooltip.top-right .tooltip-arrow {\n  border-top-color: #1f364f;\n}\n.tooltip.right .tooltip-arrow {\n  border-right-color: #1f364f;\n}\n.tooltip.left .tooltip-arrow {\n  border-left-color: #1f364f;\n}\n.tooltip.bottom .tooltip-arrow {\n  border-bottom-color: #1f364f;\n}\n.tooltip.bottom-left .tooltip-arrow {\n  border-bottom-color: #1f364f;\n}\n.tooltip.bottom-right .tooltip-arrow {\n  border-bottom-color: #1f364f;\n}\n.popover {\n  border: 1px solid #d9d9d9;\n}\n.popover.top > .arrow {\n  border-top-color: #d9d9d9;\n}\n.popover.right > .arrow {\n  border-right-color: #d9d9d9;\n}\n.popover.bottom > .arrow {\n  border-bottom-color: #d9d9d9;\n}\n.popover.left > .arrow {\n  border-left-color: #d9d9d9;\n}\n.popover-title {\n  border-bottom: 1px solid #d9d9d9;\n}\nbody.main-sidebar-toggled {\n  overflow-y: hidden;\n}\nbody.main-sidebar-toggled .main-sidebar {\n  opacity: 1;\n  -webkit-transform: translate(0, 0);\n  transform: translate(0, 0);\n}\n.brand {\n  line-height: 54px;\n  display: block;\n  position: absolute;\n  left: 50%;\n  -webkit-transform: translate(-50%, 0);\n  transform: translate(-50%, 0);\n}\nheader {\n  position: fixed;\n  padding-top: 25px;\n  top: 0;\n  left: 0;\n  height: 80px;\n  width: 100%;\n  -webkit-box-shadow: 0 0 54px rgba(31, 54, 79, 0.2);\n          box-shadow: 0 0 54px rgba(31, 54, 79, 0.2);\n  z-index: 1040;\n  background-color: #A52A2A;\n  -webkit-backface-visibility: hidden !important;\n  backface-visibility: hidden !important;\n}\nheader .header-icon {\n  display: inline-block;\n  padding: 0 18px;\n  line-height: 54px;\n  font-size: 16px;\n  color: #9a9a9a;\n}\nheader .header-icon:hover {\n  background-color: #f5f5f5;\n}\nheader .search-form span {\n  color: #9a9a9a;\n}\n.hamburger-menu {\n  position: relative;\n  display: inline-block;\n  width: 54px;\n  height: 54px;\n}\n.hamburger-menu span {\n  position: absolute;\n  top: 25px;\n  left: 18px;\n}\n.hamburger-menu span,\n.hamburger-menu span:before,\n.hamburger-menu span:after {\n  position: absolute;\n  display: inline-block;\n  height: 2px;\n  width: 18px;\n  border-radius: 2px;\n  background-color: #FFF;\n}\n.hamburger-menu span:before,\n.hamburger-menu span:after {\n  content: \"\";\n  left: 0;\n  -webkit-backface-visibility: hidden !important;\n  backface-visibility: hidden !important;\n  -webkit-transform-origin: 0% 50%;\n  transform-origin: 0% 50%;\n  -webkit-transition: -webkit-transform 0.3s;\n  transition: -webkit-transform 0.3s,transform 0.3s;\n}\n.hamburger-menu span:before {\n  top: -6px;\n}\n.hamburger-menu span:after {\n  top: 6px;\n}\n.hamburger-menu.active span:before {\n  -webkit-transform: translate3d(1px, 6px, 0) rotate(-45deg) scale(0.6, 1);\n  transform: translate3d(1px, 6px, 0) rotate(-45deg) scale(0.6, 1);\n}\n.hamburger-menu.active span:after {\n  -webkit-transform: translate3d(1px, -6px, 0) rotate(45deg) scale(0.6, 1);\n  transform: translate3d(1px, -6px, 0) rotate(45deg) scale(0.6, 1);\n}\n.notification-bar {\n  margin: 0;\n}\n.notification-bar > li {\n  float: left;\n  padding: 0;\n}\n.notification-bar .bubble {\n  position: relative;\n}\n.notification-bar .bubble .badge {\n  position: absolute;\n  top: 12px;\n  left: 27px;\n}\n.notification-bar .bubble .dot {\n  position: absolute;\n  top: 15px;\n  left: 30px;\n}\n.notification-bar .dropdown.open {\n  position: relative;\n}\n.notification-bar .dropdown.open:before {\n  position: absolute;\n  bottom: -15px;\n  left: 50%;\n  content: \"\";\n  width: 0;\n  height: 0;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  border-width: 6px;\n  border-style: solid;\n  border-color: #d9d9d9 #d9d9d9 transparent transparent;\n  margin-left: -6px;\n  z-index: 1020;\n  -webkit-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n@media (max-width: 767px) {\n  .notification-bar .dropdown.open:before {\n    display: none;\n  }\n}\n.notification-bar .dropdown-header {\n  text-transform: uppercase;\n  padding: 15px 20px;\n  margin: 0;\n  border-bottom: 1px solid #d9d9d9;\n}\n.notification-bar .dropdown-menu {\n  margin-top: 0;\n  padding: 0;\n  top: 62px;\n}\n.notification-bar .dropdown-menu > ul {\n  min-height: 120px;\n  max-height: 240px;\n}\n.notification-bar .dropdown-menu > ul li {\n  margin-top: 0;\n}\n.notification-bar .dropdown-menu > ul li > a {\n  padding: 10px 20px;\n  color: #737373;\n  display: block;\n}\n.notification-bar .dropdown-menu > ul li > a:hover {\n  background-color: #f5f5f5;\n}\n.notification-bar .dropdown-footer {\n  border-top: 1px solid #d9d9d9;\n  text-align: center;\n  padding: 10px;\n}\n.main-sidebar {\n  background-color: #FFF;\n  position: fixed;\n  top: 54px;\n  bottom: 0;\n  left: 0;\n  width: 260px;\n  padding: 0 20px 0 20px;\n  z-index: 1030;\n  opacity: 0;\n  -webkit-box-shadow: 3px 0 6px rgba(31, 54, 79, 0.2);\n          box-shadow: 3px 0 6px rgba(31, 54, 79, 0.2);\n  -lh-property: 0;\nheight:calc(100% - 54px);\n;\n  -webkit-transform: translate(-100%, 0);\n  transform: translate(-100%, 0);\n  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;\n  transition: -webkit-transform 0.3s,transform 0.3s, opacity 0.3s;\n  -webkit-backface-visibility: hidden !important;\n  backface-visibility: hidden !important;\n}\n.main-sidebar .sidebar-category {\n  text-transform: uppercase;\n  margin-bottom: 2px;\n  padding: 10px 15px;\n  color: #9a9a9a;\n  font-size: 10px;\n  font-weight: 700;\n  display: block;\n}\n.user {\n  padding: 20px 10px;\n  overflow: visible;\n}\n.user h4 {\n  color: #737373;\n}\n.user .avatar {\n  width: 40px;\n}\n.user .status {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  border: 2px solid rgba(255, 255, 255, 0.8);\n}\n.user .dropdown-menu {\n  min-width: 120px;\n}\n.user .dropdown-menu > li > a {\n  padding: 4px 15px;\n}\n.user #dropdown-status {\n  color: #9a9a9a;\n}\n.navigation > li {\n  margin-bottom: 2px;\n}\n.navigation > li > a {\n  position: relative;\n  display: block;\n  color: #777777; \n  background: #E9EFF2;\n  border-radius: 4px;\n  padding: 10px 15px;\n  font-weight: 700;\n}\n.navigation > li > a > i {\n  margin-right: 15px;\n  width: 16px;\n  font-size: 16px;\n  text-align: center;\n  display: inline-block;\n  border-radius: 50%;\n  width: 28px;\n  height: 28px;\n  line-height: 28px;\n  text-shadow: 1px 1px 2px #FF0000;\n}\n.navigation > li > a .badge,\n.navigation > li > a .label {\n  position: absolute;\n  top: 17px;\n  right: 30px;\n}\n.navigation > li > a:hover,\n.navigation > li > a.active {\n  border-radius: 4px;\n  color: #FFF;\n  background-color: #A52A2A;\n}\n.navigation > li > ul > li ul {\n  padding-left: 20px;\n}\n.navigation > li > ul > li ul li:first-child:before {\n  top: -20px;\n}\n.navigation ul {\n  /* padding-left: 25px; */\n  padding-left: 10px;\n}\n.navigation ul li {\n  position: relative;\n}\n.navigation ul li:before {\n  content: \"\";\n  position: absolute;\n  top: -20px;\n  left: 0;\n  bottom: 20px;\n  width: 1px;\n  border-left: 1px dotted #808080;\n}\n.navigation ul li:first-child:before {\n  top: 0;\n}\n.navigation ul li:last-child:before {\n  top: -20px;\n  height: 40px;\n}\n.navigation ul li:after {\n  content: \"\";\n  position: absolute;\n  top: 20px;\n  left: 0px;\n  width: 20px;\n  border-bottom: 1px dotted #808080;\n}\n.navigation ul li a {\n  padding-left: 40px;\n  padding-right: 15px;\n  line-height: 40px;\n  color: #737373;\n  font-size: 12px;\n  white-space: nowrap;\n  display: block;\n}\n.navigation ul li a:before {\n  content: \"\";\n  position: absolute;\n  top: 18px;\n  left: 18px;\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  background-color: #808080;\n}\n.navigation ul li a:hover,\n.navigation ul li a.active {\n  color: #1f364f;\n}\n.navigation ul li a[aria-expanded=\"false\"]:after,\n.navigation ul li a[aria-expanded=\"true\"]:after {\n  line-height: 40px;\n  font-size: 12px;\n  position: absolute;\n  top: 0;\n  right: 15px;\n}\n.navigation ul li.panel {\n  margin-bottom: 0;\n}\n.navigation li.panel {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  border: none;\n}\n.navigation a[aria-expanded=\"false\"]:after {\n  font-family: \"Ionicons\";\n  content: \"\\f3d3\";\n  position: absolute;\n  top: 0;\n  right: 15px;\n  font-size: 12px;\n  line-height: 48px;\n  -webkit-transition: -webkit-transform 0.3s;\n  transition: -webkit-transform 0.3s,transform 0.3s;\n}\n.navigation a[aria-expanded=\"true\"]:after {\n  font-family: \"Ionicons\";\n  content: \"\\f3d3\";\n  position: absolute;\n  top: 0;\n  right: 15px;\n  font-size: 12px;\n  line-height: 48px;\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg);\n  -webkit-transition: -webkit-transform 0.3s;\n  transition: -webkit-transform 0.3s,transform 0.3s;\n}\n.main-container {\n  padding-top: 54px;\n\n}\n.page-content {\n  padding: 20px 20px 0 20px;\n  padding-top:100px;\n  -webkit-transition: padding-left 0.3s;\n  transition: padding-left 0.3s;\n}\n.footer {\n  padding: 10px 20px;\n}\n@media (min-width: 1200px) {\n  body.main-sidebar-toggled {\n    overflow-y: auto;\n  }\n  body.main-sidebar-toggled .main-sidebar {\n    opacity: 0;\n    -webkit-transform: translate(-100%, 0);\n    transform: translate(-100%, 0);\n  }\n  body.main-sidebar-toggled .page-container {\n    padding-left: 0;\n  }\n  body.main-sidebar-toggled .page-content {\n    padding-left: 20px;\n  }\n  body.sidebar-unpin .main-sidebar {\n    -webkit-box-shadow: 3px 0 6px rgba(31, 54, 79, 0.2);\n            box-shadow: 3px 0 6px rgba(31, 54, 79, 0.2);\n  }\n  body.sidebar-unpin .page-container {\n    padding-left: 0;\n  }\n  body.sidebar-unpin .page-content {\n    padding-left: 20px;\n  }\n  .main-sidebar {\n    opacity: 1;\n    -webkit-transform: translate(0, 0);\n    transform: translate(0, 0);\n    -webkit-box-shadow: none;\n            box-shadow: none;\n  }\n  .page-container {\n    padding-left: 260px;\n    padding-top :30px;\n    -webkit-transition: padding-left 0.3s;\n    transition: padding-left 0.3s;\n  }\n  .page-content {\n    padding: 20px 20px 0 0;\n  }\n  .hamburger-menu span:before {\n    -webkit-transform: translate3d(1px, 6px, 0) rotate(-45deg) scale(0.6, 1);\n    transform: translate3d(1px, 6px, 0) rotate(-45deg) scale(0.6, 1);\n  }\n  .hamburger-menu span:after {\n    -webkit-transform: translate3d(1px, -6px, 0) rotate(45deg) scale(0.6, 1);\n    transform: translate3d(1px, -6px, 0) rotate(45deg) scale(0.6, 1);\n  }\n  .hamburger-menu.active span:before,\n  .hamburger-menu.active span:after {\n    -webkit-transform: translate3d(0, 0, 0) rotate(0deg) scale(1);\n    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);\n  }\n}\n@media (max-width: 767px) {\n  header {\n    height: 540px;\n  }\n  .brand {\n    display: none;\n  }\n  .main-sidebar {\n    top: 54px;\n    -lh-property: 0;\nheight:calc(100% - 54px);\n;\n  }\n  .main-container {\n    padding-top: 54px;\n    width: 100%;\n  }\n  .notification-bar > li.dropdown.open {\n    position: static;\n  }\n  .notification-bar > li.dropdown.open .dropdown-menu {\n    width: 100%;\n    top: 54px;\n  }\n  .page-content {\n    padding-left: 10px;\n    padding-right: 10px;\n  }\n}\n.search-bar {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 54px;\n  background-color: #FFF;\n  border-bottom: 1px solid #d9d9d9;\n  overflow: hidden;\n  opacity: 1;\n  z-index: 1050;\n  -webkit-transform: translate(0, 0);\n  transform: translate(0, 0);\n  -webkit-transition: all 0.3s;\n  transition: all 0.3s;\n}\n.search-bar.closed {\n  opacity: 0;\n  -webkit-transform: translate(0, -100%);\n  transform: translate(0, -100%);\n}\n.search-bar form {\n  margin: 4px;\n}\n.search-bar form .form-control {\n  border: none;\n  background-color: transparent;\n}\n.search-bar form .btn,\n.search-bar form .btn:hover,\n.search-bar form .btn.focus,\n.search-bar form .btn:focus,\n.search-bar form .btn.active,\n.search-bar form .btn:active {\n  background-color: transparent !important;\n  border-color: transparent !important;\n}\n.right-sidebar,\n.conversation {\n  position: fixed;\n  top: 54px;\n  right: 0;\n  width: 280px;\n  z-index: 1030;\n  background-color: #FFF;\n  -webkit-box-shadow: -1px 0 4px rgba(31, 54, 79, 0.2);\n          box-shadow: -1px 0 4px rgba(31, 54, 79, 0.2);\n  opacity: 1;\n  -lh-property: 0;\nheight:calc(100% - 54px);\n;\n  -webkit-transform: translate(0, 0);\n  transform: translate(0, 0);\n  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;\n  transition: -webkit-transform 0.3s,transform 0.3s, opacity 0.3s;\n  -webkit-backface-visibility: hidden !important;\n  backface-visibility: hidden !important;\n}\n.right-sidebar.closed,\n.conversation.closed {\n  opacity: 0;\n  -webkit-transform: translate(100%, 0);\n  transform: translate(100%, 0);\n}\n@media (max-width: 767px) {\n  .right-sidebar,\n  .conversation {\n    top: 54px;\n    -lh-property: 0;\nheight:calc(100% - 54px);\n;\n  }\n}\n.right-sidebar .sidebar-category {\n  text-transform: uppercase;\n  margin-bottom: 2px;\n  padding: 10px 0;\n  font-size: 10px;\n  font-weight: 700;\n  display: block;\n  color: #9a9a9a;\n}\n.chat-list {\n  margin-left: -20px;\n  margin-right: -20px;\n}\n.chat-list li {\n  margin-top: 0;\n}\n.chat-list li > a {\n  padding: 10px 20px;\n  display: block;\n  color: #737373;\n}\n.chat-list li > a:hover {\n  background-color: #f5f5f5;\n}\n.chat-content {\n  -lh-property: 0;\nheight:calc(100% - 119px);\n;\n}\n.nav-sidebar > li {\n  display: table-cell;\n  width: 1%;\n}\n.nav-sidebar > li > a {\n  line-height: 48px;\n  padding: 0;\n}\n.nav-sidebar > li > a > i {\n  font-size: 16px;\n  display: block;\n}\n.nav-sidebar-content {\n  -lh-property: 0;\nheight:calc(100% - 50px);\n;\n}\n.nav-sidebar-content .tab-pane {\n  padding: 20px;\n}\n.sidebar-lg {\n  width: 260px;\n}\n.sidebar-md {\n  width: 220px;\n}\n.sidebar-sm {\n  width: 180px;\n}\n.sidebar-xs {\n  width: 80px;\n}\n.content-lg {\n  margin-left: 260px;\n}\n.content-md {\n  margin-left: 220px;\n}\n.content-sm {\n  margin-left: 180px;\n}\n.content-xs {\n  margin-left: 80px;\n}\n.main-content {\n  padding: 20px;\n}\n.sidebar-toggle {\n  cursor: pointer;\n  position: absolute;\n  z-index: 910;\n  padding: 10px 15px;\n  border: 2px solid #d9d9d9;\n  border-left: none;\n  top: 200px;\n  left: 0;\n  display: none;\n  -webkit-transition: left 0.3s;\n  transition: left 0.3s;\n}\n.sidebar-container {\n  position: relative;\n}\n.sidebar {\n  padding: 20px;\n  position: fixed;\n  top: 54px;\n  bottom: 0;\n}\n.sidebar .list-group .list-group-item {\n  padding: 10px;\n  color: #9a9a9a;\n  font-weight: 700;\n}\n.sidebar .list-group .list-group-item i {\n  width: 14px;\n  margin-right: 5px;\n  text-align: center;\n  display: inline-block;\n}\n.sidebar .list-group .list-group-item.active,\n.sidebar .list-group .list-group-item.active:hover,\n.sidebar .list-group .list-group-item.active:focus {\n  color: #737373;\n  background-color: transparent;\n}\n.sidebar .list-group .list-group-item:hover,\n.sidebar .list-group .list-group-item:focus {\n  background-color: transparent;\n  color: #737373;\n}\n.page-actions {\n  margin-bottom: 20px;\n}\n.page-actions [class^=\"col\"]:nth-child(2) {\n  text-align: right;\n}\n@media (max-width: 767px) {\n  body.sidebar-toggled {\n    overflow-y: hidden;\n  }\n  body.sidebar-toggled .sidebar {\n    -webkit-transform: translate(0, 0);\n    transform: translate(0, 0);\n  }\n  body.sidebar-toggled .sidebar-toggle {\n    -lh-property: 0;\nleft:calc(100% - 2px);\n;\n  }\n  .sidebar-toggle {\n    display: block;\n  }\n  .sidebar {\n    z-index: 900;\n    border-right: 2px solid #d9d9d9;\n    top: 54px;\n    left: 0;\n    -webkit-transform: translate(-100%, 0);\n    transform: translate(-100%, 0);\n    -webkit-transition: -webkit-transform 0.3s;\n    transition: -webkit-transform 0.3s,transform 0.3s;\n  }\n  .main-content {\n    margin-left: 0;\n    padding-left: 10px;\n    padding-right: 10px;\n  }\n  .page-actions [class^=\"col\"]:nth-child(2) {\n    text-align: left;\n    padding-top: 10px;\n  }\n}\n.widget {\n  margin-bottom: 20px;\n  border: 1px solid #d9d9d9;\n  border-radius: 4px;\n  /*height:750px;*/\n  display:table;\n  width:100%;\n}\n.widget .expand {\n  margin-left: -20px;\n  margin-right: -20px;\n}\n.widget-heading {\n  padding: 20px;\n}\n.widget-heading + .widget-body {\n  padding-top: 0;\n}\n.widget-tools {\n  margin-bottom: 0;\n}\n.widget-tools > li {\n  float: left;\n  padding: 0 10px;\n}\n.widget-tools > li:last-child {\n  padding-right: 0;\n}\n.widget-tools > li a {\n  color: #9a9a9a;\n}\n.widget-title {\n  margin: 0;\n  font-size: 18px;\n  color: #1f364f;\n}\n.widget-body {\n  padding: 20px;\n}\n/*.follow-list {\n  li {\n    margin-top: 0;\n    > a {\n      padding: 12px 0;\n      display: block;\n      color: @text-color;\n    }\n  }\n}*/\n.chat-content .chat-item {\n  padding: 17px 17px 10px 17px;\n  position: relative;\n}\n.chat-content .chat-item.self .chat-bubble {\n  margin-right: 25px;\n}\n.chat-content .chat-item.self .chat-avatar {\n  left: 0;\n  top: 0;\n}\n.chat-content .chat-item.self .chat-text {\n  background-color: #e6e6e6;\n  padding: 15px 10px 15px 20px;\n}\n.chat-content .chat-item.other {\n  text-align: right;\n}\n.chat-content .chat-item.other .chat-bubble {\n  margin-left: 25px;\n}\n.chat-content .chat-item.other .chat-avatar {\n  right: 0;\n  top: 0;\n}\n.chat-content .chat-item.other .chat-text {\n  background-color: #1f364f;\n  color: #FFF;\n  text-align: left;\n  padding: 15px 20px 15px 10px;\n}\n.chat-content .chat-avatar {\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  position: absolute;\n}\n.chat-content .chat-bubble {\n  margin-bottom: 3px;\n}\n.chat-content .chat-text {\n  border-radius: 4px;\n  display: inline-block;\n}\n.activity-list .media-left {\n  min-width: 140px;\n}\n.activity-list > li {\n  position: relative;\n  padding: 10px 0 10px 41px;\n}\n.activity-list > li:before {\n  content: \"\";\n  position: absolute;\n  left: 5px;\n  top: 0;\n  height: 100%;\n  border-left: 1px solid #d9d9d9;\n}\n.activity-list > li:after {\n  content: \"\";\n  position: absolute;\n  left: 0;\n  top: 14px;\n  height: 11px;\n  width: 11px;\n  border-radius: 50%;\n  border: 2px solid #9a9a9a;\n  background-color: #FFF;\n}\n.activity-list.activity-sm > li {\n  padding: 10px 0 10px 25px;\n}\n.activity-list > li.activity-primary:after {\n  border-color: #0667D6;\n}\n.activity-list > li.activity-success:after {\n  border-color: #17A88B;\n}\n.activity-list > li.activity-info:after {\n  border-color: #0FB3FF;\n}\n.activity-list > li.activity-purple:after {\n  border-color: #8E23E0;\n}\n.activity-list > li.activity-warning:after {\n  border-color: #FFB61E;\n}\n.activity-list > li.activity-danger:after {\n  border-color: #E5343D;\n}\n.activity-list > li.activity-white:after {\n  border-color: #FFF;\n}\n.milestones > li {\n  position: relative;\n  margin: 0;\n  padding-bottom: 20px;\n}\n.milestones > li:last-child {\n  padding-bottom: 0;\n}\n.milestones > li:before {\n  content: \"\";\n  position: absolute;\n  left: 17px;\n  top: 0;\n  height: 100%;\n  border-left: 1px solid #d9d9d9;\n  z-index: -1;\n}\n.events-header {\n  height: 50px;\n  line-height: 50px;\n}\n.draggable li {\n  padding: 10px 0;\n  cursor: move;\n}\n.draggable li:first-child {\n  padding-top: 0;\n}\n.draggable li.ui-draggable-dragging {\n  padding: 10px;\n  background-color: #FFF;\n  color: #737373;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.flotTip {\n  font-size: 12px;\n  background-color: #1f364f;\n  color: #FFF;\n  padding: 5px 8px;\n  z-index: 900;\n  border-radius: 3px;\n}\n.legendColorBox div {\n  border-radius: 50%;\n}\n.legendLabel {\n  padding-left: 3px;\n  padding-right: 10px;\n  line-height: 2;\n}\n.ct-golden-section:before {\n  padding-bottom: 0;\n}\n.ct-label {\n  font-size: 11px;\n  color: #9a9a9a;\n}\n.ct-series-a .ct-point,\n.ct-series-a .ct-line,\n.ct-series-a .ct-bar,\n.ct-series-a .ct-slice-donut {\n  stroke: #5dc2ae;\n}\n.ct-series-a .ct-slice-pie,\n.ct-series-a .ct-area {\n  fill: #5dc2ae;\n}\n.ct-series-b .ct-point,\n.ct-series-b .ct-line,\n.ct-series-b .ct-bar,\n.ct-series-b .ct-slice-donut {\n  stroke: #5195e2;\n}\n.ct-series-b .ct-slice-pie,\n.ct-series-b .ct-area {\n  fill: #5195e2;\n}\n.ct-series-c .ct-point,\n.ct-series-c .ct-line,\n.ct-series-c .ct-bar,\n.ct-series-c .ct-slice-donut {\n  stroke: #f2829a;\n}\n.ct-series-c .ct-slice-pie,\n.ct-series-c .ct-area {\n  fill: #f2829a;\n}\n.ct-series-d .ct-point,\n.ct-series-d .ct-line,\n.ct-series-d .ct-bar,\n.ct-series-d .ct-slice-donut {\n  stroke: #b065e9;\n}\n.ct-series-d .ct-slice-pie,\n.ct-series-d .ct-area {\n  fill: #b065e9;\n}\n.ct-series-e .ct-point,\n.ct-series-e .ct-line,\n.ct-series-e .ct-bar,\n.ct-series-e .ct-slice-donut {\n  stroke: #ed7177;\n}\n.ct-series-e .ct-slice-pie,\n.ct-series-e .ct-area {\n  fill: #ed7177;\n}\n.ct-series-f .ct-point,\n.ct-series-f .ct-line,\n.ct-series-f .ct-bar,\n.ct-series-f .ct-slice-donut {\n  stroke: #ffcc62;\n}\n.ct-series-f .ct-slice-pie,\n.ct-series-f .ct-area {\n  fill: #ffcc62;\n}\n.ct-series-g .ct-point,\n.ct-series-g .ct-line,\n.ct-series-g .ct-bar,\n.ct-series-g .ct-slice-donut {\n  stroke: #627284;\n}\n.ct-series-g .ct-slice-pie,\n.ct-series-g .ct-area {\n  fill: #627284;\n}\n.morris-hover.morris-default-style {\n  font-size: 12px;\n  background-color: #FFF;\n  padding: 5px 8px;\n  z-index: 900;\n  border: 1px solid #d9d9d9;\n  border-radius: 3px;\n}\n.chartjs canvas {\n  width: 100% !important;\n  max-width: 1000px;\n  height: auto !important;\n}\n.jvectormap-zoomout {\n  top: 45px;\n}\n.jvectormap-zoomin,\n.jvectormap-zoomout {\n  line-height: 24px;\n  width: 24px;\n  height: 24px;\n  color: #1f364f;\n  background-color: #FFF;\n  font-size: 16px;\n  padding: 0;\n  border: 1px solid #1f364f;\n  border-radius: 50%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.easy-pie-chart {\n  position: relative;\n  display: inline-block;\n  width: 120px;\n  height: 120px;\n  line-height: 80px;\n  padding: 20px;\n  text-align: center;\n}\n.easy-pie-chart canvas {\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.easy-pie-chart .percent {\n  position: absolute;\n  top: 35px;\n  left: 35px;\n  line-height: 40px;\n  width: 50px;\n  height: 50px;\n  background-color: #e6e6e6;\n  border: 5px solid #f5f5f5;\n  border-radius: 50%;\n}\n.bootstrap-select .dropdown-toggle:focus {\n  outline: 0 !important;\n}\n.minicolors-swatch {\n  border: none;\n}\n.dropzone {\n  border: 2px dashed #d9d9d9;\n  background-color: #f5f5f5;\n}\n.dropzone .dz-message {\n  padding: 50px 0;\n  margin: 0;\n  color: #9a9a9a;\n}\n.dropzone .dz-message .icon-dz {\n  display: block;\n  font-size: 64px;\n  color: #e6e6e6;\n  margin-bottom: 15px;\n}\n.daterangepicker .ranges li {\n  background-color: transparent;\n  border-color: transparent;\n  border-radius: 3px;\n  color: #737373;\n}\n.daterangepicker .ranges li.active,\n.daterangepicker .ranges li:hover {\n  background-color: #1f364f;\n  border-color: #1f364f;\n}\n.daterangepicker .input-mini {\n  border-color: #d9d9d9;\n}\n.daterangepicker .input-mini.active,\n.daterangepicker .input-mini:focus {\n  outline: 0;\n  border-color: #66afe9;\n}\n.daterangepicker td.active,\n.daterangepicker td.active:hover {\n  background-color: #1f364f;\n}\n.daterangepicker td.start-date {\n  border-radius: 2px 0 0 2px;\n}\n.daterangepicker td.end-date {\n  border-radius: 0 2px 2px 0;\n}\n.datepicker table tr td.active.active,\n.datepicker table tr td.active.disabled.active,\n.datepicker table tr td.active.disabled:active,\n.datepicker table tr td.active.disabled:focus,\n.datepicker table tr td.active.disabled:hover,\n.datepicker table tr td.active.disabled:hover.active,\n.datepicker table tr td.active.disabled:hover:active,\n.datepicker table tr td.active.disabled:hover:focus,\n.datepicker table tr td.active.disabled:hover:hover,\n.datepicker table tr td.active:active,\n.datepicker table tr td.active:focus,\n.datepicker table tr td.active:hover,\n.datepicker table tr td.active:hover.active,\n.datepicker table tr td.active:hover:active,\n.datepicker table tr td.active:hover:focus,\n.datepicker table tr td.active:hover:hover,\n.open .dropdown-toggle.datepicker table tr td.active,\n.open .dropdown-toggle.datepicker table tr td.active.disabled,\n.open .dropdown-toggle.datepicker table tr td.active.disabled:hover,\n.open .dropdown-toggle.datepicker table tr td.active:hover {\n  background-color: #1f364f;\n  border-radius: 2px;\n  border-color: #1f364f;\n}\n.bootstrap-datetimepicker-widget table td span.active {\n  background-color: #1f364f;\n  text-shadow: none;\n}\n.bootstrap-datetimepicker-widget a[data-action] {\n  color: #737373;\n}\n.note-editor.note-frame {\n  border: 1px solid #d9d9d9;\n}\n.bootstrap-tagsinput {\n  border: 1px solid #d9d9d9;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n  padding: 6px 12px;\n  line-height: 20px;\n  display: block;\n}\n.bootstrap-tagsinput .tag {\n  display: inline-block;\n}\nli.L0,\nli.L1,\nli.L2,\nli.L3,\nli.L5,\nli.L6,\nli.L7,\nli.L8 {\n  list-style-type: decimal !important;\n}\n.toast-title {\n  font-weight: 700;\n}\n#toast-container > div {\n  border-radius: 0px;\n  opacity: 1;\n  color: #FFF;\n  background-color: #1f364f;\n  padding: 15px 15px 15px 65px;\n  width: 300px;\n  min-height: 74px;\n}\n#toast-container > .toast {\n  background-image: none !important;\n}\n.toast-close-button {\n  height: 20px;\n  width: 20px;\n  color: #9a9a9a;\n  text-shadow: none;\n  opacity: 1;\n  top: -5px;\n  right: -5px;\n  outline: 0;\n}\n.toast:before {\n  font-family: \"Ionicons\";\n  font-size: 30px;\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  text-align: center;\n}\n.toast-success .toast-title {\n  color: #117b66;\n}\n.toast-success .toast-progress {\n  background-color: #5dc2ae;\n}\n.toast-success:before {\n  content: \"\\f120\";\n  color: #117b66;\n}\n.toast-info .toast-title {\n  color: #054fa4;\n}\n.toast-info .toast-progress {\n  background-color: #5195e2;\n}\n.toast-info:before {\n  content: \"\\f149\";\n  color: #054fa4;\n}\n.toast-warning .toast-title {\n  color: #ea9e00;\n}\n.toast-warning .toast-progress {\n  background-color: #ffcc62;\n}\n.toast-warning:before {\n  content: \"\\f100\";\n  color: #ea9e00;\n}\n.toast-error .toast-title {\n  color: #cc1a23;\n}\n.toast-error .toast-progress {\n  background-color: #ed7177;\n}\n.toast-error:before {\n  content: \"\\f2a4\";\n  color: #cc1a23;\n}\n.wizard > .content > .body input {\n  border: 1px solid transparent;\n}\n.wizard > .content > .body label {\n  margin-bottom: 0;\n}\n.wizard > .steps a,\n.wizard > .steps a:hover,\n.wizard > .steps a:active {\n  margin: 3px;\n  border-radius: 0;\n  padding: 15px;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.wizard > .steps .current a,\n.wizard > .steps .current a:hover,\n.wizard > .steps .current a:active {\n  background-color: #1f364f;\n  color: #FFF;\n}\n.wizard > .steps .current a .number,\n.wizard > .steps .current a:hover .number,\n.wizard > .steps .current a:active .number {\n  border: 2px solid #FFF;\n}\n.wizard > .steps .done a,\n.wizard > .steps .done a:hover,\n.wizard > .steps .done a:active {\n  background-color: #e6e6e6;\n  color: #9a9a9a;\n}\n.wizard > .steps .done a .number,\n.wizard > .steps .done a:hover .number,\n.wizard > .steps .done a:active .number {\n  border-color: #9a9a9a;\n}\n.wizard > .steps .disabled a,\n.wizard > .steps .disabled a:hover,\n.wizard > .steps .disabled a:active {\n  background-color: #e6e6e6;\n  color: #9a9a9a;\n}\n.wizard > .steps .disabled a .number,\n.wizard > .steps .disabled a:hover .number,\n.wizard > .steps .disabled a:active .number {\n  border-color: #9a9a9a;\n}\n.wizard > .content {\n  background-color: transparent;\n  margin: 0 5px;\n  border-radius: 0;\n  min-height: 150px;\n}\n.wizard > .content > .body {\n  width: 100%;\n  height: 100%;\n  padding: 15px 0 0 0;\n  position: static;\n}\n.wizard > .steps .number {\n  font-size: 16px;\n  padding: 5px;\n  border-radius: 50%;\n  border: 2px solid #FFF;\n  width: 36px;\n  display: inline-block;\n  font-weight: 600;\n  text-align: center;\n}\n.wizard > .actions .disabled a,\n.wizard > .actions .disabled a:hover,\n.wizard > .actions .disabled a:active {\n  opacity: .65;\n  background-color: #eeeeee;\n  color: #737373;\n  cursor: not-allowed;\n  border: 2px solid #d9d9d9;\n}\n.wizard > .actions a,\n.wizard > .actions a:hover,\n.wizard > .actions a:active {\n  background-color: #627284;\n  border-radius: 4px;\n  padding: 5px 15px;\n  border: 2px solid #18293d;\n}\n.tabcontrol > .content {\n  overflow-y: auto;\n  border-top: 1px solid #d9d9d9;\n}\n.tabcontrol > .steps > ul {\n  margin: 0;\n}\n.tabcontrol > .steps > ul > li {\n  margin: 0;\n  padding: 0 !important;\n  border-radius: 0;\n  border: none !important;\n  background-color: transparent !important;\n}\n.tabcontrol > .steps > ul > li > a {\n  padding: 15px 20px !important;\n  color: #737373;\n  -webkit-transition: -webkit-box-shadow 0.3s;\n  transition: -webkit-box-shadow 0.3s;\n  transition: box-shadow 0.3s;\n  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;\n}\n.tabcontrol > .steps > ul > li > a:hover {\n  -webkit-box-shadow: inset 0 -2px 0 #1f364f;\n          box-shadow: inset 0 -2px 0 #1f364f;\n}\n.tabcontrol > .steps > ul > li.current > a {\n  color: #1f364f;\n  -webkit-box-shadow: inset 0 -2px 0 #1f364f;\n          box-shadow: inset 0 -2px 0 #1f364f;\n}\ntable.dataTable tbody > tr.selected,\ntable.dataTable tbody > tr > .selected {\n  background-color: #1f364f;\n}\n.img-container,\n.img-preview {\n  background-color: #f7f7f7;\n  overflow: hidden;\n  width: 100%;\n  text-align: center;\n}\n.img-container {\n  min-height: 200px;\n  max-height: 554px;\n  margin-bottom: 20px;\n}\n@media (min-width: 768px) {\n  .img-container {\n    min-height: 554px;\n  }\n}\n.img-container > img {\n  max-width: 100%;\n}\n.docs-preview {\n  margin-right: -15px;\n  margin-bottom: 10px;\n}\n.img-preview {\n  float: left;\n  margin-right: 10px;\n  margin-bottom: 10px;\n}\n.img-preview > img {\n  max-width: 100%;\n}\n.preview-lg {\n  width: 263px;\n  height: 148px;\n}\n.preview-md {\n  width: 139px;\n  height: 78px;\n}\n.preview-sm {\n  width: 69px;\n  height: 39px;\n}\n.preview-xs {\n  width: 35px;\n  height: 20px;\n  margin-right: 0;\n}\n.docs-data > .input-group {\n  margin-bottom: 10px;\n}\n.docs-data > .input-group > label {\n  min-width: 80px;\n}\n.docs-data > .input-group > span {\n  min-width: 50px;\n}\n.docs-buttons > .btn,\n.docs-buttons > .btn-group,\n.docs-buttons > .form-control {\n  margin-right: 5px;\n  margin-bottom: 10px;\n}\n.docs-toggles > .btn,\n.docs-toggles > .btn-group,\n.docs-toggles > .dropdown {\n  margin-bottom: 10px;\n}\n.docs-tooltip {\n  display: block;\n  margin: -6px -12px;\n  padding: 6px 12px;\n}\n.docs-tooltip > .icon {\n  margin: 0 -3px;\n  vertical-align: top;\n}\n.tooltip-inner {\n  white-space: normal;\n}\n.btn-upload .tooltip-inner {\n  white-space: nowrap;\n}\n@media (max-width: 400px) {\n  .btn-group-crop {\n    margin-right: -15px !important;\n  }\n  .btn-group-crop > .btn {\n    padding-left: 5px;\n    padding-right: 5px;\n  }\n  .btn-group-crop .docs-tooltip {\n    margin-left: -5px;\n    margin-right: -5px;\n    padding-left: 5px;\n    padding-right: 5px;\n  }\n}\n.docs-options .dropdown-menu {\n  width: 100%;\n}\n.docs-options .dropdown-menu > li {\n  padding: 5px 20px;\n}\n.docs-options .dropdown-menu > li .checkbox {\n  margin: 5px 0;\n}\n.docs-options .dropdown-menu > li:hover {\n  background-color: #f7f7f7;\n}\n.docs-options .dropdown-menu > li > label {\n  display: block;\n}\n.docs-cropped .modal-body {\n  text-align: center;\n}\n.docs-cropped .modal-body > img,\n.docs-cropped .modal-body > canvas {\n  max-width: 100%;\n}\n.overlay-container {\n  position: relative;\n  overflow: hidden;\n}\n.overlay-container.overlay-color:before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(24, 41, 61, 0.6);\n}\n.overlay-container .overlay-bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  margin: auto;\n  z-index: -1;\n}\n.overlay-container .overlay-content {\n  color: #FFF;\n  background-color: rgba(24, 41, 61, 0.6);\n}\n.overlay-container hr {\n  border-color: rgba(255, 255, 255, 0.2);\n}\n.rotate-90 {\n  -webkit-transform: rotate(90deg);\n  transform: rotate(90deg);\n}\n.text-italic {\n  font-style: italic;\n}\n.lh-1 {\n  line-height: 1 !important;\n}\n.bd-t {\n  border-top: 1px solid #d9d9d9;\n}\n.bd-r {\n  border-right: 1px solid #d9d9d9;\n}\n.bd-b {\n  border-bottom: 1px solid #d9d9d9;\n}\n.bd-l {\n  border-left: 1px solid #d9d9d9;\n}\n.no-shadow {\n  -webkit-box-shadow: none !important;\n          box-shadow: none !important;\n}\n.no-border {\n  border: none !important;\n}\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n.fw-300 {\n  font-weight: 300 !important;\n}\n.fw-400 {\n  font-weight: 400 !important;\n}\n.fw-700 {\n  font-weight: 700 !important;\n}\n.fs-11 {\n  font-size: 11px !important;\n}\n.fs-12 {\n  font-size: 12px !important;\n}\n.fs-13 {\n  font-size: 13px !important;\n}\n.fs-14 {\n  font-size: 14px !important;\n}\n.fs-16 {\n  font-size: 16px !important;\n}\n.fs-18 {\n  font-size: 18px !important;\n}\n.fs-20 {\n  font-size: 20px !important;\n}\n.fs-22 {\n  font-size: 22px !important;\n}\n.fs-24 {\n  font-size: 24px !important;\n}\n.fs-30 {\n  font-size: 30px !important;\n}\n.fs-36 {\n  font-size: 36px !important;\n}\n.fs-48 {\n  font-size: 48px !important;\n}\n.fs-60 {\n  font-size: 60px !important;\n}\n.m-0 {\n  margin: 0px !important;\n}\n.m-5 {\n  margin: 5px !important;\n}\n.m-10 {\n  margin: 10px !important;\n}\n.m-15 {\n  margin: 15px !important;\n}\n.m-20 {\n  margin: 20px !important;\n}\n.m-25 {\n  margin: 25px !important;\n}\n.m-30 {\n  margin: 30px !important;\n}\n.mt-0 {\n  margin-top: 0px !important;\n}\n.mt-5 {\n  margin-top: 5px !important;\n}\n.mt-10 {\n  margin-top: 10px !important;\n}\n.mt-15 {\n  margin-top: 15px !important;\n}\n.mt-20 {\n  margin-top: 20px !important;\n}\n.mt-25 {\n  margin-top: 25px !important;\n}\n.mt-30 {\n  margin-top: 30px !important;\n}\n.mr-0 {\n  margin-right: 0px !important;\n}\n.mr-5 {\n  margin-right: 5px !important;\n}\n.mr-10 {\n  margin-right: 10px !important;\n}\n.mr-15 {\n  margin-right: 15px !important;\n}\n.mr-20 {\n  margin-right: 20px !important;\n}\n.mr-25 {\n  margin-right: 25px !important;\n}\n.mr-30 {\n  margin-right: 30px !important;\n}\n.mb-0 {\n  margin-bottom: 0px !important;\n}\n.mb-5 {\n  margin-bottom: 5px !important;\n}\n.mb-10 {\n  margin-bottom: 10px !important;\n}\n.mb-15 {\n  margin-bottom: 15px !important;\n}\n.mb-20 {\n  margin-bottom: 20px !important;\n}\n.mb-25 {\n  margin-bottom: 25px !important;\n}\n.mb-30 {\n  margin-bottom: 30px !important;\n}\n.ml-0 {\n  margin-left: 0px !important;\n}\n.ml-5 {\n  margin-left: 5px !important;\n}\n.ml-10 {\n  margin-left: 10px !important;\n}\n.ml-15 {\n  margin-left: 15px !important;\n}\n.ml-20 {\n  margin-left: 20px !important;\n}\n.ml-25 {\n  margin-left: 25px !important;\n}\n.ml-30 {\n  margin-left: 30px !important;\n}\n.p-0 {\n  padding: 0px !important;\n}\n.p-5 {\n  padding: 5px !important;\n}\n.p-10 {\n  padding: 10px !important;\n}\n.p-15 {\n  padding: 15px !important;\n}\n.p-20 {\n  padding: 20px !important;\n}\n.p-25 {\n  padding: 25px !important;\n}\n.p-30 {\n  padding: 30px !important;\n}\n.pt-0 {\n  padding-top: 0px !important;\n}\n.pt-5 {\n  padding-top: 5px !important;\n}\n.pt-10 {\n  padding-top: 10px !important;\n}\n.pt-15 {\n  padding-top: 15px !important;\n}\n.pt-20 {\n  padding-top: 20px !important;\n}\n.pt-25 {\n  padding-top: 25px !important;\n}\n.pt-30 {\n  padding-top: 30px !important;\n}\n.pr-0 {\n  padding-right: 0px !important;\n}\n.pr-5 {\n  padding-right: 5px !important;\n}\n.pr-10 {\n  padding-right: 10px !important;\n}\n.pr-15 {\n  padding-right: 15px !important;\n}\n.pr-20 {\n  padding-right: 20px !important;\n}\n.pr-25 {\n  padding-right: 25px !important;\n}\n.pr-30 {\n  padding-right: 30px !important;\n}\n.pb-0 {\n  padding-bottom: 0px !important;\n}\n.pb-5 {\n  padding-bottom: 5px !important;\n}\n.pb-10 {\n  padding-bottom: 10px !important;\n}\n.pb-15 {\n  padding-bottom: 15px !important;\n}\n.pb-20 {\n  padding-bottom: 20px !important;\n}\n.pb-25 {\n  padding-bottom: 25px !important;\n}\n.pb-30 {\n  padding-bottom: 30px !important;\n}\n.pl-0 {\n  padding-left: 0px !important;\n}\n.pl-5 {\n  padding-left: 5px !important;\n}\n.pl-10 {\n  padding-left: 10px !important;\n}\n.pl-15 {\n  padding-left: 15px !important;\n}\n.pl-20 {\n  padding-left: 20px !important;\n}\n.pl-25 {\n  padding-left: 25px !important;\n}\n.pl-30 {\n  padding-left: 30px !important;\n}\n.email-from .media-body {\n  width: auto;\n}\n.email-from .media-heading {\n  white-space: nowrap;\n  color: #9a9a9a;\n}\n.email-select {\n  width: 50px;\n  text-align: center;\n}\n.email-title {\n  color: #9a9a9a;\n  font-weight: 700;\n}\n.email-summary {\n  color: #9a9a9a;\n}\n.unread .email-title {\n  color: #737373;\n}\n.unread .email-from .media-heading {\n  color: #737373;\n}\n.email-single p {\n  margin-bottom: 20px;\n}\n.email-single .img-responsive {\n  margin: 0 auto;\n}\n.fc-toolbar {\n  background-color: #FFF;\n  padding: 8px 0;\n  margin-bottom: 0;\n  height: 50px;\n}\n.fc-toolbar h2 {\n  font-weight: 300;\n  margin: 2px 0;\n  line-height: 1;\n}\n.fc-view-container {\n  background-color: #FFF;\n  color: #737373;\n}\n.fc button {\n  font-size: 14px;\n  padding: 5px 15px;\n  height: auto;\n  border: 2px solid #d9d9d9;\n  color: #737373;\n}\n.fc .fc-button-group > * {\n  margin: 0 0 0 -2px;\n}\n.fc-state-default {\n  background-color: #eeeeee;\n  color: #FFF;\n  border-style: none;\n  text-shadow: none;\n  background-image: none;\n  -webkit-box-shadow: none;\n          box-shadow: none;\n}\n.fc-state-default:hover {\n  outline: 0;\n  background-color: #d9d9d9;\n}\n.fc-state-default:focus,\n.fc-state-default.focus {\n  outline: 0;\n}\n.fc-unthemed .fc-today {\n  background-color: #f5f5f5;\n}\n.body-bg-full {\n  background-position: center center;\n  background-repeat: no-repeat;\n  background-attachment: fixed;\n  background-size: cover;\n  height: 100%;\n  font-family: 'Itim', cursive;\n}\n.body-bg-full .page-container {\n  padding: 0;\n  display: table;\n  width: 100%;\n  height: 100%;\n}\n.body-bg-full .page-container .page-content {\n  padding: 20px;\n  display: table-cell;\n  text-align: center;\n  vertical-align: middle;\n  min-height: auto;\n  width: 340px;\n}\n.body-bg-full .logo {\n  margin-bottom: 30px;\n}\n.btn-demo .btn {\n  margin: 0 10px 10px 0;\n}\n.bg-demo {\n  color: #FFF;\n  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM5YTlhOWEiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);\n  background-image: -webkit-gradient(linear, left top, right top, from(#9a9a9a), to(#f5f5f5));\n  background-image: linear-gradient(to right, #9a9a9a, #f5f5f5);\n}\n.loading-demo {\n  height: 240px;\n  border: 1px solid #d9d9d9;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-bottom: 20px;\n}\n.chart-demo {\n  height: 300px;\n  border: 1px solid #d9d9d9;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  margin-bottom: 20px;\n}\n.icon-demo .row > [class^=\"col\"] {\n  line-height: 50px;\n  cursor: pointer;\n  height: 50px;\n}\n.icon-demo .row > [class^=\"col\"]:hover i {\n  font-size: 28px;\n}\n.icon-demo i {\n  font-size: 16px;\n  text-align: center;\n  display: inline-block;\n  width: 40px;\n  -webkit-transition: all 0.2s;\n  transition: all 0.2s;\n}\ndiv.col-sm-9 div.form-group div#save{\n  position:relative;\n  top:384px;\n\n}\ndiv.col-sm-9 div.form-group div#cancel{\n  position:relative;\n  top:384px;\n}\n#user-list-table img {\n  padding: 0px 3px;\n  width: 20px;\n}\n/****** Vahai Team Code Starts ***********/\ndiv.form-group div.col-sm-9 div.apac {\n    display: table;\n    float: left;    \n}\ndiv.form-group div.col-sm-9 div.eu {\n    display: table;\n    float: left;\n    margin: 0px 5px;\n}\ndiv.form-group div.col-sm-9 div.us {\n    display: table;\n    float: left;\n}\ndiv.input-group-search {\n    float: left;\n    left: 0;\n    position: relative;\n    width: 350px;\n}\ndiv.input-group-search-uview {\n    /*float: left;\n    left: 110px;\n    position: relative;\n    top: 10px;\n    width: 350px;  */  \n    float: left;\n    left: 165px;\n    position: fixed;\n    top: 35px;\n    width: 350px;\n}\ndiv.input-group-search-uview input.form-control {\n  border: 1px solid #d9d9d9;\n}\ndiv.input-group-search-uview span.input-group-btn button#esearch {\n  background-color: #d9d9d9;\n  color: #A52A2A;\n  border-color: #d9d9d9;\n  margin-left: 1px;\n}\ndiv.input-group-search-uview span.input-group-btn button#esearch:hover {\n  background: #FFF;\n  border-color: #FFF;\n  color: #A52A2A; \n}\ndiv.input-group-search-uview span.input-group-btn button#advancesearch {\n\tbackground: #d9d9d9;\n\tcolor: #A52A2A;\n\tfont-size: 18px;\n\tfont-weight: bold;\n\tpadding: 2.3px 15px;\n\tmargin-left: 1px;\n}\ndiv#msgarea {\n  height: 30px; \n  top: 0; \n  position: fixed; \n  left: 0; \n  width: 100%; \n  height: 30px; \n  z-index: 999; \n  display: none; \n  background: #FFF;\n}\n.alert-box {\n    padding: 0px;\n    /* margin-bottom: 20px; */\n    font-weight: bold;\n}\n.success {\n    color: #FFF;\n    background-color: #14D115;\n    display: none;\n    position: fixed;\n    z-index: 9999;\n    top: 0;\n    left: 0;\n    width: 100%; \n    height: 20px;\n}\n.failure {\n    color: #FFF;\n    background-color: #FF0000;\n    display: none;\n    position: fixed;\n    z-index: 9999;\n    top:0;\n    left: 0;\n    width: 100%;\n    height: 20px;\n}\n.warning {\n    color: #FFF;\n    background-color: #FCB913;\n    display: none;\n    position: fixed;\n    z-index: 9999;\n    top:0;\n    left: 0;\n    width: 100%;\n    height: 20px;\n}\n.image-container234 {\n    height:100px;\n    width:55px;    float:right;\n}\n​\n\n.zurik-con{\n  float:right;\n  padding-top: 20px;\n}\n.xls-table {\n  width : 1800px;\n}\ndiv.abcd img.def\n  {\n  position:absolute;\n  top: 25%;\n  text-align: center;\n  z-index: 999999999;\n  }\n.docload {\n    padding-right:156;\n    color: #FFF;\n    background-color: #627284;\n    border-color: #18293d;\n    display: block;\n    width: 90px;\n    float: right;\n\n  }\ndiv.zurik-con a.brand span.logo-text {\n  position: relative;\n  left: 50px;\n  height:50px;\n    \n    color: #900;\n    background-color: #FFF;\n    font-family: Open Sans;\n    font-size: 30px;\n    font-weight: 700;\n    line-height: 60px;\n}\ndiv.body-bg-full div.container div.page-content div.logo\n\n{\n  color: #900;\n    background-color: #FFF;\n    font-family: Open Sans;\n    font-size: 30px;\n    font-weight: 700;\n    line-height: 60px;\n}\ndiv.zurik-con a.brand {\n  color: #FFF;\n    /* background-color: #FFF; */\n    font-family: Open Sans;\n    font-size: 30px;\n    font-weight: 700;\n    line-height: 60px;\n}\nbody.body-bg-full div.container div.page-content div.logo{\n  color: #A52A2A;\n    background-color: #FFF;\n    font-family: Open Sans;\n    font-size: 30px;\n    font-weight: 700;\n    line-height: 60px;\n\n\n}\n.resizer {\n  position: absolute;\n  top: 0;\n  right: -8px;\n  bottom: 0;\n  left: auto;\n  width: 16px;    \n  cursor: col-resize;       \n}\n#regtitle font{\n     border-top: 1px solid black;\n     border-bottom: 1px solid black;\n\n}\n.Regsplit{\n    background: #A52A2A;\n    border-radius:0;\n    color: white;\n    border: 0px;\n    padding: 10px 30px;\n    margin: 0;\n    width: 200px;\n    height:60px;\n    \n}\nimg.showFilter {\n  cursor: pointer;\n}\ndiv#filterPopupContainer {\n  border: 1px solid #EAEDEF;\n  width: auto;\n  min-width: 200px;\n  max-width: 300px;\n  position: absolute;\n  background: #FCFCFD;\n  top: 147px;\n  z-index: 999;\n  -webkit-box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n  box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n}\n/*tr#xlsheadrow td {\n  vertical-align: bottom;  \n}*/\ntr#xlsheadrow span.headrowsort {\n  display: table-cell;\n  height: 100px;\n  min-height: 100px;\n  max-width: 90%;\n  vertical-align: middle;\n  width: 100vh;\n  text-align: center;\n}\ntr#xlsheadrow div.filterarrrow {\n  float: right;\n}\ntr#xlsheadrow td {\n  vertical-align: middle;  \n}\ntr#xlsbodyrow td:last-child div#filterPopupContainer {\n  position: absolute;\n  margin-left: -110px;\n}\ntr#xlsbodyrow td:nth-last-child(2) div#filterPopupContainer {\n  position: absolute;\n  margin-left: -50px;\n}\ndiv#filterPopupContainer div#sort-asc,\ndiv#filterPopupContainer div#sort-dsc {\n  padding: 5px 0px;\n  text-align: center;\n}\ndiv#filterPopupContainer div#sort-asc:hover,\ndiv#filterPopupContainer div#sort-dsc:hover {\n  cursor: pointer;\n  background: #f5f5f5;\n}\ndiv#filterPopupContainer div.selclear {\n  text-align: center;\n}\ndiv#filterPopupContainer div.selclear span a#select-all,\ndiv#filterPopupContainer div.selclear span a#clear-all {\n  color: #737373;\n  padding: 5px 0px;  \n}\ndiv#filterPopupContainer div.selclear span a#select-all:hover,\ndiv#filterPopupContainer div.selclear span a#clear-all:hover {\n  cursor: pointer;\n  color: #000;\n}\ndiv#filterByValue {\n  height:auto;\n  min-height: 70px;\n  max-height: 300px;\n  width: 85%;\n  border:solid 1px #F0F2F4;\n  overflow:scroll;\n  overflow-x:scroll;\n  overflow-y:scroll;\n  margin: 0 auto;\n}\ndiv#filterPopupContainer .btn-success {\n  margin: 10px 5px 10px 15px;\n}\ndiv#filterPopupContainer .btn-black {\n  margin: 10px 0;\n}\nh4.media-heading {\n  color: #FEFEFE;\n  margin-bottom: 5px;\n  margin-top: 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  width: 165px;\n}\ndiv.dropdown a {\n  color: #FFF;\n}\ndiv.dropdown a:hover {\n  color: #000;\n}\ndiv.input-group-search input.form-control {\n  border: 1px solid #A52A2A;\n}\nspan.input-group-btn button#searchUser {\n  background-color: transparent;\n  color: #A52A2A;\n  border-color: #A52A2A;\n  margin-left: 1px;\n}\ndiv#page-section div.input-group-search span.input-group-btn button#searchUser:hover {\n  background: #A52A2A;\n  color: #FFF;\n}\nspan.input-group-btn button#goSearch {\n  background-color: transparent;\n  color: #A52A2A;\n  border-color: #A52A2A;\n  margin-left: 1px;\n}\ndiv.page-container div.input-group-search span.input-group-btn button#goSearch:hover {\n  background: #A52A2A;\n  color: #FFF;\n}\n/*div.input-group-search span.input-group-btn button.btn-default:hover,\ndiv.input-group-search span.input-group-btn button.btn-default:focus {\n  color: #FFF;\n  background-color: #000;\n  border-color: #000;\n}*/\n#order-table > thead > tr > th, \n#order-table > tfoot > tr > th {\n  color: #000;\n}\n/**** New Header with Nav Menu starts *****/\ndiv.main-container div#mainCanvas div.udb {\n  padding-top: 50px;\n  margin: 0 auto;\n  /*width: 1300px;*/\n  width: 96%;\n}\nheader ul li {\n  color: #FFF;\n  float: left;\n  list-style: none; \n  font-size: 13px;\n}\ndiv.zurik-con {\n  height: 56px; \n  width: 56px; \n  line-height: 40px; \n  padding: 8px;\n  float: left;\n}\ndiv.map_loc {\n  float: left;\n  font-size: 11px;\n}\nspan.zsearch input {\n  /* background: #DFEAEC url('/images/searchzoom.png') no-repeat 2% center; */\n  color: #788385;\n  border: none;\n  height: 30px;\n  padding-left: 25px;\n  width: 300px;\n  /*margin-top: 20px;*/\n  border-radius: 5px solid #DFEAEC;\n}\nspan.zsearch {\n  position: fixed;\n  left: 170px;\n  top: 35px;\n  float: left;\n}\nul.navmenu {\n  /* position: relative; */\n  float: left;\n}\nul.navmenu li img {\n  display: block;\n  text-align: center;\n  margin: 0 auto; \n}\nul.navmenu li {\n  padding: 0px 25px;\n  text-align: center;\n  font-weight: bold;\n  font-size: 14px;\n}\nul.navmenu li i {\n  display: block;\n  font-size: 22px;\n}\nul.navmenu li a {\n  color: #FFF;  \n}\nul.navmenu li a:hover {\n  color: #EDD400;\n}\nul.navmenu li a:focus {\n  color: #FFF;\n}\nh2 {\n  font-size: 18px;\n  padding-left: 10px;\n}\nh3 {\n  color: #071F1F;\n  font-size: 14px;\n  margin: 0;\n  padding: 0 0 0 10px; \n  width: 92%;\n}\ndiv.listcontent {\n  position: relative;\n  top: 100px;\n  background: #F3F7F8;\n  border: 1px solid #DFE3E2;\n  width: 200px;\n  height: 300px;\n  float: left;\n  display: table;\n  margin: 20px 10px; \n  text-align: center;\n}\ndiv.listcontent h3 {\n  color: #071F1F;\n  font-size: 12px;  \n}\ndiv.listcontent span {\n  color: #071F1F;\n  font-size: 12px;\n  display: block; \n  font-weight: bold;\n  line-height: 1.6em;\n}\ndiv.listcontent a {\n  color: #071F1F;\n  border: 2px solid #87C4D0;\n  padding: 5px 20px;\n  text-decoration: none;\n  font-size: 12px;\n  border-radius: 3px;\n  font-weight: bold;\n}\ndiv.listcontent a:hover {\n  color: #FFF;\n  border: 2px solid #368A9B;\n  background: #87C4D0;   \n}\nimg.zclose {\n  float: right;\n  margin: 7px 7px 0 0; \n}\ndiv.listcontent1 {\n  position: relative;\n  top: 0px;\n  background: #FFF;\n  width: 55%;\n  height: 300px;\n  float: left;\n  display: table;\n  margin: 20px 10px;\n  text-align: center;\n}\ndiv.listcontent2 {\n  position: relative;\n  top: 0px;\n  width: 40.4%;\n  height: 370px;\n /* float: left;*/\n  display: table;\n  margin: 5px 10px; \n  text-align: center;\n}\ndiv.listcontent3 {\n  position: relative;\n  top: 0px;\n  width: 97%;\n  float: left;\n  display: table;\n  margin: 5px 10px;\n  text-align: center;\n}\ndiv.listcontent4 {\n  position: relative;\n  top: 0px;\n  width: 97%;\n  float: left;\n  display: table;\n  margin: 5px 10px;\n  text-align: center;\n}\ndiv.listcontent5 {\n  position: relative;\n  top: 0px;\n  width: 97%;\n  float: left;\n  display: table;\n  margin: 5px 10px;\n  text-align: center; \n}\ndiv.udb h3 {\n  font-size: 15px;  \n}\ndiv.listcontent1 h3,\ndiv.listcontent2 h3,\ndiv.listcontent3 h3,\ndiv.listcontent4 h3,\ndiv.listcontent5 h3 {\n  color: #071F1F;\n  font-size: 15px;  \n  padding: 10px 10px 10px 0;\n  text-align: left;\n}\ndiv.listcontent1 .table > thead > tr > th,\ndiv.listcontent2 .table > thead > tr > th,\ndiv.listcontent3 .table > thead > tr > th,\ndiv.listcontent4 .table > thead > tr > th,\ndiv.listcontent5 .table > thead > tr > th {\n  \n}\ndiv.listcontent1 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent2 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent3 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent4 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent5 table.table thead#xlshead tr#xlsheadrow th {\n  color: #FFF;\n  background-color: #A52A2A;\n}\ndiv.listcontent1 .table,\ndiv.listcontent2 .table,\ndiv.listcontent3 .table,\ndiv.listcontent4 .table,\ndiv.listcontent5 .table {\n  /* border: 1px solid #d9d9d9; */\n}\ndiv.listcontent1 .table > thead > tr#xlsheadrow span.headrowsort,\ndiv.listcontent2 .table > thead > tr#xlsheadrow span.headrowsort,\ndiv.listcontent3 .table > thead > tr#xlsheadrow span.headrowsort,\ndiv.listcontent4 .table > thead > tr#xlsheadrow span.headrowsort,\ndiv.listcontent5 .table > thead > tr#xlsheadrow span.headrowsort {\n  height: auto;\n  min-height: auto;\n  text-transform: uppercase;\n  font-weight: bold;\n}\n/*div.listcontent2 table.table thead#xlshead tr#xlsheadrow th {\n  border: none;\n}\ndiv.listcontent1 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent2 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent3 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent4 table.table thead#xlshead tr#xlsheadrow th, \ndiv.listcontent5 table.table thead#xlshead tr#xlsheadrow th {\n  border: none;\n}\ndiv.listcontent1 table.table thead#xlshead tr#xlsheadrow th td,\ndiv.listcontent2 table.table thead#xlshead tr#xlsheadrow th td,\ndiv.listcontent3 table.table thead#xlshead tr#xlsheadrow th td,\ndiv.listcontent4 table.table thead#xlshead tr#xlsheadrow th td,\ndiv.listcontent5 table.table thead#xlshead tr#xlsheadrow th td {\n  border: none;\n}*/\n/* Red color background table starts\n\ndiv.listcontent2 table,\ndiv.listcontent3 table,\ndiv.listcontent4 table,\ndiv.listcontent5 table {\n  text-align: center;\n  width: 100%;\n  margin: 0 auto; \n  font-size: 13px;\n}\ndiv.listcontent1 .table > tbody > tr > td,\ndiv.listcontent1 .table > tbody > tr > th,\ndiv.listcontent1 .table > tfoot > tr > td,\ndiv.listcontent1 .table > tfoot > tr > th,\ndiv.listcontent1 .table > thead > tr > td,\ndiv.listcontent1 .table > thead > tr > th,\ndiv.listcontent2 .table > tbody > tr > td, \ndiv.listcontent2 .table > tbody > tr > th,\ndiv.listcontent2 .table > tfoot > tr > td,\ndiv.listcontent2 .table > tfoot > tr > th,\ndiv.listcontent2 .table > thead > tr > td,\ndiv.listcontent2 .table > thead > tr > th,\ndiv.listcontent3 .table > tbody > tr > td, \ndiv.listcontent3 .table > tbody > tr > th,\ndiv.listcontent3 .table > tfoot > tr > td,\ndiv.listcontent3 .table > tfoot > tr > th,\ndiv.listcontent3 .table > thead > tr > td,\ndiv.listcontent3 .table > thead > tr > th,\ndiv.listcontent4 .table > tbody > tr > td, \ndiv.listcontent4 .table > tbody > tr > th,\ndiv.listcontent4 .table > tfoot > tr > td,\ndiv.listcontent4 .table > tfoot > tr > th,\ndiv.listcontent4 .table > thead > tr > td,\ndiv.listcontent4 .table > thead > tr > th,\ndiv.listcontent5 .table > tbody > tr > td, \ndiv.listcontent5 .table > tbody > tr > th,\ndiv.listcontent5 .table > tfoot > tr > td,\ndiv.listcontent5 .table > tfoot > tr > th,\ndiv.listcontent5 .table > thead > tr > td,\ndiv.listcontent5 .table > thead > tr > th {\n  border: none;\n  padding: 3px;\n}\ndiv.listcontent3 .table > thead > tr#xlsheadrow span.headrowsort {\n  height: auto;\n  min-height: auto;\n  text-transform: uppercase;\n  font-weight: bold;\n}\ndiv.listcontent1 .table tbody#xlsbody tr#xlsbodyrow:hover,\ndiv.listcontent2 .table tbody#xlsbody tr#xlsbodyrow:hover,\ndiv.listcontent3 .table tbody#xlsbody tr#xlsbodyrow:hover,\ndiv.listcontent4 .table tbody#xlsbody tr#xlsbodyrow:hover,\ndiv.listcontent5 .table tbody#xlsbody tr#xlsbodyrow:hover {\n  background: #A52A2A;\n  color: #FFF;\n}\ndiv.listcontent1 .table tbody tr:hover,\ndiv.listcontent2 .table tbody tr:hover,\ndiv.listcontent3 .table tbody tr:hover,\ndiv.listcontent4 .table tbody tr:hover,\ndiv.listcontent5 .table tbody tr:hover {\n  background: #A52A2A;\n  color: #FFF;\n}\n\nRed color background table Ends */\n/*\nul.list-group {\n  position: fixed;\n  z-index: 9999;\n  background: #FFF;\n  list-style: none;\n  padding: 10px;\n  width: 750px;\n  top: 10%;\n  left: 11.1%;\n  -webkit-box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n  -moz-box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n  box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n  border-radius: 3px;\n  overflow-y: scroll;\n  height: 600px;\n}*/\nul.list-group li {\n  font-size: 14px;\n  padding: 17px;\n  border-bottom: 1px solid #ccc;\n}\nul.list-group li img {\n  float: left;  \n}\nul.list-group li h3 {\n  font-size: 16px;\n  font-weight: normal;\n  padding: 10px 0px 0px 30px;\n  margin-left: 20px;\n}\nul.list-group li span {\n  margin-left: 10px;\n  font-size: 15px;\n  color: #777777;\n}\ninput#user_name,\ninput#email_id {\n  /* width: 50%; */\n  width: 60%;\n}\n#order-table img {\n  padding: 0px 3px;\n  width: 20px;\n}\n#order-table span#publishDocument img {\n  width: 30px;\n}\n/**** New Header with Nav Menu ends *****/\n/***D3 Geo Map***/\n#graticule {\n  fill: none;\n  stroke: #000;\n  stroke-opacity: .5;\n  stroke-width: .5px;\n}\n#geoMap {\n  height:100%;\n  clear:both;\n}\n.hidden { \n  display: none; \n}\ndiv.tooltip {\n  color: #222; \n  background: #fff;\n  padding: .5em; \n  text-shadow: #f5f5f5 0 1px 0;\n  border-radius: 2px; \n  -webkit-box-shadow: 0px 0px 2px 0px #a6a6a6; \n          box-shadow: 0px 0px 2px 0px #a6a6a6; \n  opacity: 0.9; \n  position: absolute;\n}\n/*svg.asia path.subunit.CH1 { fill: #fb8072; }\nsvg.asia path.subunit.TWN { fill: #8dd3c7; }\nsvg.asia path.subunit.HKG { fill: #045a8d; }\nsvg.asia path.subunit.JPN { fill: #b3de69; }\nsvg.asia path.subunit.KOR { fill: #bc80bd; }\nsvg.asia path.subunit.IND { fill: #fdb462; }\nsvg.asia path.subunit.BTN { fill: #ffffb3; }\nsvg.asia path.subunit.NPL { fill: #80b1d3; }\nsvg.asia path.subunit.BGD { fill: #d9d9d9; }\nsvg.asia path.subunit.MMR { fill: #ccebc5; }\nsvg.asia path.subunit.THA { fill: #7489cf; }\nsvg.asia path.subunit.KHM { fill: #bebada; }\nsvg.asia path.subunit.VNM { fill: #df65b0; }\nsvg.asia path.subunit.LAO { fill: #fccde5; }\nsvg.asia path.subunit.PRK { fill: #989898; }*/\nsvg.northamerica path.subunit {fill: #1F77B4;}\nsvg.southamerica path.subunit {fill: #AA1F20;}\nsvg.asia path.subunit {fill: #FFBB78;}\nsvg.africa path.subunit {fill: #2CA02C;}\nsvg.europe path.subunit {fill: #FF7F0E;}\nsvg.australia path.subunit {fill: #AEC7E8;}\nsvg.middleeast path.subunit {fill: #009DE6;}\nsvg.northamerica path.subunit.asia_ctry { fill: #a52a2a; }\nsvg.southamerica path.subunit.asia_ctry { fill: #FCE94F; }\nsvg.asia path.subunit.asia_ctry { fill: #a52a2a; }\nsvg.africa path.subunit.asia_ctry { fill: #a52a2a; }\nsvg.europe path.subunit.asia_ctry { fill: #a52a2a; }\nsvg.australia path.subunit.asia_ctry { fill: #a52a2a; }\nsvg.middleeast path.subunit.asia_ctry { fill: #a52a2a; }\n/***D3 Geo Map Ends***/\n/*** User Dashboard Login Container Starts ***/\ndiv.header-bar {\n  float: right;\n  width: 52%;\n}\ndiv.login-container {\n  position: absolute;\n  right: 0;\n  width: 270px;\n}\ndiv.login-container span.lcleft {\n  float: left; \n  margin-left: 29px; \n  margin-top: -5px; \n  left: 10px;\n}\ndiv.login-container span.lcright {\n left: 100px;\n position: absolute;\n top: 0px;\n}\ndiv.login-container div.lcright-dropdown {\n  left: 0px;\n  position: absolute;\n  top: 20px;\n}\n/*** User Dashboard Login Container Ends ***/\ndiv.searchcontent1 {\n  position: relative;\n  top: 0px;\n  background: #FEFEFE;\n  border: 1px solid #DFE3E2;\n  width: 1212px;\n  height: 200px;\n  float: left;\n  display: table;\n  margin: 20px 10px 10px 10px; \n  text-align: center; \n  -webkit-box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n  box-shadow: 0px 0px 5px 0px rgba(128,128,128,.3);\n}\ndiv.searchcontent1 p {\n  padding: 15px;\n  text-align: left;\n}\ndiv.searchcontent1 h3 {\n  padding: 5px 15px 15px 15px;\n  text-align: left;\n}\n#page-section > div#findStatus {\n  text-align: center;\n  font-weight: bold;\n}\ntable.regtable {\n  background-color: transparent;\n  display: block;\n  position: relative;\n  overflow-x: auto;\n  left: 3px;\n  top: 5px;\n  /*width: 750px;*/  \n}\ntable.regtable tr {\n vertical-align: top;\n}\ntable.regtable tr td {\n  padding: 0 12px;\n  min-width: 120px;\n}\n.checkbox-custom-user input[type=\"checkbox\"] + label.checkbox-success:before {\n  border-color: #17A88B;\n}\n.checkbox-custom-user input[type=\"checkbox\"] + label.checkbox-success:after {\n  color: #FFF;\n}\n.checkbox-custom-user input[type=\"checkbox\"] + label.checkbox-warning:before {\n  border-color: #FFB61E;\n}\n.checkbox-custom-user input[type=\"checkbox\"] + label.checkbox-warning:after {\n  color: #FFF;\n}\n.checkbox-custom-user input[type=\"checkbox\"] + label.checkbox-error:before {\n  border-color: #E5343D;\n}\n.checkbox-custom-user input[type=\"checkbox\"] + label.checkbox-error:after {\n  color: #FFF;\n}\n.checkbox-custom-user input[type=\"checkbox\"]:checked + label:before {\n  background-color: #d9d9d9;\n}\n.checkbox-custom-user input[type=\"checkbox\"]:checked + label:after {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n}\n.checkbox-custom-user input[type=\"checkbox\"]:checked + label.checkbox-success:before {\n  background-color: #17A88B;\n}\n.checkbox-custom-user input[type=\"checkbox\"]:checked + label.checkbox-warning:before {\n  background-color: #FFB61E;\n}\n.checkbox-custom-user input[type=\"checkbox\"]:checked + label.checkbox-error:before {\n  background-color: #E5343D;\n}\n.form-horizontal .checkbox-custom-user > input[type=\"checkbox\"] {\n  display: none;\n}\n.checkbox-custom-user > input[type=\"checkbox\"] + label::before {\n    border: 2px solid #d9d9d9;\n    border-radius: 2px;\n    content: \"\";\n    height: 16px;\n    left: 0;\n    display: table;\n    font-weight: normal;\n    /*position: absolute;*/\n    top: 2px;\n    width: 16px;\n    float: left;\n    margin: 0px 5px 0px 0px;\n}\n.form-horizontal .checkbox-custom-user > label {\n    font-weight: normal;\n    height: 16px;\n    margin-right: 3px;\n    position: relative;\n    top: 3px;\n}\n.form-horizontal .checkbox-custom-user > label:hover {\n    cursor: pointer;\n}\n.form-horizontal .checkbox-custom-user > input[type=\"checkbox\"] + label::before {\n    top: 9px;\n}\n.form-horizontal .checkbox-custom-user > input[type=\"checkbox\"] + label::after {\n    /* top: 7px; */\n    top: -21px;\n}\n.checkbox-custom-user > input[type=\"checkbox\"] + label::after {\n    content: \"\";\n    font-family: \"Ionicons\";\n    font-size: 14px;\n    font-weight: normal;\n    left: 2px;\n    position: relative;\n    top: -1px;\n    display: table;\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    -webkit-transition: all 0.1s ease-in-out 0s;\n    transition: all 0.1s ease-in-out 0s;\n}\n.userformcontainer .widget {\n  width: auto;\n  min-width: 600px;\n}\nul.navmenu li.zmactive a {\n color: #EDD400;\n}\n.geoHighlight a {\n  color: #A52A2A;\n}\ndiv#datetimepicker1 {\n  z-index: 9999;\n}\n/*** Date Picker Days ***/\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-days table.table-condensed thead {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-days table.table-condensed tbody td.active {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-days table.table-condensed tbody td {\n  border: 1px solid #A52A2A;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-days table.table-condensed thead tr th.prev:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-days table.table-condensed thead tr th.next:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-days table.table-condensed thead tr th.picker-switch:hover {\n  background: #000000;  \n}\n/*** Date Picker Months ***/\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-months table.table-condensed thead {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-months table.table-condensed tbody td span.active {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-months table.table-condensed tbody td {\n  border: 1px solid #A52A2A;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-months table.table-condensed thead tr th.prev:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-months table.table-condensed thead tr th.next:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-months table.table-condensed thead tr th.picker-switch:hover {\n  background: #000000;  \n}\n/*** Date Picker Years ***/\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-years table.table-condensed thead {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-years table.table-condensed tbody td span.active {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-years table.table-condensed tbody td {\n  border: 1px solid #A52A2A;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-years table.table-condensed thead tr th.prev:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-years table.table-condensed thead tr th.next:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-years table.table-condensed thead tr th.picker-switch:hover {\n  background: #000000;  \n}\n/*** Date Picker Decades ***/\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-decades table.table-condensed thead {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-decades table.table-condensed tbody td span.active {\n  background: #A52A2A;\n  color: #FFF;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-decades table.table-condensed tbody td {\n  border: 1px solid #A52A2A;\n}\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-decades table.table-condensed thead tr th.prev:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-decades table.table-condensed thead tr th.next:hover,\nform.form-horizontal div.col-sm-5 div#datetimepicker1 .bootstrap-datetimepicker-widget ul.list-unstyled li div.datepicker div.datepicker-decades table.table-condensed thead tr th.picker-switch:hover {\n  background: #000000;  \n}\n/*** Advanced Search ***/\ndiv.advsearch input {\n  width: 93%;\n}\ndiv.advsearch select[multiple], \ndiv.advsearch select[size] {\n    height: auto;\n    width: 270px;\n}\n/*** Advanced Search ***/\n/****** Vahai Team Code Ends ***********/ "
+module.exports = "#whole{\r\n    display: inline-block;\r\n    width: 85%;\r\n    height: 100%;\r\n    border: 1px solid black;\r\n    top: 106px;\r\n    left: 200px;\r\n  }   "
 
 /***/ }),
 
 /***/ "./assets/app/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\n\n<!-- <pre>{{myData | json}}</pre> -->\n               \n<!-- <div *ngFor=\"let d of myData\">\n  {{d}}                        \n</div>                \n-->\n<!-- <li *ngFor=\"let item of myData\">\n  {{item.id}}            \n</li>      -->   \n<!-- <a routerLink=\"newuser\"><button class=\"btn btn-success pull-right\" > Add User</button></a> -->\n\n<h1>Zurik</h1>        \n  <nav>\n    <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">List Users</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Add User</a>  \n  </nav>       \n  <router-outlet></router-outlet>\n\n\n "
+module.exports = "<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\r\n\r\n<!-- <pre>{{myData | json}}</pre> -->\r\n\r\n<!-- <div *ngFor=\"let d of myData\">\r\n  {{d}}                        \r\n</div>                \r\n-->\r\n<!-- <li *ngFor=\"let item of myData\">\r\n  {{item.id}}            \r\n</li>      -->\r\n<!-- <a routerLink=\"newuser\"><button class=\"btn btn-success pull-right\" > Add User</button></a> -->\r\n\r\n<!-- <h1>Zurik</h1>                                                \r\n  <nav>\r\n    <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">List Users</a>\r\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Add User</a>  \r\n  </nav>  -->\r\n<!-- <app-list></app-list>  \r\n  <app-newuser></app-newuser>                         -->\r\n<!-- <router-outlet></router-outlet> -->\r\n<!-- \r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-12\">\r\n            \r\n        </div>\r\n\r\n    </div>\r\n     <div class=\"col-sm-4\" id=\"ttx\">      \r\n            \r\n        </div>\r\n        <div class=\"col-sm-8\" id=\"whole\">\r\n            <app-main-content></app-main-content>\r\n            <router-outlet></router-outlet>\r\n        </div>\r\n\r\n</div>    -->\r\n   \r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-12\">      \r\n            <app-header></app-header>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-4\">\r\n            <app-aside></app-aside>\r\n        </div>            \r\n        <div class=\"col-sm-8\" id=\"whole\">    \r\n            <app-main-content></app-main-content>\r\n            <router-outlet></router-outlet>      \r\n        </div>\r\n    </div>  \r\n</div>\r\n\r\n<!--    \r\n\r\n<div class=\"container\">\r\n    <div class=\"row\">   \r\n        <div class=\"col-sm-12\">\r\n            \r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-4\">   \r\n            \r\n        </div>\r\n        <div class=\"col-sm-8\" id=\"whole\">       \r\n               <app-main-content></app-main-content>\r\n               \r\n        </div>\r\n    </div>          \r\n</div>\r\n\r\n\r\n     <app-header></app-header>\r\n        <app-aside></app-aside>\r\n\r\n        <router-outlet></router-outlet>\r\n             -->"
 
 /***/ }),
 
@@ -131,6 +131,24 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__ = __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__list_list_component__ = __webpack_require__("./assets/app/app/list/list.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__country_country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__state_state_service__ = __webpack_require__("./assets/app/app/state/state.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__document_document_service__ = __webpack_require__("./assets/app/app/document/document.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__subdocumentmanagement_subdocumentmanagement_service__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__regulator_regulator_service__ = __webpack_require__("./assets/app/app/regulator/regulator.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__documentupload_documentupload_service__ = __webpack_require__("./assets/app/app/documentupload/documentupload.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__country_country_component__ = __webpack_require__("./assets/app/app/country/country.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__state_state_component__ = __webpack_require__("./assets/app/app/state/state.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__document_document_component__ = __webpack_require__("./assets/app/app/document/document.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__ = __webpack_require__("./assets/app/app/regulator/regulator.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__ = __webpack_require__("./assets/app/app/documentupload/documentupload.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -151,16 +169,94 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var appRoutes = [
-    { path: 'crisis-center', component: __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */] },
+    { path: 'userList', component: __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */] },
     {
-        path: 'heroes',
+        path: 'newUser',
         component: __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */]
     },
     {
         path: '',
-        redirectTo: '/crisis-center',
+        redirectTo: '/userList',
         pathMatch: 'full'
+    },
+    {
+        path: 'geoList',
+        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'geoCreate',
+        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'geoBack',
+        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'geoEdit/:id',
+        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+    },
+    {
+        path: 'couList',
+        component: __WEBPACK_IMPORTED_MODULE_25__country_country_component__["a" /* CountryComponent */]
+    },
+    {
+        path: 'couCreate',
+        component: __WEBPACK_IMPORTED_MODULE_25__country_country_component__["a" /* CountryComponent */]
+    },
+    {
+        path: 'stateList',
+        component: __WEBPACK_IMPORTED_MODULE_26__state_state_component__["a" /* StateComponent */]
+    },
+    {
+        path: 'stateCreate',
+        component: __WEBPACK_IMPORTED_MODULE_26__state_state_component__["a" /* StateComponent */]
+    },
+    {
+        path: 'docList',
+        component: __WEBPACK_IMPORTED_MODULE_27__document_document_component__["a" /* DocumentComponent */]
+    },
+    {
+        path: 'docCreate',
+        component: __WEBPACK_IMPORTED_MODULE_27__document_document_component__["a" /* DocumentComponent */]
+    },
+    {
+        path: 'subDocList',
+        component: __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
+    },
+    {
+        path: 'subDocCreate',
+        component: __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
+    },
+    {
+        path: 'regList',
+        component: __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__["a" /* RegulatorComponent */]
+    },
+    {
+        path: 'regCreate',
+        component: __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__["a" /* RegulatorComponent */]
+    },
+    {
+        path: 'docUplMgtList',
+        component: __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
     },
     { path: '**', component: __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
@@ -174,20 +270,331 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__aside_aside_component__["a" /* AsideComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__main_content_main_content_component__["a" /* MainContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__country_country_component__["a" /* CountryComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__state_state_component__["a" /* StateComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__document_document_component__["a" /* DocumentComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__["a" /* RegulatorComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_23__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_9__angular_router__["a" /* RouterModule */].forRoot(appRoutes),
+                // RouterModule.forRoot(
+                //   appRoutes,  
+                //  // { enableTracing: true } // <-- debugging purposes only
+                // ),
+                __WEBPACK_IMPORTED_MODULE_9__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_14__geography_create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_13__country_country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_15__state_state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_16__document_document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_17__subdocumentmanagement_subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_18__regulator_regulator_service__["a" /* RegulatorService */], __WEBPACK_IMPORTED_MODULE_19__documentupload_documentupload_service__["a" /* DocumentuploadService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/aside/aside.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/aside/aside.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<aside data-mcs-theme=\"minimal-dark\" class=\"main-sidebar mCustomScrollbar\">\r\n    <ul id=\"usertest\" class=\"list-unstyled navigation mb-0\" style=\"padding-top:30px;\">\r\n        <li class=\"sidebar-category\"></li>\r\n        <li id=\"dashboard_click\" class=\"panel\">\r\n            <a id=\"accdboard\" role=\"button\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse1\" aria-expanded=\"false\" aria-controls=\"collapse1\" class=\"bubble active collapsed\">\r\n                <i class=\"ion-ios-home-outline bg-purple\"></i>\r\n                <span class=\"sidebar-title accdboard\">Dashboard</span>\r\n                <span class=\"badge bg-danger\">9</span>\r\n            </a>\r\n\r\n            <ul id=\"collapse1\" class=\"list-unstyled collapse\">\r\n                <!-- <li>\r\n                <a id=\"usermgnt\">User Management</a>\r\n              </li> -->\r\n                <li>\r\n                    <a routerLink=\"/userList\" routerLinkActive=\"active\">User Management</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/newUser\" routerLinkActive=\"active\">New User</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/geoList\" routerLinkActive=\"active\">Geography Management</a>\r\n\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/couList\" routerLinkActive=\"active\">Country Management</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/stateList\" routerLinkActive=\"active\">State Management</a>\r\n                </li>\r\n                <li>\r\n                    <a id=\"dommgnt\">Domain Management</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/regList\" routerLinkActive=\"active\">Regulator Management</a>\r\n                </li>\r\n                <li>\r\n                    <a id=\"regmgnt\">Regulation Management</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/docList\" routerLinkActive=\"active\">Document Management</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/subDocList\" routerLinkActive=\"active\">Sub Document Management</a>\r\n                </li>\r\n                <li>\r\n                    <a routerLink=\"/docUplMgtList\" routerLinkActive=\"active\">Document Upload Management</a>\r\n                </li>\r\n                <li>\r\n                    <a id=\"newsMgnt\">News Management</a>\r\n                </li>\r\n                <li>\r\n                    <a id=\"alertMgnt\">Alert Management</a>\r\n                </li>\r\n            </ul>\r\n        </li>\r\n    </ul>\r\n    <li id=\"user_click\" class=\"panel\">\r\n        <a role=\"button\" id=\"profileMgnt\" data-toggle=\"collapse\" data-parent=\".navigation\" href=\"#collapse12\" aria-expanded=\"false\" aria-controls=\"collapse12\" class=\"bubble collapsed\">\r\n            <i class=\"ion-ios-person-outline bg-success\"></i>\r\n            <span class=\"sidebar-title\">Profile</span>\r\n            <span class=\"badge bg-danger\"></span>\r\n        </a>\r\n        <ul id=\"collapse12\" class=\"list-unstyled collapse\"></ul>\r\n    </li>\r\n</aside>"
+
+/***/ }),
+
+/***/ "./assets/app/app/aside/aside.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AsideComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AsideComponent = /** @class */ (function () {
+    function AsideComponent() {
+    }
+    AsideComponent.prototype.ngOnInit = function () {
+    };
+    AsideComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-aside',
+            template: __webpack_require__("./assets/app/app/aside/aside.component.html"),
+            styles: [__webpack_require__("./assets/app/app/aside/aside.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AsideComponent);
+    return AsideComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\r\n    <div class=\"widget-heading\">\r\n        <h3 class=\"widget-title\">Country Management</h3>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <div class=\"col-sm-offset-3 col-sm-9\">\r\n            <button id=\"createcountry\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\r\n\r\n        </div>\r\n    </div>\r\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\r\n        <thead>\r\n            <tr>\r\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\r\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\r\n                <th style=\"width:15%\" class=\"text-center\">Country Code</th>\r\n                <th style=\"width:15%\" class=\"text-center\">Geography</th>\r\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody id=\"country-list-table\">\r\n            <tr *ngFor=\"let country of myData; let i = index\">\r\n                <!--  ngfor comes here for list operation -->\r\n                <td class=\"text-center\">\r\n                    {{country.name}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{country.description}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{country.country_code}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{country.geoname}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    <div id=\"hide\">\r\n                        <span id=\"tocreatecountry\" class=\"published\">\r\n                            <a class=\"tooltips\">\r\n                                <span>\r\n                                    <button type=\"button\" (click)=\"loadArticleToEdit(country.id)\">Edit</button>\r\n                                </span>\r\n                                <img src=\"/images/edit.png\" />\r\n                            </a>\r\n                        </span>\r\n                        <span class=\"delete-country\" data-toggle=\"modal\" data-target=\"\">\r\n                            <a class=\"tooltips\">\r\n                                <span>\r\n                                    <td>\r\n                                        <button type=\"button\" (click)=\"deleteArticle(country.id)\">Delete</button>\r\n                                    </td>\r\n                                </span>\r\n                                <img src=\"/images/delete.png\" />\r\n                            </a>\r\n                        </span>\r\n                    </div>\r\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\r\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\r\n                            <div class=\"modal-content\">\r\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\r\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\r\n                                        <span aria-hidden=\"true\">×</span>\r\n                                    </button>\r\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Country Delete</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <p>Do you want to delete?</p>\r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\r\n                                    <button type=\"button\" id=\"deleteCountry\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n    <div id=\"findStatus\"></div>\r\n    <div class=\"user_load\">\r\n        <div id=\"loadMore\"></div>\r\n    </div>\r\n</ng-container>\r\n<ng-container *ngIf=\"correct\">\r\n    <div class=\"col-md-7\">\r\n        <div class=\"widget\">\r\n            <div class=\"widget-heading\">   \r\n                <h3 class=\"widget-title\">Country Set Up</h3>\r\n            </div>\r\n            <div class=\"widget-body\">\r\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Name</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryName\" [(ngModel)]=\" couInter.name\" #countryname/>\r\n                            <div id=\"country_name_error\" class=\"country_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Description</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" formControlName=\"countryDescription\" [(ngModel)]=\" couInter.description\" #countrydescription/>\r\n                            <div id=\"country_description_error\" class=\"country_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Country Code</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"countryCode\" [(ngModel)]=\" couInter.country_code\"\r\n                                #countrycode/>\r\n                            <div id=\"country_code_error\" class=\"country_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-group\">\r\n                            <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\r\n                            <div class=\"col-sm-9\">           \r\n                                <select class=\"form-control\" required formControlName=\"countryGeography\" [(ngModel)]=\"optionSelected\" (change)='onOptionsSelected($event)'\r\n                                    #selectGeography>       \r\n                                    <!-- <option value=\"0\"></option> -->\r\n                                    <option *ngFor='let option of geoData' [value]=\"option.id\">{{option.name}}</option> \r\n                                      \r\n                                </select>\r\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                            </div>\r\n                        </div>    \r\n                    <div class=\"form-group\">\r\n                        <div class=\"col-sm-offset-3 col-sm-9\">      \r\n                            <button *ngIf=\"!countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\r\n                            <button *ngIf=\"countryIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\r\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\r\n                        </div>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CountryComponent = /** @class */ (function () {
+    function CountryComponent(http, countryService, renderer, elem, _router) {
+        this.http = http;
+        this.countryService = countryService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.countryIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.optionSelected = 0;
+        this.couInter = {
+            name: '',
+            description: '',
+            geography_id: 0,
+            country_code: ''
+        };
+    }
+    CountryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            countryName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            countryDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            countryCode: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            countryGeography: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+        });
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/country', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+        this.geographyLoad = this.http.get('http://localhost:1337/geographys', { headers: headers }).subscribe(function (data) {
+            _this.geoData = data;
+            console.log(_this.geoData, "dfdsfdsfsdf");
+        });
+        this.getCountryAll();
+    };
+    CountryComponent.prototype.getCountryAll = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/country', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+    };
+    CountryComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/couCreate']);
+    };
+    CountryComponent.prototype.ngAfterViewInit = function () {
+    };
+    CountryComponent.prototype.onClickSubmit = function (data) {
+        console.log(this.geo_Value, this.geo_Text);
+    };
+    CountryComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.couName = this.countryname.nativeElement.value;
+        this.couDescription = this.countrydescription.nativeElement.value;
+        this.couCode = this.countrycode.nativeElement.value;
+        var geoLoadRef = this.selectGeography.nativeElement;
+        var optGeo = geoLoadRef.options[geoLoadRef.selectedIndex];
+        this.geo_Value = optGeo.value;
+        this.geo_Text = optGeo.text;
+        var couInter = {
+            name: this.couName,
+            description: this.couDescription,
+            geography_id: this.geo_Value,
+            country_code: this.couCode
+        };
+        if (this.countryIdToUpdate === null) {
+            this.countryService.saveCountry(couInter)
+                .subscribe(function (mySave) {
+                _this.saveCou = mySave;
+                console.log(_this.saveCou);
+                _this.getCountryAll();
+                _this._router.navigate(['/couList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            couInter.id = this.countryIdToUpdate;
+            this.countryService.updateCountryAll(couInter).subscribe(function (successCode) {
+                _this.getCountryAll();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    CountryComponent.prototype.loadArticleToEdit = function (couId) {
+        var _this = this;
+        console.log(this.geoData, "am a response");
+        this.countryService.getCountryById(couId).subscribe(function (geot) {
+            _this.countryIdToUpdate = geot[0].id;
+            console.log(_this.countryIdToUpdate);
+            _this.formdata.setValue({ countryName: geot[0].name, countryDescription: geot[0].description, countryCode: geot[0].country_code, countryGeography: geot[0].geo_id });
+        });
+        this.correct = !this.correct;
+    };
+    CountryComponent.prototype.deleteArticle = function (couId) {
+        var _this = this;
+        this.countryService.deleteCountryById(couId)
+            .subscribe(function (geot) {
+            _this.getCountryAll();
+        });
+        this._router.navigate(['/couList']);
+    };
+    CountryComponent.prototype.onOptionSelected = function (event) {
+        console.log(event); //option value will be sent as event
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countryname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "countryname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countrydescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "countrydescription", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countrycode"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "countrycode", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectGeography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], CountryComponent.prototype, "selectGeography", void 0);
+    CountryComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-country',
+            template: __webpack_require__("./assets/app/app/country/country.component.html"),
+            styles: [__webpack_require__("./assets/app/app/country/country.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], CountryComponent);
+    return CountryComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/country/country.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var CountryService = /** @class */ (function () {
+    function CountryService(http) {
+        this.http = http;
+    }
+    CountryService.prototype.saveCountry = function (couCreate) {
+        return this.http.post("http://localhost:1337/createcountry", couCreate, httpOptions);
+    };
+    CountryService.prototype.getCountryById = function (geoId) {
+        return this.http.get("http://localhost:1337/findcountry" + "/" + geoId);
+    };
+    CountryService.prototype.getGeographyOnly = function () {
+        return this.http.get("http://localhost:1337/geographys").map(function (res) { return res; });
+    };
+    CountryService.prototype.updateCountryAll = function (cou) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.post("http://localhost:1337/updatecountry", cou, httpOptions);
+    };
+    CountryService.prototype.deleteCountryById = function (couId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroycountry', { body: { country_id: couId }, headers: httpHeaders, responseType: 'text' });
+    };
+    CountryService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], CountryService);
+    return CountryService;
 }());
 
 
@@ -236,6 +643,595 @@ var DemoService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./assets/app/app/document/document.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\r\n  <div class=\"widget-heading\">      \r\n    <h3 class=\"widget-title\">Document Management</h3>\r\n                       \r\n  </div>\r\n  <div class=\"form-group\">                     \r\n    <div class=\"col-sm-offset-3 col-sm-9\">\r\n      <button id=\"createdoctype\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\r\n\r\n    </div>\r\n  </div>\r\n  <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\r\n    <thead>\r\n      <tr>\r\n        <th class=\"text-center\">Name</th>\r\n        <th class=\"text-center\">Description</th>\r\n        <th class=\"text-center\">Operation</th>\r\n      </tr>\r\n    </thead>           \r\n    <tbody id=\"doc-list-table\">   \r\n      <tr *ngFor=\"let doc of documentResponse; let i = index\">\r\n        <!-- ngfor goes here -->\r\n        <td class=\"text-left\">\r\n          {{doc.name}}\r\n        </td>\r\n        <td class=\"text-center\">\r\n          {{doc.description}}\r\n        </td>\r\n        <td class=\"text-center\">\r\n          <div>\r\n            <span id=\"toeditdoctype\" class=\"published\">\r\n              <a class=\"tooltips\">\r\n                <span>\r\n                  <button type=\"button\" (click)=\"loadArticleToEdit(doc.id)\">Edit</button>\r\n                </span>\r\n                <img src=\"/images/edit.png\" />\r\n              </a>\r\n            </span>\r\n            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"\">\r\n              <a class=\"tooltips\">\r\n                <span>\r\n                  <button type=\"button\" (click)=\"deleteArticle(doc.id)\">Delete</button>\r\n                </span>\r\n                <img src=\"/images/delete.png\" />\r\n              </a>\r\n            </span>\r\n          </div>\r\n          <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\r\n            <div role=\"document\" class=\"modal-dialog modal-sm\">\r\n              <div class=\"modal-content\">\r\n                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\r\n                  <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\r\n                    <span aria-hidden=\"true\">×</span>\r\n                  </button>\r\n                  <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\r\n                </div>\r\n                <div class=\"modal-body\">\r\n                  <p>Do you want to delete?</p>\r\n                </div>\r\n                <div class=\"modal-footer\">\r\n                  <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\r\n                  <button type=\"button\" data-dismiss=\"modal\" id=\"delDocumentType\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <div id=\"findStatus\"></div>\r\n  <div class=\"doc_load\">\r\n    <div id=\"loadMore\"></div>\r\n  </div>\r\n</ng-container>\r\n<ng-container *ngIf=\"correct\">\r\n  <div class=\"col-md-7\">\r\n    <div class=\"widget\">\r\n      <div class=\"widget-heading\">           \r\n        <h3 class=\"widget-title\">Document Set Up</h3>\r\n        <h3 class=\"widget-title\" *ngIf=\"documentIdToUpdate\">Edit Document</h3>      \r\n      </div>\r\n      <div class=\"widget-body\">\r\n        <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\r\n          <div class=\"form-group\">\r\n            <label class=\"col-sm-3 control-label\">Name</label>\r\n            <div class=\"col-sm-9\">\r\n              <input type=\"text\" class=\"form-control\" formControlName=\"documentName\" [(ngModel)]=\"docInter.name\" #doctypename/>\r\n              <div id=\"doctype_name_error\" class=\"doctype_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label class=\"col-sm-3 control-label\">Description</label>\r\n            <div class=\"col-sm-9\">\r\n              <input type=\"text\" class=\"form-control\" formControlName=\"documentDescription\" [(ngModel)]=\"docInter.description\" #doctypedescription/>\r\n              <div id=\"doctype_description_error\" class=\"doctype_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <div class=\"col-sm-offset-3 col-sm-9\">\r\n              <button *ngIf=\"!documentIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\r\n              <button *ngIf=\"documentIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\r\n              <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\r\n            </div>\r\n          </div>\r\n        \r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__document_service__ = __webpack_require__("./assets/app/app/document/document.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DocumentComponent = /** @class */ (function () {
+    function DocumentComponent(http, documentService, renderer, elem, _router) {
+        this.http = http;
+        this.documentService = documentService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.documentIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.docInter = {
+            name: '',
+            description: ''
+        };
+    }
+    DocumentComponent.prototype.ngOnInit = function () {
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            documentName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            documentDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        this.loadAllDocuments();
+    };
+    DocumentComponent.prototype.loadAllDocuments = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/doctype', { headers: headers }).subscribe(function (data) {
+            _this.documentResponse = data;
+            console.log(data);
+        });
+    };
+    DocumentComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/docCreate']);
+    };
+    DocumentComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.getDocName = this.doctypename.nativeElement.value;
+        this.getDocDescription = this.doctypedescription.nativeElement.value;
+        var docInter = {
+            name: this.getDocName,
+            description: this.getDocDescription
+        };
+        if (this.documentIdToUpdate === null) {
+            this.documentService.saveDocument(docInter)
+                .subscribe(function (mySave) {
+                _this.saveDoc = mySave;
+                console.log(_this.saveDoc);
+                _this.loadAllDocuments();
+                _this._router.navigate(['/docList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            docInter.id = this.documentIdToUpdate;
+            this.documentService.updateDocument(docInter).subscribe(function (successCode) {
+                _this.loadAllDocuments();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    DocumentComponent.prototype.loadArticleToEdit = function (documentId) {
+        var _this = this;
+        this.documentService.getDocumentById(documentId)
+            .subscribe(function (doc) {
+            _this.documentIdToUpdate = doc[0].id;
+            _this.formdata.setValue({ documentName: doc[0].name, documentDescription: doc[0].description });
+        });
+        this.correct = !this.correct;
+    };
+    DocumentComponent.prototype.deleteArticle = function (documentId) {
+        var _this = this;
+        this.documentService.deleteDocumentById(documentId)
+            .subscribe(function (doc) {
+            _this.loadAllDocuments();
+        });
+        this._router.navigate(['/docList']);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("doctypename"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], DocumentComponent.prototype, "doctypename", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("doctypedescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], DocumentComponent.prototype, "doctypedescription", void 0);
+    DocumentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-document',
+            template: __webpack_require__("./assets/app/app/document/document.component.html"),
+            styles: [__webpack_require__("./assets/app/app/document/document.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], DocumentComponent);
+    return DocumentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/document/document.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var DocumentService = /** @class */ (function () {
+    function DocumentService(http) {
+        this.http = http;
+    }
+    DocumentService.prototype.saveDocument = function (insertDocument) {
+        return this.http.post("http://localhost:1337/createDocType", insertDocument, httpOptions);
+    };
+    DocumentService.prototype.updateDocument = function (updateDocument) {
+        return this.http.post("http://localhost:1337/updateDocType", updateDocument, httpOptions);
+    };
+    DocumentService.prototype.getDocumentById = function (doumentId) {
+        return this.http.get("http://localhost:1337/findDocType" + "/" + doumentId);
+    };
+    DocumentService.prototype.deleteDocumentById = function (doumentId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroydocument', { body: { document_id: doumentId }, headers: httpHeaders, responseType: 'text' });
+    };
+    DocumentService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], DocumentService);
+    return DocumentService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/documentupload/documentupload.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/documentupload/documentupload.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Document Upload Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <!-- {#upload} -->\n            <button id=\"renderFileUploadPage\" class=\"btn btn-success btn-rounded btn-block\">Upload File</button>\n            <!-- {/upload} -->\n            <!--click event for upload documents-->\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:6%\" class=\"text-center\">Geography</th>\n                <th style=\"width:10%\" class=\"text-center\">Domain</th>\n                <th style=\"width:10%\" class=\"text-center\">Country</th>\n                <th style=\"width:10%\" class=\"text-center\">State</th>\n                <th style=\"width:10%\" class=\"text-center\">Regulator</th>\n                <th style=\"width:10%\" class=\"text-center\">Regulation</th>\n                <th style=\"width:10%\" class=\"text-center\">Document</th>\n                <th style=\"width:10%\" class=\"text-center\">SubDocument</th>\n                <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"doc-list-table\">\n            <tr *ngFor=\"let dres of documentResponse; let i = index\">\n                <!-- ngfor goes here -->\n                <td class=\"text-center\">\n                    {{dres.gname}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.dname}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.coname}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.stname}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.regtrName}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.rname}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.docname}}\n                </td>\n                <td class=\"text-center\">\n                    {{dres.sdocname}}\n                </td>\n\n                <td class=\"text-center\">\n                    {{dres.fname}}\n                </td>\n                <td class=\"text-center\">\n                    <div>\n                        <!-- {#publish} -->\n\n                        <!-- <% if (tobepublished == 1) {%> -->\n                        <span class=\"published\" data-toggle=\"modal\" data-target=\"#pub<%=fid%>\"><a class=\"tooltips\"><span>Published</span><img src=\"/images/published.png\" /></a>\n                        </span>\n                        <!-- <% } else { %> -->\n                        <span class=\"not-published\" data-toggle=\"modal\" data-target=\"#pub<%=fid%>\"><a class=\"tooltips\"><span>Publish</span><img src=\"/images/publish.png\" /></a>\n                        </span>\n                        <!-- <% } %> -->\n                        <!-- {/publish} {#delete} -->\n                        <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=fid%>\"><a class=\"tooltips\"><span>Delete</span><img src=\"/images/delete.png\" /></a>\n                        </span>\n                        <!-- {/delete} -->\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"pub<%=fid%>\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Publish</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to publish?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" data-dismiss=\"modal\" id=\"publishDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=fid%>\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" data-dismiss=\"modal\" id=\"delDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Lifecycle Document Upload Management</h3>\n    </div>\n\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:6%\" class=\"text-center\">DocumentType</th>\n                <th style=\"width:10%\" class=\"text-center\">Description</th>\n                <th style=\"width:10%\" class=\"text-center\">Date</th>\n                <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"spdoc-list-table\">\n            <tr *ngFor=\"let spres of spDocumentResponse; let i = index\">\n                <!-- ngfor goes here -->\n                <td class=\"text-center\">\n                    {{spres.document_type}}\n                </td>\n                <td class=\"text-center\">\n                    {{spres.description}}\n                </td>\n                <td class=\"text-center\">\n                    {{spres.date}}\n                </td>\n                <td class=\"text-center\">\n                    {{spres.file_name}}\n                </td>\n                <td class=\"text-center\">\n                    <div>\n\n                        <span id=\"editSpclDoc\" class=\"published\"><a class=\"tooltips\"><span>Edit</span><img src=\"/images/edit.png\" /></a>\n                        </span>\n                        <!-- {#publish} -->\n\n                        <!-- <% if (is_published == 1) {%> -->\n                        <span class=\"published\" data-toggle=\"modal\" data-target=\"#pub<%=spid%>\"><a class=\"tooltips\"><span>Published</span><img src=\"/images/published.png\" /></a>\n                        </span>\n                        <!-- <% } else { %> -->\n                        <span class=\"not-published\" data-toggle=\"modal\" data-target=\"#pub<%=spid%>\"><a class=\"tooltips\"><span>Publish</span><img src=\"/images/publish.png\" /></a>\n                        </span>\n                        <!-- <% } %> -->\n                        <!-- {/publish} {#delete} -->\n                        <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#del<%=spid%>\"><a class=\"tooltips\"><span>Delete</span><img src=\"/images/delete.png\" /></a>\n                        </span>\n                        <!-- {/delete} -->\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"pub<%=spid%>\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Publish</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to publish?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" data-dismiss=\"modal\" id=\"publishDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"del<%=spid%>\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" data-dismiss=\"modal\" id=\"delDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatusSpclDoc\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMoreSpclDoc\"></div>\n    </div>\n</ng-container>\n<!--file upload after click action for container  starts-->\n<ng-container *ngIf=\"correct\">\n\n    <div id=\"filePage\">\n        <span style=\"width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;\">       \n              <label for=\"message_name\">Message</label>\n                <input id=\"message_name\" type=\"text\" class=\"form-control\" style=\"width:500px;\">\n                <div id=\"message_name_error\" class=\"message_name_error\" style=\"font-size: 12px; color: #FF0000; \">\n          </div> \n          </span><br><br><br><br>\n\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n            <div class=\"form-group\">\n              <label for=\"selectGeo\">Select Geography</label>\n              <select id=\"selectGeo\" class=\"form-control\">\n                \n              </select>\n            </div>      \n          </span>\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\"> \n            <div class=\"form-group\">\n              <label for=\"selectCountry\">Select Country</label>\n              <select id=\"selectCountry\" class=\"form-control\" disabled=\"disabled\">\n                \n              </select>\n            </div>          \n          </span>\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n              <div class=\"form-group\">\n              <label for=\"selectState\">Select State</label>\n              <select id=\"selectState\" class=\"form-control\" disabled=\"disabled\">  \n              </select>\n            </div>   \n          </span>\n        <br><br><br><br>\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n          <div class=\"form-group\">\n              <label for=\"selectDomain\">Select Domain</label>\n              <select id=\"selectDomain\" class=\"form-control\" disabled=\"disabled\">\n                \n              </select>\n            </div>     \n          </span>\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n            <div class=\"form-group\">\n              <label for=\"selectRegulator\">Select Regulator</label>\n              <select id=\"selectRegulator\" class=\"form-control\" disabled=\"disabled\">\n                \n              </select>\n            </div>      \n          </span>\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n            <div class=\"form-group\">\n              <label for=\"selectReg\">Select Regulation</label>\n              <select id=\"selectReg\" class=\"form-control\" disabled=\"disabled\">\n                \n              </select>\n            </div>      \n          </span><br><br><br><br>\n\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n            <div class=\"form-group\">\n              <label for=\"selectRootDoc\">Select Document</label>\n              <select id=\"selectRootDoc\" class=\"form-control\" disabled=\"disabled\">          \n              </select>\n            </div>      \n          </span>\n\n        <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n            <div class=\"form-group\">\n              <label for=\"selectSubDoc\" id=\"selectDocName\">Select Sub Document</label>\n              <select id=\"selectSubDoc\" class=\"form-control parent_control\" disabled=\"disabled\">  \n              </select>\n              </div>\n          </span>\n\n        <span id=\"upload-span\" style=\"width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;\">\n            <div class=\"form-group\">\n              <label for=\"uploadFile\">Upload File</label>\n              <input type=\"file\" name=\"uploadFile\" id=\"uploadFile\" disabled=\"\" data-buttonname=\"btn-outline btn-primary\" data-iconname=\"ion-image mr-5\" class=\"filestyle\" style=\"position: absolute; clip: rect(0px, 0px, 0px, 0px);\" tabindex=\"-1\">\n              <div style=\"width:300px; position: relative; left: 10px; margin-top: 0px 20px;\" class=\"bootstrap-filestyle input-group\">\n                <input id=\"fileName\" class=\"form-control \" placeholder=\"\" disabled=\"\" type=\"text\"> \n                <div id=\"file_error\" class=\"file_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                <span class=\"group-span-filestyle input-group-btn\" tabindex=\"0\">\n                  <label id=\"uploadFileLabel\" disable=\"\" for=\"uploadFile\" class=\"btn btn-outline btn-primary-red\" style=\"cursor: not-allowed;\">\n                    <span class=\"icon-span-filestyle ion-image mr-5\"></span>\n        <span class=\"buttonText\">Choose file</span>\n        </label>\n        </span>\n    </div>\n    </div>\n    </span>\n\n    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"chooseFileid\">\n        <div role=\"document\" class=\"modal-dialog modal-sm\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Upload Document</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <p>Please upload pdf/xlsx documents</p>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\" id=\"modalClose\">Ok</button>\n                </div>\n            </div>\n        </div>\n    </div>\n    </div>\n\n</ng-container>\n<!--file upload after click action for container ends-->\n<!--after life tracker dropdown click-->\n<ng-container *ngIf=\"correct\">\n    <div class=\"widget-heading\" id=\"title\">\n        <h3 class=\"widget-title\">LifeTracker Document</h3>\n    </div>\n\n    <div id=\"addTracker\">\n        <div id=\"trackerList\">\n            <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n        <div class=\"form-group\">\n          <label for=\"document_type\">Select DocumentType</label>\n          <select id=\"document_type\" class=\"form-control select_document_type\">\n        \n        </select>  \n        </div>      \n      </span>\n\n            <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n        <div class=\"form-group\">\n          <label for=\"description\">Description</label>\n              <input id=\"docTypedescription\" name=\"docTypedescription\" type=\"text\" class=\"form-control docTypedescription\" maxlength=\"2400\"/>\n\n        </div>\n      </span>\n\n            <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n        <div class=\"form-group\">\n          <label for=\"date\">Date</label>\n            \n                <div id=\"datetimepicker1\" class=\"input-group date\">\n                  <input type=\"text\" id=\"dateDoc\" name=\"dateDoc\" data-date-format='YYYY-MM-DD' class=\"form-control dateDoc\">\n                   <div id=\"news_date_error\" class=\"\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                </div>             \n        </div>\n      </span>\n\n            <span style=\"width:195px; position: relative; left: 10px; margin-top: 0px 20px;float: left;\">\n    <div class=\"form-group\">\n      <label for=\"uploadFileDoc\">Upload File</label>\n      <input type=\"file\" name=\"uploadFileDoc\" id=\"uploadFileDoc\" data-buttonname=\"btn-outline btn-primary\" data-iconname=\"ion-image mr-5\" class=\"filestyle\" style=\"position: absolute; clip: rect(0px, 0px, 0px, 0px);\" tabindex=\"-1\">\n      <div style=\"width:300px; position: relative; left: 10px; margin-top: 0px 20px;\" class=\"bootstrap-filestyle input-group\">\n        <input id=\"lifeTrackerfileName\" class=\"form-control lifeTrackerfileName\" placeholder=\"\" disabled=\"\" type=\"text\"> \n        <div id=\"file_error_doc\" class=\"file_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n        <span class=\"group-span-filestyle input-group-btn\" tabindex=\"0\">\n          <label id=\"uploadFileLabelDoc\" for=\"uploadFileDoc\" class=\"btn btn-outline btn-primary-red\">\n            <span class=\"icon-span-filestyle ion-image mr-5\"></span>\n            <span class=\"buttonText\">Choose file</span>\n            </label>\n            </span>\n        </div>\n    </div>\n    </span>\n\n    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"chooseFileidDoc\">\n        <div role=\"document\" class=\"modal-dialog modal-sm\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Upload Document</h4>\n                </div>\n                <div class=\"modal-body\">\n                    <p>Please upload pdf/xlsx documents</p>\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\" id=\"modalDocClose\">Ok</button>\n                </div>\n            </div>\n        </div>\n    </div>\n    </div>\n    </div>\n\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:6%\" class=\"text-center\">DocumentType</th>\n                <th style=\"width:10%\" class=\"text-center\">Description</th>\n                <th style=\"width:10%\" class=\"text-center\">Date</th>\n                <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"doc-list-table\"></tbody>\n    </table>\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/documentupload/documentupload.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentuploadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__documentupload_service__ = __webpack_require__("./assets/app/app/documentupload/documentupload.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var DocumentuploadComponent = /** @class */ (function () {
+    function DocumentuploadComponent(http, documentService, renderer, elem, _router) {
+        this.http = http;
+        this.documentService = documentService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.correct = false;
+    }
+    DocumentuploadComponent.prototype.ngOnInit = function () {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+    };
+    DocumentuploadComponent.prototype.specialDocumentListLoad = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/document', { headers: headers }).subscribe(function (data) {
+            _this.documentResponse = data;
+            console.log(data);
+        });
+    };
+    DocumentuploadComponent.prototype.documentListLoad = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/spdocument', { headers: headers }).subscribe(function (data) {
+            _this.spDocumentResponse = data;
+            console.log(data);
+        });
+    };
+    DocumentuploadComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-documentupload',
+            template: __webpack_require__("./assets/app/app/documentupload/documentupload.component.html"),
+            styles: [__webpack_require__("./assets/app/app/documentupload/documentupload.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__documentupload_service__["a" /* DocumentuploadService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]])
+    ], DocumentuploadComponent);
+    return DocumentuploadComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/documentupload/documentupload.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentuploadService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DocumentuploadService = /** @class */ (function () {
+    function DocumentuploadService() {
+    }
+    DocumentuploadService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], DocumentuploadService);
+    return DocumentuploadService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/geography/create.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var CreateService = /** @class */ (function () {
+    function CreateService(http) {
+        this.http = http;
+    }
+    CreateService.prototype.saveGeography = function (geocreate) {
+        return this.http.post("http://localhost:1337/createGeo", geocreate, httpOptions);
+    };
+    CreateService.prototype.updateGeography = function (geo) {
+        return this.http.post("http://localhost:1337/updateGeo", geo, httpOptions);
+    };
+    CreateService.prototype.getGeographyById = function (geoId) {
+        return this.http.get("http://localhost:1337/findgeo" + "/" + geoId);
+    };
+    CreateService.prototype.deleteGeographyById = function (geoId) {
+        // return this.http.request('delete', 'http://localhost:1337/destroygeography', { body: { geography_id: geoId} });
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroygeography', { body: { geography_id: geoId }, headers: httpHeaders, responseType: 'text' });
+    };
+    CreateService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], CreateService);
+    return CreateService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/geography/geography.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/geography/geography.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\r\n    <div class=\"widget-heading\">\r\n        <h3 class=\"widget-title\">Geography Management</h3>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <div class=\"col-sm-offset-3 col-sm-9\">\r\n            <button id=\"creategeo\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\r\n\r\n        </div>\r\n\r\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\r\n            <thead>\r\n                <tr>\r\n                    <th style=\"width:15%\" class=\"text-center\">Name</th>\r\n                    <th style=\"width:15%\" class=\"text-center\">Description</th>\r\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\r\n                </tr>\r\n            </thead>\r\n            <tbody id=\"doc-list-table\">\r\n\r\n                <tr *ngFor=\"let employee of myData; let i = index\">\r\n                    <td class=\"text-center\">\r\n                        {{employee.name}}\r\n                    </td>\r\n                    <td class=\"text-center\">\r\n                        {{employee.description}}\r\n                    </td>\r\n                    <td class=\"text-center\">\r\n                        <div id=\"hide\">\r\n                            <span id=\"tocreategeo\" class=\"published\">  \r\n                                <a class=\"tooltips\">\r\n                    <span><button type=\"button\" (click)=\"loadArticleToEdit(employee.id)\">Edit</button></span>\r\n                                    <img src=\"/images/edit.png\" />\r\n                                </a>\r\n                            </span>       \r\n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\r\n                                <a class=\"tooltips\">\r\n                    <span><td><button type=\"button\" (click)=\"deleteArticle(employee.id)\">Delete</button></td></span>\r\n                                    <img src=\"/images/delete.png\" />\r\n                                </a>\r\n                            </span>\r\n                        </div>\r\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\r\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\r\n                                <div class=\"modal-content\">\r\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\r\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\r\n                                            <span aria-hidden=\"true\">×</span>\r\n                                        </button>\r\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Geography Delete</h4>\r\n                                    </div>\r\n                                    <div class=\"modal-body\">\r\n                                        <p>Do you want to delete?</p>\r\n                                    </div>\r\n                                    <div class=\"modal-footer\">\r\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\r\n                                        <button type=\"button\" id=\"delGeography\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n            </tbody>\r\n        </table>\r\n\r\n        <div id=\"findStatus\"></div>\r\n        <div class=\"user_load\">\r\n            <div id=\"loadMore\">\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</ng-container>\r\n<ng-container *ngIf=\"correct\">\r\n    <div class=\"col-md-7\">\r\n        <div class=\"widget\">\r\n            <div class=\"widget-heading\">\r\n                <h3 class=\"widget-title\">Geography Set Up</h3>\r\n            </div>\r\n            <div class=\"widget-body\">\r\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Name</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geographyName\" [(ngModel)]=\" geoCreate.name\" #geoname/>\r\n                            <div id=\"geo_name_error\" class=\"geo_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Description</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" formControlName=\"geoDescription\" [(ngModel)]=\" geoCreate.description\" #geodescription/>\r\n                            <div id=\"geo_description_error\" class=\"geo_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-group\">\r\n                        <div class=\"col-sm-offset-3 col-sm-9\">\r\n                            <!-- <input type=\"submit\" class=\"btn btn-outline btn-success\" value=\"Save\"> -->\r\n<button *ngIf=\"!articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>  \r\n<button *ngIf=\"articleIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>                       \r\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\r\n                        </div>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>     \r\n    </div>\r\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/geography/geography.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GeographyComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var GeographyComponent = /** @class */ (function () {
+    function GeographyComponent(http, createService, renderer, elem, _router) {
+        this.http = http;
+        this.createService = createService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.articleIdToUpdate = null;
+        this.show = false;
+        this.buttonName = 'Show';
+        this.correct = false;
+        this.geoCreate = {
+            name: '',
+            description: ''
+        };
+    }
+    GeographyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            geographyName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            geoDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/geography', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+        this.getGeographyAll();
+    };
+    GeographyComponent.prototype.getGeographyAll = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/geography', { headers: headers }).subscribe(function (data) {
+            _this.myData = data;
+            console.log(data);
+        });
+    };
+    GeographyComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/geoCreate']);
+    };
+    GeographyComponent.prototype.onClickSubmit = function (data) {
+    };
+    GeographyComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.getGeoName = this.geoname.nativeElement.value;
+        this.getGeoDescription = this.geodescription.nativeElement.value;
+        this.router = __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */];
+        var geoCreate = {
+            name: this.getGeoName,
+            description: this.getGeoDescription
+        };
+        var geoform = this.formdata.value;
+        console.log(this.articleIdToUpdate);
+        if (this.articleIdToUpdate === null) {
+            this.createService.saveGeography(geoCreate)
+                .subscribe(function (mySave) {
+                _this.saveGeo = mySave;
+                console.log(_this.saveGeo);
+                _this.getGeographyAll();
+                _this._router.navigate(['/geoList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            geoCreate.id = this.articleIdToUpdate;
+            this.createService.updateGeography(geoCreate).subscribe(function (successCode) {
+                _this.getGeographyAll();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    GeographyComponent.prototype.loadArticleToEdit = function (geoId) {
+        var _this = this;
+        this.createService.getGeographyById(geoId)
+            .subscribe(function (geot) {
+            _this.articleIdToUpdate = geot[0].id;
+            _this.formdata.setValue({ geographyName: geot[0].name, geoDescription: geot[0].description });
+        });
+        this.correct = !this.correct;
+    };
+    GeographyComponent.prototype.deleteArticle = function (geoId) {
+        var _this = this;
+        this.createService.deleteGeographyById(geoId)
+            .subscribe(function (geot) {
+            _this.getGeographyAll();
+        });
+        this._router.navigate(['/geoList']);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geoname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], GeographyComponent.prototype, "geoname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geodescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], GeographyComponent.prototype, "geodescription", void 0);
+    GeographyComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-geography',
+            template: __webpack_require__("./assets/app/app/geography/geography.component.html"),
+            styles: [__webpack_require__("./assets/app/app/geography/geography.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], GeographyComponent);
+    return GeographyComponent;
+}());
+
+// this.articleIdToUpdate = geot[0].id;     
+// console.log("am loadArticle",this.articleIdToUpdate)  
+// this.formdata.setValue({ geographyName: geo.name, geoDescription: geo.description });
+// let geoCreate: GeoCreate = {
+//   name: this.getGeoName,
+//   description: this.getGeoDescription
+// }  
+/*       useful
+  console.log(geot);
+        console.log(geot[0].name);
+        console.log(geot[0].description);  */ 
+
+
+/***/ }),
+
+/***/ "./assets/app/app/header/header.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/header/header.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header>\r\n        <a href=\"javascript:;\" role=\"button\" class=\"hamburger-menu pull-left\">\r\n          <span></span>  \r\n        </a>            \r\n        <div>  \r\n          <div style=\"float:right; overflow: visible\" align=\"top\">\r\n            <h4 class=\"media-heading fs-16\">user_name</h4>\r\n            <div class=\"dropdown\">\r\n              <a id=\"dropdown-status\" href=\"javascript:;\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"true\"\r\n                class=\"dropdown-toggle\">\r\n                <span class=\"status bg-success\"></span>\r\n                <a href=\"/logout\">Logout</a>    host\r\n              </a>\r\n            </div>\r\n          </div>\r\n          <div class=\"image-container234\" style=\"position:absolute; top:20px;right:180px\">\r\n            <div id=\"esp-user-profile\" data-percent=\"66\" style=\"height: 56px; width: 56px; line-height: 40px; padding: 8px; cursor: pointer;\"\r\n              class=\"easy-pie-chart\">\r\n              <img src=\"{profile_image_link}\" alt=\"\" class=\"avatar img-circle\" width=\"42\" height=\"42\" align=\"top\">\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"zurik-con\" style=\"height: 56px; width: 56px; line-height: 40px; padding: 8px;\">\r\n          <a style=\"left: 100px; top: 20px;\" href=\"/adminDashboard\" class=\"brand\"></a>\r\n        </div>\r\n      </header>"
+
+/***/ }),
+
+/***/ "./assets/app/app/header/header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HeaderComponent = /** @class */ (function () {
+    function HeaderComponent() {
+    }
+    HeaderComponent.prototype.ngOnInit = function () {
+    };
+    HeaderComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-header',
+            template: __webpack_require__("./assets/app/app/header/header.component.html"),
+            styles: [__webpack_require__("./assets/app/app/header/header.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], HeaderComponent);
+    return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./assets/app/app/list/list.component.css":
 /***/ (function(module, exports) {
 
@@ -246,7 +1242,7 @@ module.exports = ""
 /***/ "./assets/app/app/list/list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <button type=\"button\" class=\"btn btn-primary-outline pull-right\" (click)=\"btnClick();\">\n    <i class=\"fa fa-plus\"></i> Add User</button>    -->\n                        \n<kendo-grid [data]=\"myData\" [height]=\"410\">\n  <kendo-grid-column field=\"id\" title=\"ID\" width=\"40\">       \n  </kendo-grid-column>\n  <kendo-grid-column field=\"user_name\" title=\"Name\" width=\"250\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"type\" title=\"Category\">\n  </kendo-grid-column>   \n  <kendo-grid-column field=\"access_reg\" title=\"Access\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"access1_reg\" title=\"Access 1\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"mobile_no\" title=\"Mobile\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"email_id\" title=\"Email\" width=\"80\">\n  </kendo-grid-column>\n  <!-- <kendo-grid-column field=\"access_geo\" title=\"Geo\" width=\"80\">\n  </kendo-grid-column> -->          \n  <kendo-grid-column field=\"renewal_date\" title=\"Date\" width=\"80\">\n  </kendo-grid-column>\n  <kendo-grid-column field=\"Discontinued\" title=\"Edit\" width=\"120\">\n      <ng-template kendoGridCellTemplate let-dataItem>\n          <input type=\"checkbox\" (click)=\"selectAllStudentsChange($event)\"   \n          [checked]=\"dataItem.Discontinued\"/>\n      </ng-template>\n  </kendo-grid-column>       \n  <kendo-grid-column field=\"Discontinued\" title=\"Delete\" width=\"120\">\n    <ng-template kendoGridCellTemplate let-dataItem>\n        <input type=\"checkbox\" [checked]=\"dataItem.Discontinued\"/>\n    </ng-template>\n</kendo-grid-column>\n</kendo-grid>"
+module.exports = "<!-- <button type=\"button\" class=\"btn btn-primary-outline pull-right\" (click)=\"btnClick();\">\r\n    <i class=\"fa fa-plus\"></i> Add User</button>    -->\r\n\r\n<!-- <kendo-grid [data]=\"myData\" [height]=\"410\">\r\n  <kendo-grid-column field=\"id\" title=\"ID\" width=\"40\">       \r\n  </kendo-grid-column>\r\n  <kendo-grid-column field=\"user_name\" title=\"Name\" width=\"250\">\r\n  </kendo-grid-column>\r\n  <kendo-grid-column field=\"type\" title=\"Category\">\r\n  </kendo-grid-column>   \r\n  <kendo-grid-column field=\"access_reg\" title=\"Access\" width=\"80\">\r\n  </kendo-grid-column>\r\n  <kendo-grid-column field=\"access1_reg\" title=\"Access 1\" width=\"80\">\r\n  </kendo-grid-column>\r\n  <kendo-grid-column field=\"mobile_no\" title=\"Mobile\" width=\"80\">\r\n  </kendo-grid-column>\r\n  <kendo-grid-column field=\"email_id\" title=\"Email\" width=\"80\">\r\n  </kendo-grid-column> -->\r\n<!-- <kendo-grid-column field=\"access_geo\" title=\"Geo\" width=\"80\">\r\n  </kendo-grid-column> -->\r\n<!-- <kendo-grid-column field=\"renewal_date\" title=\"Date\" width=\"80\">\r\n  </kendo-grid-column>\r\n  <kendo-grid-column field=\"Discontinued\" title=\"Edit\" width=\"120\">\r\n      <ng-template kendoGridCellTemplate let-dataItem>\r\n          <input type=\"checkbox\" (click)=\"selectAllStudentsChange($event)\"   \r\n          [checked]=\"dataItem.Discontinued\"/>\r\n      </ng-template>\r\n  </kendo-grid-column>          \r\n  <kendo-grid-column field=\"Discontinued\" title=\"Delete\" width=\"120\">\r\n    <ng-template kendoGridCellTemplate let-dataItem>\r\n        <input type=\"checkbox\" [checked]=\"dataItem.Discontinued\"/>   \r\n    </ng-template>\r\n</kendo-grid-column>\r\n</kendo-grid> -->    \r\n\r\n<div class=\"widget-heading\">\r\n    <h3 class=\"widget-title\">User Management</h3>\r\n</div>\r\n<div class=\"form-group\">\r\n    <div class=\"col-sm-offset-3 col-sm-9\">\r\n        <div class=\"input-group input-group-search\">\r\n            <input id=\"searchUserTxt\" type=\"text\" placeholder=\"Search for...\" class=\"form-control\">\r\n            <span class=\"input-group-btn\">\r\n                <button id=\"searchUser\" type=\"button\" class=\"btn btn-outline\">Go!</button>           \r\n            </span>\r\n        </div>\r\n        <!-- {#createAdmin} -->\r\n        <button id=\"renderCreateUserFormPage\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\">Create User</button>\r\n        <button id=\"renderCreateAdminUserFormPage\" class=\"btn btn-success btn-rounded btn-block\" style=\"position: absolute;right: 50px;bottom: 0px;width: 150px;\">Create Admin</button>\r\n       \r\n    </div>\r\n</div>\r\n<table id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\r\n    <thead>\r\n        <tr>\r\n            <th style=\"width:15%\" class=\"text-center\" style=\"position: relative;right: 14px;width: 1%;\">User</th>\r\n            <th style=\"width:10%\" class=\"text-center\" style=\"left: 23px;width:10%;position: relative;\">Type</th>\r\n            <th style=\"width:10%\" class=\"text-center\" style=\"position: relative;left: 63px;width:10%;\">Email Id</th>\r\n            <th style=\"width:10%\" class=\"text-center\" style=\"position:  relative;left: 161px;width:10%;\">Mobile No</th>\r\n            <th style=\"width:15%\" class=\"text-center\" style=\"position:  relative;left: 160px;width:15%;\">Renewal Date</th>\r\n            <th style=\"width:30%\" class=\"text-center\" style=\"position: relative;left: 63px;width:30%;\">Operation</th>\r\n        </tr>\r\n        <tr style=\"display:show\" id=\"no-record-found\">\r\n            <th colspan=\"6\">\r\n                <span id=\"SearchResult\"></span>\r\n            </th>\r\n        </tr>\r\n    </thead>       \r\n    <div id=\"user-list-table\"></div>\r\n</table>        \r\n<div id=\"findStatus\"></div>\r\n<div class=\"user_load\">\r\n    <div id=\"loadMore\"></div>           \r\n</div>         \r\n<table class=\"table table-hover\">   \r\n    <tbody>   \r\n        <tr *ngFor=\"let employee of myData; let i = index\">\r\n            <td>\r\n                <div class=\"media\">\r\n                    <div class=\"media-body\">\r\n                        <h5 class=\"media-heading\">{{employee.user_name}}</h5>\r\n                    </div>\r\n                </div>            \r\n            </td>\r\n            <td class=\"text-center\">{{employee.type}}</td>\r\n            <td class=\"text-center\">{{employee.email_id}}</td>\r\n            <td class=\"text-center\">{{employee.mobile_no}}</td>\r\n            <td id='<%=user_name%><%=type%>' class=\"text-center\">{{employee.renewal_date}}</td>\r\n            <td class=\"text-center\">\r\n                <div>\r\n                    <!-- {#edituser} -->\r\n                    <span class=\"edit-user\" id=\"editUser\">\r\n                        <a class=\"tooltips\">\r\n                            <span>Edit</span>\r\n                            <img src=\"/images/edit.png\" />\r\n                        </a>\r\n                    </span>\r\n                    <!-- {/edituser} -->\r\n                    <!-- {#deleteuser}   -->\r\n                    <span class=\"delete-user\" data-toggle=\"modal\" data-target=\"#<%=id%>\">\r\n                        <a class=\"tooltips\">\r\n                            <span>Delete</span>\r\n                            <img src=\"/images/delete.png\" />\r\n                        </a>\r\n                    </span>\r\n                    <!-- {/deleteuser}   -->\r\n                </div>\r\n                <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=id%>\">\r\n                    <div role=\"document\" class=\"modal-dialog modal-sm\">\r\n                        <div class=\"modal-content\">\r\n                            <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\r\n                                <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\r\n                                    <span aria-hidden=\"true\">×</span>\r\n                                </button>\r\n                                <h4 id=\"mySmallModalLabel\" class=\"modal-title\">User Delete</h4>\r\n                            </div>\r\n                            <div class=\"modal-body\">\r\n                                <p>Do you want to delete?</p>\r\n                            </div>\r\n                            <div class=\"modal-footer\">\r\n                                <button type=\"button\" data-dismiss=\"modal\" class=\"btn  btn-outline btn-primary-red\">Close</button>\r\n                                <button type=\"button\" data-dismiss=\"modal\" id=\"delUser\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </td>\r\n        </tr>\r\n    </tbody>\r\n</table>"
 
 /***/ }),
 
@@ -296,17 +1292,67 @@ var ListComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./assets/app/app/newuser/newuser.component.css":
+/***/ "./assets/app/app/main-content/main-content.component.css":
 /***/ (function(module, exports) {
 
 module.exports = ""
 
 /***/ }),
 
+/***/ "./assets/app/app/main-content/main-content.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  main-content works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "./assets/app/app/main-content/main-content.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MainContentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MainContentComponent = /** @class */ (function () {
+    function MainContentComponent() {
+    }
+    MainContentComponent.prototype.ngOnInit = function () {
+    };
+    MainContentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-main-content',
+            template: __webpack_require__("./assets/app/app/main-content/main-content.component.html"),
+            styles: [__webpack_require__("./assets/app/app/main-content/main-content.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MainContentComponent);
+    return MainContentComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/newuser/newuser.component.css":
+/***/ (function(module, exports) {
+
+module.exports = "table {\r\n    font-family: arial, sans-serif;\r\n    border-collapse: collapse;\r\n    width: 100%;\r\n}\r\n\r\ntd, th {\r\n    border: 1px solid #dddddd;\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\ntr:nth-child(even) {\r\n    background-color: #dddddd;\r\n}"
+
+/***/ }),
+
 /***/ "./assets/app/app/newuser/newuser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\n  <div class=\"form-group\">\n    <label for=\"usr\">Name:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"usr\" [(ngModel)]=\"usr\">\n  </div>      \n\n  <div class=\"form-group\">\n    <label for=\"pwd\">Email:</label>\n    <input type=\"text\" class=\"form-control\" formControlName=\"pwd\" [(ngModel)]=\"pwd\">\n  </div>\n\n  <div class=\"form-group\">\n    <label class=\"center-block\">Mobile No:\n      <input class=\"form-control\" formControlName=\"mob\" [(ngModel)]=\"mob\">\n    </label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Subscription:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"paid\" [(ngModel)]=\"sub\">Paid Subscription</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"sub\" value=\"trail\" [(ngModel)]=\"sub\">Free Trial</label>\n  </div>\n\n  <div class=\"form-group radio\">\n    <h4>Access:</h4>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"full\" [(ngModel)]=\"acc\" (change)=\"handleChange($event)\">Full</label>\n    <label class=\"center-block\">\n      <input type=\"radio\" formControlName=\"acc\" value=\"restricted\" [(ngModel)]=\"acc\" (change)=\"handleChangeRest($event)\">Restricted</label>\n  </div>   \n  <div class=\"checkbox\">   \n    <h4>Alert Type:</h4>  \n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"sms\" class=\"classImLookingFor\" [(ngModel)]=\"ale\">Sms\n    </label>\n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"web\" class=\"classImLookingFor\" [(ngModel)]=\"ale\">Web\n    </label>  \n    <label class=\"center-block\">\n      <input type=\"checkbox\" formControlName=\"ale\" value=\"email\" class=\"classImLookingFor\" [(ngModel)]=\"ale\">E-mail\n    </label>\n  </div>\n  <div class=\"form-group\">    \n    <label class=\"control-label\" for=\"Geography\">Geography</label>\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\" [ngModelOptions]=\"{standalone: true}\" class=\"classImLookingFor\" (change)=\"onSelectGeography($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Geography\">\n      <option value=\"0\">Select Geography</option>       \n      <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option>         \n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Country\">Country</label>\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\" [ngModelOptions]=\"{standalone: true}\" class=\"classImLookingFor\" (change)=\"onSelectCountry($event.target.value)\" class=\"form-control input-lg\"\n      id=\"Country\">\n      <option value=\"0\">Select Country</option>\n      <option *ngFor=\"let cout of countryVal\" value={{cout.gid}}>{{cout.name}}</option>    \n    </select>\n  </div>\n  <div class=\"form-group\">    \n    <label class=\"control-label\" for=\"States\">State</label>\n    <select class=\"classImLookingFor\" *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\" [ngModelOptions]=\"{standalone: true}\"  (change)=\"onSelectState($event.target.value)\" class=\"form-control input-lg\"\n      id=\"States\">\n      <option value=\"0\">Select State</option>\n      <option *ngFor=\"let stat of stateVal\" value={{stat.gid}}>{{stat.name}}</option>\n    </select>            \n  </div>              \n  <div class=\"form-group\">\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n    <select class=\"form-control input-lg\" id=\"Regulation\" class=\"classImLookingFor\">\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.geography_id}}>{{reg.name}}</option>\n    </select>\n  </div>\n\n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\n  <input type=\"button\" value=\"cancel\">\n</form>"
+module.exports = "<form [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\r\n  <div class=\"form-group\">\r\n    <label for=\"usr\">Name:</label>  \r\n    <input type=\"text\" class=\"form-control\" formControlName=\"user_name\" [(ngModel)]=\" client.user_name\" #refusername>\r\n  </div>\r\n   \r\n  <div class=\"form-group\">    \r\n    <label for=\"pwd\">Email:</label>\r\n    <input type=\"text\" class=\"form-control\" formControlName=\"email_id\" [(ngModel)]=\" client.email_id\" #refemail>\r\n  </div>\r\n\r\n  <div class=\"form-group\">        \r\n    <label class=\"center-block\">Mobile No:   \r\n      <input class=\"form-control\" formControlName=\"mobile_no\" [(ngModel)]=\"client.mobile_no\" #refmob>\r\n    </label>\r\n  </div>         \r\n\r\n  <div class=\"form-group radio\">\r\n    <h4>Subscription:</h4>      \r\n    <label class=\"center-block\">   \r\n      <input type=\"radio\" formControlName=\"subscription\" value=\"paid\" [(ngModel)]=\"client.subscription\" #refsub>Paid Subscription</label>\r\n    <label class=\"center-block\">   \r\n      <input type=\"radio\" formControlName=\"subscription\" value=\"free\" [(ngModel)]=\"client.subscription\" #refsub>Free Trial</label>\r\n  </div>\r\n\r\n   <div class=\"form-group radio\">      \r\n    <h4>Access:</h4>           \r\n    <label class=\"center-block\">               \r\n      <input type=\"radio\" formControlName=\"access\" value=\"full\" [(ngModel)]=\"client.access\" (change)=\"handleChange($event)\" #refacc>Full</label>\r\n    <label class=\"center-block\">      \r\n      <input type=\"radio\" formControlName=\"access\" value=\"restricted\" [(ngModel)]=\"client.access\" (change)=\"handleChangeRest($event)\" #refacc>Restricted</label>\r\n  </div>\r\n  <div class=\"checkbox\">         \r\n    <h4>Alert Type:</h4>\r\n    <label class=\"center-block\">\r\n      <input type=\"checkbox\" formControlName=\"smsaccess\" [(ngModel)]=\"client.smsaccess\" value=\"sms\" class=\"classImLookingFor\" (change)=\"smsChoose($event)\" #sms>Sms      \r\n    </label>\r\n    <label class=\"center-block\">\r\n      <input type=\"checkbox\" formControlName=\"webaccess\" [(ngModel)]=\"client.webaccess\" value=\"web\" class=\"classImLookingFor\" (change)=\"webChoose($event)\" #web>Web      \r\n    </label>   \r\n    <label class=\"center-block\">                       \r\n      <input type=\"checkbox\" formControlName=\"emailaccess\" [(ngModel)]=\"client.emailaccess\" value=\"email\" class=\"classImLookingFor\" (change)=\"emailChoose($event)\" #email>E-mail       \r\n    </label>\r\n  </div>           \r\n  <div class=\"form-group\">         \r\n    <label class=\"control-label\" for=\"Geography\">Geography</label>\r\n    <select *ngIf=\"requests\" [(ngModel)]=\"selecteGeography\"  (change)=\"onSelectGeography($event)\"\r\n      class=\"form-control input-lg\"  class=\"classImLookingFor\" formControlName=\"geopgrpahy\" class=\"ge\" #Geography >\r\n      <option value=\"0\">Select Geography</option>   \r\n      <!-- <option *ngFor=\"let geograph of requests\" value={{geograph.id}}>{{geograph.name}}</option> -->\r\n       <option *ngFor=\"let geograph of requests\" [value]=\"geograph.id\">{{geograph.name}}</option>\r\n    </select>\r\n  </div>    \r\n  <div class=\"form-group\">      \r\n    <label class=\"control-label\" for=\"Country\">Country</label>\r\n    <select *ngIf=\"countryVal\" [(ngModel)]=\"selectedCountry\"  (change)=\"onSelectCountry($event)\"\r\n      class=\"form-control input-lg\"  class=\"classImLookingFor\" formControlName=\"country\" #Country>\r\n      <option value=\"0\">Select Country</option>  \r\n      <option *ngFor=\"let cout of countryVal\" value={{cout.id}}>{{cout.name}}</option>\r\n    </select>\r\n  </div>\r\n  <div class=\"form-group\">       \r\n    <label class=\"control-label\" for=\"States\">State</label>\r\n    <select *ngIf=\"stateVal\" [(ngModel)]=\"selectedState\"  (change)=\"onSelectState($event)\"\r\n      class=\"form-control input-lg\"  class=\"classImLookingFor\" formControlName=\"state\" #States>\r\n      <option value=\"0\">Select State</option>  \r\n      <option *ngFor=\"let stat of stateVal\" value={{stat.id}}>{{stat.name}}</option>\r\n    </select>\r\n  </div>                                   \r\n  <div class=\"form-group\">\r\n    <label class=\"control-label\" for=\"Regulation\">Regulation</label>\r\n    <select class=\"form-control input-lg\"  class=\"classImLookingFor\" #Regulation>  \r\n      <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>     \r\n      <option *ngFor=\"let reg of regulationVal\" value={{reg.rlid}}>{{reg.name}}</option>\r\n    </select>  \r\n   </div>     \r\n    \r\n  <input type=\"button\" value=\"Add\" (click)=\"addFunction()\">\r\n  <input type=\"submit\" class=\"forsubmit\" value=\"Save\">\r\n  <input type=\"button\" value=\"cancel\">\r\n</form>\r\n\r\n\r\n\r\n<table id=\"myTable\">\r\n  <thead>\r\n    <tr>\r\n      <th>GEOGRAPHY</th>\r\n      <th>COUNTRY</th>\r\n      <th>STATE</th>\r\n      <th>REGULATION</th>\r\n      <th>SMS</th>\r\n      <th>WEB</th>\r\n      <th>EMAIL</th>\r\n      <th>OPERATION</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody #ir>                       \r\n   \r\n<div *ngIf=\"!myFlag;else myFlagTrue;\" >\r\n</div>\r\n<ng-template #myFlagTrue>   \r\n  <tr *ngFor=\"let item of regulation_new; let i = index\">\r\n  <!-- <td>{{i+1}}</td>                 -->\r\n  <td>{{item.geography}}</td>                                          \r\n  <td>{{item.country}}</td>\r\n  <td>{{item.state}}</td>         \r\n  <td>{{item.regulation_name}}</td>                                                 \r\n  <td>{{item.smsaccess}}</td>               \r\n  <td>{{item.webaccess}}</td>                    \r\n  <td>{{item.emailaccess}}</td>\r\n  <td><button class=\"btn btn-default\"  type=\"button\" (click)=\"deleteFieldValue(i)\">Delete</button></td>          \r\n</tr>   \r\n</ng-template>  \r\n  </tbody>        \r\n</table>        \r\n"
 
 /***/ }),
 
@@ -339,6 +1385,45 @@ var NewuserComponent = /** @class */ (function () {
         this._http = _http;
         this.renderer = renderer;
         this.elem = elem;
+        //usr;                    
+        //formdata; 
+        this.default_state = 18;
+        this.default_country = 23;
+        this.default_smsaccess = 'none';
+        this.default_webaccess = 'none';
+        this.default_emailaccess = 'none';
+        // client: Client = {
+        //   user_name: '',
+        //   email_id: '',
+        //   mobile_no: 0,
+        //   company_name: 'others',
+        //   role_id: 3,
+        //   subscription: 'paid',
+        //   access: '',
+        //   cliaccess: '',
+        //   resaccess: '',
+        //   smsaccess: 'none',
+        //   webaccess: 'none',
+        //   emailaccess: 'none',
+        //   country: 23,
+        //   geopgrpahy: '',
+        //   state: 18
+        // }
+        this.client = {
+            user_name: '',
+            email_id: '',
+            mobile_no: 0,
+            company_name: '',
+            role_id: 3,
+            subscription: '',
+            access: '',
+            smsaccess: 0,
+            webaccess: 0,
+            emailaccess: 0,
+            country: 23,
+            geopgrpahy: '',
+            state: 18
+        };
         this.selecteGeography = 0;
         this.selectedCountry = 0;
         this.selectedState = 0;
@@ -346,7 +1431,26 @@ var NewuserComponent = /** @class */ (function () {
         this.countryVal = [];
         this.stateVal = [];
         this.regulationVal = [];
-        this.createForm();
+        this.a = [];
+        this.b = [];
+        this.regu = [];
+        this.regulation_new = [];
+        //flag = false;
+        this.tmpArray = [];
+        this.test = [];
+        this.t = [];
+        this.obj2 = [];
+        this.inc = 0;
+        this.myFlag = false;
+        this.mySecFlag = false;
+        this.sms_Text = "none";
+        this.email_Text = "none";
+        this.web_Text = "none";
+        this.smsVal = 0;
+        this.webVal = 0;
+        this.emailVal = 0;
+        this.match = false;
+        var idGet = document.querySelectorAll('#save_button');
     }
     NewuserComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -361,59 +1465,307 @@ var NewuserComponent = /** @class */ (function () {
             _this.userCollectRegulation = _this.regRequest.regCollection;
             _this.userCollectGeo = _this.regRequest.usergeoCollection;
             console.log(_this.userCollectCountry, _this.userCollectState, _this.userCollectRegulation, _this.userCollectGeo);
+            _this.uncheckAll();
         });
         this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
-            usr: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("", __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].compose([
-                __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required
-            ])),
-            pwd: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required),
-            mob: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required),
-            sub: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required),
-            acc: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required),
-            ale: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]('', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required)
+            // usr: new FormControl("", Validators.compose([
+            //   Validators.required
+            // ])),
+            // pwd: new FormControl('', Validators.required)
+            user_name: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            email_id: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            mobile_no: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            subscription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            access: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            smsaccess: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            webaccess: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            emailaccess: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            geopgrpahy: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](''),
+            country: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            state: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            reg: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        this.formdata.patchValue({
+            'country': this.default_country,
+            'state': this.default_state,
+            'smsaccess': this.default_smsaccess,
+            'webaccess': this.default_webaccess,
+            'emailaccess': this.default_emailaccess
         });
     };
     NewuserComponent.prototype.ngAfterViewInit = function () {
-        var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
-        console.log(elements);
     };
-    // pwdvalidation(formcontrol) {
-    //   if (formcontrol.value.length < 5) {     
-    //     return { "pwd": true };   
-    //   }
-    // }
+    NewuserComponent.prototype.UncheckAll = function () {
+        var w = document.getElementsByTagName('input');
+        for (var i = 0; i < w.length; i++) {
+            if (w[i].type == 'checkbox') {
+                w[i].checked = false;
+                console.log("www");
+            }
+            if (w[i].type == 'radio') {
+                w[i].checked = false;
+                console.log("www");
+            }
+        }
+    };
+    NewuserComponent.prototype.addFunction = function () {
+        this.getUser_name = this.refusername.nativeElement.value;
+        this.getEmail = this.refemail.nativeElement.value;
+        this.getMobile = this.refmob.nativeElement.value;
+        this.getSubsr = this.refsub.nativeElement.value;
+        this.getAcce = this.refacc.nativeElement.value;
+        var selGeoRef = this.Geography.nativeElement; // like getElementById           
+        var optGeo = selGeoRef.options[selGeoRef.selectedIndex];
+        this.geo_Value = optGeo.value;
+        this.geo_Text = optGeo.text;
+        var selCouRef = this.Country.nativeElement;
+        var optCou = selCouRef.options[selCouRef.selectedIndex];
+        this.cou_Value = optCou.value;
+        this.cou_Text = optCou.text;
+        var selStaRef = this.States.nativeElement;
+        var optSta = selStaRef.options[selStaRef.selectedIndex];
+        this.sta_Value = optSta.value;
+        this.sta_Text = optSta.text;
+        var selRegRef = this.Regulation.nativeElement;
+        var optReg = selRegRef.options[selRegRef.selectedIndex];
+        this.reg_Value = optReg.value;
+        this.reg_Text = optReg.text;
+        var valData;
+        if (this.geo_Value == "0" || this.cou_Value == "0" || this.sta_Value == "0" || this.reg_Value == "0") {
+            alert("please select geography");
+        }
+        else {
+            this.count = this.regu.length;
+            console.log(this.count);
+            if (this.count === 0) {
+                console.log("first if");
+                console.log(this.getUser_name);
+                console.log("am in", this.count);
+                this.myFlag = !this.myFlag;
+                if (this.inc >= 2) {
+                    this.myFlag = true;
+                }
+                /*unwanted*/ var d = this.geo_Value + ',' + this.cou_Value + ',' + this.sta_Value + ',' + this.reg_Value + ',' + this.sms_Text + ',' + this.web_Text + ',' + this.email_Text;
+                /*unwanted*/ var len = d.length;
+                valData = this.geo_Value + ',' + this.cou_Value + ',' + this.sta_Value + ',' + this.reg_Value;
+                var valNew = valData.split(',');
+                this.obj1 = {
+                    regulation_id: this.reg_Value,
+                    regulation_name: this.reg_Text,
+                    geography_id: this.geo_Value,
+                    country_id: this.cou_Value,
+                    state_id: this.sta_Value,
+                    sms: this.smsVal,
+                    web: this.webVal,
+                    email: this.webVal
+                };
+                this.t.push(this.obj1);
+                // for (var x in this.t) {
+                //   console.log(x)
+                // }
+                console.log(this.t);
+                this.obj = {
+                    "user_name": this.getUser_name,
+                    "email_id": this.getEmail,
+                    "mobile_no": this.getMobile,
+                    "company_name": "others",
+                    "role_id": 3,
+                    "subscription": this.getSubsr,
+                    "access": this.getAcce,
+                    "smsaccess": this.sms_Text,
+                    "webaccess": this.web_Text,
+                    "emailaccess": this.email_Text,
+                    "country": this.cou_Text,
+                    "geography": this.geo_Text,
+                    "state": this.sta_Text,
+                    "regulation_name": this.reg_Text,
+                    regulation: this.t
+                };
+                this.regulation_new.push(this.obj);
+                console.log("am done", this.regulation_new);
+                this.regu.push(valNew);
+            }
+            else if (this.count >= 1 && this.regulation_new.length > 1) {
+                console.log("if else");
+                this.myFlag = false;
+                valData = this.geo_Value + ',' + this.cou_Value + ',' + this.sta_Value + ',' + this.reg_Value;
+                var valNew = valData.split(',');
+                console.log(valNew, this.regu);
+                for (var i = 0; i < this.regu.length; i++) {
+                    if (JSON.stringify(valNew) == JSON.stringify(this.regu[i])) {
+                        this.match = true;
+                        break;
+                    }
+                }
+                console.log(this.match);
+                if (this.match == false) {
+                    console.log("else if match");
+                    this.myFlag = !this.myFlag;
+                    this.obj1 = {
+                        regulation_id: this.reg_Value,
+                        regulation_name: this.reg_Text,
+                        geography_id: this.geo_Value,
+                        country_id: this.cou_Value,
+                        state_id: this.sta_Value,
+                        sms: this.smsVal,
+                        web: this.webVal,
+                        email: this.webVal
+                    };
+                    this.t.push(this.obj1);
+                    console.log(this.t);
+                    this.obj = {
+                        "user_name": this.getUser_name,
+                        "email_id": this.getEmail,
+                        "mobile_no": this.getMobile,
+                        "company_name": "others",
+                        "role_id": 3,
+                        "subscription": this.getSubsr,
+                        "access": this.getAcce,
+                        "smsaccess": this.sms_Text,
+                        "webaccess": this.web_Text,
+                        "emailaccess": this.email_Text,
+                        "country": this.cou_Text,
+                        "geography": this.geo_Text,
+                        "state": this.sta_Text,
+                        "regulation_name": this.reg_Text,
+                        regulation: this.t
+                    };
+                    this.regulation_new.push(this.obj);
+                    console.log("am done", this.regulation_new);
+                    this.regu.push(valNew);
+                }
+                else {
+                    console.log("if else else");
+                    this.myFlag = true;
+                    this.inc++;
+                    console.log("not not  doma ok", this.inc);
+                }
+            }
+            else {
+                console.log("main else");
+                this.myFlag = false;
+                valData = this.geo_Value + ',' + this.cou_Value + ',' + this.sta_Value + ',' + this.reg_Value;
+                var valNew = valData.split(',');
+                for (var i = 0; i < this.regu.length; i++) {
+                    if (JSON.stringify(valNew) == JSON.stringify(this.regu[i])) {
+                        this.match = true;
+                        break;
+                    }
+                    else {
+                        this.match = false;
+                    }
+                }
+                // console.log("else block")       
+                console.log(this.match, valNew, this.regu);
+                if (this.match == false) {
+                    console.log("main match if");
+                    this.myFlag = !this.myFlag;
+                    // this.mySecFlag=!this.mySecFlag;  
+                    // this.obj = {
+                    //   "geography": this.geo_Text,
+                    //   "country": this.cou_Text,
+                    //   "state": this.sta_Text,
+                    //   "regulation": this.reg_Text,
+                    //   "sms": this.sms_Text,
+                    //   "web": this.web_Text,
+                    //   "email": this.email_Text
+                    // }
+                    // this.regulation_new.push(this.obj);
+                    // console.log(this.regulation_new)
+                    this.obj1 = {
+                        regulation_id: this.reg_Value,
+                        regulation_name: this.reg_Text,
+                        geography_id: this.geo_Value,
+                        country_id: this.cou_Value,
+                        state_id: this.sta_Value,
+                        sms: this.smsVal,
+                        web: this.webVal,
+                        email: this.emailVal
+                    };
+                    this.t.push(this.obj1);
+                    // for (var x in this.t) {
+                    //   console.log(x)
+                    // }
+                    console.log(this.t);
+                    this.obj = {
+                        "user_name": this.getUser_name,
+                        "email_id": this.getEmail,
+                        "mobile_no": this.getMobile,
+                        "company_name": "others",
+                        "role_id": 3,
+                        "subscription": this.getSubsr,
+                        "access": this.getAcce,
+                        "smsaccess": this.sms_Text,
+                        "webaccess": this.web_Text,
+                        "emailaccess": this.email_Text,
+                        "country": this.cou_Text,
+                        "geography": this.geo_Text,
+                        "state": this.sta_Text,
+                        "regulation_name": this.reg_Text,
+                        regulation: this.t
+                    };
+                    this.regulation_new.push(this.obj);
+                    console.log("am done", this.regulation_new);
+                    this.regu.push(valNew);
+                    // this.regu.push(valNew);            
+                }
+                else {
+                    console.log("outer else");
+                    this.myFlag = true;
+                    this.inc++;
+                    console.log("not doma ok", this.inc);
+                }
+            }
+        }
+    };
     NewuserComponent.prototype.onClickSubmit = function (data) {
-        this.acc = data.acc;
-        this.user_textbox = data.usr;
-        console.log("account subscription", this.acc, this.user_textbox);
+        var _this = this;
+        console.log(data);
+        // this.spc_reg=JSON.stringify(data);
+        // console.log("this is specific reg json",this.spc_reg)
+        // useful console.log(data.access, JSON.stringify(data));
+        if (data.access == "full") {
+            console.log("hello am full access");
+            this._http.newClient(data)
+                .subscribe(function (hero) { _this.addUse = hero; console.log(_this.addUse); });
+        }
+        else {
+            console.log("hello am restricted access");
+            /*make use it*/
+            var fClient = {
+                user_name: this.getUser_name,
+                email_id: this.getEmail,
+                mobile_no: this.getMobile,
+                company_name: 'others',
+                role_id: 3,
+                subscription: this.getSubsr,
+                access: this.getAcce,
+                smsaccess: this.smsVal,
+                webaccess: this.webVal,
+                emailaccess: this.emailVal,
+                country: this.cou_Value,
+                geopgrpahy: this.geo_Value,
+                state: this.sta_Value,
+                regulation: this.t
+            };
+            this._http.fullClient(fClient).subscribe(function (myFull) { _this.fullUse = myFull; console.log(_this.fullUse); });
+        }
+        // this._http.newClient(data)                              
+        //   .subscribe(hero => { this.addUse = hero; console.log(this.addUse) });
+        //useful console.log("account subscription", data);
     };
-    NewuserComponent.prototype.createForm = function () {
-        this.formdata = this.fb.group({
-            usr: ['', __WEBPACK_IMPORTED_MODULE_1__angular_forms__["i" /* Validators */].required],
-            pwd: '',
-            mob: '',
-            sub: '',
-            acc: '',
-            ale: '',
-            geo: '',
-            st: '',
-            reg: '',
-            sidekick: ''
-        });
+    NewuserComponent.prototype.uncheckAll = function () {
+        var i;
+        var list = this.elem.nativeElement.querySelectorAll("input[type=checkbox]");
+        for (var _i = 0, list_1 = list; _i < list_1.length; _i++) {
+            var item = list_1[_i];
+            console.log(item);
+            item.checked = false;
+        }
     };
-    // onClickSubmit(data) {
-    //   this.usr = data.usr;
-    //   this.pwd = data.pwd;
-    //   this.mob = data.mob;
-    //   this.sub = data.sub;
-    //   this.acc = data.acc;           
-    //   console.log("account subscription",this.acc);
-    //   this.ale = data.ale;
-    //   this.geo = data.geo;
-    //   this.st = data.st;
-    //   this.reg = data.reg;
-    // } //Iterator
-    NewuserComponent.prototype.onSelectGeography = function (geography_id) {
+    NewuserComponent.prototype.onSelectGeography = function (args) {
+        var geography_id = args.target.value;
+        this.geo_txt = args.target.options[args.target.selectedIndex].text;
         this.selecteGeography = geography_id;
         this.selectedCountry = 0;
         this.stateVal = [];
@@ -422,69 +1774,163 @@ var NewuserComponent = /** @class */ (function () {
             console.log("country id", item.gid, "geography id", geography_id);
             return item.gid === Number(geography_id);
         });
+        console.log(this.geo_txt);
     };
-    NewuserComponent.prototype.onSelectCountry = function (country_id) {
+    NewuserComponent.prototype.onSelectCountry = function (args) {
+        var country_id = args.target.value;
+        this.cou_Text = args.target.options[args.target.selectedIndex].text;
         this.selectedCountry = country_id;
         this.selectedState = 0;
         this.regulationVal = [];
         this.stateVal = this.userCollectState.filter(function (item) {
             console.log("state id", item.gid, "country id", country_id);
-            return item.gid === Number(country_id);
+            return item.scid === Number(country_id);
         });
     };
-    NewuserComponent.prototype.onSelectState = function (state_id) {
-        this.selectedState = state_id;
+    NewuserComponent.prototype.onSelectState = function (args) {
+        var stat_id = args.target.value;
+        console.log("new state", stat_id);
+        this.sta_Text = args.target.options[args.target.selectedIndex].text;
+        this.selectedState = stat_id;
+        var finish = document.querySelector('#ret');
         this.regulationVal = this.userCollectRegulation.filter(function (item) {
-            console.log("geography id", item.geography_id, "state id", state_id);
-            return item.geography_id == Number(state_id);
+            console.log("geography id", item.state_id, "state id", stat_id);
+            return item.state_id == Number(stat_id);
         });
+        // this.spc_reg=              
     };
     NewuserComponent.prototype.handleChange = function (evt) {
+        var i;
+        var elements = this.elem.nativeElement.querySelectorAll(".classImLookingFor");
+        var addElement = this.elem.nativeElement.querySelectorAll(".classImAdd");
         var target = evt.target;
         if (target.checked) {
-            //doSelected(target);   
-            //this._prevSelected = target;
-            var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
-            console.log(elements);
-            for (var i = 0; i < elements.length; i++) {
-                elements[i].disabled = true; // note the type assertion on the element
+            for (i = 0; i < elements.length; i++) {
+                elements[i].disabled = true;
             }
-            console.log("success", evt);
+            for (i = 0; i < addElement.length; i++) {
+                addElement[i].style.visibility = "hidden";
+            }
         }
         else {
-            //doUnSelected(this._prevSelected)
-            console.log("fails", evt);
+            alert("fails");
         }
     };
     NewuserComponent.prototype.handleChangeRest = function (evt) {
+        var i;
+        var elements = this.elem.nativeElement.querySelectorAll(".classImLookingFor");
+        var addElement = this.elem.nativeElement.querySelectorAll(".classImAdd");
         var target = evt.target;
         if (target.checked) {
-            var elements = this.elem.nativeElement.querySelectorAll('.classImLookingFor');
-            console.log(elements);
-            for (var i = 0; i < elements.length; i++) {
-                elements[i].disabled = false; // note the type assertion on the element
+            for (i = 0; i < elements.length; i++) {
+                elements[i].disabled = false;
             }
-            console.log("success", evt);
+            for (i = 0; i < addElement.length; i++) {
+                addElement[i].style.visibility = "visible";
+            }
         }
         else {
-            //doUnSelected(this._prevSelected)
-            console.log("fails", evt);
+            alert("fails");
         }
     };
-    NewuserComponent.prototype.logForm = function (value) {
-        console.log(value);
+    NewuserComponent.prototype.smsChoose = function (event) {
+        var sms_Chk = this.sms.nativeElement.value;
+        if (event.target.checked == true && sms_Chk === "sms") {
+            this.sms_Text = "sms";
+            this.smsVal = (this.sms_Text === "sms") ? 1 : 0;
+        }
+        else {
+            this.sms_Text = "none";
+            console.log(this.sms_Text);
+            this.smsVal = (this.sms_Text === "none") ? 0 : 1;
+            console.log(this.smsVal);
+        }
+    };
+    NewuserComponent.prototype.webChoose = function (event) {
+        var web_Chk = this.web.nativeElement.value;
+        if (event.target.checked == true && web_Chk === "web") {
+            this.web_Text = "web";
+            this.webVal = (this.web_Text === "web") ? 1 : 0;
+        }
+        else {
+            this.web_Text = "none";
+            this.webVal = (this.web_Text === "none") ? 0 : 1;
+        }
+    };
+    NewuserComponent.prototype.emailChoose = function (event) {
+        var email_Chk = this.email.nativeElement.value;
+        if (event.target.checked == true && email_Chk === "email") {
+            this.email_Text = "email";
+            this.emailVal = (this.email_Text === "email") ? 1 : 0;
+        }
+        else {
+            this.email_Text = "none";
+            this.emailVal = (this.email_Text === "none") ? 0 : 1;
+        }
+    };
+    NewuserComponent.prototype.deleteFieldValue = function (index) {
+        this.regulation_new.splice(index, 1);
+        this.regu.splice(index, 1);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('abc'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refusername"),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
-    ], NewuserComponent.prototype, "abc", void 0);
+    ], NewuserComponent.prototype, "refusername", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refemail"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "refemail", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refmob"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "refmob", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refsub"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "refsub", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refacc"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "refacc", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("Geography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "Geography", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("Country"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "Country", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("States"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "States", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("Regulation"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "Regulation", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("sms"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "sms", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("web"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "web", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("email"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "email", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('ir'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NewuserComponent.prototype, "ir", void 0);
     NewuserComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-newuser',
             template: __webpack_require__("./assets/app/app/newuser/newuser.component.html"),
             styles: [__webpack_require__("./assets/app/app/newuser/newuser.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
     ], NewuserComponent);
     return NewuserComponent;
 }());
@@ -500,7 +1946,11 @@ var NewuserComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RequestService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -513,9 +1963,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
 var RequestService = /** @class */ (function () {
-    function RequestService(http) {
+    //clients: any[] = [];
+    //client: Observable<any>;                     
+    function RequestService(http, _http) {
         this.http = http;
+        this._http = _http;
     }
     RequestService.prototype.getRequest = function () {
         return this.http.get("http://localhost:1337/geographys").map(function (res) { return res; });
@@ -523,9 +1985,28 @@ var RequestService = /** @class */ (function () {
     RequestService.prototype.getRegByGeo = function () {
         return this.http.get("http://localhost:1337/getRegbygeostate").map(function (res) { return res; });
     };
+    RequestService.prototype.newClient = function (client) {
+        // Pushing Client object to clients which is a FirebaseListObservable
+        //this.clients.push(client);    
+        //let headers = new Headers({ 'Content-Type': 'application/json' });
+        //let options = new RequestOptions({ headers: headers });    
+        // return this.http.post("http://localhost:1337/getRegbygeostate", client, options).toPromise()
+        //        .then(this.extractData)   
+        //        .catch(this.handleErrorPromise);       
+        console.log("new client in");
+        client.role_id = 3;
+        client.country = 23;
+        client.geopgrpahy = '';
+        client.state = 18;
+        console.log(client);
+        return this.http.post("http://localhost:1337/createUser", client, httpOptions);
+    };
+    RequestService.prototype.fullClient = function (client) {
+        return this.http.post("http://localhost:1337/createUser", client, httpOptions);
+    };
     RequestService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
     ], RequestService);
     return RequestService;
 }());
@@ -544,7 +2025,7 @@ module.exports = ""
 /***/ "./assets/app/app/page-not-found/page-not-found.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  page-not-found works!\n</p>\n"
+module.exports = "<p>\r\n  page-not-found works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -578,6 +2059,730 @@ var PageNotFoundComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], PageNotFoundComponent);
     return PageNotFoundComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/regulator/regulator.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/regulator/regulator.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\n    <div class=\"widget-heading\">\n        <h3 class=\"widget-title\">Regulator Management</h3>\n    </div>\n    <div class=\"form-group\">\n        <div class=\"col-sm-offset-3 col-sm-9\">\n            <button id=\"createregulator\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\n        </div>\n    </div>\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n        <thead>\n            <tr>\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\n            </tr>\n        </thead>\n        <tbody id=\"regulator-list-table\">\n            <tr *ngFor=\"let reg of regulatorResponse; let i = index\">\n                <!-- ngfor goes here -->\n                <td class=\"text-center\">\n                    {{reg.name}}\n                </td>\n                <td class=\"text-center\">\n                    {{reg.description}}\n                </td>\n                <td class=\"text-center\">\n                    <div>\n                        <span id=\"tocreateregulator\" class=\"published\"><a class=\"tooltips\">\n                          <span>\n                              <span><button type=\"button\" (click)=\"loadArticleToEdit(reg.id)\">Edit</button></span>\n                        </span>\n                        <img src=\"/images/edit.png\" /></a>\n                        </span>\n                        <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"\"><a class=\"tooltips\">\n                          <span>\n                              <button type=\"button\" (click)=\"deleteArticle(reg.id)\">Delete</button>                    \n                          </span>\n                        <img src=\"/images/delete.png\" /></a>\n                        </span>\n                    </div>\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\n                            <div class=\"modal-content\">\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\"><span aria-hidden=\"true\">×</span></button>\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Regulator Delete</h4>\n                                </div>\n                                <div class=\"modal-body\">\n                                    <p>Do you want to delete?</p>\n                                </div>\n                                <div class=\"modal-footer\">\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                    <button type=\"button\" id=\"delRegulator\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </td>\n            </tr>\n        </tbody>\n    </table>\n    <div id=\"findStatus\"></div>\n    <div class=\"user_load\">\n        <div id=\"loadMore\"></div>\n    </div>\n</ng-container>\n<ng-container *ngIf=\"correct\">\n    <div class=\"col-md-7\">\n        <div class=\"widget\">\n            <div class=\"widget-heading\">\n                <h3 *ngIf=\"!subRegIdToUpdate\" class=\"widget-title\">Regulator Set Up</h3>\n                <h3 *ngIf=\"subRegIdToUpdate\" class=\"widget-title\">Edit Regulator</h3>\n            </div>\n            <div class=\"widget-body\">\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\">\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Name</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"regulatorName\" [(ngModel)]=\" regObj.name\" #regulatorname/>\n                            <div id=\"regulator_name_error\" class=\"regulator_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n\n                    <div class=\"form-group\">\n                        <label class=\"col-sm-3 control-label\">Description</label>\n                        <div class=\"col-sm-9\">\n                            <input type=\"text\" class=\"form-control\" formControlName=\"regulatorDescription\" [(ngModel)]=\" regObj.description\" #regulatordescription/>\n                            <div id=\"regulator_description_error\" class=\"regulator_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n                    <div class=\"form-group\">\n                        <div class=\"col-sm-offset-3 col-sm-9\">\n                            <button *ngIf=\"!subRegIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\n                            <button *ngIf=\"subRegIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\n                        </div>\n                    </div>\n\n                </form>\n            </div>\n        </div>\n    </div>\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/regulator/regulator.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegulatorComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__regulator_service__ = __webpack_require__("./assets/app/app/regulator/regulator.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RegulatorComponent = /** @class */ (function () {
+    function RegulatorComponent(http, regulatorService, renderer, elem, _router) {
+        this.http = http;
+        this.regulatorService = regulatorService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.subRegIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.regObj = {
+            name: '',
+            description: ''
+        };
+    }
+    RegulatorComponent.prototype.ngOnInit = function () {
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            regulatorName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            regulatorDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        this.loadAllRegulator();
+    };
+    RegulatorComponent.prototype.loadAllRegulator = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/regulator', { headers: headers }).subscribe(function (data) {
+            _this.regulatorResponse = data;
+            console.log(data);
+        });
+    };
+    RegulatorComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/regCreate']);
+    };
+    RegulatorComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.getRegulatorName = this.regulatorname.nativeElement.value;
+        this.getRegulatorDescription = this.regulatordescription.nativeElement.value;
+        var regObj = {
+            name: this.getRegulatorName,
+            description: this.getRegulatorDescription
+        };
+        console.log(this.subRegIdToUpdate);
+        if (this.subRegIdToUpdate === null) {
+            this.regulatorService.saveRegulator(regObj)
+                .subscribe(function (mySave) {
+                _this.saveRegulator = mySave;
+                console.log(_this.saveRegulator);
+                _this.loadAllRegulator();
+                _this._router.navigate(['/regList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            regObj.id = this.subRegIdToUpdate;
+            this.regulatorService.updateRegulator(regObj).subscribe(function (successCode) {
+                _this.loadAllRegulator();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    RegulatorComponent.prototype.loadArticleToEdit = function (regId) {
+        var _this = this;
+        this.regulatorService.getRegulatorById(regId)
+            .subscribe(function (regl) {
+            _this.subRegIdToUpdate = regl[0].id;
+            _this.formdata.setValue({ regulatorName: regl[0].name, regulatorDescription: regl[0].description });
+        });
+        this.correct = !this.correct;
+    };
+    RegulatorComponent.prototype.deleteArticle = function (regId) {
+        var _this = this;
+        this.regulatorService.deleteRegulatorById(regId)
+            .subscribe(function (regl) {
+            _this.loadAllRegulator();
+        });
+        this._router.navigate(['/regList']);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("regulatorname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], RegulatorComponent.prototype, "regulatorname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("regulatordescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], RegulatorComponent.prototype, "regulatordescription", void 0);
+    RegulatorComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-regulator',
+            template: __webpack_require__("./assets/app/app/regulator/regulator.component.html"),
+            styles: [__webpack_require__("./assets/app/app/regulator/regulator.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__regulator_service__["a" /* RegulatorService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], RegulatorComponent);
+    return RegulatorComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/regulator/regulator.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegulatorService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var RegulatorService = /** @class */ (function () {
+    function RegulatorService(http) {
+        this.http = http;
+    }
+    RegulatorService.prototype.saveRegulator = function (regCreate) {
+        return this.http.post("http://localhost:1337/createRegulator", regCreate, httpOptions);
+    };
+    RegulatorService.prototype.updateRegulator = function (regUpdate) {
+        return this.http.post("http://localhost:1337/updateRegulator", regUpdate, httpOptions);
+    };
+    RegulatorService.prototype.getRegulatorById = function (regId) {
+        return this.http.get("http://localhost:1337/findRegulator" + "/" + regId);
+    };
+    RegulatorService.prototype.deleteRegulatorById = function (regId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroyregulator', { body: { regulator_id: regId }, headers: httpHeaders, responseType: 'text' });
+    };
+    RegulatorService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], RegulatorService);
+    return RegulatorService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/state/state.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/state/state.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\r\n    <div class=\"widget-heading\">\r\n        <h3 class=\"widget-title\">State Management</h3>   \r\n    </div>\r\n    <div class=\"form-group\">     \r\n        <div class=\"col-sm-offset-3 col-sm-9\">\r\n            <button id=\"createstate\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\r\n\r\n        </div>\r\n    </div>\r\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\r\n        <thead>\r\n            <tr>\r\n                <th style=\"width:15%\" class=\"text-center\">Name</th>\r\n                <th style=\"width:15%\" class=\"text-center\">Description</th>\r\n                <th style=\"width:15%\" class=\"text-center\">State Code</th>\r\n                <th style=\"width:15%\" class=\"text-center\">Country</th>\r\n                <th style=\"width:30%\" class=\"text-center\">Operation</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody id=\"state-list-table\">         \r\n            <tr *ngFor=\"let state of stateResponse; let i = index\">        \r\n                <!-- ngfor goes here  -->\r\n                <td class=\"text-center\">\r\n                    {{state.name}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{state.description}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{state.state_code}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{state.cname}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    <div id=\"hide\">\r\n                        <span id=\"tocreatestate\" class=\"published\">\r\n                            <a class=\"tooltips\">         \r\n                                <span>\r\n                                    <button type=\"button\" (click)=\"loadStateToEdit(state.id)\">Edit</button>\r\n                                </span>\r\n                                <img src=\"/images/edit.png\" />\r\n                            </a>\r\n                        </span>\r\n                        <span class=\"delete-state\" data-toggle=\"modal\" data-target=\"\">\r\n                            <a class=\"tooltips\">\r\n                                <span>\r\n                                    <td>\r\n                                        <button type=\"button\" (click)=\"deleteState(state.id)\">Delete</button>\r\n                                    </td>\r\n                                </span>\r\n                                <img src=\"/images/delete.png\" />\r\n                            </a>\r\n                        </span>\r\n                    </div>\r\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\r\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\r\n                            <div class=\"modal-content\">\r\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\r\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\r\n                                        <span aria-hidden=\"true\">×</span>\r\n                                    </button>\r\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">State Delete</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <p>Do you want to delete?</p>\r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\r\n                                    <button type=\"button\" id=\"deleteState\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n    <div id=\"findStatus\"></div>\r\n    <div class=\"user_load\">\r\n        <div id=\"loadMore\"></div>\r\n    </div>\r\n</ng-container>\r\n<ng-container *ngIf=\"correct\">\r\n    <div class=\"col-md-7\">\r\n        <div class=\"widget\">\r\n            <div class=\"widget-heading\">\r\n                <h3 class=\"widget-title\">State Set Up</h3>\r\n            </div>\r\n            <div class=\"widget-body\">\r\n                <form class=\"form-horizontal\" [formGroup]=\"formdata\" (ngSubmit)=\"onClickSubmit(formdata.value)\">\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Name</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" formControlName=\"stateName\" [(ngModel)]=\" stateInterface.name\" #statename />\r\n                            <div id=\"state_name_error\" class=\"state_name_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">Description</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" formControlName=\"stateDescription\" [(ngModel)]=\" stateInterface.description\" #statedescription\r\n                            />\r\n                            <div id=\"state_description_error\" class=\"state_description_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>\r\n\r\n\r\n                    <div class=\"form-group\">\r\n                        <label class=\"col-sm-3 control-label\">State Code</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <input type=\"text\" class=\"form-control\" maxlength=\"3\" formControlName=\"stateCode\" [(ngModel)]=\" stateInterface.countrycode\" #statecode\r\n                            />\r\n                            <div id=\"state_code_error\" class=\"state_code_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>                                               \r\n           \r\n                    <div class=\"form-group\">                        \r\n                        <label for=\"selectGeography\" class=\"col-sm-3 control-label\">Geography</label>\r\n                        <div class=\"col-sm-9\">                                                                  \r\n                            <select *ngIf=\"GeographyResponse\" class=\"form-control\" formControlName=\"stateGeography\" [(ngModel)]=\"optionSelectedGeography\" (change)='onOptionsSelectedGeo($event)'\r\n                                #selectGeography>                                                                     \r\n                                <option value=\"0\">Select Geography</option>   \r\n                                <option *ngFor='let option of GeographyResponse' [value]=\"option.id\">{{option.name}}</option>\r\n                            </select>\r\n                            <div id=\"geo_error\" class=\"reg_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>              \r\n                    <div class=\"form-group\">\r\n                        <label for=\"selectCountry\" class=\"col-sm-3 control-label\">Country</label>\r\n                        <div class=\"col-sm-9\">\r\n                            <select class=\"form-control\" formControlName=\"stateCountry\" [(ngModel)]=\"optionSelectedCountry\" (change)='onOptionsSelectedCountry($event)'\r\n                                #selectCountry>\r\n                                <option *ngIf=\"!optionSelectedGeography\" value=\"0\">Select Country</option>                                                                           \r\n                                <option *ngFor='let cout of countryVal' [value]=\"cout.gid\">{{cout.name}}</option>\r\n                            </select>\r\n                            <div id=\"country_error\" class=\"reg_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                        </div>\r\n                    </div>                            \r\n   \r\n                    <div class=\"form-group\">       \r\n                        <div class=\"col-sm-offset-3 col-sm-9\">  \r\n                            <button *ngIf=\"!stateIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\r\n                            <button *ngIf=\"stateIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\r\n                            <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\r\n                        </div>\r\n                    </div>\r\n\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>   \r\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/state/state.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__state_service__ = __webpack_require__("./assets/app/app/state/state.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var StateComponent = /** @class */ (function () {
+    function StateComponent(http, stateService, renderer, elem, _router) {
+        this.http = http;
+        this.stateService = stateService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.stateIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.optionSelectedGeography = 0;
+        this.optionSelectedCountry = 0;
+        this.countryVal = [];
+        this.stateVal = [];
+        this.stateInterface = {
+            name: '',
+            description: '',
+            state_code: '',
+            gid: 0,
+            country_id: 0
+        };
+    }
+    StateComponent.prototype.ngOnInit = function () {
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            stateName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            stateDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            stateCode: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            stateGeography: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            stateCountry: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]("")
+        });
+        this.onstateLoad();
+        this.onGeographyLoad();
+        this.onCountryLoad();
+    };
+    StateComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/stateCreate']);
+    };
+    StateComponent.prototype.onstateLoad = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/states', { headers: headers }).subscribe(function (data) {
+            _this.stateResponse = data;
+            console.log(_this.stateResponse, "state Response");
+        });
+    };
+    StateComponent.prototype.onGeographyLoad = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/geographys', { headers: headers }).subscribe(function (data) {
+            _this.GeographyResponse = data;
+            console.log(_this.GeographyResponse, "Geography Response");
+        });
+    };
+    StateComponent.prototype.onCountryLoad = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/country', { headers: headers }).subscribe(function (data) {
+            _this.CountryResponse = data;
+            console.log(_this.CountryResponse, "CountryResponse");
+        });
+    };
+    StateComponent.prototype.ngAfterViewInit = function () {
+    };
+    StateComponent.prototype.onClickSubmit = function (data) {
+        console.log("on submit");
+    };
+    StateComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.refStateName = this.statename.nativeElement.value;
+        this.refStateDescription = this.statedescription.nativeElement.value;
+        this.refStateCode = this.statecode.nativeElement.value;
+        this.refStateGeography = this.selectGeography.nativeElement;
+        var optGeo = this.refStateGeography.options[this.refStateGeography.selectedIndex];
+        this.refGeo_Value = optGeo.value;
+        this.refGeo_Text = optGeo.text;
+        this.refStateCountry = this.selectCountry.nativeElement;
+        var optCou = this.refStateCountry.options[this.refStateCountry.selectedIndex];
+        this.refCou_Value = optCou.value;
+        this.refCou_Text = optCou.text;
+        this.fetchGeography = this.GeographyResponse;
+        this.fetchCountry = this.CountryResponse;
+        console.log("fetch response", this.fetchGeography);
+        var stateInterface = {
+            name: this.refStateName,
+            description: this.refStateDescription,
+            state_code: this.refStateCode,
+            gid: this.refGeo_Value,
+            country_id: this.refCou_Value
+        };
+        var stateInterfaceUpdate = {
+            name: this.refStateName,
+            description: this.refStateDescription,
+            state_code: this.refStateCode,
+            geography_id: this.refGeo_Value,
+            country_id: this.refCou_Value
+        };
+        if (this.stateIdToUpdate === null) {
+            this.stateService.saveState(stateInterfaceUpdate).subscribe(function (mySave) {
+                _this.saveState = mySave;
+                console.log(_this.saveState);
+                _this.onstateLoad();
+                _this._router.navigate(['/stateList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            stateInterfaceUpdate.id = this.stateIdToUpdate;
+            this.stateService.getStateAll(stateInterfaceUpdate).subscribe(function (successCode) {
+                _this.onstateLoad();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    StateComponent.prototype.loadStateToEdit = function (stateId) {
+        var _this = this;
+        this.stateService.getStateById(stateId).subscribe(function (sta) {
+            _this.stateIdToUpdate = sta[0].id;
+            console.log(_this.stateIdToUpdate);
+            _this.formdata.setValue({ stateName: sta[0].name, stateDescription: sta[0].description, stateCode: sta[0].state_code, stateGeography: sta[0].gid, stateCountry: sta[0].country_id });
+        });
+        this.correct = !this.correct;
+    };
+    StateComponent.prototype.deleteState = function (stateId) {
+        var _this = this;
+        this.stateService.deleteStateById(stateId)
+            .subscribe(function (sta) {
+            _this.onstateLoad();
+        });
+        this._router.navigate(['/stateList']);
+    };
+    StateComponent.prototype.onOptionsSelectedGeo = function (event) {
+        this.fetchGeography = this.stateResponse;
+        console.log("fetch response", this.fetchGeography);
+        this.fetchCountry = this.CountryResponse;
+        console.log('fetch country response', this.CountryResponse);
+        var geography_id = event.target.value;
+        this.refGeo_Text = event.target.options[event.target.selectedIndex].text;
+        this.optionSelectedGeography = geography_id;
+        this.optionSelectedCountry = 0;
+        this.stateVal = [];
+        this.countryVal = this.fetchCountry.filter(function (item) {
+            console.log("country id", item.gid, "geography id", geography_id);
+            return item.gid === Number(geography_id);
+        });
+    };
+    StateComponent.prototype.onOptionsSelectedCountry = function (event) {
+        var country_id = event.target.value;
+        this.refCou_Text = event.target.options[event.target.selectedIndex].text;
+        this.optionSelectedCountry = country_id;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("statename"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], StateComponent.prototype, "statename", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("statedescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], StateComponent.prototype, "statedescription", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("statecode"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], StateComponent.prototype, "statecode", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectGeography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], StateComponent.prototype, "selectGeography", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectCountry"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], StateComponent.prototype, "selectCountry", void 0);
+    StateComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-state',
+            template: __webpack_require__("./assets/app/app/state/state.component.html"),
+            styles: [__webpack_require__("./assets/app/app/state/state.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], StateComponent);
+    return StateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/state/state.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StateService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var StateService = /** @class */ (function () {
+    function StateService(http) {
+        this.http = http;
+    }
+    StateService.prototype.saveState = function (stateCreate) {
+        return this.http.post("http://localhost:1337/createstate", stateCreate, httpOptions);
+    };
+    StateService.prototype.getStateById = function (stateId) {
+        return this.http.get("http://localhost:1337/findstate" + "/" + stateId);
+    };
+    StateService.prototype.getStateAll = function (stateAll) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.post("http://localhost:1337/updatestate", stateAll, httpOptions);
+    };
+    StateService.prototype.deleteStateById = function (stateId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroystate', { body: { state_id: stateId }, headers: httpHeaders, responseType: 'text' });
+    };
+    StateService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], StateService);
+    return StateService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ng-container *ngIf=\"!correct\">\r\n    <div class=\"widget-heading\">\r\n        <h3 class=\"widget-title\">Sub Document Management</h3>\r\n    </div>\r\n    <div class=\"form-group\">\r\n        <div class=\"col-sm-offset-3 col-sm-9\">\r\n            <button id=\"createSubDoc\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"toggle()\">create</button>\r\n        </div>\r\n    </div>\r\n    <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\r\n        <thead>\r\n            <tr>\r\n                <th class=\"text-center\">Name </th>\r\n                <th class=\"text-center\">Description</th>\r\n                <th class=\"text-center\">Document Name </th>\r\n                <th class=\"text-center\">Operation</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody id=\"subDocList\">\r\n            <tr *ngFor=\"let sdm of subDocMgtResponse; let i = index\">\r\n                <td class=\"text-left\">\r\n                    {{sdm.name}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{sdm.description}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    {{sdm.docname}}\r\n                </td>\r\n                <td class=\"text-center\">\r\n                    <div>\r\n                        <span id=\"editSubDoc\" class=\"\">\r\n              <a class=\"tooltips\">\r\n                <span>\r\n                  <button type=\"button\" (click)=\"loadArticleToEdit(sdm.id)\">Edit</button>\r\n                </span>\r\n                        <img src=\"/images/edit.png\" />\r\n                        </a>\r\n                        </span>\r\n                        <span class=\"delete-subDoc\" data-toggle=\"modal\" data-target=\"\">\r\n              <a class=\"tooltips\">\r\n                <span>\r\n                  <button type=\"button\" (click)=\"deleteArticle(sdm.id)\">Delete</button>\r\n                </span>\r\n                        <img src=\"/images/delete.png\" />\r\n                        </a>\r\n                        </span>\r\n                    </div>\r\n                    <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"\">\r\n                        <div role=\"document\" class=\"modal-dialog modal-sm\">\r\n                            <div class=\"modal-content\">\r\n                                <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\r\n                                    <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\r\n                    <span aria-hidden=\"true\">×</span>\r\n                  </button>\r\n                                    <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Sub Document Delete</h4>\r\n                                </div>\r\n                                <div class=\"modal-body\">\r\n                                    <p>Do you want to delete?</p>\r\n                                </div>\r\n                                <div class=\"modal-footer\">\r\n                                    <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\r\n                                    <button type=\"button\" data-dismiss=\"modal\" id=\"deleteSubDoc\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n    <div id=\"findStatus\"></div>\r\n    <div class=\"user_load\">\r\n        <div id=\"loadMore\"></div>\r\n    </div>\r\n</ng-container>\r\n<ng-container *ngIf=\"correct\">\r\n    <div class=\"container\">\r\n        <div class=\"col-md-6\">\r\n            <div class=\"widget\">\r\n                <div class=\"widget-heading\">\r\n                    <h3 *ngIf=\"!subDocIdToUpdate\" class=\"widget-title\">Sub Document Create</h3>\r\n                    <h3 *ngIf=\"subDocIdToUpdate\" class=\"widget-title\">Edit Sub Document</h3>\r\n                </div>\r\n                <div class=\"widget-body\">\r\n                    <form class=\"form-horizontal\" [formGroup]=\"formdata\">\r\n                        <div class=\"form-group\">\r\n                            <label class=\"col-sm-3 control-label\">Name</label>\r\n                            <div class=\"col-sm-8\">\r\n                                <input type=\"text\" class=\"form-control\" formControlName=\"subDocName\" [(ngModel)]=\" subDocInter.name\" #subDocname/>\r\n                                <div id=\"subDocName_error\" class=\"sub_doc_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                            </div>\r\n                        </div>\r\n\r\n                        <div class=\"form-group\">\r\n                            <label class=\"col-sm-3 control-label\">Description</label>\r\n                            <div class=\"col-sm-8\">\r\n                                <input type=\"text\" class=\"form-control\" formControlName=\"subDocDescription\" [(ngModel)]=\" subDocInter.description\" #subDocdescription/>\r\n\r\n                                <div id=\"subDoc_content_error\" style=\"font-size: 12px; color: #FF0000;\"></div>\r\n                            </div>\r\n                        </div>\r\n\r\n                        <!-- <div class=\"form-group\">\r\n              <label for=\"selectDocument\" class=\"col-sm-3 control-label\">Document</label>\r\n              <div class=\"col-sm-9\">            \r\n                <select id=\"selectDocument\" class=\"form-control\">\r\n                </select>\r\n                <div id=\"doc_error\" class=\"doc_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n              </div>\r\n            </div> -->\r\n                        <div class=\"form-group\">\r\n                            <label for=\"selectDocument\" class=\"col-sm-3 control-label\">Document</label>\r\n                            <div class=\"col-sm-9\">\r\n                                <select class=\"form-control\" formControlName=\"subDocSelectDocument\" [(ngModel)]=\"optionSelected\" #selectDocument>                                                          \r\n                  <!-- <option value=\"0\"></option> -->                                                                                                                             \r\n                  <option *ngFor='let option of documentResponse' [value]=\"option.id\">{{option.name}}</option>        \r\n\r\n                </select>\r\n                                <div id=\"geo_error\" class=\"geo_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-group\">\r\n                            <div class=\"col-sm-offset-3 col-sm-9\">\r\n                                <button *ngIf=\"!subDocIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">CREATE</button>\r\n                                <button *ngIf=\"subDocIdToUpdate\" class=\"btn btn-outline btn-success\" (click)=\"saveEdit()\">UPDATE</button>\r\n                                <button id=\"cancel\" class=\"btn btn-outline btn-black\">Cancel</button>\r\n                            </div>\r\n                        </div>\r\n                    </form>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</ng-container>"
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubdocumentmanagementComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__subdocumentmanagement_service__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var SubdocumentmanagementComponent = /** @class */ (function () {
+    function SubdocumentmanagementComponent(http, subDocService, renderer, elem, _router) {
+        this.http = http;
+        this.subDocService = subDocService;
+        this.renderer = renderer;
+        this.elem = elem;
+        this._router = _router;
+        this.subDocIdToUpdate = null;
+        this.show = false;
+        this.correct = false;
+        this.optionSelected = 0;
+        this.subDocInter = {
+            name: '',
+            description: '',
+            doc_id: 0,
+            parent_id: 0
+        };
+    }
+    SubdocumentmanagementComponent.prototype.ngOnInit = function () {
+        this.formdata = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormGroup */]({
+            subDocName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            subDocDescription: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+            subDocSelectDocument: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */](""),
+        });
+        this.loadAllSubDocuments();
+        this.loadDropDownDocumentst();
+    };
+    SubdocumentmanagementComponent.prototype.loadAllSubDocuments = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/getAllSubDoc', { headers: headers }).subscribe(function (data) {
+            _this.subDocMgtResponse = data;
+            console.log(data);
+        });
+    };
+    SubdocumentmanagementComponent.prototype.loadDropDownDocumentst = function () {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+        this.http.get('http://localhost:1337/allDoctype', { headers: headers }).subscribe(function (data) {
+            _this.documentResponse = data;
+            console.log(data);
+        });
+    };
+    SubdocumentmanagementComponent.prototype.toggle = function () {
+        this.correct = !this.correct;
+        this._router.navigate(['/subDocCreate']);
+    };
+    SubdocumentmanagementComponent.prototype.ngAfterViewInit = function () {
+    };
+    SubdocumentmanagementComponent.prototype.saveEdit = function () {
+        var _this = this;
+        this.subDoc_Name = this.subDocname.nativeElement.value;
+        this.subDoc_Description = this.subDocdescription.nativeElement.value;
+        var subDocLoadRef = this.selectDocument.nativeElement;
+        var optSubDoc = subDocLoadRef.options[subDocLoadRef.selectedIndex];
+        this.subdoc_Value = optSubDoc.value;
+        this.subdoc_Text = optSubDoc.text;
+        var subDocInter = {
+            name: this.subDoc_Name,
+            description: this.subDoc_Description,
+            parent_id: this.subdoc_Value,
+            doc_id: this.subdoc_Value
+        };
+        console.log("am save edit subdoc value", subDocInter.parent_id);
+        console.log("am save edit subdoc value", subDocInter.doc_id);
+        if (this.subDocIdToUpdate === null) {
+            this.subDocService.saveSubDocument(subDocInter)
+                .subscribe(function (mySave) {
+                _this.saveSubDoc = mySave;
+                console.log(_this.saveSubDoc);
+                _this.loadAllSubDocuments();
+                _this._router.navigate(['/subDocList']);
+                _this.show = !_this.show;
+            });
+            console.warn("am in create");
+        }
+        else {
+            subDocInter.id = this.subDocIdToUpdate;
+            this.subDocService.SubDocumentUpdate(subDocInter).subscribe(function (successCode) {
+                _this.loadAllSubDocuments();
+            });
+            console.warn("am in update");
+            this.correct = !this.correct;
+        }
+    };
+    SubdocumentmanagementComponent.prototype.loadArticleToEdit = function (subDocId) {
+        var _this = this;
+        this.subDocService.getSubDocumentById(subDocId).subscribe(function (subdoc) {
+            _this.subDocIdToUpdate = subdoc[0].id;
+            console.log(_this.subDocIdToUpdate);
+            _this.formdata.setValue({ subDocName: subdoc[0].name, subDocDescription: subdoc[0].description, subDocSelectDocument: subdoc[0].parent_id });
+        });
+        this.correct = !this.correct;
+    };
+    SubdocumentmanagementComponent.prototype.deleteArticle = function (subDocId) {
+        var _this = this;
+        this.subDocService.deleteSubDocumentById(subDocId)
+            .subscribe(function (subdoc) {
+            _this.loadAllSubDocuments();
+        });
+        this._router.navigate(['/subDocList']);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("subDocname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], SubdocumentmanagementComponent.prototype, "subDocname", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("subDocdescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], SubdocumentmanagementComponent.prototype, "subDocdescription", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectDocument"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], SubdocumentmanagementComponent.prototype, "selectDocument", void 0);
+    SubdocumentmanagementComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-subdocumentmanagement',
+            template: __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.html"),
+            styles: [__webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+    ], SubdocumentmanagementComponent);
+    return SubdocumentmanagementComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubdocumentmanagementService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var httpOptions = {
+    headers: new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({
+        'Content-Type': 'application/json',
+        'Authorization': 'my-auth-token'
+    })
+};
+var SubdocumentmanagementService = /** @class */ (function () {
+    function SubdocumentmanagementService(http) {
+        this.http = http;
+    }
+    SubdocumentmanagementService.prototype.saveSubDocument = function (subDocCreate) {
+        return this.http.post("http://localhost:1337/saveSubDocUrl", subDocCreate, httpOptions);
+    };
+    SubdocumentmanagementService.prototype.getSubDocumentById = function (subDocId) {
+        return this.http.get("http://localhost:1337/findBySubDoc" + "/" + subDocId);
+    };
+    SubdocumentmanagementService.prototype.SubDocumentUpdate = function (subDocId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.post("http://localhost:1337/updateSubDoc", subDocId, httpOptions);
+    };
+    SubdocumentmanagementService.prototype.deleteSubDocumentById = function (subDocId) {
+        var httpHeaders = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]()
+            .set('Accept', 'application/json');
+        return this.http.request('delete', 'http://localhost:1337/destroySubDoc ', { body: { id: subDocId }, headers: httpHeaders, responseType: 'text' });
+    };
+    SubdocumentmanagementService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], SubdocumentmanagementService);
+    return SubdocumentmanagementService;
 }());
 
 

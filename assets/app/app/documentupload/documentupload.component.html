@@ -1,0 +1,408 @@
+<ng-container *ngIf="!correct">
+    <div class="widget-heading">
+        <h3 class="widget-title">Document Upload Management</h3>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-9">
+            <!-- {#upload} -->
+            <button id="renderFileUploadPage" class="btn btn-success btn-rounded btn-block">Upload File</button>
+            <!-- {/upload} -->
+            <!--click event for upload documents-->
+        </div>
+    </div>
+    <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th style="width:6%" class="text-center">Geography</th>
+                <th style="width:10%" class="text-center">Domain</th>
+                <th style="width:10%" class="text-center">Country</th>
+                <th style="width:10%" class="text-center">State</th>
+                <th style="width:10%" class="text-center">Regulator</th>
+                <th style="width:10%" class="text-center">Regulation</th>
+                <th style="width:10%" class="text-center">Document</th>
+                <th style="width:10%" class="text-center">SubDocument</th>
+                <th style="width:30%" class="text-center">Uploaded File</th>
+                <th style="width:30%" class="text-center">Operation</th>
+            </tr>
+        </thead>
+        <tbody id="doc-list-table">
+            <tr *ngFor="let dres of documentResponse; let i = index">
+                <!-- ngfor goes here -->
+                <td class="text-center">
+                    {{dres.gname}}
+                </td>
+                <td class="text-center">
+                    {{dres.dname}}
+                </td>
+                <td class="text-center">
+                    {{dres.coname}}
+                </td>
+                <td class="text-center">
+                    {{dres.stname}}
+                </td>
+                <td class="text-center">
+                    {{dres.regtrName}}
+                </td>
+                <td class="text-center">
+                    {{dres.rname}}
+                </td>
+                <td class="text-center">
+                    {{dres.docname}}
+                </td>
+                <td class="text-center">
+                    {{dres.sdocname}}
+                </td>
+
+                <td class="text-center">
+                    {{dres.fname}}
+                </td>
+                <td class="text-center">
+                    <div>
+                        <!-- {#publish} -->
+
+                        <!-- <% if (tobepublished == 1) {%> -->
+                        <span class="published" data-toggle="modal" data-target="#pub<%=fid%>"><a class="tooltips"><span>Published</span><img src="/images/published.png" /></a>
+                        </span>
+                        <!-- <% } else { %> -->
+                        <span class="not-published" data-toggle="modal" data-target="#pub<%=fid%>"><a class="tooltips"><span>Publish</span><img src="/images/publish.png" /></a>
+                        </span>
+                        <!-- <% } %> -->
+                        <!-- {/publish} {#delete} -->
+                        <span class="delete-doc" data-toggle="modal" data-target="#<%=fid%>"><a class="tooltips"><span>Delete</span><img src="/images/delete.png" /></a>
+                        </span>
+                        <!-- {/delete} -->
+                    </div>
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="pub<%=fid%>">
+                        <div role="document" class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                    <h4 id="mySmallModalLabel" class="modal-title">Document Publish</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you want to publish?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                                    <button type="button" data-dismiss="modal" id="publishDocument" class="btn btn-outline btn-primary-red">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="<%=fid%>">
+                        <div role="document" class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                    <h4 id="mySmallModalLabel" class="modal-title">Document Delete</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you want to delete?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                                    <button type="button" data-dismiss="modal" id="delDocument" class="btn btn-outline btn-primary-red">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="findStatus"></div>
+    <div class="user_load">
+        <div id="loadMore"></div>
+    </div>
+
+    <div class="widget-heading">
+        <h3 class="widget-title">Lifecycle Document Upload Management</h3>
+    </div>
+
+    <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th style="width:6%" class="text-center">DocumentType</th>
+                <th style="width:10%" class="text-center">Description</th>
+                <th style="width:10%" class="text-center">Date</th>
+                <th style="width:30%" class="text-center">Uploaded File</th>
+                <th style="width:30%" class="text-center">Operation</th>
+            </tr>
+        </thead>
+        <tbody id="spdoc-list-table">
+            <tr *ngFor="let spres of spDocumentResponse; let i = index">
+                <!-- ngfor goes here -->
+                <td class="text-center">
+                    {{spres.document_type}}
+                </td>
+                <td class="text-center">
+                    {{spres.description}}
+                </td>
+                <td class="text-center">
+                    {{spres.date}}
+                </td>
+                <td class="text-center">
+                    {{spres.file_name}}
+                </td>
+                <td class="text-center">
+                    <div>
+
+                        <span id="editSpclDoc" class="published"><a class="tooltips"><span>Edit</span><img src="/images/edit.png" /></a>
+                        </span>
+                        <!-- {#publish} -->
+
+                        <!-- <% if (is_published == 1) {%> -->
+                        <span class="published" data-toggle="modal" data-target="#pub<%=spid%>"><a class="tooltips"><span>Published</span><img src="/images/published.png" /></a>
+                        </span>
+                        <!-- <% } else { %> -->
+                        <span class="not-published" data-toggle="modal" data-target="#pub<%=spid%>"><a class="tooltips"><span>Publish</span><img src="/images/publish.png" /></a>
+                        </span>
+                        <!-- <% } %> -->
+                        <!-- {/publish} {#delete} -->
+                        <span class="delete-doc" data-toggle="modal" data-target="#del<%=spid%>"><a class="tooltips"><span>Delete</span><img src="/images/delete.png" /></a>
+                        </span>
+                        <!-- {/delete} -->
+                    </div>
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="pub<%=spid%>">
+                        <div role="document" class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                    <h4 id="mySmallModalLabel" class="modal-title">Document Publish</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you want to publish?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                                    <button type="button" data-dismiss="modal" id="publishDocument" class="btn btn-outline btn-primary-red">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="del<%=spid%>">
+                        <div role="document" class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                    <h4 id="mySmallModalLabel" class="modal-title">Document Delete</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Do you want to delete?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red">Close</button>
+                                    <button type="button" data-dismiss="modal" id="delDocument" class="btn btn-outline btn-primary-red">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="findStatusSpclDoc"></div>
+    <div class="user_load">
+        <div id="loadMoreSpclDoc"></div>
+    </div>
+</ng-container>
+<!--file upload after click action for container  starts-->
+<ng-container *ngIf="correct">
+
+    <div id="filePage">
+        <span style="width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;">       
+              <label for="message_name">Message</label>
+                <input id="message_name" type="text" class="form-control" style="width:500px;">
+                <div id="message_name_error" class="message_name_error" style="font-size: 12px; color: #FF0000; ">
+          </div> 
+          </span><br><br><br><br>
+
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+            <div class="form-group">
+              <label for="selectGeo">Select Geography</label>
+              <select id="selectGeo" class="form-control">
+                
+              </select>
+            </div>      
+          </span>
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;"> 
+            <div class="form-group">
+              <label for="selectCountry">Select Country</label>
+              <select id="selectCountry" class="form-control" disabled="disabled">
+                
+              </select>
+            </div>          
+          </span>
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+              <div class="form-group">
+              <label for="selectState">Select State</label>
+              <select id="selectState" class="form-control" disabled="disabled">  
+              </select>
+            </div>   
+          </span>
+        <br><br><br><br>
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+          <div class="form-group">
+              <label for="selectDomain">Select Domain</label>
+              <select id="selectDomain" class="form-control" disabled="disabled">
+                
+              </select>
+            </div>     
+          </span>
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+            <div class="form-group">
+              <label for="selectRegulator">Select Regulator</label>
+              <select id="selectRegulator" class="form-control" disabled="disabled">
+                
+              </select>
+            </div>      
+          </span>
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+            <div class="form-group">
+              <label for="selectReg">Select Regulation</label>
+              <select id="selectReg" class="form-control" disabled="disabled">
+                
+              </select>
+            </div>      
+          </span><br><br><br><br>
+
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+            <div class="form-group">
+              <label for="selectRootDoc">Select Document</label>
+              <select id="selectRootDoc" class="form-control" disabled="disabled">          
+              </select>
+            </div>      
+          </span>
+
+        <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+            <div class="form-group">
+              <label for="selectSubDoc" id="selectDocName">Select Sub Document</label>
+              <select id="selectSubDoc" class="form-control parent_control" disabled="disabled">  
+              </select>
+              </div>
+          </span>
+
+        <span id="upload-span" style="width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
+            <div class="form-group">
+              <label for="uploadFile">Upload File</label>
+              <input type="file" name="uploadFile" id="uploadFile" disabled="" data-buttonname="btn-outline btn-primary" data-iconname="ion-image mr-5" class="filestyle" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1">
+              <div style="width:300px; position: relative; left: 10px; margin-top: 0px 20px;" class="bootstrap-filestyle input-group">
+                <input id="fileName" class="form-control " placeholder="" disabled="" type="text"> 
+                <div id="file_error" class="file_error" style="font-size: 12px; color: #FF0000; "></div>
+                <span class="group-span-filestyle input-group-btn" tabindex="0">
+                  <label id="uploadFileLabel" disable="" for="uploadFile" class="btn btn-outline btn-primary-red" style="cursor: not-allowed;">
+                    <span class="icon-span-filestyle ion-image mr-5"></span>
+        <span class="buttonText">Choose file</span>
+        </label>
+        </span>
+    </div>
+    </div>
+    </span>
+
+    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileid">
+        <div role="document" class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                    <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please upload pdf/xlsx documents</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalClose">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</ng-container>
+<!--file upload after click action for container ends-->
+<!--after life tracker dropdown click-->
+<ng-container *ngIf="correct">
+    <div class="widget-heading" id="title">
+        <h3 class="widget-title">LifeTracker Document</h3>
+    </div>
+
+    <div id="addTracker">
+        <div id="trackerList">
+            <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+        <div class="form-group">
+          <label for="document_type">Select DocumentType</label>
+          <select id="document_type" class="form-control select_document_type">
+        
+        </select>  
+        </div>      
+      </span>
+
+            <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+        <div class="form-group">
+          <label for="description">Description</label>
+              <input id="docTypedescription" name="docTypedescription" type="text" class="form-control docTypedescription" maxlength="2400"/>
+
+        </div>
+      </span>
+
+            <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+        <div class="form-group">
+          <label for="date">Date</label>
+            
+                <div id="datetimepicker1" class="input-group date">
+                  <input type="text" id="dateDoc" name="dateDoc" data-date-format='YYYY-MM-DD' class="form-control dateDoc">
+                   <div id="news_date_error" class="" style="font-size: 12px; color: #FF0000; "></div>
+                </div>             
+        </div>
+      </span>
+
+            <span style="width:195px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
+    <div class="form-group">
+      <label for="uploadFileDoc">Upload File</label>
+      <input type="file" name="uploadFileDoc" id="uploadFileDoc" data-buttonname="btn-outline btn-primary" data-iconname="ion-image mr-5" class="filestyle" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1">
+      <div style="width:300px; position: relative; left: 10px; margin-top: 0px 20px;" class="bootstrap-filestyle input-group">
+        <input id="lifeTrackerfileName" class="form-control lifeTrackerfileName" placeholder="" disabled="" type="text"> 
+        <div id="file_error_doc" class="file_error" style="font-size: 12px; color: #FF0000; "></div>
+        <span class="group-span-filestyle input-group-btn" tabindex="0">
+          <label id="uploadFileLabelDoc" for="uploadFileDoc" class="btn btn-outline btn-primary-red">
+            <span class="icon-span-filestyle ion-image mr-5"></span>
+            <span class="buttonText">Choose file</span>
+            </label>
+            </span>
+        </div>
+    </div>
+    </span>
+
+    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileidDoc">
+        <div role="document" class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                    <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                    <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please upload pdf/xlsx documents</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalDocClose">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th style="width:6%" class="text-center">DocumentType</th>
+                <th style="width:10%" class="text-center">Description</th>
+                <th style="width:10%" class="text-center">Date</th>
+                <th style="width:30%" class="text-center">Uploaded File</th>
+                <th style="width:30%" class="text-center">Operation</th>
+            </tr>
+        </thead>
+        <tbody id="doc-list-table"></tbody>
+    </table>
+</ng-container>
