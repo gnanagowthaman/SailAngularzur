@@ -101,6 +101,10 @@ const appRoutes: Routes = [
    path:'docUplMgtList',
    component:DocumentuploadComponent                  
   },
+  {
+    path:'uploadCreate',
+    component:DocumentuploadComponent 
+  },                       
   { path: '**', component: PageNotFoundComponent }
 ];
 @NgModule({

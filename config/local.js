@@ -1,4 +1,4 @@
-/**
+ /**
  * Local environment settings
  *
  * Use this file to specify configuration settings for use while developing
@@ -27,8 +27,8 @@
  * http://sailsjs.org/#!/documentation/anatomy/myApp/config/local.js.html
  */
 var ip = require('ip');
-module.exports = {
-
+module.exports = {    
+                    
   /***************************************************************************
    * Your SSL certificate and key, if you want to be able to serve HTTP      *
    * responses over https:// and/or use websockets over the wss:// protocol  *

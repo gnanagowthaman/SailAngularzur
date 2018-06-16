@@ -109,17 +109,15 @@
                 <div id="doc_error" class="doc_error" style="font-size: 12px; color: #FF0000; "></div>
               </div>
             </div> -->
-                        <div class="form-group">
-                            <label for="selectDocument" class="col-sm-3 control-label">Document</label>
-                            <div class="col-sm-9">
-                                <select class="form-control" formControlName="subDocSelectDocument" [(ngModel)]="optionSelected" #selectDocument>                                                          
-                  <!-- <option value="0"></option> -->                                                                                                                             
-                  <option *ngFor='let option of documentResponse' [value]="option.id">{{option.name}}</option>        
-
+    <div class="form-group">
+        <label for="selectDocument" class="col-sm-3 control-label">Document</label>
+            <div class="col-sm-9">
+                 <select class="form-control" formControlName="subDocSelectDocument" [(ngModel)]="optionSelected" #selectDocument>                                                                                                                                                                                     
+                    <option *ngFor='let option of documentResponse' [value]="option.id">{{option.name}}</option>        
                 </select>
-                                <div id="geo_error" class="geo_error" style="font-size: 12px; color: #FF0000; "></div>
-                            </div>
-                        </div>
+                     <div id="geo_error" class="geo_error" style="font-size: 12px; color: #FF0000; "></div>
+                     </div>      
+    </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
                                 <button *ngIf="!subDocIdToUpdate" class="btn btn-outline btn-success" (click)="saveEdit()">CREATE</button>

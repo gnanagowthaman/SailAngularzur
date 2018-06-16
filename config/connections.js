@@ -27,8 +27,8 @@ module.exports.connections = {
         host: 'localhost',
         port: 3306,
         user: 'root', //optional
-        password: '', //optional  
-        database: 'zurik', //optional   port: 3306,
+        password: 'root', //optional     
+        database: 'zurikt', //optional   port: 3306,                      
         pool: true,
         connectionLimit: 10,
         waitForConnections: true
