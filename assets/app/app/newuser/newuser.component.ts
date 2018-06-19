@@ -105,7 +105,7 @@ export class NewuserComponent implements OnInit {
   inc = 0;
   public myFlag: boolean = false;
   public mySecFlag: boolean = false;
-  private _prevSelected: any;
+  private _prevSelected: any;  
   public count: any;
   geo_Text; cou_Text; sta_Text; reg_Text; sms_Text = "none"; email_Text = "none"; web_Text = "none"; geo_txt; spc_reg;
   smsVal = 0; webVal = 0; emailVal = 0; getUser_name; getEmail; getMobile; getSubsr; getAcce; geo_Value; cou_Value; sta_Value; reg_Value;
@@ -139,7 +139,7 @@ export class NewuserComponent implements OnInit {
       subscription: new FormControl(""),
       access: new FormControl(""),
       smsaccess: new FormControl(""),
-      webaccess: new FormControl(""),
+      webaccess: new FormControl(""),            
       emailaccess: new FormControl(""),
       geopgrpahy: new FormControl(''),
       country: new FormControl(""),
