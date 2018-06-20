@@ -30,11 +30,21 @@ export class DocumentuploadComponent implements OnInit {
   selectedState = 0;
   selectedDomain = 0;
   selectedRegulator = 0;
+  selectedRegulation = 0;
+  selectedRootDoc = 0;
+  selectedSubDoc = 0;
+
   countryVal = [];
-  stateVal = [];                       
-  domainVal = [];              
-  regulatorVal=[];
-  butDisabled: boolean = true; buttonDisabledState: boolean = true; buttonDisabledDomain: boolean = true;buttonDisabledRegulator: boolean = true;
+  stateVal = [];
+  domainVal = [];
+  regulatorVal = [];
+  regulationVal = [];
+  rootDocVal = [];
+  subDocVal = [];
+
+  butDisabled: boolean = true; buttonDisabledState: boolean = true; buttonDisabledDomain: boolean = true; buttonDisabledRegulator: boolean = true;
+  buttonDisabledRegulation: boolean = true; buttonDisabledRootDoc: boolean = true; buttonDisabledSubDoc: true;
+
   constructor(private http: HttpClient, private documentService: DocumentuploadService, private renderer: Renderer2, private elem: ElementRef, private _router: Router) { }
   formdata: FormGroup;
   ngOnInit() {
@@ -43,7 +53,10 @@ export class DocumentuploadComponent implements OnInit {
       uploadcountry: new FormControl(""),
       uploadstate: new FormControl(""),
       uploaddomain: new FormControl(""),
-      uploadregulator: new FormControl("")   
+      uploadregulator: new FormControl(""),
+      uploadregulation: new FormControl(""),
+      uploadrootdoc: new FormControl(""),
+      uploadsubdoc: new FormControl("")
       // subDocDescription: new FormControl(""),
       // subDocSelectDocument: new FormControl(""),                                           
     });
@@ -99,9 +112,17 @@ export class DocumentuploadComponent implements OnInit {
     this.selectedCountry = 0;
     this.selectedState = 0;
     this.selectedDomain = 0;
+    this.selectedRegulator = 0;
+    this.selectedRegulation = 0;
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
 
     this.domainVal = [];
     this.stateVal = [];
+    this.regulatorVal = [];
+    this.regulationVal = [];
+    this.rootDocVal = [];
+    this.subDocVal = [];
 
     this.buttonDisabled = true;
     this.countryVal = this.countryArrayResponse.filter((item) => {
@@ -117,26 +138,108 @@ export class DocumentuploadComponent implements OnInit {
     this.selectedCountry = country_id;
 
     this.selectedState = 0;
-    this.selectedDomain = 0;                  
+    this.selectedDomain = 0;
+    this.selectedRegulator = 0;
+    this.selectedRegulation = 0;
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
 
     this.domainVal = [];
+    this.regulatorVal = [];
+    this.regulationVal = [];
+    this.rootDocVal = [];
+    this.subDocVal = [];
 
     this.buttonDisabledState = true;
     this.stateVal = this.stateArrayResponse.filter((item) => {
-      console.log("state id", item.country_id, "country id", country_id)
+      console.log("state id", item.country_id, "s id", country_id)
       return item.country_id === Number(country_id)
     });
   }
   onSelectState(args) {
     var state_id = args.target.value;
     this.selectedState = state_id;
+
     this.selectedDomain = 0;
+    this.selectedRegulator = 0;
+    this.selectedRegulation = 0;
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
+
+    this.regulatorVal = [];
+    this.regulationVal = [];
+    this.rootDocVal = [];
+    this.subDocVal = [];
+
     this.buttonDisabledDomain = true;
     this.domainVal = this.domainArrayResponse.filter((item) => {
-      console.log("state id", item.sid, "country id", state_id)
+      console.log("state id", item.sid, "state id", state_id)
       if (item.sid === Number(state_id) && item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry)) {
         return item.sid;
-      }                 
+      }
     });
   }
-}
+  onSelectDomain(args) {
+    var domain_id = args.target.value;
+    this.selectedDomain = domain_id;
+    this.selectedRegulator = 0;
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
+
+    this.regulationVal = [];
+    this.rootDocVal = [];
+    this.subDocVal = [];
+
+    this.buttonDisabledRegulator = true;
+    this.regulatorVal = this.regulatorArrayResponse.filter((item) => {
+      console.log("domain item id", item.did, "domain id", domain_id)
+      if (item.did === Number(domain_id) && item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState)) {
+        return item.rid;
+      }
+    });
+  }
+  onSelectRegulator(args) {
+    var regulator_id = args.target.value;
+    this.selectedRegulator = regulator_id;
+    this.selectedRegulation = 0;
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
+
+    this.rootDocVal = [];
+    this.subDocVal = [];
+
+    this.buttonDisabledRegulation = true;
+    this.regulationVal = this.regulationArrayResponse.filter((item) => {
+      console.log("domain item id", item.rid, "domain id", regulator_id)
+      if (item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState) && item.did === Number(this.selectedDomain) && item.rid === Number(this.selectedRegulator)) {
+        return item.rlid;
+      }
+    });
+  }
+  onSelectRegulation(args) {
+    var regulation_id = args.target.value;
+    this.selectedRegulation = regulation_id;
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
+    this.subDocVal = [];
+    this.buttonDisabledRootDoc = true;
+    this.rootDocVal = this.documentArrayResponse.filter((item) => {
+      console.log("domain item id", item.rlid, "domain id", regulation_id)
+      if (item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState) && item.did === Number(this.selectedDomain) && item.rid === Number(this.selectedRegulator) && item.rlid === Number(this.selectedRegulation)) {
+        return item.docid;
+      }
+    });
+  }
+  onSelectRootDoc(args) {
+    var rooddoc_id = args.target.value;
+    this.selectedRootDoc = rooddoc_id;               
+    this.selectedSubDoc = 0;
+    this.buttonDisabledSubDoc = true;
+    this.subDocVal = this.subDocumentArrayResponse.filter((item) => {
+      console.log("domain item id", item.docid, "domain id", rooddoc_id)
+      if (item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState) && item.did === Number(this.selectedDomain) && item.rid === Number(this.selectedRegulator) && item.rlid === Number(this.selectedRegulation) && item.docid === Number(this.selectedRootDoc)) {
+        return item.sdocid;                
+      }
+    });
+  }
+}                                     

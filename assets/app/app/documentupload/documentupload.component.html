@@ -55,12 +55,12 @@
                 <br>
                 <br>
                 <br>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">    
                     <div class="form-group">
                         <label for="selectDomain">Select Domain</label>
                         <div>
                             <select *ngIf="domainVal" class="form-control" formControlName="uploaddomain" [(ngModel)]="selectedDomain" (change)="onSelectDomain($event)"
-                                [disabled]="!buttonDisabledDomain" #selectState>
+                                [disabled]="!buttonDisabledDomain" #selectDomain>
                                 <option value="0">Select Domain</option>
                                 <option *ngFor="let doma of domainVal" [value]="doma.did">{{doma.name}}</option>
                             </select>
@@ -68,18 +68,12 @@
                     </div>
                 </span>
                 <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <!-- <div class="form-group">
-                        <label for="selectRegulator">Select Regulator</label>
-                        <select id="selectRegulator" class="form-control" disabled="disabled">
-
-                        </select>
-                    </div> -->
                     <div class="form-group">
                         <label for="selectRegulator">Select Regulator</label>
                         <div>
                             <select *ngIf="regulatorVal" class="form-control" formControlName="uploadregulator" [(ngModel)]="selectedRegulator" (change)="onSelectRegulator($event)"
-                                [disabled]="!buttonDisabledRegulator" #selectState>
-                                <option value="0">Select Domain</option>
+                                [disabled]="!buttonDisabledRegulator" #selectRegulator>
+                                <option value="0">Select Regulator</option>
                                 <option *ngFor="let regu of regulatorVal" [value]="regu.rid">{{regu.rname}}</option>
                             </select>
                         </div>
@@ -87,31 +81,55 @@
                 </span>
                 <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <div class="form-group">
-                        <label for="selectReg">Select Regulation</label>
-                        <select id="selectReg" class="form-control" disabled="disabled">
-
-                        </select>
+                        <label for="selectRegulation">Select Regulation</label>
+                        <div>
+                            <select *ngIf="regulationVal" class="form-control" formControlName="uploadregulation" [(ngModel)]="selectedRegulation" (change)="onSelectRegulation($event)"
+                                [disabled]="!buttonDisabledRegulation" #selectRegulation>
+                                <option value="0">Select Regulation</option>
+                                <option *ngFor="let regul of regulationVal" [value]="regul.rlid">{{regul.rname}}</option>
+                            </select>
+                        </div>
                     </div>
                 </span>
                 <br>
                 <br>
                 <br>
                 <br>
-
                 <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <div class="form-group">
                         <label for="selectRootDoc">Select Document</label>
-                        <select id="selectRootDoc" class="form-control" disabled="disabled">
-                        </select>
+                        <div>
+                            <select *ngIf="rootDocVal" class="form-control" formControlName="uploadrootdoc" [(ngModel)]="selectedRootDoc" (change)="onSelectRootDoc($event)"
+                                [disabled]="!buttonDisabledRootDoc" #selectRootDoc>         
+                                <option value="0">Select Regulation</option>
+                                <option *ngFor="let root of rootDocVal" [value]="root.docid">{{root.docname}}</option>
+                            </select>
+                        </div>
                     </div>
                 </span>
 
                 <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="selectSubDoc" id="selectDocName">Select Sub Document</label>
                         <select id="selectSubDoc" class="form-control parent_control" disabled="disabled">
                         </select>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="selectSubDoc">Select Sub Document</label>
+                        <div>
+                            <select class="form-control" formControlName="uploadsubdoc" [(ngModel)]="selectedSubDoc" #selectSubDoc>         
+                                <option *ngIf="!selectedRootDoc" value="0">Select Sub Document</option>                       
+                                <option  *ngFor="let subd of subDocVal" [value]="subd.sdocid">{{subd.subdocname}}</option>     
+                            </select>
+                        </div>                       
                     </div>
+                    <!-- <div class="form-group">
+                        <label class="control-label" for="Regulation">Regulation</label>
+                        <select class="form-control input-lg"  class="classImLookingFor" #Regulation>  
+                          <option *ngIf="!selectedState" value="0">Select Reg</option>     
+                          <option *ngFor="let reg of regulationVal" value={{reg.rlid}}>{{reg.name}}</option>
+                        </select>  
+                       </div>   -->
                 </span>
 
                 <span id="upload-span" style="width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
