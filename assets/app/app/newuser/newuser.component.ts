@@ -5,10 +5,9 @@ import { Router } from '@angular/router';
 import { Response, Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { RequestService } from './request.service';
-import { Iterator } from '@progress/kendo-angular-grid/dist/es2015/data/data.iterators';
 import { Client } from './user';
 import { fullClient } from './user';
-import * as $ from '../../resources/js/jquery.min.js';
+     
 @Component({
   selector: 'app-newuser',
   templateUrl: './newuser.component.html',
@@ -36,7 +35,7 @@ export class NewuserComponent implements OnInit {
   //   smsaccess: 'none',
   //   webaccess: 'none',
   //   emailaccess: 'none',
-  //   country: 23,
+  //   country: 23,    
   //   geopgrpahy: '',
   //   state: 18
   // }

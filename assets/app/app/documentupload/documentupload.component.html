@@ -55,7 +55,7 @@
                 <br>
                 <br>
                 <br>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">    
+                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <div class="form-group">
                         <label for="selectDomain">Select Domain</label>
                         <div>
@@ -100,13 +100,30 @@
                         <label for="selectRootDoc">Select Document</label>
                         <div>
                             <select *ngIf="rootDocVal" class="form-control" formControlName="uploadrootdoc" [(ngModel)]="selectedRootDoc" (change)="onSelectRootDoc($event)"
-                                [disabled]="!buttonDisabledRootDoc" #selectRootDoc>         
+                                [disabled]="!buttonDisabledRootDoc" #selectRootDoc>
                                 <option value="0">Select Regulation</option>
                                 <option *ngFor="let root of rootDocVal" [value]="root.docid">{{root.docname}}</option>
+
                             </select>
+
+                            <!-- <div [ngSwitch]="selectedRootDoc">
+                                <ng-template [ngSwitchCase]="'13'">          
+                                    <div>FOOOOOO</div>           
+                                </ng-template>
+                                <ng-template [ngSwitchCase]="'0'">
+                                    <div>BARRRR</div>
+                                </ng-template>
+                                <ng-template [ngSwitchCase]="cat">                              
+                                    <div>CAT</div>
+                                </ng-template>
+                                <ng-template [ngSwitchCase]="dog">
+                                    <div>DOG</div>
+                                </ng-template>
+                            </div>  -->
                         </div>
                     </div>
                 </span>
+
 
                 <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <!-- <div class="form-group">
@@ -117,11 +134,11 @@
                     <div class="form-group">
                         <label for="selectSubDoc">Select Sub Document</label>
                         <div>
-                            <select class="form-control" formControlName="uploadsubdoc" [(ngModel)]="selectedSubDoc" #selectSubDoc>         
-                                <option *ngIf="!selectedRootDoc" value="0">Select Sub Document</option>                       
-                                <option  *ngFor="let subd of subDocVal" [value]="subd.sdocid">{{subd.subdocname}}</option>     
+                            <select class="form-control" formControlName="uploadsubdoc" [(ngModel)]="selectedSubDoc" #selectSubDoc>
+                                <option *ngIf="!selectedRootDoc" value="0">Select Sub Document</option>
+                                <option *ngFor="let subd of subDocVal" [value]="subd.sdocid">{{subd.subdocname}}</option>
                             </select>
-                        </div>                       
+                        </div>
                     </div>
                     <!-- <div class="form-group">
                         <label class="control-label" for="Regulation">Regulation</label>
@@ -509,5 +526,10 @@
         <div class="user_load">
             <div id="loadMoreSpclDoc"></div>
         </div>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'local'">
+        <div class="div">
+            am working correctly
+        </div>         
     </ng-template>
 </div>

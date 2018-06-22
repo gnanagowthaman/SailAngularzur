@@ -17,6 +17,7 @@ export class DocumentuploadComponent implements OnInit {
   // public testdemo: boolean = false;
   // public foo:number;
   myDir = '';
+  status = [];
   buttonDisabled: boolean;
   spDocumentResponse: any;
   documentResponse: any;
@@ -217,29 +218,35 @@ export class DocumentuploadComponent implements OnInit {
     });
   }
   onSelectRegulation(args) {
-    var regulation_id = args.target.value;
+    var regulation_id = args.target.value;    
     this.selectedRegulation = regulation_id;
-    this.selectedRootDoc = 0;
+    this.selectedRootDoc = 0;         
     this.selectedSubDoc = 0;
     this.subDocVal = [];
     this.buttonDisabledRootDoc = true;
     this.rootDocVal = this.documentArrayResponse.filter((item) => {
       console.log("domain item id", item.rlid, "domain id", regulation_id)
       if (item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState) && item.did === Number(this.selectedDomain) && item.rid === Number(this.selectedRegulator) && item.rlid === Number(this.selectedRegulation)) {
-        return item.docid;
+        return item.docid;       
       }
-    });
+    });    
   }
   onSelectRootDoc(args) {
     var rooddoc_id = args.target.value;
-    this.selectedRootDoc = rooddoc_id;               
+    this.selectedRootDoc = rooddoc_id;
+    if (rooddoc_id == 13) {               
+      console.log("dkfjkdsfs")
+      this.myDir='local';    
+      console.log('this is  my dir',this.myDir)                                   
+    }
     this.selectedSubDoc = 0;
     this.buttonDisabledSubDoc = true;
     this.subDocVal = this.subDocumentArrayResponse.filter((item) => {
       console.log("domain item id", item.docid, "domain id", rooddoc_id)
       if (item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState) && item.did === Number(this.selectedDomain) && item.rid === Number(this.selectedRegulator) && item.rlid === Number(this.selectedRegulation) && item.docid === Number(this.selectedRootDoc)) {
-        return item.sdocid;                
+        return item.sdocid;
       }
     });
   }
+
 }                                     

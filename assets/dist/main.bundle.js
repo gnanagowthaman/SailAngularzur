@@ -20,14 +20,14 @@ webpackEmptyAsyncContext.id = "./assets/app/$$_lazy_route_resource lazy recursiv
 /***/ "./assets/app/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "#whole{\n    display: inline-block;\n    width: 85%;\n    height: 100%;\n    border: 1px solid black;\n    top: 106px;\n    left: 200px;\n  }   "
+module.exports = "#whole{\n    display: inline-block;\n    width: 85%;\n    height: 100%;\n    border: 1px solid black;\n    top: 106px;\n    left: 200px;\n  }   \n      \n"
 
 /***/ }),
 
 /***/ "./assets/app/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <li *ngFor=\"let food of foods\">{{food.user_name}}</li> -->\n\n<!-- <pre>{{myData | json}}</pre> -->\n\n<!-- <div *ngFor=\"let d of myData\">\n  {{d}}                        \n</div>                \n-->\n<!-- <li *ngFor=\"let item of myData\">\n  {{item.id}}            \n</li>      -->\n<!-- <a routerLink=\"newuser\"><button class=\"btn btn-success pull-right\" > Add User</button></a> -->\n\n<!-- <h1>Zurik</h1>                                                \n  <nav>\n    <a routerLink=\"/crisis-center\" routerLinkActive=\"active\">List Users</a>\n    <a routerLink=\"/heroes\" routerLinkActive=\"active\">Add User</a>  \n  </nav>  -->\n<!-- <app-list></app-list>  \n  <app-newuser></app-newuser>                         -->\n<!-- <router-outlet></router-outlet> -->\n<!-- \n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-sm-12\">\n            \n        </div>\n\n    </div>\n     <div class=\"col-sm-4\" id=\"ttx\">      \n            \n        </div>\n        <div class=\"col-sm-8\" id=\"whole\">\n            <app-main-content></app-main-content>\n            <router-outlet></router-outlet>\n        </div>\n\n</div>    -->\n   \n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-sm-12\">      \n            <app-header></app-header>\n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-sm-4\">\n            <app-aside></app-aside>\n        </div>            \n        <div class=\"col-sm-8\" id=\"whole\">    \n            <app-main-content></app-main-content>\n            <router-outlet></router-outlet>      \n        </div>\n    </div>  \n</div>\n\n<!--    \n\n<div class=\"container\">\n    <div class=\"row\">   \n        <div class=\"col-sm-12\">\n            \n        </div>\n    </div>\n    <div class=\"row\">\n        <div class=\"col-sm-4\">   \n            \n        </div>\n        <div class=\"col-sm-8\" id=\"whole\">       \n               <app-main-content></app-main-content>\n               \n        </div>\n    </div>          \n</div>\n\n\n     <app-header></app-header>\n        <app-aside></app-aside>\n\n        <router-outlet></router-outlet>\n             -->"
+module.exports = "\n<div class=\"container\">\n    <div class=\"row\">\n        <div class=\"col-sm-12\">\n            <app-header></app-header>\n        </div>\n    </div>\n    <div class=\"row\">         \n        <div class=\"col-sm-4\">\n            <app-aside></app-aside>\n        </div>\n        <div class=\"col-sm-8\" id=\"whole\">\n            <app-main-content></app-main-content>\n            <router-outlet></router-outlet>\n        </div>    \n    </div>\n</div>   "
 
 /***/ }),
 
@@ -122,33 +122,32 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/animations.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__ = __webpack_require__("./node_modules/@progress/kendo-angular-grid/dist/es/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./assets/app/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__demo_service__ = __webpack_require__("./assets/app/app/demo.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__ = __webpack_require__("./assets/app/app/newuser/newuser.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__ = __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__list_list_component__ = __webpack_require__("./assets/app/app/list/list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__country_country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__state_state_service__ = __webpack_require__("./assets/app/app/state/state.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__document_document_service__ = __webpack_require__("./assets/app/app/document/document.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__subdocumentmanagement_subdocumentmanagement_service__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__regulator_regulator_service__ = __webpack_require__("./assets/app/app/regulator/regulator.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__documentupload_documentupload_service__ = __webpack_require__("./assets/app/app/documentupload/documentupload.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__country_country_component__ = __webpack_require__("./assets/app/app/country/country.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__state_state_component__ = __webpack_require__("./assets/app/app/state/state.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__document_document_component__ = __webpack_require__("./assets/app/app/document/document.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__ = __webpack_require__("./assets/app/app/regulator/regulator.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__ = __webpack_require__("./assets/app/app/documentupload/documentupload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./assets/app/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__demo_service__ = __webpack_require__("./assets/app/app/demo.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__newuser_newuser_component__ = __webpack_require__("./assets/app/app/newuser/newuser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__page_not_found_page_not_found_component__ = __webpack_require__("./assets/app/app/page-not-found/page-not-found.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__list_list_component__ = __webpack_require__("./assets/app/app/list/list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__newuser_request_service__ = __webpack_require__("./assets/app/app/newuser/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__country_country_service__ = __webpack_require__("./assets/app/app/country/country.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__geography_create_service__ = __webpack_require__("./assets/app/app/geography/create.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__state_state_service__ = __webpack_require__("./assets/app/app/state/state.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__document_document_service__ = __webpack_require__("./assets/app/app/document/document.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__subdocumentmanagement_subdocumentmanagement_service__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__regulator_regulator_service__ = __webpack_require__("./assets/app/app/regulator/regulator.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__documentupload_documentupload_service__ = __webpack_require__("./assets/app/app/documentupload/documentupload.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__header_header_component__ = __webpack_require__("./assets/app/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__aside_aside_component__ = __webpack_require__("./assets/app/app/aside/aside.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__main_content_main_content_component__ = __webpack_require__("./assets/app/app/main-content/main-content.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__geography_geography_component__ = __webpack_require__("./assets/app/app/geography/geography.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__country_country_component__ = __webpack_require__("./assets/app/app/country/country.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__state_state_component__ = __webpack_require__("./assets/app/app/state/state.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__document_document_component__ = __webpack_require__("./assets/app/app/document/document.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__subdocumentmanagement_subdocumentmanagement_component__ = __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__regulator_regulator_component__ = __webpack_require__("./assets/app/app/regulator/regulator.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__documentupload_documentupload_component__ = __webpack_require__("./assets/app/app/documentupload/documentupload.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -186,12 +185,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var appRoutes = [
-    { path: 'userList', component: __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */] },
+    { path: 'userList', component: __WEBPACK_IMPORTED_MODULE_10__list_list_component__["a" /* ListComponent */] },
     {
         path: 'newUser',
-        component: __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_7__newuser_newuser_component__["a" /* NewuserComponent */]
     },
     {
         path: '',
@@ -200,106 +198,106 @@ var appRoutes = [
     },
     {
         path: 'geoList',
-        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_23__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoCreate',
-        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_23__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoBack',
-        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_23__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'geoEdit/:id',
-        component: __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_23__geography_geography_component__["a" /* GeographyComponent */]
     },
     {
         path: 'couList',
-        component: __WEBPACK_IMPORTED_MODULE_25__country_country_component__["a" /* CountryComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_24__country_country_component__["a" /* CountryComponent */]
     },
     {
         path: 'couCreate',
-        component: __WEBPACK_IMPORTED_MODULE_25__country_country_component__["a" /* CountryComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_24__country_country_component__["a" /* CountryComponent */]
     },
     {
         path: 'stateList',
-        component: __WEBPACK_IMPORTED_MODULE_26__state_state_component__["a" /* StateComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_25__state_state_component__["a" /* StateComponent */]
     },
     {
         path: 'stateCreate',
-        component: __WEBPACK_IMPORTED_MODULE_26__state_state_component__["a" /* StateComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_25__state_state_component__["a" /* StateComponent */]
     },
     {
         path: 'docList',
-        component: __WEBPACK_IMPORTED_MODULE_27__document_document_component__["a" /* DocumentComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_26__document_document_component__["a" /* DocumentComponent */]
     },
     {
         path: 'docCreate',
-        component: __WEBPACK_IMPORTED_MODULE_27__document_document_component__["a" /* DocumentComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_26__document_document_component__["a" /* DocumentComponent */]
     },
     {
         path: 'subDocList',
-        component: __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_27__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
     },
     {
         path: 'subDocCreate',
-        component: __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_27__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */]
     },
     {
         path: 'regList',
-        component: __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__["a" /* RegulatorComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_28__regulator_regulator_component__["a" /* RegulatorComponent */]
     },
     {
         path: 'regCreate',
-        component: __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__["a" /* RegulatorComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_28__regulator_regulator_component__["a" /* RegulatorComponent */]
     },
     {
         path: 'docUplMgtList',
-        component: __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_29__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
     },
     {
         path: 'uploadCreate',
-        component: __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_29__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
     },
-    { path: '**', component: __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_9__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__newuser_newuser_component__["a" /* NewuserComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__list_list_component__["a" /* ListComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__header_header_component__["a" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__aside_aside_component__["a" /* AsideComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__main_content_main_content_component__["a" /* MainContentComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__geography_geography_component__["a" /* GeographyComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__country_country_component__["a" /* CountryComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__state_state_component__["a" /* StateComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__document_document_component__["a" /* DocumentComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__regulator_regulator_component__["a" /* RegulatorComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__newuser_newuser_component__["a" /* NewuserComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__list_list_component__["a" /* ListComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__header_header_component__["a" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__aside_aside_component__["a" /* AsideComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__main_content_main_content_component__["a" /* MainContentComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__geography_geography_component__["a" /* GeographyComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__country_country_component__["a" /* CountryComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__state_state_component__["a" /* StateComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__document_document_component__["a" /* DocumentComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__subdocumentmanagement_subdocumentmanagement_component__["a" /* SubdocumentmanagementComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__regulator_regulator_component__["a" /* RegulatorComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__documentupload_documentupload_component__["a" /* DocumentuploadComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_23__angular_http__["b" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_22__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_forms__["e" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_6__angular_forms__["d" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_forms__["d" /* FormsModule */],
                 // RouterModule.forRoot(
                 //   appRoutes,  
                 //  // { enableTracing: true } // <-- debugging purposes only
                 // ),
-                __WEBPACK_IMPORTED_MODULE_9__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */], __WEBPACK_IMPORTED_MODULE_4__progress_kendo_angular_grid__["a" /* GridModule */]
+                __WEBPACK_IMPORTED_MODULE_8__angular_router__["b" /* RouterModule */].forRoot(appRoutes, { useHash: true }),
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_12__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_14__geography_create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_13__country_country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_15__state_state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_16__document_document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_17__subdocumentmanagement_subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_18__regulator_regulator_service__["a" /* RegulatorService */], __WEBPACK_IMPORTED_MODULE_19__documentupload_documentupload_service__["a" /* DocumentuploadService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_6__demo_service__["a" /* DemoService */], __WEBPACK_IMPORTED_MODULE_11__newuser_request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_13__geography_create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_12__country_country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_14__state_state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_15__document_document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_16__subdocumentmanagement_subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_17__regulator_regulator_service__["a" /* RegulatorService */], __WEBPACK_IMPORTED_MODULE_18__documentupload_documentupload_service__["a" /* DocumentuploadService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -510,20 +508,20 @@ var CountryComponent = /** @class */ (function () {
         console.log(event); //option value will be sent as event
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countryname"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("countryname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], CountryComponent.prototype, "countryname", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countrydescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("countrydescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], CountryComponent.prototype, "countrydescription", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("countrycode"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("countrycode"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], CountryComponent.prototype, "countrycode", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectGeography"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("selectGeography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], CountryComponent.prototype, "selectGeography", void 0);
     CountryComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -531,7 +529,7 @@ var CountryComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/country/country.component.html"),
             styles: [__webpack_require__("./assets/app/app/country/country.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__country_service__["a" /* CountryService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], CountryComponent);
     return CountryComponent;
 }());
@@ -595,7 +593,7 @@ var CountryService = /** @class */ (function () {
         return this.http.request('delete', 'http://localhost:1337/destroycountry', { body: { country_id: couId }, headers: httpHeaders, responseType: 'text' });
     };
     CountryService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], CountryService);
     return CountryService;
@@ -637,7 +635,7 @@ var DemoService = /** @class */ (function () {
     DemoService.prototype.getNavigate = function () {
     };
     DemoService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], DemoService);
     return DemoService;
@@ -766,12 +764,12 @@ var DocumentComponent = /** @class */ (function () {
         this._router.navigate(['/docList']);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("doctypename"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("doctypename"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], DocumentComponent.prototype, "doctypename", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("doctypedescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("doctypedescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], DocumentComponent.prototype, "doctypedescription", void 0);
     DocumentComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -779,7 +777,7 @@ var DocumentComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/document/document.component.html"),
             styles: [__webpack_require__("./assets/app/app/document/document.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__document_service__["a" /* DocumentService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], DocumentComponent);
     return DocumentComponent;
 }());
@@ -838,7 +836,7 @@ var DocumentService = /** @class */ (function () {
         return this.http.request('delete', 'http://localhost:1337/destroydocument', { body: { document_id: doumentId }, headers: httpHeaders, responseType: 'text' });
     };
     DocumentService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], DocumentService);
     return DocumentService;
@@ -858,7 +856,7 @@ module.exports = ""
 /***/ "./assets/app/app/documentupload/documentupload.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngSwitch]=\"myDir\">\n\n    <!--file upload after click action for container  starts-->\n    <ng-template [ngSwitchCase]=\"'east'\">\n\n\n        <div id=\"filePage\">\n            <span style=\"width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;\">\n                <label for=\"message_name\">Message</label>\n                <input id=\"message_name\" type=\"text\" class=\"form-control\" style=\"width:500px;\">\n                <div id=\"message_name_error\" class=\"message_name_error\" style=\"font-size: 12px; color: #FF0000; \">\n                </div>\n            </span>\n            <br>\n            <br>\n            <br>\n            <br>\n            <form [formGroup]=\"formdata\">\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectGeo\">Select Geography</label>\n                        <select *ngIf=\"geoArrayResponse\" class=\"form-control\" formControlName=\"uploadgeography\" [(ngModel)]=\"optionSelected\" (change)=\"onSelectGeography($event)\">\n                            <!-- #selectGeo -->\n                            <option value=\"0\">Select Geography</option>\n                            <option *ngFor='let option of geoArrayResponse' [value]=\"option.id\">{{option.name}}</option>\n                        </select>\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectCountry\">Select Country</label>\n                        <div>\n                            <select *ngIf=\"countryVal\" class=\"form-control\" formControlName=\"uploadcountry\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event)\"\n                                [disabled]=\"!buttonDisabled\" #selectCountry>\n                                <option value=\"0\">Select Country</option>\n                                <option *ngFor=\"let cout of countryVal\" [value]=\"cout.country_id\">{{cout.cname}}</option>\n                            </select>\n                        </div>\n\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectState\">Select State</label>\n                        <div>\n                            <select *ngIf=\"stateVal\" class=\"form-control\" formControlName=\"uploadstate\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event)\"\n                                [disabled]=\"!buttonDisabledState\" #selectState>\n                                <option value=\"0\">Select State</option>\n                                <option *ngFor=\"let stat of stateVal\" [value]=\"stat.state_id\">{{stat.sname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <br>\n                <br>\n                <br>\n                <br>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">    \n                    <div class=\"form-group\">\n                        <label for=\"selectDomain\">Select Domain</label>\n                        <div>\n                            <select *ngIf=\"domainVal\" class=\"form-control\" formControlName=\"uploaddomain\" [(ngModel)]=\"selectedDomain\" (change)=\"onSelectDomain($event)\"\n                                [disabled]=\"!buttonDisabledDomain\" #selectDomain>\n                                <option value=\"0\">Select Domain</option>\n                                <option *ngFor=\"let doma of domainVal\" [value]=\"doma.did\">{{doma.name}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectRegulator\">Select Regulator</label>\n                        <div>\n                            <select *ngIf=\"regulatorVal\" class=\"form-control\" formControlName=\"uploadregulator\" [(ngModel)]=\"selectedRegulator\" (change)=\"onSelectRegulator($event)\"\n                                [disabled]=\"!buttonDisabledRegulator\" #selectRegulator>\n                                <option value=\"0\">Select Regulator</option>\n                                <option *ngFor=\"let regu of regulatorVal\" [value]=\"regu.rid\">{{regu.rname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectRegulation\">Select Regulation</label>\n                        <div>\n                            <select *ngIf=\"regulationVal\" class=\"form-control\" formControlName=\"uploadregulation\" [(ngModel)]=\"selectedRegulation\" (change)=\"onSelectRegulation($event)\"\n                                [disabled]=\"!buttonDisabledRegulation\" #selectRegulation>\n                                <option value=\"0\">Select Regulation</option>\n                                <option *ngFor=\"let regul of regulationVal\" [value]=\"regul.rlid\">{{regul.rname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <br>\n                <br>\n                <br>\n                <br>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectRootDoc\">Select Document</label>\n                        <div>\n                            <select *ngIf=\"rootDocVal\" class=\"form-control\" formControlName=\"uploadrootdoc\" [(ngModel)]=\"selectedRootDoc\" (change)=\"onSelectRootDoc($event)\"\n                                [disabled]=\"!buttonDisabledRootDoc\" #selectRootDoc>         \n                                <option value=\"0\">Select Regulation</option>\n                                <option *ngFor=\"let root of rootDocVal\" [value]=\"root.docid\">{{root.docname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <!-- <div class=\"form-group\">\n                        <label for=\"selectSubDoc\" id=\"selectDocName\">Select Sub Document</label>\n                        <select id=\"selectSubDoc\" class=\"form-control parent_control\" disabled=\"disabled\">\n                        </select>\n                    </div> -->\n                    <div class=\"form-group\">\n                        <label for=\"selectSubDoc\">Select Sub Document</label>\n                        <div>\n                            <select class=\"form-control\" formControlName=\"uploadsubdoc\" [(ngModel)]=\"selectedSubDoc\" #selectSubDoc>         \n                                <option *ngIf=\"!selectedRootDoc\" value=\"0\">Select Sub Document</option>                       \n                                <option  *ngFor=\"let subd of subDocVal\" [value]=\"subd.sdocid\">{{subd.subdocname}}</option>     \n                            </select>\n                        </div>                       \n                    </div>\n                    <!-- <div class=\"form-group\">\n                        <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n                        <select class=\"form-control input-lg\"  class=\"classImLookingFor\" #Regulation>  \n                          <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>     \n                          <option *ngFor=\"let reg of regulationVal\" value={{reg.rlid}}>{{reg.name}}</option>\n                        </select>  \n                       </div>   -->\n                </span>\n\n                <span id=\"upload-span\" style=\"width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;\">\n                    <div class=\"form-group\">\n                        <label for=\"uploadFile\">Upload File</label>\n                        <input type=\"file\" name=\"uploadFile\" id=\"uploadFile\" disabled=\"\" data-buttonname=\"btn-outline btn-primary\" data-iconname=\"ion-image mr-5\"\n                            class=\"filestyle\" style=\"position: absolute; clip: rect(0px, 0px, 0px, 0px);\" tabindex=\"-1\">\n                        <div style=\"width:300px; position: relative; left: 10px; margin-top: 0px 20px;\" class=\"bootstrap-filestyle input-group\">\n                            <input id=\"fileName\" class=\"form-control \" placeholder=\"\" disabled=\"\" type=\"text\">\n                            <div id=\"file_error\" class=\"file_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            <span class=\"group-span-filestyle input-group-btn\" tabindex=\"0\">\n                                <label id=\"uploadFileLabel\" disable=\"\" for=\"uploadFile\" class=\"btn btn-outline btn-primary-red\" style=\"cursor: not-allowed;\">\n                                    <span class=\"icon-span-filestyle ion-image mr-5\"></span>\n                                    <span class=\"buttonText\">Choose file</span>\n                                </label>\n                            </span>\n                        </div>\n                    </div>\n                </span>\n            </form>\n            <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"chooseFileid\">\n                <div role=\"document\" class=\"modal-dialog modal-sm\">\n                    <div class=\"modal-content\">\n                        <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                            <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                <span aria-hidden=\"true\">×</span>\n                            </button>\n                            <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Upload Document</h4>\n                        </div>\n                        <div class=\"modal-body\">\n                            <p>Please upload pdf/xlsx documents</p>\n                        </div>\n                        <div class=\"modal-footer\">\n                            <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\" id=\"modalClose\">Ok</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n    </ng-template>\n    <!--file upload after click action for container ends-->\n    <!--after life tracker dropdown click-->\n\n    <ng-template [ngSwitchCase]=\"'west'\">\n\n        <div class=\"widget-heading\" id=\"title\">\n            <h3 class=\"widget-title\">LifeTracker Document</h3>\n        </div>\n\n        <div id=\"addTracker\">\n            <div id=\"trackerList\">\n                <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"document_type\">Select DocumentType</label>\n                        <select id=\"document_type\" class=\"form-control select_document_type\">\n\n                        </select>\n                    </div>\n                </span>\n\n                <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"description\">Description</label>\n                        <input id=\"docTypedescription\" name=\"docTypedescription\" type=\"text\" class=\"form-control docTypedescription\" maxlength=\"2400\"\n                        />\n\n                    </div>\n                </span>\n\n                <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"date\">Date</label>\n\n                        <div id=\"datetimepicker1\" class=\"input-group date\">\n                            <input type=\"text\" id=\"dateDoc\" name=\"dateDoc\" data-date-format='YYYY-MM-DD' class=\"form-control dateDoc\">\n                            <div id=\"news_date_error\" class=\"\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n                </span>\n\n                <span style=\"width:195px; position: relative; left: 10px; margin-top: 0px 20px;float: left;\">\n                    <div class=\"form-group\">\n                        <label for=\"uploadFileDoc\">Upload File</label>\n                        <input type=\"file\" name=\"uploadFileDoc\" id=\"uploadFileDoc\" data-buttonname=\"btn-outline btn-primary\" data-iconname=\"ion-image mr-5\"\n                            class=\"filestyle\" style=\"position: absolute; clip: rect(0px, 0px, 0px, 0px);\" tabindex=\"-1\">\n                        <div style=\"width:300px; position: relative; left: 10px; margin-top: 0px 20px;\" class=\"bootstrap-filestyle input-group\">\n                            <input id=\"lifeTrackerfileName\" class=\"form-control lifeTrackerfileName\" placeholder=\"\" disabled=\"\" type=\"text\">\n                            <div id=\"file_error_doc\" class=\"file_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            <span class=\"group-span-filestyle input-group-btn\" tabindex=\"0\">\n                                <label id=\"uploadFileLabelDoc\" for=\"uploadFileDoc\" class=\"btn btn-outline btn-primary-red\">\n                                    <span class=\"icon-span-filestyle ion-image mr-5\"></span>\n                                    <span class=\"buttonText\">Choose file</span>\n                                </label>\n                            </span>\n                        </div>\n                    </div>\n                </span>\n\n                <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"chooseFileidDoc\">\n                    <div role=\"document\" class=\"modal-dialog modal-sm\">\n                        <div class=\"modal-content\">\n                            <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                    <span aria-hidden=\"true\">×</span>\n                                </button>\n                                <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Upload Document</h4>\n                            </div>\n                            <div class=\"modal-body\">\n                                <p>Please upload pdf/xlsx documents</p>\n                            </div>\n                            <div class=\"modal-footer\">\n                                <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\" id=\"modalDocClose\">Ok</button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:6%\" class=\"text-center\">DocumentType</th>\n                    <th style=\"width:10%\" class=\"text-center\">Description</th>\n                    <th style=\"width:10%\" class=\"text-center\">Date</th>\n                    <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\"></tbody>\n        </table>\n\n    </ng-template>\n    <ng-template ngSwitchDefault>\n        <div class=\"widget-heading\">\n            <h3 class=\"widget-title\">Document Upload Management</h3>\n        </div>\n        <div class=\"form-group\">\n            <div class=\"col-sm-offset-3 col-sm-9\">\n                <!-- {#upload} -->\n                <button id=\"renderFileUploadPage\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"myDir='east'\">Upload File</button>\n                <!-- {/upload} -->\n                <!--click event for upload documents-->\n            </div>\n        </div>\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:6%\" class=\"text-center\">Geography</th>\n                    <th style=\"width:10%\" class=\"text-center\">Domain</th>\n                    <th style=\"width:10%\" class=\"text-center\">Country</th>\n                    <th style=\"width:10%\" class=\"text-center\">State</th>\n                    <th style=\"width:10%\" class=\"text-center\">Regulator</th>\n                    <th style=\"width:10%\" class=\"text-center\">Regulation</th>\n                    <th style=\"width:10%\" class=\"text-center\">Document</th>\n                    <th style=\"width:10%\" class=\"text-center\">SubDocument</th>\n                    <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\">\n                <tr *ngFor=\"let dres of documentResponse; let i = index\">\n                    <!-- ngfor goes here -->\n                    <td class=\"text-center\">\n                        {{dres.gname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.dname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.coname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.stname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.regtrName}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.rname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.docname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.sdocname}}\n                    </td>\n\n                    <td class=\"text-center\">\n                        {{dres.fname}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div>\n                            <!-- {#publish} -->\n\n                            <!-- <% if (tobepublished == 1) {%> -->\n                            <span class=\"published\" data-toggle=\"modal\" data-target=\"#pub<%=fid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Published</span>\n                                    <img src=\"/images/published.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } else { %> -->\n                            <span class=\"not-published\" data-toggle=\"modal\" data-target=\"#pub<%=fid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Publish</span>\n                                    <img src=\"/images/publish.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } %> -->\n                            <!-- {/publish} {#delete} -->\n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=fid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Delete</span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                            <!-- {/delete} -->\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"pub<%=fid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Publish</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to publish?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"publishDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=fid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"delDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n        <div id=\"findStatus\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMore\"></div>\n        </div>\n\n        <div class=\"widget-heading\">\n            <h3 class=\"widget-title\">Lifecycle Document Upload Management</h3>\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:6%\" class=\"text-center\">DocumentType</th>\n                    <th style=\"width:10%\" class=\"text-center\">Description</th>\n                    <th style=\"width:10%\" class=\"text-center\">Date</th>\n                    <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"spdoc-list-table\">\n                <tr *ngFor=\"let spres of spDocumentResponse; let i = index\">\n                    <!-- ngfor goes here -->\n                    <td class=\"text-center\">\n                        {{spres.document_type}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{spres.description}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{spres.date}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{spres.file_name}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div>\n\n                            <span id=\"editSpclDoc\" class=\"published\">\n                                <a class=\"tooltips\">\n                                    <span>Edit</span>\n                                    <img src=\"/images/edit.png\" />\n                                </a>\n                            </span>\n                            <!-- {#publish} -->\n\n                            <!-- <% if (is_published == 1) {%> -->\n                            <span class=\"published\" data-toggle=\"modal\" data-target=\"#pub<%=spid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Published</span>\n                                    <img src=\"/images/published.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } else { %> -->\n                            <span class=\"not-published\" data-toggle=\"modal\" data-target=\"#pub<%=spid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Publish</span>\n                                    <img src=\"/images/publish.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } %> -->\n                            <!-- {/publish} {#delete} -->\n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#del<%=spid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Delete</span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                            <!-- {/delete} -->\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"pub<%=spid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Publish</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to publish?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"publishDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"del<%=spid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"delDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n        <div id=\"findStatusSpclDoc\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMoreSpclDoc\"></div>\n        </div>\n    </ng-template>\n</div>"
+module.exports = "<div [ngSwitch]=\"myDir\">\n\n    <!--file upload after click action for container  starts-->\n    <ng-template [ngSwitchCase]=\"'east'\">\n\n\n        <div id=\"filePage\">\n            <span style=\"width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;\">\n                <label for=\"message_name\">Message</label>\n                <input id=\"message_name\" type=\"text\" class=\"form-control\" style=\"width:500px;\">\n                <div id=\"message_name_error\" class=\"message_name_error\" style=\"font-size: 12px; color: #FF0000; \">\n                </div>\n            </span>\n            <br>\n            <br>\n            <br>\n            <br>\n            <form [formGroup]=\"formdata\">\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectGeo\">Select Geography</label>\n                        <select *ngIf=\"geoArrayResponse\" class=\"form-control\" formControlName=\"uploadgeography\" [(ngModel)]=\"optionSelected\" (change)=\"onSelectGeography($event)\">\n                            <!-- #selectGeo -->\n                            <option value=\"0\">Select Geography</option>\n                            <option *ngFor='let option of geoArrayResponse' [value]=\"option.id\">{{option.name}}</option>\n                        </select>\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectCountry\">Select Country</label>\n                        <div>\n                            <select *ngIf=\"countryVal\" class=\"form-control\" formControlName=\"uploadcountry\" [(ngModel)]=\"selectedCountry\" (change)=\"onSelectCountry($event)\"\n                                [disabled]=\"!buttonDisabled\" #selectCountry>\n                                <option value=\"0\">Select Country</option>\n                                <option *ngFor=\"let cout of countryVal\" [value]=\"cout.country_id\">{{cout.cname}}</option>\n                            </select>\n                        </div>\n\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectState\">Select State</label>\n                        <div>\n                            <select *ngIf=\"stateVal\" class=\"form-control\" formControlName=\"uploadstate\" [(ngModel)]=\"selectedState\" (change)=\"onSelectState($event)\"\n                                [disabled]=\"!buttonDisabledState\" #selectState>\n                                <option value=\"0\">Select State</option>\n                                <option *ngFor=\"let stat of stateVal\" [value]=\"stat.state_id\">{{stat.sname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <br>\n                <br>\n                <br>\n                <br>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectDomain\">Select Domain</label>\n                        <div>\n                            <select *ngIf=\"domainVal\" class=\"form-control\" formControlName=\"uploaddomain\" [(ngModel)]=\"selectedDomain\" (change)=\"onSelectDomain($event)\"\n                                [disabled]=\"!buttonDisabledDomain\" #selectDomain>\n                                <option value=\"0\">Select Domain</option>\n                                <option *ngFor=\"let doma of domainVal\" [value]=\"doma.did\">{{doma.name}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectRegulator\">Select Regulator</label>\n                        <div>\n                            <select *ngIf=\"regulatorVal\" class=\"form-control\" formControlName=\"uploadregulator\" [(ngModel)]=\"selectedRegulator\" (change)=\"onSelectRegulator($event)\"\n                                [disabled]=\"!buttonDisabledRegulator\" #selectRegulator>\n                                <option value=\"0\">Select Regulator</option>\n                                <option *ngFor=\"let regu of regulatorVal\" [value]=\"regu.rid\">{{regu.rname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectRegulation\">Select Regulation</label>\n                        <div>\n                            <select *ngIf=\"regulationVal\" class=\"form-control\" formControlName=\"uploadregulation\" [(ngModel)]=\"selectedRegulation\" (change)=\"onSelectRegulation($event)\"\n                                [disabled]=\"!buttonDisabledRegulation\" #selectRegulation>\n                                <option value=\"0\">Select Regulation</option>\n                                <option *ngFor=\"let regul of regulationVal\" [value]=\"regul.rlid\">{{regul.rname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                </span>\n                <br>\n                <br>\n                <br>\n                <br>\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"selectRootDoc\">Select Document</label>\n                        <div>\n                            <select *ngIf=\"rootDocVal\" class=\"form-control\" formControlName=\"uploadrootdoc\" [(ngModel)]=\"selectedRootDoc\" (change)=\"onSelectRootDoc($event)\"\n                                [disabled]=\"!buttonDisabledRootDoc\" #selectRootDoc>\n                                <option value=\"0\">Select Regulation</option>\n                                <option *ngFor=\"let root of rootDocVal\" [value]=\"root.docid\">{{root.docname}}</option>\n\n                            </select>\n\n                            <!-- <div [ngSwitch]=\"selectedRootDoc\">\n                                <ng-template [ngSwitchCase]=\"'13'\">          \n                                    <div>FOOOOOO</div>           \n                                </ng-template>\n                                <ng-template [ngSwitchCase]=\"'0'\">\n                                    <div>BARRRR</div>\n                                </ng-template>\n                                <ng-template [ngSwitchCase]=\"cat\">                              \n                                    <div>CAT</div>\n                                </ng-template>\n                                <ng-template [ngSwitchCase]=\"dog\">\n                                    <div>DOG</div>\n                                </ng-template>\n                            </div>  -->\n                        </div>\n                    </div>\n                </span>\n\n\n                <span style=\"width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <!-- <div class=\"form-group\">\n                        <label for=\"selectSubDoc\" id=\"selectDocName\">Select Sub Document</label>\n                        <select id=\"selectSubDoc\" class=\"form-control parent_control\" disabled=\"disabled\">\n                        </select>\n                    </div> -->\n                    <div class=\"form-group\">\n                        <label for=\"selectSubDoc\">Select Sub Document</label>\n                        <div>\n                            <select class=\"form-control\" formControlName=\"uploadsubdoc\" [(ngModel)]=\"selectedSubDoc\" #selectSubDoc>\n                                <option *ngIf=\"!selectedRootDoc\" value=\"0\">Select Sub Document</option>\n                                <option *ngFor=\"let subd of subDocVal\" [value]=\"subd.sdocid\">{{subd.subdocname}}</option>\n                            </select>\n                        </div>\n                    </div>\n                    <!-- <div class=\"form-group\">\n                        <label class=\"control-label\" for=\"Regulation\">Regulation</label>\n                        <select class=\"form-control input-lg\"  class=\"classImLookingFor\" #Regulation>  \n                          <option *ngIf=\"!selectedState\" value=\"0\">Select Reg</option>     \n                          <option *ngFor=\"let reg of regulationVal\" value={{reg.rlid}}>{{reg.name}}</option>\n                        </select>  \n                       </div>   -->\n                </span>\n\n                <span id=\"upload-span\" style=\"width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;\">\n                    <div class=\"form-group\">\n                        <label for=\"uploadFile\">Upload File</label>\n                        <input type=\"file\" name=\"uploadFile\" id=\"uploadFile\" disabled=\"\" data-buttonname=\"btn-outline btn-primary\" data-iconname=\"ion-image mr-5\"\n                            class=\"filestyle\" style=\"position: absolute; clip: rect(0px, 0px, 0px, 0px);\" tabindex=\"-1\">\n                        <div style=\"width:300px; position: relative; left: 10px; margin-top: 0px 20px;\" class=\"bootstrap-filestyle input-group\">\n                            <input id=\"fileName\" class=\"form-control \" placeholder=\"\" disabled=\"\" type=\"text\">\n                            <div id=\"file_error\" class=\"file_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            <span class=\"group-span-filestyle input-group-btn\" tabindex=\"0\">\n                                <label id=\"uploadFileLabel\" disable=\"\" for=\"uploadFile\" class=\"btn btn-outline btn-primary-red\" style=\"cursor: not-allowed;\">\n                                    <span class=\"icon-span-filestyle ion-image mr-5\"></span>\n                                    <span class=\"buttonText\">Choose file</span>\n                                </label>\n                            </span>\n                        </div>\n                    </div>\n                </span>\n            </form>\n            <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"chooseFileid\">\n                <div role=\"document\" class=\"modal-dialog modal-sm\">\n                    <div class=\"modal-content\">\n                        <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                            <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                <span aria-hidden=\"true\">×</span>\n                            </button>\n                            <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Upload Document</h4>\n                        </div>\n                        <div class=\"modal-body\">\n                            <p>Please upload pdf/xlsx documents</p>\n                        </div>\n                        <div class=\"modal-footer\">\n                            <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\" id=\"modalClose\">Ok</button>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n    </ng-template>\n    <!--file upload after click action for container ends-->\n    <!--after life tracker dropdown click-->\n\n    <ng-template [ngSwitchCase]=\"'west'\">\n\n        <div class=\"widget-heading\" id=\"title\">\n            <h3 class=\"widget-title\">LifeTracker Document</h3>\n        </div>\n\n        <div id=\"addTracker\">\n            <div id=\"trackerList\">\n                <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"document_type\">Select DocumentType</label>\n                        <select id=\"document_type\" class=\"form-control select_document_type\">\n\n                        </select>\n                    </div>\n                </span>\n\n                <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"description\">Description</label>\n                        <input id=\"docTypedescription\" name=\"docTypedescription\" type=\"text\" class=\"form-control docTypedescription\" maxlength=\"2400\"\n                        />\n\n                    </div>\n                </span>\n\n                <span style=\"width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;\">\n                    <div class=\"form-group\">\n                        <label for=\"date\">Date</label>\n\n                        <div id=\"datetimepicker1\" class=\"input-group date\">\n                            <input type=\"text\" id=\"dateDoc\" name=\"dateDoc\" data-date-format='YYYY-MM-DD' class=\"form-control dateDoc\">\n                            <div id=\"news_date_error\" class=\"\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                        </div>\n                    </div>\n                </span>\n\n                <span style=\"width:195px; position: relative; left: 10px; margin-top: 0px 20px;float: left;\">\n                    <div class=\"form-group\">\n                        <label for=\"uploadFileDoc\">Upload File</label>\n                        <input type=\"file\" name=\"uploadFileDoc\" id=\"uploadFileDoc\" data-buttonname=\"btn-outline btn-primary\" data-iconname=\"ion-image mr-5\"\n                            class=\"filestyle\" style=\"position: absolute; clip: rect(0px, 0px, 0px, 0px);\" tabindex=\"-1\">\n                        <div style=\"width:300px; position: relative; left: 10px; margin-top: 0px 20px;\" class=\"bootstrap-filestyle input-group\">\n                            <input id=\"lifeTrackerfileName\" class=\"form-control lifeTrackerfileName\" placeholder=\"\" disabled=\"\" type=\"text\">\n                            <div id=\"file_error_doc\" class=\"file_error\" style=\"font-size: 12px; color: #FF0000; \"></div>\n                            <span class=\"group-span-filestyle input-group-btn\" tabindex=\"0\">\n                                <label id=\"uploadFileLabelDoc\" for=\"uploadFileDoc\" class=\"btn btn-outline btn-primary-red\">\n                                    <span class=\"icon-span-filestyle ion-image mr-5\"></span>\n                                    <span class=\"buttonText\">Choose file</span>\n                                </label>\n                            </span>\n                        </div>\n                    </div>\n                </span>\n\n                <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"chooseFileidDoc\">\n                    <div role=\"document\" class=\"modal-dialog modal-sm\">\n                        <div class=\"modal-content\">\n                            <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                    <span aria-hidden=\"true\">×</span>\n                                </button>\n                                <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Upload Document</h4>\n                            </div>\n                            <div class=\"modal-body\">\n                                <p>Please upload pdf/xlsx documents</p>\n                            </div>\n                            <div class=\"modal-footer\">\n                                <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\" id=\"modalDocClose\">Ok</button>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:6%\" class=\"text-center\">DocumentType</th>\n                    <th style=\"width:10%\" class=\"text-center\">Description</th>\n                    <th style=\"width:10%\" class=\"text-center\">Date</th>\n                    <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\"></tbody>\n        </table>\n\n    </ng-template>\n    <ng-template ngSwitchDefault>\n        <div class=\"widget-heading\">\n            <h3 class=\"widget-title\">Document Upload Management</h3>\n        </div>\n        <div class=\"form-group\">\n            <div class=\"col-sm-offset-3 col-sm-9\">\n                <!-- {#upload} -->\n                <button id=\"renderFileUploadPage\" class=\"btn btn-success btn-rounded btn-block\" style=\"width: 150px;\" (click)=\"myDir='east'\">Upload File</button>\n                <!-- {/upload} -->\n                <!--click event for upload documents-->\n            </div>\n        </div>\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:6%\" class=\"text-center\">Geography</th>\n                    <th style=\"width:10%\" class=\"text-center\">Domain</th>\n                    <th style=\"width:10%\" class=\"text-center\">Country</th>\n                    <th style=\"width:10%\" class=\"text-center\">State</th>\n                    <th style=\"width:10%\" class=\"text-center\">Regulator</th>\n                    <th style=\"width:10%\" class=\"text-center\">Regulation</th>\n                    <th style=\"width:10%\" class=\"text-center\">Document</th>\n                    <th style=\"width:10%\" class=\"text-center\">SubDocument</th>\n                    <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"doc-list-table\">\n                <tr *ngFor=\"let dres of documentResponse; let i = index\">\n                    <!-- ngfor goes here -->\n                    <td class=\"text-center\">\n                        {{dres.gname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.dname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.coname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.stname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.regtrName}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.rname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.docname}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{dres.sdocname}}\n                    </td>\n\n                    <td class=\"text-center\">\n                        {{dres.fname}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div>\n                            <!-- {#publish} -->\n\n                            <!-- <% if (tobepublished == 1) {%> -->\n                            <span class=\"published\" data-toggle=\"modal\" data-target=\"#pub<%=fid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Published</span>\n                                    <img src=\"/images/published.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } else { %> -->\n                            <span class=\"not-published\" data-toggle=\"modal\" data-target=\"#pub<%=fid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Publish</span>\n                                    <img src=\"/images/publish.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } %> -->\n                            <!-- {/publish} {#delete} -->\n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#<%=fid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Delete</span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                            <!-- {/delete} -->\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"pub<%=fid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Publish</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to publish?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"publishDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"<%=fid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"delDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n        <div id=\"findStatus\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMore\"></div>\n        </div>\n\n        <div class=\"widget-heading\">\n            <h3 class=\"widget-title\">Lifecycle Document Upload Management</h3>\n        </div>\n\n        <table border=\"0\" id=\"order-table\" style=\"width: 100%\" class=\"table table-hover dt-responsive nowrap\">\n            <thead>\n                <tr>\n                    <th style=\"width:6%\" class=\"text-center\">DocumentType</th>\n                    <th style=\"width:10%\" class=\"text-center\">Description</th>\n                    <th style=\"width:10%\" class=\"text-center\">Date</th>\n                    <th style=\"width:30%\" class=\"text-center\">Uploaded File</th>\n                    <th style=\"width:30%\" class=\"text-center\">Operation</th>\n                </tr>\n            </thead>\n            <tbody id=\"spdoc-list-table\">\n                <tr *ngFor=\"let spres of spDocumentResponse; let i = index\">\n                    <!-- ngfor goes here -->\n                    <td class=\"text-center\">\n                        {{spres.document_type}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{spres.description}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{spres.date}}\n                    </td>\n                    <td class=\"text-center\">\n                        {{spres.file_name}}\n                    </td>\n                    <td class=\"text-center\">\n                        <div>\n\n                            <span id=\"editSpclDoc\" class=\"published\">\n                                <a class=\"tooltips\">\n                                    <span>Edit</span>\n                                    <img src=\"/images/edit.png\" />\n                                </a>\n                            </span>\n                            <!-- {#publish} -->\n\n                            <!-- <% if (is_published == 1) {%> -->\n                            <span class=\"published\" data-toggle=\"modal\" data-target=\"#pub<%=spid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Published</span>\n                                    <img src=\"/images/published.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } else { %> -->\n                            <span class=\"not-published\" data-toggle=\"modal\" data-target=\"#pub<%=spid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Publish</span>\n                                    <img src=\"/images/publish.png\" />\n                                </a>\n                            </span>\n                            <!-- <% } %> -->\n                            <!-- {/publish} {#delete} -->\n                            <span class=\"delete-doc\" data-toggle=\"modal\" data-target=\"#del<%=spid%>\">\n                                <a class=\"tooltips\">\n                                    <span>Delete</span>\n                                    <img src=\"/images/delete.png\" />\n                                </a>\n                            </span>\n                            <!-- {/delete} -->\n                        </div>\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"pub<%=spid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Publish</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to publish?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"publishDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n\n                        <div tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" class=\"modal fade bs-example-modal-sm\" id=\"del<%=spid%>\">\n                            <div role=\"document\" class=\"modal-dialog modal-sm\">\n                                <div class=\"modal-content\">\n                                    <div class=\"modal-header bg-black no-border\" style=\"background-color: #cc0000;\">\n                                        <button type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\" class=\"close\">\n                                            <span aria-hidden=\"true\">×</span>\n                                        </button>\n                                        <h4 id=\"mySmallModalLabel\" class=\"modal-title\">Document Delete</h4>\n                                    </div>\n                                    <div class=\"modal-body\">\n                                        <p>Do you want to delete?</p>\n                                    </div>\n                                    <div class=\"modal-footer\">\n                                        <button type=\"button\" data-dismiss=\"modal\" class=\"btn btn-outline btn-primary-red\">Close</button>\n                                        <button type=\"button\" data-dismiss=\"modal\" id=\"delDocument\" class=\"btn btn-outline btn-primary-red\">Confirm</button>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </td>\n                </tr>\n            </tbody>\n        </table>\n        <div id=\"findStatusSpclDoc\"></div>\n        <div class=\"user_load\">\n            <div id=\"loadMoreSpclDoc\"></div>\n        </div>\n    </ng-template>\n    <ng-template [ngSwitchCase]=\"'local'\">\n        <div class=\"div\">\n            am working correctly\n        </div>         \n    </ng-template>\n</div>"
 
 /***/ }),
 
@@ -897,6 +895,7 @@ var DocumentuploadComponent = /** @class */ (function () {
         // public testdemo: boolean = false;
         // public foo:number;
         this.myDir = '';
+        this.status = [];
         this.optionSelected = 0;
         this.selectedCountry = 0;
         this.selectedState = 0;
@@ -1096,6 +1095,11 @@ var DocumentuploadComponent = /** @class */ (function () {
         var _this = this;
         var rooddoc_id = args.target.value;
         this.selectedRootDoc = rooddoc_id;
+        if (rooddoc_id == 13) {
+            console.log("dkfjkdsfs");
+            this.myDir = 'local';
+            console.log('this is  my dir', this.myDir);
+        }
         this.selectedSubDoc = 0;
         this.buttonDisabledSubDoc = true;
         this.subDocVal = this.subDocumentArrayResponse.filter(function (item) {
@@ -1111,7 +1115,7 @@ var DocumentuploadComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/documentupload/documentupload.component.html"),
             styles: [__webpack_require__("./assets/app/app/documentupload/documentupload.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__documentupload_service__["a" /* DocumentuploadService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__documentupload_service__["a" /* DocumentuploadService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], DocumentuploadComponent);
     return DocumentuploadComponent;
 }());
@@ -1159,7 +1163,7 @@ var DocumentuploadService = /** @class */ (function () {
         return this.http.get("http://localhost:1337/findRegulationData").map(function (res) { return res; });
     };
     DocumentuploadService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], DocumentuploadService);
     return DocumentuploadService;
@@ -1220,7 +1224,7 @@ var CreateService = /** @class */ (function () {
         return this.http.request('delete', 'http://localhost:1337/destroygeography', { body: { geography_id: geoId }, headers: httpHeaders, responseType: 'text' });
     };
     CreateService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], CreateService);
     return CreateService;
@@ -1362,12 +1366,12 @@ var GeographyComponent = /** @class */ (function () {
         this._router.navigate(['/geoList']);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geoname"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("geoname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], GeographyComponent.prototype, "geoname", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("geodescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("geodescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], GeographyComponent.prototype, "geodescription", void 0);
     GeographyComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1375,7 +1379,7 @@ var GeographyComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/geography/geography.component.html"),
             styles: [__webpack_require__("./assets/app/app/geography/geography.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__create_service__["a" /* CreateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], GeographyComponent);
     return GeographyComponent;
 }());
@@ -1618,7 +1622,7 @@ var NewuserComponent = /** @class */ (function () {
         //   smsaccess: 'none',
         //   webaccess: 'none',
         //   emailaccess: 'none',
-        //   country: 23,
+        //   country: 23,    
         //   geopgrpahy: '',
         //   state: 18
         // }
@@ -2086,56 +2090,56 @@ var NewuserComponent = /** @class */ (function () {
         this.regu.splice(index, 1);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refusername"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("refusername"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "refusername", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refemail"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("refemail"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "refemail", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refmob"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("refmob"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "refmob", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refsub"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("refsub"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "refsub", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("refacc"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("refacc"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "refacc", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("Geography"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("Geography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "Geography", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("Country"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("Country"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "Country", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("States"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("States"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "States", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("Regulation"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("Regulation"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "Regulation", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("sms"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("sms"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "sms", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("web"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("web"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "web", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("email"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("email"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "email", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('ir'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('ir'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], NewuserComponent.prototype, "ir", void 0);
     NewuserComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -2143,7 +2147,7 @@ var NewuserComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/newuser/newuser.component.html"),
             styles: [__webpack_require__("./assets/app/app/newuser/newuser.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3__request_service__["a" /* RequestService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
     ], NewuserComponent);
     return NewuserComponent;
 }());
@@ -2218,7 +2222,7 @@ var RequestService = /** @class */ (function () {
         return this.http.post("http://localhost:1337/createUser", client, httpOptions);
     };
     RequestService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */]])
     ], RequestService);
     return RequestService;
@@ -2398,12 +2402,12 @@ var RegulatorComponent = /** @class */ (function () {
         this._router.navigate(['/regList']);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("regulatorname"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("regulatorname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], RegulatorComponent.prototype, "regulatorname", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("regulatordescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("regulatordescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], RegulatorComponent.prototype, "regulatordescription", void 0);
     RegulatorComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -2411,7 +2415,7 @@ var RegulatorComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/regulator/regulator.component.html"),
             styles: [__webpack_require__("./assets/app/app/regulator/regulator.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__regulator_service__["a" /* RegulatorService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__regulator_service__["a" /* RegulatorService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], RegulatorComponent);
     return RegulatorComponent;
 }());
@@ -2470,7 +2474,7 @@ var RegulatorService = /** @class */ (function () {
         return this.http.request('delete', 'http://localhost:1337/destroyregulator', { body: { regulator_id: regId }, headers: httpHeaders, responseType: 'text' });
     };
     RegulatorService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], RegulatorService);
     return RegulatorService;
@@ -2675,24 +2679,24 @@ var StateComponent = /** @class */ (function () {
         this.optionSelectedCountry = country_id;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("statename"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("statename"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], StateComponent.prototype, "statename", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("statedescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("statedescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], StateComponent.prototype, "statedescription", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("statecode"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("statecode"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], StateComponent.prototype, "statecode", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectGeography"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("selectGeography"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], StateComponent.prototype, "selectGeography", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectCountry"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("selectCountry"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], StateComponent.prototype, "selectCountry", void 0);
     StateComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -2700,7 +2704,7 @@ var StateComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/state/state.component.html"),
             styles: [__webpack_require__("./assets/app/app/state/state.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__state_service__["a" /* StateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], StateComponent);
     return StateComponent;
 }());
@@ -2761,7 +2765,7 @@ var StateService = /** @class */ (function () {
         return this.http.request('delete', 'http://localhost:1337/destroystate', { body: { state_id: stateId }, headers: httpHeaders, responseType: 'text' });
     };
     StateService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], StateService);
     return StateService;
@@ -2914,16 +2918,16 @@ var SubdocumentmanagementComponent = /** @class */ (function () {
         this._router.navigate(['/subDocList']);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("subDocname"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("subDocname"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], SubdocumentmanagementComponent.prototype, "subDocname", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("subDocdescription"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("subDocdescription"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], SubdocumentmanagementComponent.prototype, "subDocdescription", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])("selectDocument"),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("selectDocument"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
     ], SubdocumentmanagementComponent.prototype, "selectDocument", void 0);
     SubdocumentmanagementComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -2931,7 +2935,7 @@ var SubdocumentmanagementComponent = /** @class */ (function () {
             template: __webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.html"),
             styles: [__webpack_require__("./assets/app/app/subdocumentmanagement/subdocumentmanagement.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_4__subdocumentmanagement_service__["a" /* SubdocumentmanagementService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer2 */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], SubdocumentmanagementComponent);
     return SubdocumentmanagementComponent;
 }());
@@ -2992,7 +2996,7 @@ var SubdocumentmanagementService = /** @class */ (function () {
         return this.http.request('delete', 'http://localhost:1337/destroySubDoc ', { body: { id: subDocId }, headers: httpHeaders, responseType: 'text' });
     };
     SubdocumentmanagementService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], SubdocumentmanagementService);
     return SubdocumentmanagementService;
@@ -3032,7 +3036,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
