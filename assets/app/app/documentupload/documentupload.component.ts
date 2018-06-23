@@ -221,7 +221,7 @@ export class DocumentuploadComponent implements OnInit {
     var regulation_id = args.target.value;    
     this.selectedRegulation = regulation_id;
     this.selectedRootDoc = 0;         
-    this.selectedSubDoc = 0;
+    this.selectedSubDoc = 0;       
     this.subDocVal = [];
     this.buttonDisabledRootDoc = true;
     this.rootDocVal = this.documentArrayResponse.filter((item) => {
@@ -234,6 +234,7 @@ export class DocumentuploadComponent implements OnInit {
   onSelectRootDoc(args) {
     var rooddoc_id = args.target.value;
     this.selectedRootDoc = rooddoc_id;
+    console.log(rooddoc_id,"deadpool")           
     if (rooddoc_id == 13) {               
       console.log("dkfjkdsfs")
       this.myDir='local';    
