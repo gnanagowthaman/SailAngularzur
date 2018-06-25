@@ -218,27 +218,27 @@ export class DocumentuploadComponent implements OnInit {
     });
   }
   onSelectRegulation(args) {
-    var regulation_id = args.target.value;    
+    var regulation_id = args.target.value;
     this.selectedRegulation = regulation_id;
-    this.selectedRootDoc = 0;         
-    this.selectedSubDoc = 0;       
+    this.selectedRootDoc = 0;
+    this.selectedSubDoc = 0;
     this.subDocVal = [];
     this.buttonDisabledRootDoc = true;
     this.rootDocVal = this.documentArrayResponse.filter((item) => {
       console.log("domain item id", item.rlid, "domain id", regulation_id)
       if (item.gid === Number(this.optionSelected) && item.cntid === Number(this.selectedCountry) && item.sid === Number(this.selectedState) && item.did === Number(this.selectedDomain) && item.rid === Number(this.selectedRegulator) && item.rlid === Number(this.selectedRegulation)) {
-        return item.docid;       
+        return item.docid;
       }
-    });    
+    });
   }
   onSelectRootDoc(args) {
     var rooddoc_id = args.target.value;
     this.selectedRootDoc = rooddoc_id;
-    console.log(rooddoc_id,"deadpool")           
-    if (rooddoc_id == 13) {               
+    console.log(rooddoc_id, "deadpool")
+    if (rooddoc_id == 13) {
       console.log("dkfjkdsfs")
-      this.myDir='local';    
-      console.log('this is  my dir',this.myDir)                                   
+      this.myDir = 'local';
+      console.log('this is  my dir', this.myDir)
     }
     this.selectedSubDoc = 0;
     this.buttonDisabledSubDoc = true;
@@ -248,6 +248,13 @@ export class DocumentuploadComponent implements OnInit {
         return item.sdocid;
       }
     });
+  }
+  fileEvent(fileInput) {
+    let file = fileInput.target.files[0];
+    let fileName = file.name;
+    let fileType = file.type;
+    let fileSize = file.size;                    
+    console.log("am in file change event Name", fileName,"File Type",fileType,"File size",fileSize)
   }
 
 }                                     
