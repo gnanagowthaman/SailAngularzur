@@ -1,28 +1,26 @@
 export interface UploadI {
-    rdlid?: number;
-    gid?: number;
-    gname?: string;
-    did?: number;
-    dname?: string;
-    rid?: number;
-    rname?: string;
-    docid?: number;
-    docname?: string;
-    coid?: number;
-    coname?: string;
-    stid?: number;
-    geography_id?: number;
-    stname?: string;
-    regtrId?: number;
-    sdocid?: number;
-    regtrName?: string;
-    fid?: number;
-    fname?: string;
-    level?: string;
-    isuploaded?: number;
-    is_published?: number;
-    tobepublished?: number;
-
+    fileType?: string;
+    fileName?: string;
+    path?: string;
+    message?: string;
+    geoName?: string;
+    countryName?: string;
+    stateName?: string;
+    domainName?: string;
+    regName?: string;
+    regulatorName?: string;
+    docName?: string;
+    subDocName?: string;
+    regDocId?: number;
+    geoId?: number;
+    subdocId?: number;
+    countryId?: number;
+    stateId?: number;
+    domainId?: number;
+    reglatorId?: number;
+    regulationId?: number;
+    level?: number;
+    uploadFile?: string;
 }
 export interface SpecialUploadI {
     id?: number;

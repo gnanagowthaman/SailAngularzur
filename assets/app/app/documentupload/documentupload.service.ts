@@ -3,7 +3,7 @@ import { HttpClient,HttpHeaders} from '@angular/common/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Http, Response } from '@angular/http';
 
-import { UploadI } from './upload-i';
+import { UploadI,UploadCard} from './upload-i';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';

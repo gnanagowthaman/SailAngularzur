@@ -3,127 +3,128 @@
     <!--file upload after click action for container  starts-->
     <ng-template [ngSwitchCase]="'east'">
 
+        <form [formGroup]="formdata" enctype="multipart/form-data">
+            <div id="filePage">
+                <span style="width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;">
+                    <label for="message_name">Message</label>
+                    <!-- [(ngModel)]="uI.message" -->
+                    <input type="text" class="form-control" formControlName="uploadmessage" style="width:500px;" #messagename>
+                    <div id="message_name_error" class="message_name_error" style="font-size: 12px; color: #FF0000; ">
+                    </div>
+                </span>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectGeo">Select Geography</label>
+                    <select *ngIf="geoArrayResponse" class="form-control" formControlName="uploadgeography" [(ngModel)]="optionSelected" (change)="onSelectGeography($event)"
+                        #selectGeo>
+                        <option value="0">Select Geography</option>
+                        <option *ngFor='let option of geoArrayResponse' [value]="option.id">{{option.name}}</option>
+                    </select>
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectCountry">Select Country</label>
+                    <div>
+                        <select *ngIf="countryVal" class="form-control" formControlName="uploadcountry" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event)"
+                            [disabled]="!buttonDisabled" #selectCountry>
+                            <option value="0">Select Country</option>
+                            <option *ngFor="let cout of countryVal" [value]="cout.country_id">{{cout.cname}}</option>
+                        </select>
+                    </div>
 
-        <div id="filePage">
-            <span style="width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;">
-                <label for="message_name">Message</label>
-                <input id="message_name" type="text" class="form-control" style="width:500px;">
-                <div id="message_name_error" class="message_name_error" style="font-size: 12px; color: #FF0000; ">
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectState">Select State</label>
+                    <div>
+                        <select *ngIf="stateVal" class="form-control" formControlName="uploadstate" [(ngModel)]="selectedState" (change)="onSelectState($event)"
+                            [disabled]="!buttonDisabledState" #selectState>
+                            <option value="0">Select State</option>
+                            <option *ngFor="let stat of stateVal" [value]="stat.state_id">{{stat.sname}}</option>
+                        </select>
+                    </div>
                 </div>
             </span>
             <br>
             <br>
             <br>
             <br>
-            <form [formGroup]="formdata" enctype="multipart/form-data">
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectGeo">Select Geography</label>
-                        <select *ngIf="geoArrayResponse" class="form-control" formControlName="uploadgeography" [(ngModel)]="optionSelected" (change)="onSelectGeography($event)">
-                            <!-- #selectGeo -->
-                            <option value="0">Select Geography</option>
-                            <option *ngFor='let option of geoArrayResponse' [value]="option.id">{{option.name}}</option>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectDomain">Select Domain</label>
+                    <div>
+                        <select *ngIf="domainVal" class="form-control" formControlName="uploaddomain" [(ngModel)]="selectedDomain" (change)="onSelectDomain($event)"
+                            [disabled]="!buttonDisabledDomain" #selectDomain>
+                            <option value="0">Select Domain</option>
+                            <option *ngFor="let doma of domainVal" [value]="doma.did">{{doma.name}}</option>
                         </select>
                     </div>
-                </span>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectCountry">Select Country</label>
-                        <div>
-                            <select *ngIf="countryVal" class="form-control" formControlName="uploadcountry" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event)"
-                                [disabled]="!buttonDisabled" #selectCountry>
-                                <option value="0">Select Country</option>
-                                <option *ngFor="let cout of countryVal" [value]="cout.country_id">{{cout.cname}}</option>
-                            </select>
-                        </div>
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectRegulator">Select Regulator</label>
+                    <div>
+                        <select *ngIf="regulatorVal" class="form-control" formControlName="uploadregulator" [(ngModel)]="selectedRegulator" (change)="onSelectRegulator($event)"
+                            [disabled]="!buttonDisabledRegulator" #selectRegulator>
+                            <option value="0">Select Regulator</option>
+                            <option *ngFor="let regu of regulatorVal" [value]="regu.rid">{{regu.rname}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectRegulation">Select Regulation</label>
+                    <div>
+                        <select *ngIf="regulationVal" class="form-control" formControlName="uploadregulation" [(ngModel)]="selectedRegulation" (change)="onSelectRegulation($event)"
+                            [disabled]="!buttonDisabledRegulation" #selectRegulation>
+                            <option value="0">Select Regulation</option>
+                            <option *ngFor="let regul of regulationVal" [value]="regul.rlid">{{regul.rname}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectRootDoc">Select Document</label>
+                    <div>
+                        <select *ngIf="rootDocVal" class="form-control" formControlName="uploadrootdoc" [(ngModel)]="selectedRootDoc" (change)="onSelectRootDoc($event)"
+                            [disabled]="!buttonDisabledRootDoc" #selectRootDoc>
+                            <option value="0">Select Regulation</option>
+                            <option *ngFor="let root of rootDocVal" [value]="root.docid">{{root.docname}}</option>
 
+                        </select>
                     </div>
-                </span>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectState">Select State</label>
-                        <div>
-                            <select *ngIf="stateVal" class="form-control" formControlName="uploadstate" [(ngModel)]="selectedState" (change)="onSelectState($event)"
-                                [disabled]="!buttonDisabledState" #selectState>
-                                <option value="0">Select State</option>
-                                <option *ngFor="let stat of stateVal" [value]="stat.state_id">{{stat.sname}}</option>
-                            </select>
-                        </div>
-                    </div>
-                </span>
-                <br>
-                <br>
-                <br>
-                <br>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectDomain">Select Domain</label>
-                        <div>
-                            <select *ngIf="domainVal" class="form-control" formControlName="uploaddomain" [(ngModel)]="selectedDomain" (change)="onSelectDomain($event)"
-                                [disabled]="!buttonDisabledDomain" #selectDomain>
-                                <option value="0">Select Domain</option>
-                                <option *ngFor="let doma of domainVal" [value]="doma.did">{{doma.name}}</option>
-                            </select>
-                        </div>
-                    </div>
-                </span>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectRegulator">Select Regulator</label>
-                        <div>
-                            <select *ngIf="regulatorVal" class="form-control" formControlName="uploadregulator" [(ngModel)]="selectedRegulator" (change)="onSelectRegulator($event)"
-                                [disabled]="!buttonDisabledRegulator" #selectRegulator>
-                                <option value="0">Select Regulator</option>
-                                <option *ngFor="let regu of regulatorVal" [value]="regu.rid">{{regu.rname}}</option>
-                            </select>
-                        </div>
-                    </div>
-                </span>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectRegulation">Select Regulation</label>
-                        <div>
-                            <select *ngIf="regulationVal" class="form-control" formControlName="uploadregulation" [(ngModel)]="selectedRegulation" (change)="onSelectRegulation($event)"
-                                [disabled]="!buttonDisabledRegulation" #selectRegulation>
-                                <option value="0">Select Regulation</option>
-                                <option *ngFor="let regul of regulationVal" [value]="regul.rlid">{{regul.rname}}</option>
-                            </select>
-                        </div>
-                    </div>
-                </span>
-                <br>
-                <br>
-                <br>
-                <br>
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectRootDoc">Select Document</label>
-                        <div>
-                            <select *ngIf="rootDocVal" class="form-control" formControlName="uploadrootdoc" [(ngModel)]="selectedRootDoc" (change)="onSelectRootDoc($event)"
-                                [disabled]="!buttonDisabledRootDoc" #selectRootDoc>
-                                <option value="0">Select Regulation</option>
-                                <option *ngFor="let root of rootDocVal" [value]="root.docid">{{root.docname}}</option>
-
-                            </select>
-                        </div>
-                    </div>
-                </span>
+                </div>
+            </span>
 
 
-                <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
-                    <div class="form-group">
-                        <label for="selectSubDoc">Select Sub Document</label>
-                        <div>
-                            <select class="form-control" formControlName="uploadsubdoc" [(ngModel)]="selectedSubDoc" #selectSubDoc>
-                                <option *ngIf="!selectedRootDoc" value="0">Select Sub Document</option>
-                                <option *ngFor="let subd of subDocVal" [value]="subd.sdocid">{{subd.subdocname}}</option>
-                            </select>
-                        </div>                         
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectSubDoc">Select Sub Document</label>
+                    <div>
+                        <select class="form-control" formControlName="uploadsubdoc" [(ngModel)]="selectedSubDoc" #selectSubDoc>
+                            <option *ngIf="!selectedRootDoc" value="0">Select Sub Document</option>
+                            <option *ngFor="let subd of subDocVal" [value]="subd.sdocid">{{subd.subdocname}}</option>
+                        </select>
                     </div>
-                </span>
+                </div>
+            </span>
 
-                <span id="upload-span" style="width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
-                    <!-- <div class="form-group">
+            <span id="upload-span" style="width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
+                <!-- <div class="form-group">
                         <label for="uploadFile">Upload File</label>     
                         <input type="file" name="uploadFile"  data-buttonname="btn-outline btn-primary" data-iconname="ion-image mr-5"
                             class="filestyle" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" #uploadFile (change)="fileEvent($event)">
@@ -138,34 +139,35 @@
                             </span>    
                         </div>        
                     </div>      -->
-                    <div class="form-group">   
-                        <label for="exampleFormControlFile1">Example file input</label>         
-                        <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.pdf" class="form-control-file" #uploadFile (change)="fileEvent($event)">
-                    </div>                           
-                </span>
-            </form>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.pdf" class="form-control-file"
+                        (change)="fileEvent($event)" #uploadFile>
+                </div>
+            </span>
+        </form>
 
 
 
-            <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileid">
-                <div role="document" class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
-                            <button type="button" data-dismiss="modal" aria-label="Close" class="close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                            <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Please upload pdf/xlsx documents</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalClose">Ok</button>
-                        </div>
+        <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileid">
+            <div role="document" class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please upload pdf/xlsx documents</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalClose">Ok</button>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </ng-template>
     <!--file upload after click action for container ends-->
@@ -182,29 +184,46 @@
                 <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <div class="form-group">
                         <label for="document_type">Select DocumentType</label>
-                        <select id="document_type" class="form-control select_document_type">
-
+                        <!-- [(ngModel)]="selectedLDocument" -->
+                        <select *ngIf="lDocVal" class="form-control" formControlName="uploadldocument" #documenttype>
+                            <option value="0">Select</option>
+                            <option *ngFor="let ld of lDocVal" [value]="ld.id">{{cout.document_typess}}</option>
                         </select>
                     </div>
+                    <!-- <div class="form-group">
+                        <label for="selectCountry">Select Country</label>
+                        <div>
+                            <select *ngIf="countryVal" class="form-control" formControlName="uploadcountry" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event)"
+                                [disabled]="!buttonDisabled" #selectCountry>
+                                <option value="0">Select Country</option>
+                                <option *ngFor="let cout of countryVal" [value]="cout.country_id">{{cout.cname}}</option>
+                            </select>
+                        </div>
+    
+                    </div> -->
                 </span>
 
                 <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <input id="docTypedescription" name="docTypedescription" type="text" class="form-control docTypedescription" maxlength="2400"
-                        />
-
+                        <input type="text" class="form-control" formControlName="docTypeDescriptionName" maxlength="2400" #docTypedescription />
+                        <!-- <input type="text" class="form-control" formControlName="geographyName" [(ngModel)]=" geoCreate.name" #geoname/> -->
                     </div>
                 </span>
 
                 <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
                     <div class="form-group">
                         <label for="date">Date</label>
-
-                        <div id="datetimepicker1" class="input-group date">
-                            <input type="text" id="dateDoc" name="dateDoc" data-date-format='YYYY-MM-DD' class="form-control dateDoc">
+                        <!-- <div id="datetimepicker1" class="input-group date">                     
+                            <input type="text" name="dateDoc" data-date-format='YYYY-MM-DD' class="form-control" #dateDoc> 
                             <div id="news_date_error" class="" style="font-size: 12px; color: #FF0000; "></div>
-                        </div>
+                        </div> -->
+                        <div class="input-group date" data-date-format="YYYY-MM-DD">
+                            <input type="text" class="form-control" placeholder="dd.mm.yyyy">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>                                                             
                     </div>
                 </span>
 
