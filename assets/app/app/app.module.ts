@@ -29,7 +29,8 @@ import { DocumentComponent } from './document/document.component';
 import { SubdocumentmanagementComponent } from './subdocumentmanagement/subdocumentmanagement.component';
 import { RegulatorComponent } from './regulator/regulator.component';
 import { DocumentuploadComponent } from './documentupload/documentupload.component';
-const appRoutes: Routes = [
+import { BsDatepickerModule } from 'ngx-bootstrap';    
+const appRoutes: Routes = [     
   { path: 'userList', component: ListComponent },
   {
     path: 'newUser',
@@ -129,7 +130,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    // RouterModule.forRoot(
+    BsDatepickerModule.forRoot(),
+    // RouterModule.forRoot(   
     //   appRoutes,  
     //  // { enableTracing: true } // <-- debugging purposes only
     // ),

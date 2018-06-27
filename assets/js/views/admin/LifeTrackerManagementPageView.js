@@ -438,7 +438,7 @@ admin.LifeTrackerManagementPageView =Backbone.View.extend({
            console.log("geoName",geoName);      
           formData.append('fileType', type);
           formData.append('fileName', e.target.files[0].name);
-          formData.append('path', path);
+          formData.append('path', path);       
           formData.append('geoName', geoName);
           formData.append('countryName',countryName);
           formData.append('stateName',stateName);
