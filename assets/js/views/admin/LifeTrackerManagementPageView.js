@@ -470,7 +470,7 @@ admin.LifeTrackerManagementPageView =Backbone.View.extend({
 
           $.ajax({
               type: "POST",
-              url: "/uploadSpecialFile",
+              url: "/uploadSpecialFile",   
               data: formData,
               cache: false,
               contentType: false,

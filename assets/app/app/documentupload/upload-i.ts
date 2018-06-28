@@ -45,6 +45,7 @@ export interface SpecialUploadI {
     regulation_document_id?: number;
     file_id?: number;
     file_name?: string;
+    is_uploaded?: boolean;                 
     is_published?: number;
     docname?: string;
 }
@@ -53,4 +54,5 @@ export interface SpecialUploadCard {
 }
 export interface UploadCard {
     [index: number]: UploadI;
-} 
+}
+

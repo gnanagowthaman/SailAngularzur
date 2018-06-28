@@ -30,6 +30,7 @@ import { SubdocumentmanagementComponent } from './subdocumentmanagement/subdocum
 import { RegulatorComponent } from './regulator/regulator.component';
 import { DocumentuploadComponent } from './documentupload/documentupload.component';
 import { BsDatepickerModule } from 'ngx-bootstrap';    
+import { ModalModule } from 'ngx-bootstrap';
 const appRoutes: Routes = [     
   { path: 'userList', component: ListComponent },
   {
@@ -131,6 +132,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     BsDatepickerModule.forRoot(),
+    ModalModule.forRoot(),
     // RouterModule.forRoot(   
     //   appRoutes,  
     //  // { enableTracing: true } // <-- debugging purposes only

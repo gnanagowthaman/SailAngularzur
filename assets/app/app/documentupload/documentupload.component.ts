@@ -1,12 +1,13 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, TemplateRef } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
 import { Response, Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { DocumentuploadService } from './documentupload.service';
-import { UploadI } from './upload-i';
-
+import { UploadI, SpecialUploadI } from './upload-i';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-documentupload',
@@ -17,16 +18,19 @@ export class DocumentuploadComponent implements OnInit {
   // public correct: boolean = false;
   // public testdemo: boolean = false;
   // public foo:number;
+  modalRef: BsModalRef;
+  message: string;
+
   myDir = '';
   status = [];
   buttonDisabled: boolean;
   spDocumentResponse: any;
   documentResponse: any;
-  resultResponse: any;
+  resultResponse: any;          
   geoArrayResponse: any; countryArrayResponse: any; stateArrayResponse: any; domainArrayResponse: any;
   regulatorArrayResponse: any; regulationArrayResponse: any; documentArrayResponse: any;
-  subDocumentArrayResponse: any; documentTypeResponse: any;uploadSpecialResponse:any;
-  geoText: any; cou_Text: any;
+  subDocumentArrayResponse: any; documentTypeResponse: any; uploadSpecialResponse: any;
+  geoText: any; cou_Text: any;                 
   optionSelected = 0;
   selectedCountry = 0;
   selectedState = 0;
@@ -46,14 +50,14 @@ export class DocumentuploadComponent implements OnInit {
   rootDocVal = [];
   subDocVal = [];
   geoName: any; countryName: any; stateName: any; domainName: any; regulatorName: any; regName: any;
-  docName: any; subDocName: any; path: any; geoId: any; countryId: any; stateId: any;
+  docName: any; subDocName: any; path: any; spath: any; geoId: any; countryId: any; stateId: any;
   domainId: any; regulatorId: any; regulationId: any; regDocId: any; subdocId: any; optDocTName: any; optDocTId: any;
-  fileType: any; fileName: any; message: any; level: any = 0; uploaDFile: any;
+  fileType: any; fileName: any; messages: any; level: any = 0; uploaDFile: any; foo: any;
   uploadResponse: any;
   butDisabled: boolean = true; buttonDisabledState: boolean = true; buttonDisabledDomain: boolean = true; buttonDisabledRegulator: boolean = true;
   buttonDisabledRegulation: boolean = true; buttonDisabledRootDoc: boolean = true; buttonDisabledSubDoc: true;
 
-  constructor(private http: HttpClient, private documentService: DocumentuploadService, private renderer: Renderer2, private elem: ElementRef, private _router: Router) { }
+  constructor(private http: HttpClient, private documentService: DocumentuploadService, private renderer: Renderer2, private elem: ElementRef, private _router: Router, private modalService: BsModalService) { }
   @ViewChild("messagename") messagename: ElementRef;
   @ViewChild("selectGeo") selectGeo: ElementRef;
   @ViewChild("selectCountry") selectCountry: ElementRef;
@@ -271,6 +275,7 @@ export class DocumentuploadComponent implements OnInit {
       }
     });
   }
+
   onSelectRootDoc(args) {
     var rooddoc_id = args.target.value;
     this.selectedRootDoc = rooddoc_id;
@@ -278,7 +283,7 @@ export class DocumentuploadComponent implements OnInit {
     let stTestDocName = this.rootDocVal[0].is_special_doc;
     console.log("doc special is", this.rootDocVal[0].is_special_doc)
     if (stTestDocName === 1) {
-      this.message = this.messagename.nativeElement.value;
+      this.messages = this.messagename.nativeElement.value;
       var refGeography = this.selectGeo.nativeElement;
       var optGeo = refGeography.options[refGeography.selectedIndex];
       this.geoName = optGeo.text;
@@ -328,7 +333,7 @@ export class DocumentuploadComponent implements OnInit {
   }
   fileEvent(fileInput) {
     const formData: FormData = new FormData();
-    this.message = this.messagename.nativeElement.value;
+    this.messages = this.messagename.nativeElement.value;
     var refGeography = this.selectGeo.nativeElement;
     var optGeo = refGeography.options[refGeography.selectedIndex];
     this.geoName = optGeo.text;
@@ -396,7 +401,7 @@ export class DocumentuploadComponent implements OnInit {
     });
   }
   specialFileEvent(event) {
-    const formData: FormData = new FormData();
+    const sformData: FormData = new FormData();
     let dateValue = this.datespecialupload.nativeElement.value;
 
     var refDocType = this.documenttype.nativeElement;
@@ -414,37 +419,59 @@ export class DocumentuploadComponent implements OnInit {
     this.fileName = file.name;
     this.fileType = file.type;
     let fileSize = file.size;
-    this.path = '/' + this.geoName + '/' + this.countryName + '/' + this.domainName + '/' + this.regulatorName + '/' + this.regName + '/' + this.docName + '/' + this.fileName;
-    console.log("myspecial path value", this.path)
-    formData.append('fileType', this.fileType);
-    formData.append('fileName', this.fileName);
-    formData.append('path', this.path);
-    formData.append('geoName', this.geoName);
-    formData.append('countryName', this.countryName);
-    formData.append('stateName', this.stateName);
-    formData.append('domainName', this.domainName);
-    formData.append('regName', this.regName);
-    formData.append('regulatorName', this.regulatorName);
-    formData.append('docName', this.docName);
-    formData.append('subDocName', "null");
-    formData.append('regDocId', this.regDocId);
-    formData.append('geoId', this.geoId);
-    formData.append('subdocId', subDocDefault);
-    formData.append('countryId', this.countryId);
-    formData.append('stateId', this.stateId);
-    formData.append('domainId', this.domainId);
-    formData.append('reglatorId', this.regulatorId);
-    formData.append('regulationId', this.regulationId);
-    formData.append('spclDocId', this.optDocTId);
-    formData.append('description', doctypeDesc);
-    formData.append('date', dateValue);
-    formData.append('level', levelDefault);
-    formData.append('uploadFile', file, this.fileName);
-    console.log("check inside the formdata", formData);
-    this.http.post("http://localhost:1337/uploadSpecialFile", formData).subscribe(result => {
+    //this.spath = '/' + this.geoName + '/' + this.countryName + '/' + this.domainName + '/' + this.regulatorName + '/' + this.regName + '/' + this.docName + '/' + this.fileName;
+    this.spath = '/' + this.geoName + '/' + this.countryName + '/' + this.stateName + '/' + this.domainName + '/' + this.regulatorName + '/' + this.regName + '/' + this.docName + '/' + this.subDocName;
+    console.log("myspecial path value", this.spath)
+    sformData.append('fileType', this.fileType);
+    sformData.append('fileName', this.fileName);
+    sformData.append('path', this.spath);
+    sformData.append('geoName', this.geoName);
+    sformData.append('countryName', this.countryName);
+    sformData.append('stateName', this.stateName);
+    sformData.append('domainName', this.domainName);
+    sformData.append('regName', this.regName);
+    sformData.append('regulatorName', this.regulatorName);
+    sformData.append('docName', this.docName);
+    sformData.append('subDocName', this.subDocName);
+    sformData.append('regDocId', this.regDocId);
+    sformData.append('geoId', this.geoId);
+    sformData.append('subdocId', this.subdocId);
+    sformData.append('countryId', this.countryId);
+    sformData.append('stateId', this.stateId);
+    sformData.append('domainId', this.domainId);
+    sformData.append('reglatorId', this.regulatorId);
+    sformData.append('regulationId', this.regulationId);
+    sformData.append('spclDocId', this.optDocTId);
+    sformData.append('description', doctypeDesc);
+    sformData.append('date', dateValue);
+    sformData.append('level', levelDefault);
+    sformData.append('uploadFile', file, this.fileName);
+    console.log("check inside the sformData", sformData);
+    this.http.post<SpecialUploadI>("http://localhost:1337/uploadSpecialFile", sformData).subscribe(result => {
       this.uploadSpecialResponse = result;
-      console.log("success file upload", this.uploadSpecialResponse)       
-     
+      this.documentListLoad();
+      console.log("success file upload", this.uploadSpecialResponse)
     });
+  }
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+  }
+
+  confirm(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  decline(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
   }
 }                                     
