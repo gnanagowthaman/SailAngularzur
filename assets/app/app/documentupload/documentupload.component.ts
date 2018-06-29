@@ -26,11 +26,11 @@ export class DocumentuploadComponent implements OnInit {
   buttonDisabled: boolean;
   spDocumentResponse: any;
   documentResponse: any;
-  resultResponse: any;          
+  resultResponse: any;
   geoArrayResponse: any; countryArrayResponse: any; stateArrayResponse: any; domainArrayResponse: any;
   regulatorArrayResponse: any; regulationArrayResponse: any; documentArrayResponse: any;
   subDocumentArrayResponse: any; documentTypeResponse: any; uploadSpecialResponse: any;
-  geoText: any; cou_Text: any;                 
+  geoText: any; cou_Text: any;
   optionSelected = 0;
   selectedCountry = 0;
   selectedState = 0;
@@ -129,8 +129,8 @@ export class DocumentuploadComponent implements OnInit {
 
     this.http.get('http://localhost:1337/document', { headers: headers }).subscribe(
       data => {
-        this.documentResponse = data
-        console.log(data);
+        this.documentResponse = data;
+        console.log(data, "document response");
       });
   }
   documentListLoad() {
@@ -394,6 +394,7 @@ export class DocumentuploadComponent implements OnInit {
     formData.append('level', this.level);
     formData.append('uploadFile', file, this.fileName);
     console.log("am in file change event Name", this.fileName, "File Type", this.fileType, "File size", fileSize, "file=>", file)
+    //this.foo=this.rootDocVal[0].tobepublished;
     this.http.post<UploadI>("http://localhost:1337/uploadFile", formData).subscribe(result => {
       this.uploadResponse = result;
       console.log("success file upload", this.uploadResponse)
@@ -420,7 +421,7 @@ export class DocumentuploadComponent implements OnInit {
     this.fileType = file.type;
     let fileSize = file.size;
     //this.spath = '/' + this.geoName + '/' + this.countryName + '/' + this.domainName + '/' + this.regulatorName + '/' + this.regName + '/' + this.docName + '/' + this.fileName;
-    this.spath = '/' + this.geoName + '/' + this.countryName + '/' + this.stateName + '/' + this.domainName + '/' + this.regulatorName + '/' + this.regName + '/' + this.docName + '/' + this.subDocName;
+    this.spath = '/' + this.geoName + '/' + this.countryName + '/' + this.stateName + '/' + this.domainName + '/' + this.regulatorName + '/' + this.regName + '/' + this.docName;
     console.log("myspecial path value", this.spath)
     sformData.append('fileType', this.fileType);
     sformData.append('fileName', this.fileName);
@@ -453,11 +454,12 @@ export class DocumentuploadComponent implements OnInit {
       console.log("success file upload", this.uploadSpecialResponse)
     });
   }
+  /*--Delete Modal starts--*/
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
   }
 
-  confirm(fid: string): void {
+  confirmDelete(fid: string): void {
     this.documentService.deleteDocumentById(fid)
       .subscribe(geot => {
         this.specialDocumentListLoad();
@@ -470,8 +472,208 @@ export class DocumentuploadComponent implements OnInit {
     this.modalRef.hide();
   }
 
-  decline(): void {
+  declineDelete(): void {
     this.message = 'Declined!';
     this.modalRef.hide();
   }
+  /*--Delete Modal ends--*/
+  /*--Publish Modal starts--*/
+  openModalPublish(publishtemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(publishtemplate, { class: 'modal-sm' });
+  }
+
+  confirmPublish(f_id: string): void {
+
+    let uploadDoc: UploadI = {
+      fid: f_id,
+      is_published: true,
+      tobepublished: true   
+    }
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+    this.http.patch('http://localhost:1337/document' + "/" + f_id, JSON.stringify(uploadDoc), { headers: headers }).subscribe(
+      data => {
+        console.log(data, "am got doc publish response");                                                                             
+      });
+    // this.documentService.publishDocumentById(uploadDoc)
+    //   .subscribe(geot => {
+    //     this.specialDocumentListLoad();
+    //     this.documentListLoad();
+    //     this.findRegulationDataMethod();       
+    //     this.documentTypeLoad();
+    //   });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declinePublish(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Publish Modal ends--*/
+  /*--Published Modal starts--*/
+  openModalPublished(publishedtemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(publishedtemplate, { class: 'modal-sm' });
+  }
+
+  confirmPublished(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declinePublished(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Published Modal ends--*/
+  //-----------------------------------------------------Cycle ----------------------------------------------------//
+  /*--Delete Modal starts--*/
+  openCycleModalDelete(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+  }
+
+  confirmCycleDelete(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declineCycleDelete(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Delete Modal ends--*/
+  /*--Publish Modal starts--*/
+  openModalCyclePublish(publishtemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(publishtemplate, { class: 'modal-sm' });
+  }
+
+  confirmCyclePublish(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declineCyclePublish(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Publish Modal ends--*/
+  /*--Published Modal starts--*/
+  openModalCyclePublished(publishedtemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(publishedtemplate, { class: 'modal-sm' });
+  }
+
+  confirmCyclePublished(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declineCyclePublished(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Published Modal ends--*/
+  //-----------------------------------------------------Life Tracker ----------------------------------------------------//
+  /*--Delete Modal starts--*/
+  openModalTrackerDelete(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+  }
+
+  confirmTrackerDelete(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declineTrackerDelete(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Delete Modal ends--*/
+  /*--Publish Modal starts--*/
+  openModalTrackerPublish(publishtemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(publishtemplate, { class: 'modal-sm' });
+  }
+
+  confirmTrackerPublish(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declineTrackerPublish(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Publish Modal ends--*/
+  /*--Published Modal starts--*/
+  openModalTrackerPublished(publishedtemplate: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(publishedtemplate, { class: 'modal-sm' });
+  }
+
+  confirmTrackerPublished(fid: string): void {
+    this.documentService.deleteDocumentById(fid)
+      .subscribe(geot => {
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+      });
+    this._router.navigate(['/docUplMgtList']);
+    this.message = 'Confirmed!';
+    this.modalRef.hide();
+  }
+
+  declineTrackerPublished(): void {
+    this.message = 'Declined!';
+    this.modalRef.hide();
+  }
+  /*--Published Modal ends--*/
 }                                     

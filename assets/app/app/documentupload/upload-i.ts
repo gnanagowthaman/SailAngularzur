@@ -20,6 +20,10 @@ export interface UploadI {
     reglatorId?: number;
     regulationId?: number;
     level?: number;
+    fid?: string;
+    is_uploaded?: boolean;
+    is_published?: boolean;
+    tobepublished?: boolean;
     uploadFile?: string;
 }
 export interface SpecialUploadI {
@@ -45,7 +49,7 @@ export interface SpecialUploadI {
     regulation_document_id?: number;
     file_id?: number;
     file_name?: string;
-    is_uploaded?: boolean;                 
+    is_uploaded?: boolean;
     is_published?: number;
     docname?: string;
 }

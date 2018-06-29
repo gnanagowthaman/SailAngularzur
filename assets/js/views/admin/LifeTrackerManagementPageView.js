@@ -211,7 +211,7 @@ admin.LifeTrackerManagementPageView =Backbone.View.extend({
       var description = $('#docTypedescription').val();
       var date        = $('#dateDoc').val();
       console.log(regId,regulatorId,domainId,geoId,countryId,stateId,regDocId,spclDocId,sub_DocId);
-      console.log(countryName,stateName,domainName,regulatorName,regName,docName,subDocName); 
+      console.log(countryName,stateName,domainName,regulatorName,regName,docName,subDocName,"ck value"); 
       console.log(description);
       console.log(date);      
       var fileName = e.target.files[0].name;        
@@ -453,7 +453,7 @@ admin.LifeTrackerManagementPageView =Backbone.View.extend({
           formData.append('countryId', countryId);
           formData.append('stateId', stateId);
           formData.append('domainId', domainId);
-          formData.append('reglatorId', regulatorId);
+          formData.append('reglatorId', regulatorId);     
           formData.append('regulationId', regId);
           formData.append('spclDocId', spclDocId);
           formData.append('description',description);
