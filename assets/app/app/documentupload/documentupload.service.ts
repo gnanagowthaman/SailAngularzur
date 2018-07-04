@@ -14,12 +14,12 @@ const httpOptions = {
     'Content-Type': 'application/json',
     'Authorization': 'my-auth-token'
   })
-};
+};              
 @Injectable()
 export class DocumentuploadService {
 
   constructor(private http: HttpClient) { }
-
+     
   getFindRegulationData() {
     return this.http.get("http://localhost:1337/findRegulationData").map(res => res);
   }
@@ -28,9 +28,9 @@ export class DocumentuploadService {
     let options = new RequestOptions({ headers: cpHeaders });          
     return this.http.delete( 'http://localhost:1337/document' +"/"+ fId)            
   }
-  // publishDocumentById(fId: any): Observable<UploadI> {
-  //   let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
-  //   let options = new RequestOptions({ headers: cpHeaders });          
-  //   return this.http.patch( 'http://localhost:1337/document' +"/"+ fId.fid,)
-  // }
+  deleteCycleById(fId: any): Observable<any>{                                 
+    let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: cpHeaders });          
+    return this.http.delete( 'http://localhost:1337/spdocument' +"/"+ fId)
+  }
 }

@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
 import { Response, Http } from '@angular/http';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { DocumentuploadService } from './documentupload.service';
 import { UploadI, SpecialUploadI } from './upload-i';
 import { BsModalService } from 'ngx-bootstrap/modal';
@@ -53,7 +53,7 @@ export class DocumentuploadComponent implements OnInit {
   docName: any; subDocName: any; path: any; spath: any; geoId: any; countryId: any; stateId: any;
   domainId: any; regulatorId: any; regulationId: any; regDocId: any; subdocId: any; optDocTName: any; optDocTId: any;
   fileType: any; fileName: any; messages: any; level: any = 0; uploaDFile: any; foo: any;
-  uploadResponse: any;
+  uploadResponse: any; inPath: any;
   butDisabled: boolean = true; buttonDisabledState: boolean = true; buttonDisabledDomain: boolean = true; buttonDisabledRegulator: boolean = true;
   buttonDisabledRegulation: boolean = true; buttonDisabledRootDoc: boolean = true; buttonDisabledSubDoc: true;
 
@@ -283,6 +283,7 @@ export class DocumentuploadComponent implements OnInit {
     let stTestDocName = this.rootDocVal[0].is_special_doc;
     console.log("doc special is", this.rootDocVal[0].is_special_doc)
     if (stTestDocName === 1) {
+
       this.messages = this.messagename.nativeElement.value;
       var refGeography = this.selectGeo.nativeElement;
       var optGeo = refGeography.options[refGeography.selectedIndex];
@@ -315,12 +316,30 @@ export class DocumentuploadComponent implements OnInit {
       var refSubDocument = this.selectSubDoc.nativeElement;
       var optSubD = refSubDocument.options[refSubDocument.selectedIndex];
       this.subDocName = optSubD.text;
-      this.subdocId = optSubD.value;
+      this.subdocId = optSubD.value;         
+      // this.inPath=        
+      let headers = new HttpHeaders();      
+      headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+      let myparams = new HttpParams();
+      myparams.append('geoId', this.geoId);
+      myparams.append('countryId', this.countryId);
+      myparams.append('stateId', this.stateId);
+      myparams.append('domainId', this.domainId);                                                                  
+      myparams.append('regulatorId', this.regulatorId);
+      myparams.append('regId', this.regulationId);
+      myparams.append('regDocId', this.regDocId);
+      myparams.append('subDocId', '10');
 
+      this.http.get('http://localhost:1337/spdocument', { headers: headers, params: myparams }).subscribe(
+        data => {
+          this.inPath = data;                                                         
+          console.log(data, "inner get document response");  
+        });
       console.log("dkfjkdsfs")
       this.myDir = 'local';
       console.log('this is  my dir', this.myDir)
       console.log('am special one', this.path)
+
     }
     this.selectedSubDoc = 0;
     this.buttonDisabledSubDoc = true;
@@ -487,22 +506,19 @@ export class DocumentuploadComponent implements OnInit {
     let uploadDoc: UploadI = {
       fid: f_id,
       is_published: true,
-      tobepublished: true   
+      tobepublished: true
     }
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');
 
     this.http.patch('http://localhost:1337/document' + "/" + f_id, JSON.stringify(uploadDoc), { headers: headers }).subscribe(
       data => {
-        console.log(data, "am got doc publish response");                                                                             
+        this.specialDocumentListLoad();
+        this.documentListLoad();
+        this.findRegulationDataMethod();
+        this.documentTypeLoad();
+        console.log(data, "am got doc publish response");
       });
-    // this.documentService.publishDocumentById(uploadDoc)
-    //   .subscribe(geot => {
-    //     this.specialDocumentListLoad();
-    //     this.documentListLoad();
-    //     this.findRegulationDataMethod();       
-    //     this.documentTypeLoad();
-    //   });
     this._router.navigate(['/docUplMgtList']);
     this.message = 'Confirmed!';
     this.modalRef.hide();
@@ -543,7 +559,7 @@ export class DocumentuploadComponent implements OnInit {
   }
 
   confirmCycleDelete(fid: string): void {
-    this.documentService.deleteDocumentById(fid)
+    this.documentService.deleteCycleById(fid)
       .subscribe(geot => {
         this.specialDocumentListLoad();
         this.documentListLoad();
@@ -565,13 +581,21 @@ export class DocumentuploadComponent implements OnInit {
     this.modalRef = this.modalService.show(publishtemplate, { class: 'modal-sm' });
   }
 
-  confirmCyclePublish(fid: string): void {
-    this.documentService.deleteDocumentById(fid)
-      .subscribe(geot => {
+  confirmCyclePublish(fid: any): void {
+    let specialUploadDoc: SpecialUploadI = {
+      spid: fid,
+      is_published: true
+    }
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+    this.http.patch('http://localhost:1337/spdocument' + "/" + fid, JSON.stringify(specialUploadDoc), { headers: headers }).subscribe(
+      data => {
         this.specialDocumentListLoad();
         this.documentListLoad();
         this.findRegulationDataMethod();
         this.documentTypeLoad();
+        console.log(data, "am got doc publish response");
       });
     this._router.navigate(['/docUplMgtList']);
     this.message = 'Confirmed!';

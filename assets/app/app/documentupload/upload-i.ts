@@ -44,13 +44,13 @@ export interface SpecialUploadI {
     description?: string;
     document_type?: string;
     document_type_id?: number;
-    document_link?: string;
+    document_link?: string;   
     type?: string;
     regulation_document_id?: number;
-    file_id?: number;
+    file_id?: string;
     file_name?: string;
     is_uploaded?: boolean;
-    is_published?: number;
+    is_published?: boolean;
     docname?: string;
 }
 export interface SpecialUploadCard {
