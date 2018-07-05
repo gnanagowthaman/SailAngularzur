@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Renderer2, Tem
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
 import { Router } from '@angular/router';
-import { Response, Http } from '@angular/http';
+import { Response, Http, URLSearchParams, RequestOptions } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams } from '@angular/common/http';
 import { DocumentuploadService } from './documentupload.service';
 import { UploadI, SpecialUploadI } from './upload-i';
@@ -49,10 +49,11 @@ export class DocumentuploadComponent implements OnInit {
   regulationVal = [];
   rootDocVal = [];
   subDocVal = [];
+  testArray=[];
   geoName: any; countryName: any; stateName: any; domainName: any; regulatorName: any; regName: any;
   docName: any; subDocName: any; path: any; spath: any; geoId: any; countryId: any; stateId: any;
   domainId: any; regulatorId: any; regulationId: any; regDocId: any; subdocId: any; optDocTName: any; optDocTId: any;
-  fileType: any; fileName: any; messages: any; level: any = 0; uploaDFile: any; foo: any;
+  fileType: any; fileName: any; messages: any; level: any = 0; uploaDFile: any; foo: any; headers: any;
   uploadResponse: any; inPath: any;
   butDisabled: boolean = true; buttonDisabledState: boolean = true; buttonDisabledDomain: boolean = true; buttonDisabledRegulator: boolean = true;
   buttonDisabledRegulation: boolean = true; buttonDisabledRootDoc: boolean = true; buttonDisabledSubDoc: true;
@@ -139,6 +140,7 @@ export class DocumentuploadComponent implements OnInit {
 
     this.http.get('http://localhost:1337/spdocument', { headers: headers }).subscribe(
       data => {
+
         this.spDocumentResponse = data
         console.log(data);
       });
@@ -275,7 +277,7 @@ export class DocumentuploadComponent implements OnInit {
       }
     });
   }
-
+                                                                  
   onSelectRootDoc(args) {
     var rooddoc_id = args.target.value;
     this.selectedRootDoc = rooddoc_id;
@@ -316,25 +318,9 @@ export class DocumentuploadComponent implements OnInit {
       var refSubDocument = this.selectSubDoc.nativeElement;
       var optSubD = refSubDocument.options[refSubDocument.selectedIndex];
       this.subDocName = optSubD.text;
-      this.subdocId = optSubD.value;         
-      // this.inPath=        
-      let headers = new HttpHeaders();      
-      headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-      let myparams = new HttpParams();
-      myparams.append('geoId', this.geoId);
-      myparams.append('countryId', this.countryId);
-      myparams.append('stateId', this.stateId);
-      myparams.append('domainId', this.domainId);                                                                  
-      myparams.append('regulatorId', this.regulatorId);
-      myparams.append('regId', this.regulationId);
-      myparams.append('regDocId', this.regDocId);
-      myparams.append('subDocId', '10');
-
-      this.http.get('http://localhost:1337/spdocument', { headers: headers, params: myparams }).subscribe(
-        data => {
-          this.inPath = data;                                                         
-          console.log(data, "inner get document response");  
-        });
+      this.subdocId = optSubD.value;
+      console.log(this.geoId, this.countryId, this.stateId, this.domainId, this.regulatorId, this.regulationId, this.regDocId, "all values");
+      this.specificLoad();
       console.log("dkfjkdsfs")
       this.myDir = 'local';
       console.log('this is  my dir', this.myDir)
@@ -349,6 +335,20 @@ export class DocumentuploadComponent implements OnInit {
         return item.sdocid;
       }
     });
+  }
+  specificLoad() {
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+    let httpParams = new HttpParams().set('geoId', this.geoId).set('countryId', this.countryId).set('stateId', this.stateId)
+      .set('domainId', this.domainId).set('regulatorId', this.regulatorId).set('regId', this.regulationId).set('regDocId', this.regDocId)
+      .set('subDocId', '10');
+
+    this.http.get('http://localhost:1337/spdocument', { headers: headers, params: httpParams }).subscribe(
+      data => {
+        this.inPath = data;
+        console.log(data, "sp parameter");
+      });
   }
   fileEvent(fileInput) {
     const formData: FormData = new FormData();
@@ -468,8 +468,22 @@ export class DocumentuploadComponent implements OnInit {
     sformData.append('uploadFile', file, this.fileName);
     console.log("check inside the sformData", sformData);
     this.http.post<SpecialUploadI>("http://localhost:1337/uploadSpecialFile", sformData).subscribe(result => {
+      console.log("all values of upload response", result.description);
+      var inSpPath = {
+        document_type: this.optDocTName,
+        description: result.description,
+        date: result.date,
+        file_name: result.file_name
+      };
+     this.testArray.push(inSpPath);               
+     this.inPath=this.testArray;
+      console.log("this inpath", this.inPath);   
+
       this.uploadSpecialResponse = result;
+      this.specialDocumentListLoad();
       this.documentListLoad();
+      this.findRegulationDataMethod();
+      this.documentTypeLoad();
       console.log("success file upload", this.uploadSpecialResponse)
     });
   }
@@ -636,13 +650,14 @@ export class DocumentuploadComponent implements OnInit {
     this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
   }
 
-  confirmTrackerDelete(fid: string): void {
-    this.documentService.deleteDocumentById(fid)
+  confirmTrackerDelete(spid: string): void {
+    this.documentService.deleteTrackerById(spid)
       .subscribe(geot => {
         this.specialDocumentListLoad();
         this.documentListLoad();
         this.findRegulationDataMethod();
         this.documentTypeLoad();
+        this.specificLoad();
       });
     this._router.navigate(['/docUplMgtList']);
     this.message = 'Confirmed!';
@@ -659,13 +674,22 @@ export class DocumentuploadComponent implements OnInit {
     this.modalRef = this.modalService.show(publishtemplate, { class: 'modal-sm' });
   }
 
-  confirmTrackerPublish(fid: string): void {
-    this.documentService.deleteDocumentById(fid)
-      .subscribe(geot => {
+  confirmTrackerPublish(fid: any): void {
+    let specialUploadDocTracker: SpecialUploadI = {
+      spid: fid,
+      is_published: true
+    }
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+
+    this.http.patch('http://localhost:1337/spdocument' + "/" + fid, JSON.stringify(specialUploadDocTracker), { headers: headers }).subscribe(
+      data => {
         this.specialDocumentListLoad();
         this.documentListLoad();
         this.findRegulationDataMethod();
         this.documentTypeLoad();
+        this.specificLoad();
+        console.log(data, "am got doc publish response");
       });
     this._router.navigate(['/docUplMgtList']);
     this.message = 'Confirmed!';

@@ -415,16 +415,16 @@
                 <tr *ngFor="let spres of spDocumentResponse; let i = index">
                     <!-- ngfor goes here -->
                     <td class="text-center">
-                        {{spres.document_type}}                                          
+                        {{spres.document_type}}
                     </td>
                     <td class="text-center">
-                        {{spres.description}}                     
+                        {{spres.description}}
                     </td>
                     <td class="text-center">
-                        {{spres.date}}                   
+                        {{spres.date}}
                     </td>
                     <td class="text-center">
-                        {{spres.file_name}}   
+                        {{spres.file_name}}
                     </td>
                     <td class="text-center">
                         <div>
@@ -434,7 +434,7 @@
                                     <span>Edit</span>
                                     <img src="/images/edit.png" />
                                 </a>
-                            </span>        
+                            </span>
                             <div *ngIf="(spres.is_published === 0);else other_content">
                                 <!--Lifecycle publish code  -->
                                 <a class="tooltips" [routerLink]="" (click)="openModalCyclePublish(publishcycletemplate)">
@@ -444,39 +444,39 @@
                                 <br>
                                 <br>
                                 <ng-template #publishcycletemplate>
-                                    <div class="modal-body text-center">     
+                                    <div class="modal-body text-center">
                                         <p>Do you want to confirm?</p>
                                         <button type="button" class="btn btn-default" (click)="confirmCyclePublish(spres.spid)">Yes</button>
                                         <button type="button" class="btn btn-primary" (click)="declineCyclePublish()">No</button>
                                     </div>
                                 </ng-template>
-                            </div>                                                    
-                                         
+                            </div>
+
                             <ng-template #other_content>
                                 <!--Lifecycle published code  -->
                                 <a class="tooltips" [routerLink]="" (click)="openModalCyclePublished(publishedcycletemplate)">
                                     <span>Published</span>
-                                    <img src="/images/published.png" />     
+                                    <img src="/images/published.png" />
                                 </a>
                                 <br>
                                 <br>
-                                <ng-template #publishedcycletemplate>                   
+                                <ng-template #publishedcycletemplate>
                                     <div class="modal-body text-center">
                                         <p>Do you want to confirm?</p>
                                         <button type="button" class="btn btn-default" (click)="confirmCyclePublished(spres.spid)">Yes</button>
                                         <button type="button" class="btn btn-primary" (click)="declineCyclePublished()">No</button>
                                     </div>
-                                </ng-template>    
+                                </ng-template>
                             </ng-template>
                             <!--Lifecycle Document Delete code  -->
                             <!--   <button type="button" class="btn btn-primary" (click)="openModal(template)">Delete</button>-->
                             <a class="tooltips" [routerLink]="" (click)="openCycleModalDelete(cycledeletetemplate)">
                                 <span>Delete</span>
                                 <img src="/images/delete.png" />
-                            </a>               
+                            </a>
                             <br>
-                            <br>               
-                            <ng-template #cycledeletetemplate>                                                                             
+                            <br>
+                            <ng-template #cycledeletetemplate>
                                 <div class="modal-body text-center">
                                     <p>Do you want to confirm?</p>
                                     <button type="button" class="btn btn-default" (click)="confirmCycleDelete(spres.spid)">Yes</button>
@@ -597,7 +597,7 @@
                                     <img src="/images/edit.png" />
                                 </a>
                             </span>
-                            <div *ngIf="(sur.is_published === 0);else other_content">                                   
+                            <div *ngIf="(sur.is_published === 0);else other_content">
                                 <!--LifeTracker publish code  -->
                                 <a class="tooltips" [routerLink]="" (click)="openModalTrackerPublish(publishtrackertemplate)">
                                     <span>Publish</span> r
@@ -608,7 +608,7 @@
                                 <ng-template #publishtrackertemplate>
                                     <div class="modal-body text-center">
                                         <p>Do you want to confirm?</p>
-                                        <button type="button" class="btn btn-default" (click)="confirmTrackerPublish(sur.fid)">Yes</button>
+                                        <button type="button" class="btn btn-default" (click)="confirmTrackerPublish(sur.spid)">Yes</button>
                                         <button type="button" class="btn btn-primary" (click)="declineTrackerPublish()">No</button>
                                     </div>
                                 </ng-template>
@@ -625,7 +625,7 @@
                                 <ng-template #publishedtrackertemplate>
                                     <div class="modal-body text-center">
                                         <p>Do you want to confirm?</p>
-                                        <button type="button" class="btn btn-default" (click)="confirmTrackerPublished(dres.fid)">Yes</button>
+                                        <button type="button" class="btn btn-default" (click)="confirmTrackerPublished(sur.spid)">Yes</button>
                                         <button type="button" class="btn btn-primary" (click)="declineTrackerPublished()">No</button>
                                     </div>
                                 </ng-template>
@@ -635,13 +635,13 @@
                             <a class="tooltips" [routerLink]="" (click)="openModalTrackerDelete(trackerdeletetemplate)">
                                 <span>Delete</span>
                                 <img src="/images/delete.png" />
-                            </a>
+                            </a>                
                             <br>
                             <br>
-                            <ng-template #trackerdeletetemplate>
+                            <ng-template #trackerdeletetemplate>                  
                                 <div class="modal-body text-center">
                                     <p>Do you want to confirm?</p>
-                                    <button type="button" class="btn btn-default" (click)="confirmTrackerDelete(dres.fid)">Yes</button>
+                                    <button type="button" class="btn btn-default" (click)="confirmTrackerDelete(sur.spid)">Yes</button>
                                     <button type="button" class="btn btn-primary" (click)="declineTrackerDelete()">No</button>
                                 </div>
                             </ng-template>
