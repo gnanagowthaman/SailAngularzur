@@ -49,7 +49,8 @@ export class DocumentuploadComponent implements OnInit {
   regulationVal = [];
   rootDocVal = [];
   subDocVal = [];
-  testArray=[];
+  testArray = [];
+  secTestArray = [];
   geoName: any; countryName: any; stateName: any; domainName: any; regulatorName: any; regName: any;
   docName: any; subDocName: any; path: any; spath: any; geoId: any; countryId: any; stateId: any;
   domainId: any; regulatorId: any; regulationId: any; regDocId: any; subdocId: any; optDocTName: any; optDocTId: any;
@@ -277,7 +278,7 @@ export class DocumentuploadComponent implements OnInit {
       }
     });
   }
-                                                                  
+
   onSelectRootDoc(args) {
     var rooddoc_id = args.target.value;
     this.selectedRootDoc = rooddoc_id;
@@ -346,7 +347,9 @@ export class DocumentuploadComponent implements OnInit {
 
     this.http.get('http://localhost:1337/spdocument', { headers: headers, params: httpParams }).subscribe(
       data => {
+        console.log("json stringifiy", JSON.stringify(data));
         this.inPath = data;
+        console.log("step 3", this.inPath);
         console.log(data, "sp parameter");
       });
   }
@@ -432,7 +435,7 @@ export class DocumentuploadComponent implements OnInit {
 
     let doctypeDesc = this.docTypedescription.nativeElement.value;
 
-    const subDocDefault = "10";
+    const subDocDefault = "10";         
     const levelDefault = "1";
     console.log("Data value" + dateValue)
     let file = event.target.files[0];
@@ -465,20 +468,22 @@ export class DocumentuploadComponent implements OnInit {
     sformData.append('description', doctypeDesc);
     sformData.append('date', dateValue);
     sformData.append('level', levelDefault);
-    sformData.append('uploadFile', file, this.fileName);
+    sformData.append('uploadFile', file, this.fileName);                      
     console.log("check inside the sformData", sformData);
     this.http.post<SpecialUploadI>("http://localhost:1337/uploadSpecialFile", sformData).subscribe(result => {
-      console.log("all values of upload response", result.description);
-      var inSpPath = {
-        document_type: this.optDocTName,
-        description: result.description,
-        date: result.date,
-        file_name: result.file_name
-      };
-     this.testArray.push(inSpPath);               
-     this.inPath=this.testArray;
-      console.log("this inpath", this.inPath);   
+      // var inSpPath = {
+      //  document_type: this.optDocTName,
+      //  description: result.description,   
+      //  date: result.date,
+      //  file_name: result.file_name                        
+      //  };
+      result.document_type=this.optDocTName;
+      result.document_type_id=this.optDocTId;
+      result.docname=this.docName;
+      result.sub_document_id=subDocDefault;                                                                  
 
+      this.inPath.push(result);
+      console.log("am special response only", JSON.stringify(this.inPath));                      
       this.uploadSpecialResponse = result;
       this.specialDocumentListLoad();
       this.documentListLoad();
