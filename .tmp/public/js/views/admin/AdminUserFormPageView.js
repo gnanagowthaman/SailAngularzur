@@ -327,8 +327,8 @@ admin.AdminUserFormPageView = Backbone.View.extend({
 				      		
 						});
 				
-		}		
-		console.log(userFormData);
+		}		     
+		console.log("data fetching testing this",userFormData);
 		// POST the data to server
         $.ajax({
           type 		: "POST",

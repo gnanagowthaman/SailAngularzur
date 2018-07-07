@@ -5,10 +5,9 @@ import { Router } from '@angular/router';
 import { Response, Http } from '@angular/http';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { RequestService } from './request.service';
-import { Iterator } from '@progress/kendo-angular-grid/dist/es2015/data/data.iterators';
 import { Client } from './user';
 import { fullClient } from './user';
-import * as $ from '../../resources/js/jquery.min.js';
+     
 @Component({
   selector: 'app-newuser',
   templateUrl: './newuser.component.html',
@@ -36,7 +35,7 @@ export class NewuserComponent implements OnInit {
   //   smsaccess: 'none',
   //   webaccess: 'none',
   //   emailaccess: 'none',
-  //   country: 23,
+  //   country: 23,    
   //   geopgrpahy: '',
   //   state: 18
   // }
@@ -105,7 +104,7 @@ export class NewuserComponent implements OnInit {
   inc = 0;
   public myFlag: boolean = false;
   public mySecFlag: boolean = false;
-  private _prevSelected: any;
+  private _prevSelected: any;  
   public count: any;
   geo_Text; cou_Text; sta_Text; reg_Text; sms_Text = "none"; email_Text = "none"; web_Text = "none"; geo_txt; spc_reg;
   smsVal = 0; webVal = 0; emailVal = 0; getUser_name; getEmail; getMobile; getSubsr; getAcce; geo_Value; cou_Value; sta_Value; reg_Value;
@@ -139,7 +138,7 @@ export class NewuserComponent implements OnInit {
       subscription: new FormControl(""),
       access: new FormControl(""),
       smsaccess: new FormControl(""),
-      webaccess: new FormControl(""),
+      webaccess: new FormControl(""),            
       emailaccess: new FormControl(""),
       geopgrpahy: new FormControl(''),
       country: new FormControl(""),

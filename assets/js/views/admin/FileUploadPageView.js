@@ -356,7 +356,7 @@ admin.FileUploadPageView = Backbone.View.extend({
           });        
           
           
-      }
+      }   
       else{
            $( "div.failure" ).html("Please upload correct file type. expected xlsx xls pdf");
            $( "div.failure" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );

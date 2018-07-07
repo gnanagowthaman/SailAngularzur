@@ -1,0 +1,655 @@
+<div [ngSwitch]="myDir">
+
+    <!--file upload after click action for container  starts-->
+    <ng-template [ngSwitchCase]="'east'">
+
+        <form [formGroup]="formdata" enctype="multipart/form-data">
+            <div id="filePage">
+                <span style="width:130px; position: relative; left: 1px; float: left; margin-top: 0px 20px;">
+                    <label for="message_name">Message</label>
+                    <!-- [(ngModel)]="uI.message" -->
+                    <input type="text" class="form-control" formControlName="uploadmessage" style="width:500px;" #messagename>
+                    <div id="message_name_error" class="message_name_error" style="font-size: 12px; color: #FF0000; ">
+                    </div>
+                </span>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectGeo">Select Geography</label>
+                    <select *ngIf="geoArrayResponse" class="form-control" formControlName="uploadgeography" [(ngModel)]="optionSelected" (change)="onSelectGeography($event)"
+                        #selectGeo>
+                        <option value="0">Select Geography</option>
+                        <option *ngFor='let option of geoArrayResponse' [value]="option.id">{{option.name}}</option>
+                    </select>
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectCountry">Select Country</label>
+                    <div>
+                        <select *ngIf="countryVal" class="form-control" formControlName="uploadcountry" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event)"
+                            [disabled]="!buttonDisabled" #selectCountry>
+                            <option value="0">Select Country</option>
+                            <option *ngFor="let cout of countryVal" [value]="cout.country_id">{{cout.cname}}</option>
+                        </select>
+                    </div>
+
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectState">Select State</label>
+                    <div>
+                        <select *ngIf="stateVal" class="form-control" formControlName="uploadstate" [(ngModel)]="selectedState" (change)="onSelectState($event)"
+                            [disabled]="!buttonDisabledState" #selectState>
+                            <option value="0">Select State</option>
+                            <option *ngFor="let stat of stateVal" [value]="stat.state_id">{{stat.sname}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectDomain">Select Domain</label>
+                    <div>
+                        <select *ngIf="domainVal" class="form-control" formControlName="uploaddomain" [(ngModel)]="selectedDomain" (change)="onSelectDomain($event)"
+                            [disabled]="!buttonDisabledDomain" #selectDomain>
+                            <option value="0">Select Domain</option>
+                            <option *ngFor="let doma of domainVal" [value]="doma.did">{{doma.name}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectRegulator">Select Regulator</label>
+                    <div>
+                        <select *ngIf="regulatorVal" class="form-control" formControlName="uploadregulator" [(ngModel)]="selectedRegulator" (change)="onSelectRegulator($event)"
+                            [disabled]="!buttonDisabledRegulator" #selectRegulator>
+                            <option value="0">Select Regulator</option>
+                            <option *ngFor="let regu of regulatorVal" [value]="regu.rid">{{regu.rname}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectRegulation">Select Regulation</label>
+                    <div>
+                        <select *ngIf="regulationVal" class="form-control" formControlName="uploadregulation" [(ngModel)]="selectedRegulation" (change)="onSelectRegulation($event)"
+                            [disabled]="!buttonDisabledRegulation" #selectRegulation>
+                            <option value="0">Select Regulation</option>
+                            <option *ngFor="let regul of regulationVal" [value]="regul.rlid">{{regul.rname}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectRootDoc">Select Document</label>
+                    <div>
+                        <select *ngIf="rootDocVal" class="form-control" formControlName="uploadrootdoc" [(ngModel)]="selectedRootDoc" (change)="onSelectRootDoc($event)"
+                            [disabled]="!buttonDisabledRootDoc" #selectRootDoc>
+                            <option value="0">Select Regulation</option>
+                            <option *ngFor="let root of rootDocVal" [value]="root.docid">{{root.docname}}</option>
+
+                        </select>
+                    </div>
+                </div>
+            </span>
+
+
+            <span style="width:190px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                <div class="form-group">
+                    <label for="selectSubDoc">Select Sub Document</label>
+                    <div>
+                        <select class="form-control" formControlName="uploadsubdoc" [(ngModel)]="selectedSubDoc" #selectSubDoc>
+                            <option *ngIf="!selectedRootDoc" value="0">Select Sub Document</option>
+                            <option *ngFor="let subd of subDocVal" [value]="subd.sdocid">{{subd.subdocname}}</option>
+                        </select>
+                    </div>
+                </div>
+            </span>
+
+            <span id="upload-span" style="width:190px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
+                <!-- <div class="form-group">
+                        <label for="uploadFile">Upload File</label>     
+                        <input type="file" name="uploadFile"  data-buttonname="btn-outline btn-primary" data-iconname="ion-image mr-5"
+                            class="filestyle" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1" #uploadFile (change)="fileEvent($event)">
+                        <div style="width:300px; position: relative; left: 10px; margin-top: 0px 20px;" class="bootstrap-filestyle input-group">
+                            <input id="fileName" class="form-control " placeholder=""  type="text">
+                            <div id="file_error" class="file_error" style="font-size: 12px; color: #FF0000; "></div>
+                            <span class="group-span-filestyle input-group-btn" tabindex="0">
+                                <label disable="" for="uploadFile" class="btn btn-outline btn-primary-red"  #uploadFileLabel>
+                                    <span class="icon-span-filestyle ion-image mr-5"></span>
+                                    <span class="buttonText">Choose file</span>
+                                </label>           
+                            </span>    
+                        </div>        
+                    </div>      -->
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.pdf" class="form-control-file"
+                        (change)="fileEvent($event)" #uploadFile>
+                </div>
+            </span>
+        </form>
+
+
+
+        <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileid">
+            <div role="document" class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please upload pdf/xlsx documents</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalClose">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </ng-template>
+    <!--file upload after click action for container ends-->
+    <!--after life tracker dropdown click-->
+
+    <ng-template [ngSwitchCase]="'west'">
+
+        <div class="widget-heading" id="title">
+            <h3 class="widget-title">LifeTracker Document</h3>
+        </div>
+
+        <div id="addTracker">
+            <div id="trackerList">
+                <form class="form-horizontal" [formGroup]="formdata">
+                    <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                        <div class="form-group">
+                            <label for="document_type">Select DocumentType</label>
+                            <!-- [(ngModel)]="selectedLDocument" -->
+                            <select *ngIf="documentTypeResponse" class="form-control" formControlName="uploadldocument" #documenttype>
+                                <option value="0">Select</option>
+                                <option *ngFor="let ld of documentTypeResponse" [value]="ld.id">{{cout.document_typess}}</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                        <label for="selectCountry">Select Country</label>
+                        <div>
+                            <select *ngIf="countryVal" class="form-control" formControlName="uploadcountry" [(ngModel)]="selectedCountry" (change)="onSelectCountry($event)"
+                                [disabled]="!buttonDisabled" #selectCountry>
+                                <option value="0">Select Country</option>
+                                <option *ngFor="let cout of countryVal" [value]="cout.country_id">{{cout.cname}}</option>
+                            </select>
+                        </div>
+    
+                    </div> -->
+                    </span>
+
+                    <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" formControlName="docTypeDescriptionName" maxlength="2400" #docTypedescription />
+                            <!-- <input type="text" class="form-control" formControlName="geographyName" [(ngModel)]=" geoCreate.name" #geoname/> -->
+                        </div>
+                    </span>
+
+                    <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <!-- <div id="datetimepicker1" class="input-group date">                     
+                            <input type="text" name="dateDoc" data-date-format='YYYY-MM-DD' class="form-control" #dateDoc> 
+                            <div id="news_date_error" class="" style="font-size: 12px; color: #FF0000; "></div>
+                        </div> -->
+                            <div class="col-xs-12 col-12 col-md-4 form-group">
+                                <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker>
+                            </div>
+                        </div>
+                    </span>
+
+                    <span style="width:195px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
+                        <div class="form-group">
+                            <label for="uploadFileDoc">Upload File</label>
+                            <input type="file" name="uploadFileDoc" id="uploadFileDoc" data-buttonname="btn-outline btn-primary" data-iconname="ion-image mr-5"
+                                class="filestyle" style="position: absolute; clip: rect(0px, 0px, 0px, 0px);" tabindex="-1">
+                            <div style="width:300px; position: relative; left: 10px; margin-top: 0px 20px;" class="bootstrap-filestyle input-group">
+                                <input id="lifeTrackerfileName" class="form-control lifeTrackerfileName" placeholder="" disabled="" type="text">
+                                <div id="file_error_doc" class="file_error" style="font-size: 12px; color: #FF0000; "></div>
+                                <span class="group-span-filestyle input-group-btn" tabindex="0">
+                                    <label id="uploadFileLabelDoc" for="uploadFileDoc" class="btn btn-outline btn-primary-red">
+                                        <span class="icon-span-filestyle ion-image mr-5"></span>
+                                        <span class="buttonText">Choose file</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileidDoc">
+                        <div role="document" class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please upload pdf/xlsx documents</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalDocClose">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+            <thead>
+                <tr>
+                    <th style="width:6%" class="text-center">DocumentType</th>
+                    <th style="width:10%" class="text-center">Description</th>
+                    <th style="width:10%" class="text-center">Date</th>
+                    <th style="width:30%" class="text-center">Uploaded File</th>
+                    <th style="width:30%" class="text-center">Operation</th>
+                </tr>
+            </thead>
+            <tbody id="doc-list-table"></tbody>
+        </table>
+
+    </ng-template>
+    <ng-template ngSwitchDefault>
+        <div class="widget-heading">
+            <h3 class="widget-title">Document Upload Management</h3>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                <!-- {#upload} -->
+                <button id="renderFileUploadPage" class="btn btn-success btn-rounded btn-block" style="width: 150px;" (click)="myDir='east'">Upload File</button>
+                <!-- {/upload} -->
+                <!--click event for upload documents-->
+            </div>
+        </div>
+        <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+            <thead>
+                <tr>
+                    <th style="width:6%" class="text-center">Geography</th>
+                    <th style="width:10%" class="text-center">Domain</th>
+                    <th style="width:10%" class="text-center">Country</th>
+                    <th style="width:10%" class="text-center">State</th>
+                    <th style="width:10%" class="text-center">Regulator</th>
+                    <th style="width:10%" class="text-center">Regulation</th>
+                    <th style="width:10%" class="text-center">Document</th>
+                    <th style="width:10%" class="text-center">SubDocument</th>
+                    <th style="width:30%" class="text-center">Uploaded File</th>
+                    <th style="width:30%" class="text-center">Operation</th>
+                </tr>
+            </thead>
+            <tbody id="doc-list-table">
+                <tr *ngFor="let dres of documentResponse; let i = index">
+                    <!-- ngfor goes here -->
+                    <td class="text-center">
+                        {{dres.gname}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.dname}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.coname}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.stname}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.regtrName}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.rname}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.docname}}
+                    </td>
+                    <td class="text-center">
+                        {{dres.sdocname}}
+                    </td>
+
+                    <td class="text-center">
+                        {{dres.fname}}
+                    </td>
+                    <td class="text-center">
+                        <div>
+                            <div *ngIf="(dres.tobepublished === 0);else other_content">
+                                <!-- publish code  -->
+                                <a class="tooltips" [routerLink]="" (click)="openModalPublish(publishtemplate)">
+                                    <span>Publish</span>
+                                    <img src="/images/publish.png" />
+                                </a>
+                                <br>
+                                <br>
+                                <ng-template #publishtemplate>
+                                    <div class="modal-body text-center">
+                                        <p>Do you want to confirm?</p>
+                                        <button type="button" class="btn btn-default" (click)="confirmPublish(dres.fid)">Yes</button>
+                                        <button type="button" class="btn btn-primary" (click)="declinePublish()">No</button>
+                                    </div>
+                                </ng-template>
+                            </div>
+
+                            <ng-template #other_content>
+                                <!-- published code  -->
+                                <a class="tooltips" [routerLink]="" (click)="openModalPublished(publishedtemplate)">
+                                    <span>Published</span>
+                                    <img src="/images/published.png" />
+                                </a>
+                                <br>
+                                <br>
+                                <ng-template #publishedtemplate>
+                                    <div class="modal-body text-center">
+                                        <p>Do you want to confirm?</p>
+                                        <button type="button" class="btn btn-default" (click)="confirmPublished(dres.fid)">Yes</button>
+                                        <button type="button" class="btn btn-primary" (click)="declinePublished()">No</button>
+                                    </div>
+                                </ng-template>
+                            </ng-template>
+                            <!-- Delete code  -->
+                            <!--   <button type="button" class="btn btn-primary" (click)="openModal(template)">Delete</button>-->
+                            <a class="tooltips" [routerLink]="" (click)="openModal(deletetemplate)">
+                                <span>Delete</span>
+                                <img src="/images/delete.png" />
+                            </a>
+                            <br>
+                            <br>
+                            <ng-template #deletetemplate>
+                                <div class="modal-body text-center">
+                                    <p>Do you want to confirm?</p>
+                                    <button type="button" class="btn btn-default" (click)="confirmDelete(dres.fid)">Yes</button>
+                                    <button type="button" class="btn btn-primary" (click)="declineDelete()">No</button>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="findStatus"></div>
+        <div class="user_load">
+            <div id="loadMore"></div>
+        </div>
+
+        <div class="widget-heading">
+            <h3 class="widget-title">Lifecycle Document Upload Management</h3>
+        </div>
+
+        <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+            <thead>
+                <tr>
+                    <th style="width:6%" class="text-center">DocumentType</th>
+                    <th style="width:10%" class="text-center">Description</th>
+                    <th style="width:10%" class="text-center">Date</th>
+                    <th style="width:30%" class="text-center">Uploaded File</th>
+                    <th style="width:30%" class="text-center">Operation</th>
+                </tr>
+            </thead>
+            <tbody id="spdoc-list-table">
+                <tr *ngFor="let spres of spDocumentResponse; let i = index">
+                    <!-- ngfor goes here -->
+                    <td class="text-center">
+                        {{spres.document_type}}
+                    </td>
+                    <td class="text-center">
+                        {{spres.description}}
+                    </td>
+                    <td class="text-center">
+                        {{spres.date}}
+                    </td>
+                    <td class="text-center">
+                        {{spres.file_name}}
+                    </td>
+                    <td class="text-center">
+                        <div>
+
+                            <span id="editSpclDoc" class="published">
+                                <a class="tooltips">
+                                    <span>Edit</span>
+                                    <img src="/images/edit.png" />
+                                </a>
+                            </span>
+                            <div *ngIf="(spres.is_published === 0);else other_content">
+                                <!--Lifecycle publish code  -->
+                                <a class="tooltips" [routerLink]="" (click)="openModalCyclePublish(publishcycletemplate)">
+                                    <span>Publish</span>
+                                    <img src="/images/publish.png" />
+                                </a>
+                                <br>
+                                <br>
+                                <ng-template #publishcycletemplate>
+                                    <div class="modal-body text-center">
+                                        <p>Do you want to confirm?</p>
+                                        <button type="button" class="btn btn-default" (click)="confirmCyclePublish(spres.spid)">Yes</button>
+                                        <button type="button" class="btn btn-primary" (click)="declineCyclePublish()">No</button>
+                                    </div>
+                                </ng-template>
+                            </div>
+
+                            <ng-template #other_content>
+                                <!--Lifecycle published code  -->
+                                <a class="tooltips" [routerLink]="" (click)="openModalCyclePublished(publishedcycletemplate)">
+                                    <span>Published</span>
+                                    <img src="/images/published.png" />
+                                </a>
+                                <br>
+                                <br>
+                                <ng-template #publishedcycletemplate>
+                                    <div class="modal-body text-center">
+                                        <p>Do you want to confirm?</p>
+                                        <button type="button" class="btn btn-default" (click)="confirmCyclePublished(spres.spid)">Yes</button>
+                                        <button type="button" class="btn btn-primary" (click)="declineCyclePublished()">No</button>
+                                    </div>
+                                </ng-template>
+                            </ng-template>
+                            <!--Lifecycle Document Delete code  -->
+                            <!--   <button type="button" class="btn btn-primary" (click)="openModal(template)">Delete</button>-->
+                            <a class="tooltips" [routerLink]="" (click)="openCycleModalDelete(cycledeletetemplate)">
+                                <span>Delete</span>
+                                <img src="/images/delete.png" />
+                            </a>
+                            <br>
+                            <br>
+                            <ng-template #cycledeletetemplate>
+                                <div class="modal-body text-center">
+                                    <p>Do you want to confirm?</p>
+                                    <button type="button" class="btn btn-default" (click)="confirmCycleDelete(spres.spid)">Yes</button>
+                                    <button type="button" class="btn btn-primary" (click)="declineCycleDelete()">No</button>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="findStatusSpclDoc"></div>
+        <div class="user_load">
+            <div id="loadMoreSpclDoc"></div>
+        </div>
+    </ng-template>
+    <ng-template [ngSwitchCase]="'local'">
+        <div class="widget-heading" id="title">
+            <h3 class="widget-title">LifeTracker Documentttttz</h3>
+        </div>
+
+        <div id="addTracker">
+            <div id="trackerList">
+                <form class="form-horizontal" [formGroup]="formdata">
+                    <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                        <div class="form-group">
+                            <label for="document_type">Select DocumentType</label>
+                            <select *ngIf="documentTypeResponse" class="form-control" formControlName="uploadldocument" #documenttype>
+                                <option value="0">Select</option>
+                                <option *ngFor="let ld of documentTypeResponse" [value]="ld.id">{{ld.document_type}}</option>
+                            </select>
+                        </div>
+                    </span>
+
+                    <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" formControlName="docTypeDescriptionName" maxlength="2400" style="
+                            position: relative;
+                            left: 24px;
+                            width: 201px;          
+                        " #docTypedescription />
+                        </div>
+                    </span>
+
+                    <span style="width:195px; position: relative; left: 10px; float: left; margin: 0 15px 0 0px;">
+                        <div class="form-group">
+                            <div style="
+                            position: relative;
+                            left: 43px;">
+                                <label for="date">Date</label>
+                            </div>
+                            <div style="position: relative;left:30px;width:85%">
+                                <div class="col-xs-12 col-12 col-md-4 form-group">
+                                    <input type="text" placeholder="Datepicker" class="form-control" bsDatepicker [(bsValue)]="newVar" value="{{ newVar | date:'yyyy-MM-dd' }}"
+                                        style="
+                                    position: relative;
+                                    width: 171px;
+                                " #datespecialupload>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <span style="width:195px; position: relative; left: 10px; margin-top: 0px 20px;float: left;">
+                        <div class="form-group">
+                            <label for="exampleFormControlFile1">Upload File</label>
+                            <input type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.pdf" class="form-control-file"
+                                (change)="specialFileEvent($event)" #uploadSpecialFile>
+                        </div>
+                    </span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" class="modal fade bs-example-modal-sm" id="chooseFileidDoc">
+                        <div role="document" class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header bg-black no-border" style="background-color: #cc0000;">
+                                    <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                    <h4 id="mySmallModalLabel" class="modal-title">Upload Document</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Please upload pdf/xlsx documents</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-dismiss="modal" class="btn btn-outline btn-primary-red" id="modalDocClose">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <table border="0" id="order-table" style="width: 100%" class="table table-hover dt-responsive nowrap">
+            <thead>
+                <tr>
+                    <th style="width:6%" class="text-center">DocumentTypezzzz</th>
+                    <th style="width:10%" class="text-center">Description</th>
+                    <th style="width:10%" class="text-center">Date</th>
+                    <th style="width:30%" class="text-center">Uploaded File</th>
+                    <th style="width:30%" class="text-center">Operation</th>
+                </tr>
+            </thead>
+            <tbody id="doc-list-table">
+                <tr *ngFor="let sur of inPath; let i = index">
+                    <td class="text-center">{{sur.document_type}}</td>
+                    <td class="text-center">{{sur.description}}</td>
+                    <td class="text-center">{{sur.date}}</td>
+                    <td class="text-center">{{sur.file_name}}</td>
+                    <td class="text-center">
+                        <div>
+
+                            <span id="editSpclDoc" class="published">
+                                <a class="tooltips">
+                                    <span>Edit</span>
+                                    <img src="/images/edit.png" />
+                                </a>
+                            </span>
+                            <div *ngIf="(sur.is_published === 0);else other_content">
+                                <!--LifeTracker publish code  -->
+                                <a class="tooltips" [routerLink]="" (click)="openModalTrackerPublish(publishtrackertemplate)">
+                                    <span>Publish</span> r
+                                    <img src="/images/publish.png" />
+                                </a>
+                                <br>
+                                <br>
+                                <ng-template #publishtrackertemplate>
+                                    <div class="modal-body text-center">
+                                        <p>Do you want to confirm?</p>
+                                        <button type="button" class="btn btn-default" (click)="confirmTrackerPublish(sur.spid)">Yes</button>
+                                        <button type="button" class="btn btn-primary" (click)="declineTrackerPublish()">No</button>
+                                    </div>
+                                </ng-template>
+                            </div>
+
+                            <ng-template #other_content>
+                                <!--LifeTracker published code  -->
+                                <a class="tooltips" [routerLink]="" (click)="openModalTrackerPublished(publishedtrackertemplate)">
+                                    <span>Published</span>
+                                    <img src="/images/published.png" />
+                                </a>
+                                <br>
+                                <br>
+                                <ng-template #publishedtrackertemplate>
+                                    <div class="modal-body text-center">
+                                        <p>Do you want to confirm?</p>
+                                        <button type="button" class="btn btn-default" (click)="confirmTrackerPublished(sur.spid)">Yes</button>
+                                        <button type="button" class="btn btn-primary" (click)="declineTrackerPublished()">No</button>
+                                    </div>
+                                </ng-template>
+                            </ng-template>
+                            <!--LifeTracker Delete code  -->
+                            <!--   <button type="button" class="btn btn-primary" (click)="openModal(template)">Delete</button>-->
+                            <a class="tooltips" [routerLink]="" (click)="openModalTrackerDelete(trackerdeletetemplate)">
+                                <span>Delete</span>
+                                <img src="/images/delete.png" />
+                            </a>                
+                            <br>
+                            <br>
+                            <ng-template #trackerdeletetemplate>                  
+                                <div class="modal-body text-center">
+                                    <p>Do you want to confirm?</p>
+                                    <button type="button" class="btn btn-default" (click)="confirmTrackerDelete(sur.spid)">Yes</button>
+                                    <button type="button" class="btn btn-primary" (click)="declineTrackerDelete()">No</button>
+                                </div>
+                            </ng-template>
+
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-template>
+</div>

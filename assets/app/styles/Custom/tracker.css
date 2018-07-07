@@ -1,0 +1,523 @@
+@import url("light.css");
+
+.content-container{
+	clear: both;
+	margin-bottom: 95px;
+	margin-right: 10px;
+}
+
+.tree li a{
+	border: 0px;
+	letter-spacing: 0px;
+	white-space: nowrap;
+}
+
+
+.regulation-tracker{
+	background-color: #232323;
+    /*width: 100%;*/
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.left-panel{
+	/*width: 290px;*/
+	background-color: #232323;
+	float: left;
+	position: relative;
+	min-height: 245px;
+	margin-bottom: 53px;
+}
+
+.title-panel{
+	width: 50px;
+	background-color: #141414;
+	height: 100%;
+	position: absolute;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.title-panel.close:hover {
+	opacity: 1;
+}
+
+.title-panel .content-header-min {
+    position: absolute;
+    left: 19px;
+    top: 18px;
+}
+
+.title-panel .content-header-min img{
+	width: 12px;
+}
+
+.title-panel .content-header-max {
+    position: absolute;
+    left: 14px;
+    top: 18px;
+    height: 18px;
+    display: none;
+}
+
+.title-panel .content-header-max .open.tracker{
+	background-image: url(../img/panel-close-icon.svg);
+	width: 16px;
+	height: 61px;
+}
+
+.title-panel .content-header-min .close.tracker{
+	background-image: url(../img/panel-open-icon.svg);
+	width: 11.64px;
+    height: 61px;
+    opacity: 1;
+}
+
+.title-panel .content-header-max .tracker{
+	width: 18px;
+}
+
+.title-panel.close .content-header-min{
+	display: none;
+}
+
+.title-panel.close .content-header-max{
+	display: block;
+}
+
+.panel-title .content-header-max{
+	display: none;
+}
+
+.panel-title.close .content-header-max{
+	display: block;
+}
+
+.panel-title.close .content-header-min{
+	display: none;
+}
+
+.panel-title.closed .content-header-max{
+	display: block;
+}
+
+.panel-title.closed .content-header-min{
+	display: none;
+}
+
+.regulation-tracker .panel-container.close{
+	display: none;
+}
+
+.panel-title .content-header-max .open.tracker{
+	position: absolute;
+	right: 32px;
+    top: 14px;
+}
+
+.panel-title .content-header-min .close.tracker{
+	position: absolute;
+	right: 40px;
+	top: 18px;
+	opacity: 1;
+}
+
+.header-right-title {
+    position: absolute;
+    bottom: 25px;
+    left: 17px;
+    width: 12px;
+    height: 118px;
+    background-image: url(../img/regulation-tracker-left.svg);
+}
+
+.panel-container{
+	height: 210px;
+    padding: 10px 40px;
+    position: relative;
+}
+
+.domains-container{
+	float: left;
+}
+
+.regions-container{
+	float: left;
+	margin-left: 105px;
+}
+
+.status-container{
+	float: right;
+}
+
+.domains-container .subtitle, .regions-container .subtitle, .status-container .subtitle{
+	line-height: 12px;
+    letter-spacing: 2px;
+    color: #7E838E;
+}
+
+.domains-container ul, .regions-container ul, .status-container ul{
+	list-style: none;
+	padding: 0px;
+}
+
+.domains-container li, .regions-container li, .status-container li{
+    background-image: url(../img/cb-unchecked.png);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position-y: 50%;
+    padding-left: 22px;
+    line-height: 14px;
+    width: 250px;
+    vertical-align: middle;
+    color: #50535B;
+    cursor: pointer;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    border-bottom: 1px solid #2F2F2F;
+}
+
+.domains-container li:last-child, .regions-container li:last-child, .status-container li:last-child{
+	border: 0px;
+}
+
+.domains-container li.selected, .regions-container li.selected, .status-container li.selected{
+	color: #FFF;
+	background-image: url(../img/cb-checked.png);
+}
+
+.domains-container li:hover, .regions-container li:hover, .status-container li:hover{
+	color: #FFF;
+}
+
+.status-container li.upcoming{
+	color: #DA2128;
+}
+
+.status-container li.ongoing{
+	color: #EF9029;
+}
+
+.status-container li.completed{
+	color: #87AF23;
+}
+
+.map-regions-container{
+	position: absolute;
+	left: 604px;
+    top: 28px;
+}
+
+.panel-pdf-title {
+	height: 50px;
+    background-color: #232323;
+    line-height: 50px;
+    color: #FFF;
+    font-size: 14px;
+}
+
+.panel-pdf-title button {
+    margin-top: 10px;
+    margin-right: 13px;
+}
+
+#the-canvas{
+	width: 100%;
+	display: none;
+	background-color: #FFF;
+}
+
+.guide-tree{
+	width: 100%;
+	height: 200px;
+	background-color: #FFF;
+}
+
+.tableContainer {
+	display: none;
+	position: relative;
+}
+
+.pdf-container button{
+	display: none;
+}
+
+.pdf-container.pdf button{
+	display: block
+}
+
+.pdf-container.pdf .guide-tree{
+	display: none;
+}
+
+.pdf-container.pdf #the-canvas{
+	display: block;
+}
+
+.pdf-container.tableregulatory button{
+	display: block;
+}
+
+.guide-tree.europe{
+	background-image: url(../img/regulation/map-europe.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 75%;
+    background-position-y: 5%;
+}
+
+.guide-tree.apac{
+	background-image: url(../img/regulation/map-apac.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 75%;
+    background-position-y: 5%;
+}
+
+.guide-tree.middleeast{
+	background-image: url(../img/regulation/map-middleeast.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 75%;
+    background-position-y: 5%;
+}
+
+.guide-tree.usaandcanada{
+	background-image: url(../img/regulation/map-usaandcanada.svg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 75%;
+    background-position-y: 5%;
+}
+
+.guide-tree .logo-selection-tree{
+	
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    height: 100%;
+    background-size: 20%;
+    background-position-y: 15%;
+    mix-blend-mode: multiply;
+}
+
+.guide-tree .logo-selection-tree.consumerfinance{
+	background-image: url(../img/regulation/consumer-finance-b.svg);
+}
+
+.guide-tree .logo-selection-tree.bankingandcreditunions{
+	background-image: url(../img/regulation/icon-bankingandcreditunions.svg);
+}
+
+.guide-tree .logo-selection-tree.financialcrime{
+	background-image: url(../img/regulation/icon-financialcrime.svg);
+}
+
+.guide-tree .logo-selection-tree.financialmarkets{
+	background-image: url(../img/regulation/icon-financialmarkets.svg);
+}
+
+.guide-tree .logo-selection-tree.paymentservices{
+	background-image: url(../img/regulation/icon-paymentservices.svg);
+}
+
+.guide-tree .logo-selection-tree.insurance{
+	background-image: url(../img/regulation/icon-insurance.svg);
+}
+
+.guide-tree .logo-selection-tree.pensions{
+	background-image: url(../img/regulation/icon-pensions.svg);
+}
+
+.guide-tree .logo-selection-tree.supervisory{
+	background-image: url(../img/regulation/icon-supervisory.svg);
+}
+
+.logo-selection-tree div{
+	text-align: center;
+    font-size: 16pt;
+    color: #DA2128;
+    top: 31%;
+    position: relative;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.panel-title .open.tracker {
+	width: 61px;
+	height: 18px;
+	background-image: url(../img/panel-close-icon-h.svg);
+}
+
+.panel-title .close.tracker {
+	width: 61px;
+	height: 12px;
+	background-image: url(../img/panel-open-icon-h.svg);
+}
+
+.pdf-container.lifecycle #the-canvas{
+	display: none
+}
+
+.pdf-container.lifecycle .lifecycleContainer{
+	display: block;
+}
+
+.pdf-container.lifecycle .guide-tree.europe{
+	display: none;
+}
+
+.pdf-container.tableregulatory #the-canvas{
+	display: none
+}
+
+.pdf-container.tableregulatory .lifecycleContainer{
+	display: none;
+}
+
+/*.pdf-container.tableregulatory .guide-tree.europe{
+	display: none;
+}*/
+
+.pdf-container.tableregulatory .tableContainer{
+	display: block;
+}
+
+
+.lifecycleContainer{
+	padding: 0px 27px;
+	position: relative;
+	background-color: #333333;
+	display: none;
+}
+
+.lifecycleContainer tr td {
+	font-size: 12px;
+	padding-left: 10px !important;
+	vertical-align: top !important;
+	letter-spacing: 0px;
+}
+
+.lifecycleContainer tr td:first-child {
+	white-space: nowrap;
+	padding-left: 0px !important;
+}
+
+.lifecycleContainer .last-button-table{
+	width: 160px !important;
+	position: relative;
+}
+
+.lifecycleContainer .title_doc_type{
+	width: 115px;
+}
+
+.lifecycleContainer .link_icon_doc{
+	width: 27px;
+	height: 18px;
+	background-image: url(../img/doc_link.svg);
+	position: absolute;
+	cursor: pointer;
+	right: 0px;
+    bottom: 10px;
+}
+
+.lifecycleContainer .link_icon_doc:hover{
+	background-image: url(../img/doc_link_rollover.svg);
+}
+
+.lifecycleContainer tr:hover td{
+	background-color: #333333;
+}
+
+/* Filter */
+
+.switch_btn{
+	width:-webkit-calc(100% - 12px);
+	width:-moz-calc(100% - 12px);
+	width: calc(100% - 12px);
+	padding: 6px;
+	border-bottom: 1px solid #2D2D2D;
+	height: 28px;
+}
+
+.switch_btn .title_sort{
+	padding-left: 3px;
+	margin-right: 23px;
+	color: #50535B;
+	float: left;
+	line-height: 28px;
+}
+
+.selclear .title_sort{
+	margin-right: 10px;
+}
+
+.selclear button{
+    padding: 4px 10px;
+}
+
+.selclear button.btn-block {
+	margin-top: 0;
+}
+
+.selclear button#select-all{
+	margin-right: 7px;
+}
+
+.selclear button img{
+	margin-right: 3px;
+}
+
+.filter_buttons {
+	border-top: 1px solid #2D2D2D;
+    width:-webkit-calc(100% - 40px);
+	width:-moz-calc(100% - 40px);
+	width: calc(100% - 40px);
+    padding: 20px;
+    height: 28px;
+}
+
+.filter_buttons button {
+    padding: 4px 10px;
+}
+
+.filter_buttons button.btn-block {
+	margin-top: 0;
+}
+
+@media (max-width: 1280px) {
+
+	.regions-container{
+		margin-left: 45px;
+	}
+
+	.map-regions-container{
+		left: 384px;
+	}
+
+	.domains-container li, .regions-container li, .status-container li{
+		width: 160px;
+	}
+
+}
+
+@media (max-width: 960px) {
+	#mainMap2{
+		/*width: 193px;
+		height: auto;*/
+		display: none;
+	}
+
+	.map-regions-container {
+	    right: 50px;
+	    left: auto;
+	    top: 110px;
+	}
+	
+}
+
+@media (max-width: 700px) {
+	#mainMap2{
+		display: none;
+	}
+}
