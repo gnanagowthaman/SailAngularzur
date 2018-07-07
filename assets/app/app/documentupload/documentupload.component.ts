@@ -435,8 +435,8 @@ export class DocumentuploadComponent implements OnInit {
 
     let doctypeDesc = this.docTypedescription.nativeElement.value;
 
-    const subDocDefault = "10";         
-    const levelDefault = "1";
+    const subDocDefault = '10';
+    const levelDefault = "1"; 
     console.log("Data value" + dateValue)
     let file = event.target.files[0];
     this.fileName = file.name;
@@ -451,14 +451,14 @@ export class DocumentuploadComponent implements OnInit {
     sformData.append('geoName', this.geoName);
     sformData.append('countryName', this.countryName);
     sformData.append('stateName', this.stateName);
-    sformData.append('domainName', this.domainName);
+    sformData.append('domainName', this.domainName);      
     sformData.append('regName', this.regName);
     sformData.append('regulatorName', this.regulatorName);
     sformData.append('docName', this.docName);
     sformData.append('subDocName', this.subDocName);
     sformData.append('regDocId', this.regDocId);
     sformData.append('geoId', this.geoId);
-    sformData.append('subdocId', this.subdocId);
+    sformData.append('subdocId', subDocDefault);
     sformData.append('countryId', this.countryId);
     sformData.append('stateId', this.stateId);
     sformData.append('domainId', this.domainId);
@@ -468,7 +468,7 @@ export class DocumentuploadComponent implements OnInit {
     sformData.append('description', doctypeDesc);
     sformData.append('date', dateValue);
     sformData.append('level', levelDefault);
-    sformData.append('uploadFile', file, this.fileName);                      
+    sformData.append('uploadFile', file, this.fileName);
     console.log("check inside the sformData", sformData);
     this.http.post<SpecialUploadI>("http://localhost:1337/uploadSpecialFile", sformData).subscribe(result => {
       // var inSpPath = {
@@ -477,13 +477,13 @@ export class DocumentuploadComponent implements OnInit {
       //  date: result.date,
       //  file_name: result.file_name                        
       //  };
-      result.document_type=this.optDocTName;
-      result.document_type_id=this.optDocTId;
-      result.docname=this.docName;
-      result.sub_document_id=subDocDefault;                                                                  
+      result.document_type = this.optDocTName;
+      result.document_type_id = this.optDocTId;
+      result.docname = this.docName;
+      result.sub_document_id = subDocDefault; 
 
       this.inPath.push(result);
-      console.log("am special response only", JSON.stringify(this.inPath));                      
+      console.log("am special response only", JSON.stringify(this.inPath));
       this.uploadSpecialResponse = result;
       this.specialDocumentListLoad();
       this.documentListLoad();
@@ -681,8 +681,7 @@ export class DocumentuploadComponent implements OnInit {
 
   confirmTrackerPublish(fid: any): void {
     let specialUploadDocTracker: SpecialUploadI = {
-      spid: fid,
-      is_published: true
+      spid: fid                               
     }
     let headers = new HttpHeaders();
     headers = headers.set('Content-Type', 'application/json; charset=utf-8');

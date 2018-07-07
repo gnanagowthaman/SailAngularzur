@@ -588,6 +588,7 @@
                     <td class="text-center">{{sur.description}}</td>
                     <td class="text-center">{{sur.date}}</td>
                     <td class="text-center">{{sur.file_name}}</td>
+                                                    
                     <td class="text-center">
                         <div>
 
@@ -600,7 +601,7 @@
                             <div *ngIf="(sur.is_published === 0);else other_content">
                                 <!--LifeTracker publish code  -->
                                 <a class="tooltips" [routerLink]="" (click)="openModalTrackerPublish(publishtrackertemplate)">
-                                    <span>Publish</span> r
+                                    <span>Publish</span>   
                                     <img src="/images/publish.png" />
                                 </a>
                                 <br>

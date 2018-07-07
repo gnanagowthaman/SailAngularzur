@@ -35,8 +35,8 @@ export interface SpecialUploadI {
     country_id?: number;
     state_id?: number;
     regulator_id?: number;
-    sub_document_id?: number;
-    regulationStatus?: number;
+    sub_document_id?: string;
+    regulationStatus?: number;     
     gname?: string;
     dname?: string;
     spid?: number;
@@ -46,7 +46,7 @@ export interface SpecialUploadI {
     document_type_id?: number;
     document_link?: string;   
     type?: string;
-    regulation_document_id?: number;
+    regulation_document_id?: string;
     file_id?: string;
     file_name?: string;
     is_uploaded?: boolean;

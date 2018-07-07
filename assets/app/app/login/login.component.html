@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Zurik</title>   
+		<link rel='shortcut icon' type='image/x-icon' href='../../images/favicon.ico'>
+		<!-- Itim-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Itim">
+		<!-- Core CSS-->
+	</head>
+	<body class="body-bg-full">                                                                                                                       
+		<div class="container page-container login">
+			<div class="page-content">
+				<img class="logo" src="../../images/zurik-logo.svg" width="200" height="200"></img>
+				    
+				<div id="error" class="error_login" ></div>   
+					<form method="POST" action="/locallogin" class="form-horizontal">
+					<div class="form-group">
+						    
+						<div class="col-xs-12">
+							<div class="label_login">USER NAME</div>
+							<input type="text" id="userName" class="email_id" name="email_id" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-12">
+							<div class="label_login">PASSWORD</div>
+							<input type="password" name="password" id="userPwd" class="form-control">
+							<div class="pull-right">
+								<a href="/forgotpass" class="inline-block form-control-static forgotten-pass">Forgotten Password?</a>
+							</div>
+						</div>
+					</div>
+	
+					<div class="form-group">
+						<div class="col-xs-12">
+							<div class="checkbox-inline checkbox-custom pull-left">
+								<input id="exampleCheckboxRemember" type="checkbox" value="remember" onclick="rememberMe(this);">
+								<label for="exampleCheckboxRemember" >Remember me</label>
+							</div>
+							<button type="submit" class="btn btn-success btn-rounded btn-block" onclick="submitMe();">Sign in</button>
+						</div>
+					</div>
+				</form>
+				<p class="login_desc">
+					DISCLAIMER<br/>
+					Zurik Financial Regulation Tracking is provided for general information purposes only and does not constitute legal or other professional advice.<br/>
+Law, regulation, market practice or other circumstances may change after the dates on which the relevant analysis was made.<br/>
+Zurik will place its best effort to keep this information up to date. Zurik does not accept any responsibility for any loss which may arise from 
+reliance on information contained in this site.<br/>
+Use of this service is subject to the Terms of Business which can be viewed in full on the website. 
+The reproduction, permanent storage or retransmission of the contents of this site is prohibited without the prior written consent of Zurik,
+a Sett & Lucas firm.
+				</p>
+
+				
+			</div>
+			<div class="bottom">
+				<div class="copyright">Zurik V.2.2 Copyright 2017</div>
+				<img class="logo_bottom" src="../../images/zurik-logo-small.svg" width="24" height="24">
+			</div>
+		</div> 
+	</body>
+</html>     

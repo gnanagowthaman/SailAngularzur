@@ -31,6 +31,7 @@ import { RegulatorComponent } from './regulator/regulator.component';
 import { DocumentuploadComponent } from './documentupload/documentupload.component';
 import { BsDatepickerModule } from 'ngx-bootstrap';    
 import { ModalModule } from 'ngx-bootstrap';
+import { LoginComponent } from './login/login.component';
 const appRoutes: Routes = [     
   { path: 'userList', component: ListComponent },
   {
@@ -123,7 +124,8 @@ const appRoutes: Routes = [
     DocumentComponent,
     SubdocumentmanagementComponent,  
     RegulatorComponent,
-    DocumentuploadComponent
+    DocumentuploadComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
